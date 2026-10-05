@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2023",
-    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "target": "ES2024",
+    "lib": ["ES2024", "DOM", "DOM.Iterable"],
+    "types": ["node"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "strict": true,
@@ -11,7 +12,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "baseUrl": ".",
     "paths": { "@/*": ["./*"] }
   },
   "include": ["**/*.ts", "**/*.tsx"],
