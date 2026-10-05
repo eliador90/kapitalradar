@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# secrets
+.env
+.env.*
+!.env.example
+
+# raw source data: contains natural-person data, never committed
+.data/
+
+# isolated Claude config for the classifier backend
+.claude-classifier/
