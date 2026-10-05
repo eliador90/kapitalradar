@@ -1,6 +1,7 @@
 // startupticker.ch, used only to hand-build the eval ground truth (Open Question 4 gates any
 // production use). robots.txt asks for a 5 s crawl delay.
 import { fetchText } from "../../lib/pipeline/http";
+import { decodeEntities } from "../../lib/pipeline/text";
 
 export const BASE = "https://www.startupticker.ch";
 const CRAWL_DELAY_MS = 5000;
@@ -12,14 +13,7 @@ export interface ListItem {
   url: string;
 }
 
-const decode = (s: string) =>
-  s
-    .replace(/&amp;/g, "&")
-    .replace(/&quot;/g, '"')
-    .replace(/&#0?39;|&apos;/g, "'")
-    .replace(/&lt;/g, "<")
-    .replace(/&gt;/g, ">")
-    .replace(/&nbsp;/g, " ");
+const decode = (s: string) => decodeEntities(s).replace(/ /g, " ");
 
 const stripTags = (s: string) =>
   decode(s.replace(/<br\s*\/?>/gi, "\n").replace(/<\/p>/gi, "\n").replace(/<[^>]+>/g, ""))

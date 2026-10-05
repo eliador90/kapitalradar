@@ -5,8 +5,9 @@
 //   npm run preregister -- fetch <from> <to>  article text for ranks → .data/startupticker/ (gitignored)
 //   npm run preregister -- zefix <name>       sealed registry lookup (name, UID, legal form, seat)
 //   npm run preregister -- finalize           screening.csv → eval/cohort.json + spike ledger entries
-//   npm run preregister -- check              cohort ∩ inspected ledger must be empty
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+//   npm run preregister -- scrub              replace names from .data/person-names.txt with tokens
+//   npm run preregister -- check              no listed names left; cohort ∩ inspected ledger empty
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { toCsv, parseCsv } from "../eval/lib/csv";
 import { assignPartitions, overlap } from "../eval/lib/partition";
@@ -14,14 +15,16 @@ import {
   SCREENING_COLUMNS,
   candidatesFile,
   cohortFile,
-  inspectedFile,
   screeningOutcome,
   type CohortRound,
   type InspectedEntry,
 } from "../eval/lib/schemas";
+import { readLedger, today, writeLedger } from "../eval/lib/ledger";
+import { assertNoListedNames, loadNameList, scrub } from "../eval/lib/scrub";
 import { seededShuffle } from "../eval/lib/seeded";
 import { BASE, fetchArticle, fetchFinancingPage } from "../eval/lib/startupticker";
-import { ZEFIX_LEGAL_FORM_AG, ZEFIX_LEGAL_FORM_GMBH, searchFirms, formatUid } from "../lib/pipeline/zefix";
+import { ZEFIX_LEGAL_FORM_AG, ZEFIX_LEGAL_FORM_GMBH, searchFirms } from "../lib/pipeline/zefix";
+import { formatUid } from "../lib/domain/uid";
 
 const SEED = 2613906888;
 const WINDOW = { start: "2025-12-01", end: "2026-04-08" } as const;
@@ -32,10 +35,9 @@ const DIR = "eval/preregistration";
 const CANDIDATES = join(DIR, "candidates.json");
 const SCREENING = join(DIR, "screening.csv");
 const COHORT = "eval/cohort.json";
-const INSPECTED = "eval/inspected.json";
 const ARTICLES = ".data/startupticker";
+const UNSCRUBBED = ".data/preregistration-unscrubbed";
 
-const today = () => new Date().toISOString().slice(0, 10);
 const writeJson = (path: string, data: unknown) => writeFileSync(path, JSON.stringify(data, null, 2) + "\n");
 
 async function crawl() {
@@ -91,10 +93,6 @@ async function zefix(name: string) {
   }
 }
 
-function readInspected(): InspectedEntry[] {
-  return existsSync(INSPECTED) ? inspectedFile.parse(JSON.parse(readFileSync(INSPECTED, "utf8"))).entries : [];
-}
-
 function finalize() {
   const rows = parseCsv(readFileSync(SCREENING, "utf8"));
   const screened = rows.filter((r) => r.outcome);
@@ -136,23 +134,49 @@ function finalize() {
   if (!result.complete) throw new Error("quotas not met: screen further in seeded order");
 
   writeJson(COHORT, draft);
-  const ledger = readInspected().filter((e) => e.source !== "spike");
+  const ledger = readLedger().filter((e) => e.source !== "spike");
   const spikeEntries = [...new Map(draft.spike.map((r) => [r.uid, r])).values()].map(
     (r): InspectedEntry => ({ uid: r.uid, company: r.company, source: "spike", added: today() }),
   );
-  writeJson(INSPECTED, { entries: [...spikeEntries, ...ledger] });
-  console.log(`wrote ${COHORT} and ${INSPECTED}`);
+  writeLedger([...spikeEntries, ...ledger]);
+  console.log(`wrote ${COHORT} and the inspected ledger`);
   check();
 }
 
+// Committed eval files must not name people (some startupticker headlines do). The real
+// titles and URLs stay in the gitignored backup for day-2 adjudication.
+function scrubFiles() {
+  const names = loadNameList();
+  mkdirSync(UNSCRUBBED, { recursive: true });
+  for (const file of [CANDIDATES, SCREENING, COHORT]) {
+    const text = readFileSync(file, "utf8");
+    const backup = join(UNSCRUBBED, file.replace(/[\\/]/g, "__"));
+    if (!existsSync(backup)) writeFileSync(backup, text);
+    writeFileSync(file, scrub(text, names));
+  }
+  check();
+}
+
+/** Every committed data file under eval/ (code excluded). */
+function evalDataFiles(dir = "eval"): string[] {
+  return readdirSync(dir).flatMap((f) => {
+    const p = join(dir, f);
+    if (statSync(p).isDirectory()) return evalDataFiles(p);
+    return /.(json|csv|md)$/.test(f) ? [p] : [];
+  });
+}
+
 function check() {
+  const names = loadNameList(); // throws when missing: no silent pass on a fresh clone
+  const files = evalDataFiles();
+  for (const file of files) assertNoListedNames(file, readFileSync(file, "utf8"), names);
   const cohort = cohortFile.parse(JSON.parse(readFileSync(COHORT, "utf8")));
   const bad = overlap(
-    readInspected().map((e) => e.uid),
+    readLedger().map((e) => e.uid),
     cohort.cohort.map((r) => r.uid),
   );
   if (bad.length) throw new Error(`cohort UIDs in the inspected ledger: ${bad.join(", ")}`);
-  console.log(`check ok: ${cohort.cohort.length} cohort rounds, none in the inspected ledger`);
+  console.log(`check ok: no listed names in ${files.length} eval files; ${cohort.cohort.length} cohort rounds, none in the inspected ledger`);
 }
 
 const [cmd, ...args] = process.argv.slice(2);
@@ -162,6 +186,7 @@ const commands: Record<string, () => unknown> = {
   fetch: () => fetchArticles(Number(args[0]), Number(args[1])),
   zefix: () => zefix(args.join(" ")),
   finalize,
+  scrub: scrubFiles,
   check,
 };
 const run = commands[cmd ?? ""];

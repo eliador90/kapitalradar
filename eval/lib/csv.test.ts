@@ -14,3 +14,9 @@ describe("csv", () => {
     expect(parseCsv("﻿a,b\r\n1,2\r\n")).toEqual([{ a: "1", b: "2" }]);
   });
 });
+
+describe("csv mid-field quotes", () => {
+  it("keeps a quote inside an unquoted field literal", () => {
+    expect(parseCsv('a,b\n5" display,x\n')).toEqual([{ a: '5" display', b: "x" }]);
+  });
+});

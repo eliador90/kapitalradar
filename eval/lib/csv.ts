@@ -23,7 +23,7 @@ export function parseCsv(text: string): Row[] {
         i++;
       } else if (ch === '"') inQuotes = false;
       else field += ch;
-    } else if (ch === '"') inQuotes = true;
+    } else if (ch === '"' && field === "") inQuotes = true; // a quote mid-field is literal
     else if (ch === ",") {
       record.push(field);
       field = "";

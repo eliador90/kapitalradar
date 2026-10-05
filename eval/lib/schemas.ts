@@ -1,7 +1,7 @@
 import { z } from "zod";
+import { isoDate, uid } from "../../lib/domain/schemas";
 
-export const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
-export const uid = z.string().regex(/^CHE\d{9}$/);
+export { isoDate, uid };
 
 export const SCREENING_OUTCOMES = [
   "eligible",
