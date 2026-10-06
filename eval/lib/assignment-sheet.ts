@@ -9,6 +9,8 @@ export const sheetLabel = z.object({
   startup_relevance: z.enum(STARTUP_RELEVANCE),
   transaction_type: z.enum(TRANSACTION_TYPES),
   reason: z.string().min(1),
+  /** Optional URL when the label used evidence beyond the gazette text (provenance "verified"). */
+  source: z.string().url().optional(),
 });
 export type SheetLabel = z.infer<typeof sheetLabel>;
 
@@ -25,6 +27,7 @@ export function parseSheet(md: string): SheetLabel[] {
         startup_relevance: field("startup_relevance"),
         transaction_type: field("transaction_type"),
         reason: field("reason"),
+        source: field("source") || undefined,
       });
       if (!parsed.success) throw new Error(`A${n}: ${parsed.error.issues.map((i) => i.path.join(".")).join(", ")} missing or invalid`);
       return parsed.data;

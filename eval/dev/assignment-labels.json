@@ -1,0 +1,379 @@
+{
+  "agreementOnCold": {
+    "agree": 4,
+    "of": 10
+  },
+  "labels": [
+    {
+      "n": 1,
+      "startup_relevance": "no",
+      "transaction_type": "restructuring",
+      "reason": "holding company; new shares paid with assets (contribution in kind), no cash",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "no",
+        "transaction_type": "new_equity"
+      },
+      "id": "8fe53ee9-2759-4bdf-afc5-fc7be0e687bf",
+      "uid": "CHE310255922",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 2,
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "reason": "description reads like a startup (software / SaaS)",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "yes",
+        "transaction_type": "new_equity"
+      },
+      "id": "88838525-c0b9-4e78-bcfb-106e45525b33",
+      "uid": "CHE294630698",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 3,
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "reason": "AI-solutions company; new pre-seed preferred class in CHF 0.01 shares",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "no",
+        "transaction_type": "new_equity"
+      },
+      "id": "d37ff8bc-fbfb-4582-84c9-c231f1e93a07",
+      "uid": "CHE182433340",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 4,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "invests in and sells stakes in companies (unsure)",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "no",
+        "transaction_type": "new_equity"
+      },
+      "id": "3dd0638b-a38b-4fb2-b94e-533186eea78d",
+      "uid": "CHE188957647",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 5,
+      "startup_relevance": "yes",
+      "transaction_type": "conversion_only",
+      "reason": "biotech; all new Series A shares issued against set-off claims",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "yes",
+        "transaction_type": "new_equity"
+      },
+      "id": "b637fda2-4028-45bd-8832-0b53b148840a",
+      "uid": "CHE371974816",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 6,
+      "startup_relevance": "no",
+      "transaction_type": "unknown",
+      "reason": "probably not: SME or ordinary company; share change unclear (restructuring or unknown)",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "no",
+        "transaction_type": "unknown"
+      },
+      "id": "1a80a06c-111d-4f87-acad-0b15bcd79197",
+      "uid": "CHE377719004",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 7,
+      "startup_relevance": "no",
+      "transaction_type": "restructuring",
+      "reason": "invests in and sells stakes; new shares look tied to a deal or merger (unsure)",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "no",
+        "transaction_type": "restructuring"
+      },
+      "id": "8a5425f1-8ec9-4a60-80e4-8fb2894c56b6",
+      "uid": "CHE181869640",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 8,
+      "startup_relevance": "no",
+      "transaction_type": "restructuring",
+      "reason": "holding, trading or professional-services vehicle",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "no",
+        "transaction_type": "restructuring"
+      },
+      "id": "d5fd9c0c-e776-46c2-b5d3-4bfc5d424390",
+      "uid": "CHE352221053",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 9,
+      "startup_relevance": "no",
+      "transaction_type": "restructuring",
+      "reason": "staffing agency; GmbH to AG conversion",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "yes",
+        "transaction_type": "restructuring"
+      },
+      "id": "d6df0c2b-8321-4fd8-bcbf-c1ecca474cf4",
+      "uid": "CHE395550588",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 10,
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "reason": "ordinary increase of 580,000 new shares (CHF 100k to 680k): fresh equity, not restructuring, debt conversion or option pool",
+      "labeler": "remo",
+      "cold": {
+        "startup_relevance": "yes",
+        "transaction_type": "new_equity"
+      },
+      "id": "6812593e-8a19-48a7-9f89-d4c36488cf27",
+      "uid": "CHE354591532",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 11,
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "reason": "gas-sensor developer; new Seed preferred shares within capital band, no set-off",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "b87f32d4-e780-486b-a48d-dd5370f9ac8b",
+      "uid": "CHE294885554",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 12,
+      "startup_relevance": "no",
+      "transaction_type": "conversion_only",
+      "reason": "holding; the new share is paid by setting off a CHF 8.6m claim",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "d6dfa29e-0a86-4f10-b3d5-5ff1ca78a12f",
+      "uid": "CHE109107863",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 13,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "established software company; ordinary fully paid increase, nothing in the filing indicates options",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "452ccaf3-ff82-4a3c-bbc3-355c3b221699",
+      "uid": "CHE113479003",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 14,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "marketing services firm; ordinary cash increase",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "cbf4299e-0c5c-4211-9ee3-bc5457db57bd",
+      "uid": "CHE161977858",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 15,
+      "startup_relevance": "yes",
+      "transaction_type": "restructuring",
+      "reason": "hydrogen-technology company founded 2021; share-for-share contribution in kind",
+      "source": "https://whitecell-power.com",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "a8645a4c-73df-4f67-9a92-5cc22ef71c9c",
+      "uid": "CHE215174710",
+      "provenance": "verified",
+      "split": "dev"
+    },
+    {
+      "n": 16,
+      "startup_relevance": "unknown",
+      "transaction_type": "new_equity",
+      "reason": "solar services; CHF 20k to 100k before the Sàrl to SA conversion, no set-off or in-kind contribution disclosed",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "9c8ea388-9332-4ce3-bd04-747f77eb77b7",
+      "uid": "CHE429263290",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 17,
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "reason": "biotech holding; +19% within capital band, CHF 0.10 shares, no qualified facts",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "0d854dd3-316c-4535-9deb-612bc113aebf",
+      "uid": "CHE101271542",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 18,
+      "startup_relevance": "no",
+      "transaction_type": "restructuring",
+      "reason": "Sàrl to SA conversion of an IT/alarm company",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "8b89001e-3cf9-44f6-8223-235c4ce3c06e",
+      "uid": "CHE115726968",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 19,
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "reason": "tourism tech platform; +7.7% CHF 0.01 shares, no qualified facts",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "530daedd-1d28-4010-9ccf-4d19d4f3c454",
+      "uid": "CHE496562005",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 20,
+      "startup_relevance": "no",
+      "transaction_type": "conversion_only",
+      "reason": "accounting firm; increase fully paid by set-off of claims",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "013ea014-3497-4783-8246-fafb089d334d",
+      "uid": "CHE419252764",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 21,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "advisory firm; GmbH capital CHF 20k to 100k, fully paid before conversion, no non-cash mechanism disclosed",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "e26cecfc-ff81-40be-85bf-02aa203e32c1",
+      "uid": "CHE313480585",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 22,
+      "startup_relevance": "yes",
+      "transaction_type": "unknown",
+      "reason": "crowdinvesting platform; conditional-capital issuance on granted rights, holders not disclosed (options or warrants)",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "198d58ba-1c50-4c97-bd7c-2cb0e1b66098",
+      "uid": "CHE371959426",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 23,
+      "startup_relevance": "no",
+      "transaction_type": "conversion_only",
+      "reason": "real-estate company; increase fully by set-off of claims",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "37615a86-1390-4c11-aac5-7ea91831477b",
+      "uid": "CHE223326011",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 24,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "mechanics workshop; 80 new units subscribed for CHF 80k before the Sàrl to SA conversion",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "def3cbc1-6545-4247-977a-42be618360b9",
+      "uid": "CHE455127126",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 25,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "consulting group holding; ordinary increase, nothing in the filing indicates options",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "f04ae7e9-23d3-481d-b1a7-ef3d362e19c7",
+      "uid": "CHE205544716",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 26,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "real-estate company; 100k to 5.05m, no qualified facts",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "3c9309dd-fe5a-409f-9bdb-d4cefe4ae288",
+      "uid": "CHE154680703",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 27,
+      "startup_relevance": "yes",
+      "transaction_type": "conversion_only",
+      "reason": "biotech; whole increase by set-off of CHF 2.04m claims (loan conversion)",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "fb2d8792-79db-4ee8-94cb-3e8b06a86845",
+      "uid": "CHE174194506",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 28,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "waste-management holding; mixed set-off and cash contribution",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "a55c1a0b-a590-45ea-8d0f-9d1d69684200",
+      "uid": "CHE360372139",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 29,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "established software firm; round-up to CHF 500k, no qualified facts",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "2811fd75-fcaf-4509-a29f-4701c80cdc5b",
+      "uid": "CHE112828934",
+      "provenance": "text_only",
+      "split": "dev"
+    },
+    {
+      "n": 30,
+      "startup_relevance": "no",
+      "transaction_type": "new_equity",
+      "reason": "investment/wealth-management company; ordinary increase",
+      "labeler": "claude_draft_remo_reviewed",
+      "id": "dc2f7ec3-50d6-468c-a524-9f883538cd11",
+      "uid": "CHE108651199",
+      "provenance": "text_only",
+      "split": "dev"
+    }
+  ]
+}

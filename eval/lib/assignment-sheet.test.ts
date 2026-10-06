@@ -11,6 +11,11 @@ describe("parseSheet", () => {
     ]);
   });
 
+  it("reads an optional source", () => {
+    const md = block("02", "yes", "new_equity", "x").replace("- reason: x\n", "- reason: x\n- source: https://example.test/\n");
+    expect(parseSheet(md)[0]?.source).toBe("https://example.test/");
+  });
+
   it("names the entry with a missing field", () => {
     expect(() => parseSheet(block("07", "yes", "", "x"))).toThrow(/A7: transaction_type/);
   });

@@ -114,7 +114,7 @@ function tally() {
   const ev = rows.filter((r) => r.status === "evaluated");
   const count = (v: string) => ev.filter((r) => r.verdict === v).length;
   const summary = { evaluated: ev.length, verified: count("verified"), refuted: count("refuted"), unverifiable: count("unverifiable"), threshold: CLAIM_THRESHOLD, claimKept: count("verified") >= CLAIM_THRESHOLD };
-  const out = JSON.stringify({ researchedBy: "Claude subagents (web search), pending Remo's review", rule: `first ${EVALUATE} in seeded order that are startups and gazette-first; >= ${CLAIM_THRESHOLD} verified keeps the claim`, summary, rows }, null, 2) + "\n";
+  const out = JSON.stringify({ researchedBy: "Claude subagents (web search), reviewed by Remo 2026-10-06", rule: `first ${EVALUATE} in seeded order that are startups and gazette-first; >= ${CLAIM_THRESHOLD} verified keeps the claim`, summary, rows }, null, 2) + "\n";
   assertNoListedNames(EVIDENCE, out, loadNameList());
   writeFileSync(EVIDENCE, out);
   const added = addToLedger(rows.map((r) => ({ uid: r.uid, company: r.company })), "x1");

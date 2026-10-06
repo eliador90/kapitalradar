@@ -4,6 +4,10 @@
 //
 //   npm run assignment -- draw      seeded draw → .data/assignment/{entries.json, sheets}, eval/dev/assignment.json
 //   npm run assignment -- collect   filled sheets → eval/dev/assignment-labels.json
+//
+// Sheets: remo-cold-10.md (Remo's cold labels, kept as given: the agreement measure),
+// remo-final-10.md (the same 10 after adjudication: the dev labels), claude-blind-10.md, and
+// claude-draft-20.md (Claude's drafts as corrected by Remo).
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { STARTUP_RELEVANCE, TRANSACTION_TYPES, parseSheet, type SheetLabel } from "../eval/lib/assignment-sheet";
@@ -153,18 +157,23 @@ function expectRange(labels: SheetLabel[], from: number, to: number, sheetName: 
 function collect() {
   const entries: Entry[] = JSON.parse(readFileSync(ENTRIES, "utf8"));
   const remo = parseSheet(readFileSync(join(OUT, "remo-cold-10.md"), "utf8"));
+  const final = parseSheet(readFileSync(join(OUT, "remo-final-10.md"), "utf8"));
   const reviewed = parseSheet(readFileSync(join(OUT, "claude-draft-20.md"), "utf8"));
   const blind = parseSheet(readFileSync(join(OUT, "claude-blind-10.md"), "utf8"));
   expectRange(remo, 1, COLD, "remo-cold-10.md");
+  expectRange(final, 1, COLD, "remo-final-10.md");
   expectRange(blind, 1, COLD, "claude-blind-10.md");
   expectRange(reviewed, COLD + 1, entries.length, "claude-draft-20.md");
   const byN = new Map(entries.map((e) => [e.n, e]));
   const labels = [
-    ...remo.map((l) => ({ ...l, labeler: "remo" as const })),
+    ...final.map((l) => {
+      const cold = remo.find((r) => r.n === l.n)!;
+      return { ...l, labeler: "remo" as const, cold: { startup_relevance: cold.startup_relevance, transaction_type: cold.transaction_type } };
+    }),
     ...reviewed.map((l) => ({ ...l, labeler: "claude_draft_remo_reviewed" as const })),
   ].map((l) => {
     const e = byN.get(l.n)!;
-    return { ...l, id: e.id, uid: e.uid, provenance: "text_only", split: "dev" };
+    return { ...l, id: e.id, uid: e.uid, provenance: l.source ? "verified" : "text_only", split: "dev" };
   });
   const agree = remo.filter((r) => {
     const b = blind.find((x) => x.n === r.n)!;

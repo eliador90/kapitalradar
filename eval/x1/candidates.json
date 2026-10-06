@@ -1,0 +1,345 @@
+{
+  "seed": 3508160021,
+  "window": {
+    "start": "2026-04-01",
+    "end": "2026-07-31"
+  },
+  "keywords": [
+    "Vorzugsaktien",
+    "privilégiées"
+  ],
+  "candidates": [
+    {
+      "order": 1,
+      "uid": "CHE479313033",
+      "company": "Joran Partners AG",
+      "seat": "Zürich",
+      "publicationId": "ec218bf8-b172-47e3-a3e4-dd34909154a3",
+      "publicationNumber": "HR02-1006683468",
+      "publishedAt": "2026-06-22",
+      "capitalBefore": 100000,
+      "capitalAfter": 130081.16,
+      "preferredClasses": [
+        "Vorzugsaktien"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/ec218bf8-b172-47e3-a3e4-dd34909154a3"
+    },
+    {
+      "order": 2,
+      "uid": "CHE217268552",
+      "company": "flowit AG",
+      "seat": "Zürich",
+      "publicationId": "8d30b9f7-7c31-4db8-a068-d3cfb1f58d3e",
+      "publicationNumber": "HR02-1006671181",
+      "publishedAt": "2026-06-09",
+      "capitalBefore": 296980.67,
+      "capitalAfter": 317551.5,
+      "preferredClasses": [
+        "Vorzugsaktien Seed",
+        "Vorzugsaktien"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/8d30b9f7-7c31-4db8-a068-d3cfb1f58d3e"
+    },
+    {
+      "order": 3,
+      "uid": "CHE424414541",
+      "company": "SwissDrones Operating AG",
+      "seat": "Zürich",
+      "publicationId": "6ce8bbd4-35cc-457d-8e59-c838e91b574c",
+      "publicationNumber": "HR02-1006621074",
+      "publishedAt": "2026-04-10",
+      "capitalBefore": 2119514.04,
+      "capitalAfter": 3404427.23,
+      "preferredClasses": [
+        "Vorzugsaktien B",
+        "Vorzugsaktien B2",
+        "Vorzugsaktien B3",
+        "Vorzugsaktien B4"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/6ce8bbd4-35cc-457d-8e59-c838e91b574c"
+    },
+    {
+      "order": 4,
+      "uid": "CHE457582576",
+      "company": "Findependent AG",
+      "seat": "Aarau",
+      "publicationId": "c1b8ba17-c6e7-416b-a6da-d3850cfdf8ba",
+      "publicationNumber": "HR02-1006638191",
+      "publishedAt": "2026-04-29",
+      "capitalBefore": 1082667.6,
+      "capitalAfter": 1215149.6,
+      "preferredClasses": [
+        "Vorzugsaktien I",
+        "Vorzugsaktien II"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/c1b8ba17-c6e7-416b-a6da-d3850cfdf8ba"
+    },
+    {
+      "order": 5,
+      "uid": "CHE114362007",
+      "company": "TVP Solar SA",
+      "seat": "Genève",
+      "publicationId": "f59ef5c5-2909-44b8-9651-c5ffa49d162f",
+      "publicationNumber": "HR02-1006704283",
+      "publishedAt": "2026-07-10",
+      "capitalBefore": 4288550,
+      "capitalAfter": 4321650,
+      "preferredClasses": [
+        "privilégiées"
+      ],
+      "setOff": true,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/f59ef5c5-2909-44b8-9651-c5ffa49d162f"
+    },
+    {
+      "order": 6,
+      "uid": "CHE199552591",
+      "company": "Embion Technologies SA",
+      "seat": "Etoy",
+      "publicationId": "5d7fd7b8-5fa8-46ac-af2b-3dc02e96f14b",
+      "publicationNumber": "HR02-1006649565",
+      "publishedAt": "2026-05-12",
+      "capitalBefore": 629134.5,
+      "capitalAfter": 743244.5,
+      "preferredClasses": [
+        "privilégiées",
+        "Serie A"
+      ],
+      "setOff": true,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/5d7fd7b8-5fa8-46ac-af2b-3dc02e96f14b"
+    },
+    {
+      "order": 7,
+      "uid": "CHE188776100",
+      "company": "SMTM VII SA",
+      "seat": "Genève",
+      "publicationId": "550145ea-ec0b-46bc-b57c-0e3e7b9748ff",
+      "publicationNumber": "HR02-1006720772",
+      "publishedAt": "2026-07-30",
+      "capitalBefore": 101325.4,
+      "capitalAfter": 101981.6,
+      "preferredClasses": [
+        "privilégiées"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/550145ea-ec0b-46bc-b57c-0e3e7b9748ff"
+    },
+    {
+      "order": 8,
+      "uid": "CHE485116920",
+      "company": "KAISERHAUS HANDELz AG",
+      "seat": "Bern",
+      "publicationId": "e5238100-8293-4968-9af7-e51eaa6481cd",
+      "publicationNumber": "HR02-1006700791",
+      "publishedAt": "2026-07-08",
+      "capitalBefore": 100000,
+      "capitalAfter": 260200,
+      "preferredClasses": [
+        "Vorzugsaktien"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/e5238100-8293-4968-9af7-e51eaa6481cd"
+    },
+    {
+      "order": 9,
+      "uid": "CHE141471366",
+      "company": "Bite-Finder AG",
+      "seat": "Rheinfelden",
+      "publicationId": "ccd23fe4-e058-4a7e-8382-c4b52ea65160",
+      "publicationNumber": "HR02-1006721534",
+      "publishedAt": "2026-07-31",
+      "capitalBefore": 100000,
+      "capitalAfter": 103752.34,
+      "preferredClasses": [
+        "Vorzugsaktien Seed",
+        "Vorzugsaktien"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/ccd23fe4-e058-4a7e-8382-c4b52ea65160"
+    },
+    {
+      "order": 10,
+      "uid": "CHE373771678",
+      "company": "EH Group Engineering SA",
+      "seat": "Nyon",
+      "publicationId": "49643db5-fd91-4dd8-998d-088e14e6350b",
+      "publicationNumber": "HR02-1006716136",
+      "publishedAt": "2026-07-24",
+      "capitalBefore": 658000,
+      "capitalAfter": 2073896.1,
+      "preferredClasses": [
+        "privilégiées"
+      ],
+      "setOff": true,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/49643db5-fd91-4dd8-998d-088e14e6350b"
+    },
+    {
+      "order": 11,
+      "uid": "CHE112534906",
+      "company": "Groupe Eric Sturdza SA",
+      "seat": "Genève",
+      "publicationId": "d258aa82-3b8d-42ea-964d-bbfe81dc450d",
+      "publicationNumber": "HR02-1006673290",
+      "publishedAt": "2026-06-10",
+      "capitalBefore": 7930000,
+      "capitalAfter": 8680000,
+      "preferredClasses": [
+        "privilégiées"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/d258aa82-3b8d-42ea-964d-bbfe81dc450d"
+    },
+    {
+      "order": 12,
+      "uid": "CHE169120376",
+      "company": "BSL CH AG",
+      "seat": "Chur",
+      "publicationId": "62433f92-3bfe-4011-9f55-10cc45ab95f4",
+      "publicationNumber": "HR02-1006663633",
+      "publishedAt": "2026-06-01",
+      "capitalBefore": 100000,
+      "capitalAfter": 401739.66,
+      "preferredClasses": [
+        "Vorzugsaktien"
+      ],
+      "setOff": true,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/62433f92-3bfe-4011-9f55-10cc45ab95f4"
+    },
+    {
+      "order": 13,
+      "uid": "CHE253496327",
+      "company": "Yuon Control AG",
+      "seat": "Burgdorf",
+      "publicationId": "198f7f6f-3804-4273-9b45-800a609c45e1",
+      "publicationNumber": "HR02-1006653713",
+      "publishedAt": "2026-05-19",
+      "capitalBefore": 152713,
+      "capitalAfter": 160073,
+      "preferredClasses": [
+        "Vorzugsaktien"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/198f7f6f-3804-4273-9b45-800a609c45e1"
+    },
+    {
+      "order": 14,
+      "uid": "CHE187646914",
+      "company": "Haya Therapeutics SA",
+      "seat": "Epalinges",
+      "publicationId": "3d0176d1-2478-4d78-8391-77c2b35fda18",
+      "publicationNumber": "HR02-1006632227",
+      "publishedAt": "2026-04-22",
+      "capitalBefore": 1339116.12,
+      "capitalAfter": 1781119.38,
+      "preferredClasses": [
+        "privilégiées"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/3d0176d1-2478-4d78-8391-77c2b35fda18"
+    },
+    {
+      "order": 15,
+      "uid": "CHE239055668",
+      "company": "HELVO SA",
+      "seat": "Crissier",
+      "publicationId": "bbe20998-7d0d-4e02-be87-aac851d2184b",
+      "publicationNumber": "HR02-1006661315",
+      "publishedAt": "2026-05-28",
+      "capitalBefore": 500000,
+      "capitalAfter": 869749.37,
+      "preferredClasses": [
+        "privilégiées"
+      ],
+      "setOff": true,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/bbe20998-7d0d-4e02-be87-aac851d2184b"
+    },
+    {
+      "order": 16,
+      "uid": "CHE406111054",
+      "company": "ABSTRACT DRINKS SA",
+      "seat": "Rolle",
+      "publicationId": "b193eb93-3b2c-47a8-9bec-c3ea8d6406d2",
+      "publicationNumber": "HR02-1006634615",
+      "publishedAt": "2026-04-24",
+      "capitalBefore": 20000,
+      "capitalAfter": 152637.65,
+      "preferredClasses": [
+        "privilégiées"
+      ],
+      "setOff": true,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/b193eb93-3b2c-47a8-9bec-c3ea8d6406d2"
+    },
+    {
+      "order": 17,
+      "uid": "CHE465152120",
+      "company": "Granite Bio AG",
+      "seat": "Basel",
+      "publicationId": "b206fc45-3b05-46b3-b9d1-49f60d4266e0",
+      "publicationNumber": "HR02-1006698390",
+      "publishedAt": "2026-07-06",
+      "capitalBefore": 922694.95,
+      "capitalAfter": 927196.84,
+      "preferredClasses": [
+        "Vorzugsaktien A",
+        "Vorzugsaktien B"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/b206fc45-3b05-46b3-b9d1-49f60d4266e0"
+    },
+    {
+      "order": 18,
+      "uid": "CHE499636858",
+      "company": "NaturalCycles AG",
+      "seat": "Bottighofen",
+      "publicationId": "ee986177-c1d7-4550-86b6-ae4bfe6fc4f3",
+      "publicationNumber": "HR02-1006658684",
+      "publishedAt": "2026-05-26",
+      "capitalBefore": 418006,
+      "capitalAfter": 428675,
+      "preferredClasses": [
+        "Vorzugsaktien Serie Seed",
+        "Vorzugsaktien Serie C",
+        "Vorzugsaktien Serie B",
+        "Vorzugsaktien Serie A",
+        "Vorzugsaktien"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/ee986177-c1d7-4550-86b6-ae4bfe6fc4f3"
+    },
+    {
+      "order": 19,
+      "uid": "CHE334653443",
+      "company": "Swisspod Technologies SA",
+      "seat": "Monthey",
+      "publicationId": "5f9667e5-43f2-40a1-9c09-d6ad8c26abb2",
+      "publicationNumber": "HR02-1006695894",
+      "publishedAt": "2026-07-02",
+      "capitalBefore": 138680.25,
+      "capitalAfter": 138704.45,
+      "preferredClasses": [
+        "privilégiées"
+      ],
+      "setOff": false,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/5f9667e5-43f2-40a1-9c09-d6ad8c26abb2"
+    },
+    {
+      "order": 20,
+      "uid": "CHE191728053",
+      "company": "AVAtronics SA",
+      "seat": "Lausanne",
+      "publicationId": "6a5f0836-ce81-4a22-940e-692ab820eb95",
+      "publicationNumber": "HR02-1006718419",
+      "publishedAt": "2026-07-28",
+      "capitalBefore": 205876,
+      "capitalAfter": 230845,
+      "preferredClasses": [
+        "privilégiées"
+      ],
+      "setOff": true,
+      "shabUrl": "https://amtsblattportal.ch/#!/search/publications/detail/6a5f0836-ce81-4a22-940e-692ab820eb95"
+    }
+  ]
+}

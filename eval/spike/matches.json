@@ -1,0 +1,594 @@
+{
+  "matchWindowDays": {
+    "before": 120,
+    "after": 180
+  },
+  "rows": [
+    {
+      "rank": 1,
+      "uid": "CHE213692684",
+      "company": "Ahead Health AG",
+      "announced": "2026-01-13",
+      "publications": 7,
+      "earliestPublication": "2024-08-29",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [
+        {
+          "id": "9580e391-85aa-4d97-a63d-a4df6eb1b1b4",
+          "publicationNumber": "HR02-1006636170",
+          "publishedAt": "2026-04-28",
+          "lagDays": 105,
+          "before": 170151.13,
+          "after": 198516.23,
+          "setOff": false,
+          "capitalBand": true
+        },
+        {
+          "id": "51be7085-dfcf-464d-8e5c-2dfa09c3e12a",
+          "publicationNumber": "HR02-1006479540",
+          "publishedAt": "2025-11-10",
+          "lagDays": -64,
+          "before": 100000,
+          "after": 170151.13,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": "51be7085-dfcf-464d-8e5c-2dfa09c3e12a",
+        "eventMatch": "accepted",
+        "note": "new Seed preferred class (+3.73m shares, +70% nominal), −64 d; the +105 d entry adds more Seed shares plus conditional-capital issuance (second close / options)",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 3,
+      "uid": "CHE478871980",
+      "company": "ORamaVR SA",
+      "announced": "2026-01-30",
+      "publications": 14,
+      "earliestPublication": "2020-06-26",
+      "formationFound": true,
+      "increasesTotal": 3,
+      "candidates": [
+        {
+          "id": "f5607e1f-e435-4108-ab66-ac04f558c77b",
+          "publicationNumber": "HR02-1006543104",
+          "publishedAt": "2026-01-19",
+          "lagDays": -11,
+          "before": 108737.8,
+          "after": 558537.32,
+          "setOff": true,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "f5607e1f-e435-4108-ab66-ac04f558c77b",
+        "eventMatch": "accepted",
+        "note": "new liquidation-preferred shares, mixed: CHF 2.17m set-off + cash, −11 d",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 5,
+      "uid": "CHE299451950",
+      "company": "Axi Labs AG",
+      "announced": "2026-03-11",
+      "publications": 2,
+      "earliestPublication": "2024-03-13",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "8604d669-7b70-4b0a-b4c5-56fdc9d6d820",
+          "publicationNumber": "HR02-1006647642",
+          "publishedAt": "2026-05-11",
+          "lagDays": 61,
+          "before": 100000,
+          "after": 825000,
+          "setOff": true,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "8604d669-7b70-4b0a-b4c5-56fdc9d6d820",
+        "eventMatch": "accepted",
+        "note": "+61 d; whole increase by set-off of a USD 935k claim (investment first made as a loan?) → dev label conversion_only, not positive in v1",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 7,
+      "uid": "CHE449975270",
+      "company": "ExerGo SA",
+      "announced": "2026-02-18",
+      "publications": 21,
+      "earliestPublication": "2019-03-07",
+      "formationFound": false,
+      "increasesTotal": 5,
+      "candidates": [
+        {
+          "id": "e5f1b9a5-e4f4-4c3f-a8bd-d95e21ae877e",
+          "publicationNumber": "HR02-1006518003",
+          "publishedAt": "2025-12-18",
+          "lagDays": -62,
+          "before": 292155,
+          "after": 389755,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "e5f1b9a5-e4f4-4c3f-a8bd-d95e21ae877e",
+        "eventMatch": "accepted",
+        "note": "new Series A preferred class, −62 d",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 8,
+      "uid": "CHE231678216",
+      "company": "Testmate Health SA",
+      "announced": "2025-12-12",
+      "publications": 7,
+      "earliestPublication": "2020-05-01",
+      "formationFound": true,
+      "increasesTotal": 4,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "eventMatch": null,
+        "note": "no increase since 2023; strategic investor 'set to become a shareholder' — not yet registered or via another instrument",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 9,
+      "uid": "CHE453478419",
+      "company": "Soverli AG",
+      "announced": "2025-12-16",
+      "publications": 4,
+      "earliestPublication": "2025-07-08",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [
+        {
+          "id": "c6e101a9-8f05-494e-b612-3c796e7625ce",
+          "publicationNumber": "HR02-1006601905",
+          "publishedAt": "2026-03-20",
+          "lagDays": 94,
+          "before": 132893,
+          "after": 136307,
+          "setOff": false,
+          "capitalBand": false
+        },
+        {
+          "id": "b575722a-2206-45b6-8f8a-3c7c6787ff6d",
+          "publicationNumber": "HR02-1006440626",
+          "publishedAt": "2025-09-24",
+          "lagDays": -83,
+          "before": 100000,
+          "after": 132893,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "b575722a-2206-45b6-8f8a-3c7c6787ff6d",
+        "eventMatch": "accepted",
+        "note": "new Pre-Seed preferred class, −83 d; the +94 d entry adds a few Pre-Seed shares (second close)",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 12,
+      "uid": "CHE378979051",
+      "company": "STS Digital AG",
+      "announced": "2026-03-02",
+      "publications": 9,
+      "earliestPublication": "2021-12-14",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [
+        {
+          "id": "14c0b626-8db7-468d-a463-707298ce78c5",
+          "publicationNumber": "HR02-1006582022",
+          "publishedAt": "2026-02-27",
+          "lagDays": -3,
+          "before": 1119316.8,
+          "after": 1235519,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "14c0b626-8db7-468d-a463-707298ce78c5",
+        "eventMatch": "accepted",
+        "note": "new preferred class (3.17m shares), −3 d",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 13,
+      "uid": "CHE249673253",
+      "company": "L.E.S.S. SA",
+      "announced": "2026-02-27",
+      "publications": 4,
+      "earliestPublication": "2019-05-31",
+      "formationFound": false,
+      "increasesTotal": 3,
+      "candidates": [
+        {
+          "id": "52d4b7a5-f67c-45ab-a4c6-9977090cf94a",
+          "publicationNumber": "HR02-1006572457",
+          "publishedAt": "2026-02-17",
+          "lagDays": -10,
+          "before": 215310,
+          "after": 232255,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": "52d4b7a5-f67c-45ab-a4c6-9977090cf94a",
+        "eventMatch": "accepted",
+        "note": "+16,945 CHF 1 shares (CHF 17m at ~CHF 1,000/share is plausible), −10 d; no class named",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 15,
+      "uid": "CHE342451781",
+      "company": "Aukera Therapeutics AG",
+      "announced": "2025-12-11",
+      "publications": 2,
+      "earliestPublication": "2026-03-11",
+      "formationFound": true,
+      "increasesTotal": 0,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "eventMatch": null,
+        "note": "AG newly formed Mar 2026 (HR01) after the announcement; financing likely in the predecessor GmbH",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 17,
+      "uid": "CHE270490998",
+      "company": "Plair SA",
+      "announced": "2026-03-27",
+      "publications": 13,
+      "earliestPublication": "2020-01-21",
+      "formationFound": false,
+      "increasesTotal": 5,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "eventMatch": null,
+        "note": "increase registered 2025-10-01, 177 d BEFORE the announcement (outside −120)",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 19,
+      "uid": "CHE291505720",
+      "company": "terralayr AG",
+      "announced": "2026-01-19",
+      "publications": 10,
+      "earliestPublication": "2022-12-09",
+      "formationFound": true,
+      "increasesTotal": 6,
+      "candidates": [
+        {
+          "id": "f54733a5-efca-48dc-8f35-b80a01140e57",
+          "publicationNumber": "HR02-1006695387",
+          "publishedAt": "2026-07-02",
+          "lagDays": 164,
+          "before": 428181,
+          "after": 480979.3,
+          "setOff": false,
+          "capitalBand": true
+        },
+        {
+          "id": "c8dd1226-6885-4714-a19a-5310be19381b",
+          "publicationNumber": "HR02-1006626439",
+          "publishedAt": "2026-04-16",
+          "lagDays": 87,
+          "before": 364823,
+          "after": 428181,
+          "setOff": false,
+          "capitalBand": true
+        },
+        {
+          "id": "5378025a-6334-4f88-bf2c-10c454876a10",
+          "publicationNumber": "HR02-1006520768",
+          "publishedAt": "2025-12-22",
+          "lagDays": -28,
+          "before": 239061,
+          "after": 364823,
+          "setOff": true,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": "5378025a-6334-4f88-bf2c-10c454876a10",
+        "eventMatch": "accepted",
+        "note": "preferred shares, partly set-off, −28 d; the +87 d and +164 d entries fit the announced EUR 80m upsizing option",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 25,
+      "uid": "CHE298133861",
+      "company": "CompPair Technologies SA",
+      "announced": "2026-02-18",
+      "publications": 14,
+      "earliestPublication": "2020-01-14",
+      "formationFound": true,
+      "increasesTotal": 5,
+      "candidates": [
+        {
+          "id": "78f655e5-4d57-4240-ae7d-97dc3413b4cf",
+          "publicationNumber": "HR02-1006541488",
+          "publishedAt": "2026-01-16",
+          "lagDays": -33,
+          "before": 220121.53,
+          "after": 232369.3,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": "78f655e5-4d57-4240-ae7d-97dc3413b4cf",
+        "eventMatch": "accepted",
+        "note": "preferred shares within the capital band, −33 d",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 27,
+      "uid": "CHE442791208",
+      "company": "TECregen AG",
+      "announced": "2026-01-09",
+      "publications": 10,
+      "earliestPublication": "2023-06-29",
+      "formationFound": true,
+      "increasesTotal": 3,
+      "candidates": [
+        {
+          "id": "d2b87edd-46cf-4f70-9741-78f31a3b2f69",
+          "publicationNumber": "HR02-1006592964",
+          "publishedAt": "2026-03-11",
+          "lagDays": 61,
+          "before": 210428.5,
+          "after": 350066.2,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "d2b87edd-46cf-4f70-9741-78f31a3b2f69",
+        "eventMatch": "accepted",
+        "note": "+1.4m preferred shares, +61 d",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 28,
+      "uid": "CHE482446338",
+      "company": "Chiral Nano AG",
+      "announced": "2026-02-06",
+      "publications": 4,
+      "earliestPublication": "2023-07-03",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "0d91de04-3f79-4ff2-9a7d-45a291249434",
+          "publicationNumber": "HR02-1006503788",
+          "publishedAt": "2025-12-05",
+          "lagDays": -63,
+          "before": 100000,
+          "after": 128948,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "0d91de04-3f79-4ff2-9a7d-45a291249434",
+        "eventMatch": "accepted",
+        "note": "+28,948 CHF 1 shares (+29%), −63 d; no class named",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 29,
+      "uid": "CHE440654730",
+      "company": "Artificialy SA",
+      "announced": "2026-04-02",
+      "publications": 19,
+      "earliestPublication": "2020-03-06",
+      "formationFound": true,
+      "increasesTotal": 6,
+      "candidates": [
+        {
+          "id": "1a4a43a2-cec8-466c-9d29-ef195a9acd52",
+          "publicationNumber": "HR02-1006603981",
+          "publishedAt": "2026-03-23",
+          "lagDays": -10,
+          "before": 1374762,
+          "after": 1446965,
+          "setOff": false,
+          "capitalBand": false
+        },
+        {
+          "id": "6145c931-0dc9-4abb-9c47-3f0f00827147",
+          "publicationNumber": "HR02-1006587732",
+          "publishedAt": "2026-03-05",
+          "lagDays": -28,
+          "before": 1341240,
+          "after": 1374762,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "1a4a43a2-cec8-466c-9d29-ef195a9acd52",
+        "eventMatch": "accepted",
+        "note": "ordinary increase + new participation capital, −10 d; the −28 d entry is conditional capital (options), reject",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 31,
+      "uid": "CHE218846606",
+      "company": "Alithea Genomics SA",
+      "announced": "2026-03-04",
+      "publications": 9,
+      "earliestPublication": "2020-06-03",
+      "formationFound": true,
+      "increasesTotal": 3,
+      "candidates": [
+        {
+          "id": "80055a00-9fbe-415d-a068-04964d6073e9",
+          "publicationNumber": "HR02-1006573579",
+          "publishedAt": "2026-02-18",
+          "lagDays": -14,
+          "before": 201804,
+          "after": 233103,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "80055a00-9fbe-415d-a068-04964d6073e9",
+        "eventMatch": "accepted",
+        "note": "new Seed 2 preferred class, −14 d",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 32,
+      "uid": "CHE318903127",
+      "company": "Agora Care SA",
+      "announced": "2026-03-17",
+      "publications": 11,
+      "earliestPublication": "2021-06-14",
+      "formationFound": true,
+      "increasesTotal": 4,
+      "candidates": [
+        {
+          "id": "b9533337-d6f9-4d8a-8086-2b880549aecf",
+          "publicationNumber": "HR02-1006597667",
+          "publishedAt": "2026-03-16",
+          "lagDays": -1,
+          "before": 200812,
+          "after": 312791,
+          "setOff": true,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "b9533337-d6f9-4d8a-8086-2b880549aecf",
+        "eventMatch": "accepted",
+        "note": "new preferred shares, mixed set-off + cash, −1 d",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 33,
+      "uid": "CHE112158921",
+      "company": "cohaga AG",
+      "announced": "2026-04-02",
+      "publications": 7,
+      "earliestPublication": "2021-04-29",
+      "formationFound": false,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "97a4b75c-3334-494c-a2a4-faa6c2eb81fe",
+          "publicationNumber": "HR02-1006603778",
+          "publishedAt": "2026-03-23",
+          "lagDays": -10,
+          "before": 100000,
+          "after": 111111.2,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": "97a4b75c-3334-494c-a2a4-faa6c2eb81fe",
+        "eventMatch": "accepted",
+        "note": "first round: 100 → 1.11m shares re-split, +11% nominal, −10 d",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 34,
+      "uid": "CHE294398863",
+      "company": "Sparkli AG",
+      "announced": "2026-01-23",
+      "publications": 4,
+      "earliestPublication": "2024-10-31",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "eventMatch": null,
+        "note": "increase registered 2025-02-10, 347 d before the announcement (company announced on leaving stealth)",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    },
+    {
+      "rank": 35,
+      "uid": "CHE178002184",
+      "company": "OPTIML AG",
+      "announced": "2026-02-17",
+      "publications": 8,
+      "earliestPublication": "2022-10-17",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [
+        {
+          "id": "3d8f5a7b-fdcd-4e7f-b608-6006e36ecbc3",
+          "publicationNumber": "HR02-1006579012",
+          "publishedAt": "2026-02-25",
+          "lagDays": 8,
+          "before": 132640,
+          "after": 214254,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": "3d8f5a7b-fdcd-4e7f-b608-6006e36ecbc3",
+        "eventMatch": "accepted",
+        "note": "new Seed 1 + Seed 2 preferred classes, +8 d",
+        "reviewedBy": "remo",
+        "reviewedAt": "2026-10-06"
+      }
+    }
+  ]
+}

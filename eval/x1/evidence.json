@@ -1,0 +1,335 @@
+{
+  "researchedBy": "Claude subagents (web search), reviewed by Remo 2026-10-06",
+  "rule": "first 10 in seeded order that are startups and gazette-first; >= 4 verified keeps the claim",
+  "summary": {
+    "evaluated": 10,
+    "verified": 1,
+    "refuted": 0,
+    "unverifiable": 9,
+    "threshold": 4,
+    "claimKept": false
+  },
+  "rows": [
+    {
+      "order": 1,
+      "uid": "CHE479313033",
+      "company": "Joran Partners AG",
+      "gazettePublished": "2026-06-22",
+      "publicationNumber": "HR02-1006683468",
+      "startup": "unclear",
+      "startupReason": "young secondaries advisory boutique, service firm",
+      "announcedBeforeGazette": null,
+      "status": "skipped: not a startup (unclear)",
+      "verdict": "unverifiable",
+      "evidence": "no announcement; website says backed by family offices and PE professionals, undated",
+      "sources": [
+        "https://www.joranpartners.com/about"
+      ]
+    },
+    {
+      "order": 2,
+      "uid": "CHE217268552",
+      "company": "flowit AG",
+      "gazettePublished": "2026-06-09",
+      "publicationNumber": "HR02-1006671181",
+      "startup": "yes",
+      "startupReason": "founded 2020, HR-tech, VC seed 2024",
+      "announcedBeforeGazette": null,
+      "status": "evaluated",
+      "verdict": "unverifiable",
+      "evidence": "only announced round is the Aug 2024 seed (~22 months earlier); +CHF 20.6k with capital band, maybe extension or option pool",
+      "sources": [
+        "https://www.startupticker.ch/en/news/flowit-sichert-sich-4-millionen-franken-in-ueberzeichneter-seed-runde"
+      ]
+    },
+    {
+      "order": 3,
+      "uid": "CHE424414541",
+      "company": "SwissDrones Operating AG",
+      "gazettePublished": "2026-04-10",
+      "publicationNumber": "HR02-1006621074",
+      "startup": "yes",
+      "startupReason": "founded 2013, uncrewed helicopters, VC-backed, Series B 2024",
+      "announcedBeforeGazette": null,
+      "status": "evaluated",
+      "verdict": "unverifiable",
+      "evidence": "no 2025-2026 round announced; register text reportedly shows set-off of CHF 1.28M claims into new preferred B4 (converted loans)",
+      "sources": [
+        "https://www.startupticker.ch/en/news/swissdrones-banks-usd-10-million-in-series-b-round"
+      ]
+    },
+    {
+      "order": 4,
+      "uid": "CHE457582576",
+      "company": "Findependent AG",
+      "gazettePublished": "2026-04-29",
+      "publicationNumber": "HR02-1006638191",
+      "startup": "yes",
+      "startupReason": "founded 2019, ETF fintech, crowd-funded",
+      "announcedBeforeGazette": true,
+      "status": "skipped: announced before the gazette",
+      "verdict": "verified",
+      "evidence": "crowdinvesting page announced a planned early-2026 capital increase before the gazette; April 2026 increase shows no set-off",
+      "sources": [
+        "https://findependent.ch/en/crowdinvesting/"
+      ]
+    },
+    {
+      "order": 5,
+      "uid": "CHE114362007",
+      "company": "TVP Solar SA",
+      "gazettePublished": "2026-07-10",
+      "publicationNumber": "HR02-1006704283",
+      "startup": "unclear",
+      "startupReason": "long-running VC-backed cleantech, not early-stage",
+      "announcedBeforeGazette": null,
+      "status": "skipped: not a startup (unclear)",
+      "verdict": "refuted",
+      "evidence": "increase fully paid by set-off of CHF 2.1M claims, part of a debt-to-equity restructuring series",
+      "sources": [
+        "https://www.tvpsolar.com/news/"
+      ]
+    },
+    {
+      "order": 6,
+      "uid": "CHE199552591",
+      "company": "Embion Technologies SA",
+      "gazettePublished": "2026-05-12",
+      "publicationNumber": "HR02-1006649565",
+      "startup": "yes",
+      "startupReason": "founded 2016, EPFL spin-off, VC/corporate-backed",
+      "announcedBeforeGazette": null,
+      "status": "evaluated",
+      "verdict": "unverifiable",
+      "evidence": "last public round Dec 2021; May 2026 increase paid by set-off (likely converted loans), no announcement",
+      "sources": [
+        "https://www.startupticker.ch/en/news/embion-closes-asahi-led-chf-4-5m-financing-round"
+      ]
+    },
+    {
+      "order": 7,
+      "uid": "CHE188776100",
+      "company": "SMTM VII SA",
+      "gazettePublished": "2026-07-30",
+      "publicationNumber": "HR02-1006720772",
+      "startup": "no",
+      "startupReason": "holding acquiring stakes in medical companies",
+      "announcedBeforeGazette": null,
+      "status": "skipped: not a startup (no)",
+      "verdict": "refuted",
+      "evidence": "shares issued for an in-kind contribution of another company's shares (share-for-share acquisition)",
+      "sources": [
+        "https://www.moneyhouse.ch/en/company/smtm-vii-sa-9175729801"
+      ]
+    },
+    {
+      "order": 8,
+      "uid": "CHE485116920",
+      "company": "KAISERHAUS HANDELz AG",
+      "gazettePublished": "2026-07-08",
+      "publicationNumber": "HR02-1006700791",
+      "startup": "no",
+      "startupReason": "cooperative-style retail store co-owned by participating labels",
+      "announcedBeforeGazette": null,
+      "status": "skipped: not a startup (no)",
+      "verdict": "unverifiable",
+      "evidence": "labels buying in as co-owners is likely; not an investor round; no amounts",
+      "sources": [
+        "https://www.hauptstadt.be/a/kaiserhaus-bern-60-labels-setzen-auf-neues-einkaufserlebnis"
+      ]
+    },
+    {
+      "order": 9,
+      "uid": "CHE141471366",
+      "company": "Bite-Finder AG",
+      "gazettePublished": "2026-07-31",
+      "publicationNumber": "HR02-1006721534",
+      "startup": "yes",
+      "startupReason": "founded 2023, dental AI/SaaS, seed preferred class",
+      "announcedBeforeGazette": null,
+      "status": "evaluated",
+      "verdict": "unverifiable",
+      "evidence": "no funding announcement; 2026 news is product-only",
+      "sources": [
+        "https://bite-finder.com/category/news/"
+      ]
+    },
+    {
+      "order": 10,
+      "uid": "CHE373771678",
+      "company": "EH Group Engineering SA",
+      "gazettePublished": "2026-07-24",
+      "publicationNumber": "HR02-1006716136",
+      "startup": "yes",
+      "startupReason": "founded 2017, hydrogen fuel cells, VC/corporate-backed",
+      "announcedBeforeGazette": null,
+      "status": "evaluated",
+      "verdict": "unverifiable",
+      "evidence": "recapitalisation: reduction then CHF 6.47M by cash and set-off into new preferred; possibly a down round; no independent confirmation",
+      "sources": [
+        "https://dealroom.co/companies/eh-group/"
+      ]
+    },
+    {
+      "order": 11,
+      "uid": "CHE112534906",
+      "company": "Groupe Eric Sturdza SA",
+      "gazettePublished": "2026-06-10",
+      "publicationNumber": "HR02-1006673290",
+      "startup": "no",
+      "startupReason": "established Geneva private-banking holding (2005), family-controlled, restructuring",
+      "announcedBeforeGazette": null,
+      "status": "skipped: not a startup (no)",
+      "verdict": "refuted",
+      "evidence": "7,500 ordinary shares issued; preferred class unchanged; owner recapitalisation of a loss-making group (inferred from context)",
+      "sources": [
+        "https://www.finews.com/news/english-news/72167-banque-eric-sturdza-ergebnis-2025-ceo-gruppe-bank-swissbanking-finanzplatz-schweiz-2"
+      ]
+    },
+    {
+      "order": 12,
+      "uid": "CHE169120376",
+      "company": "BSL CH AG",
+      "gazettePublished": "2026-06-01",
+      "publicationNumber": "HR02-1006663633",
+      "startup": "yes",
+      "startupReason": "founded 2021, range-extender EVs, pre-revenue",
+      "announcedBeforeGazette": null,
+      "status": "evaluated",
+      "verdict": "unverifiable",
+      "evidence": "set-off of GBP 8.46M claims into preferred shares (debt-to-equity); no public announcement",
+      "sources": [
+        "https://www.moneyhouse.ch/en/company/bsl-ch-ag-6027082151"
+      ]
+    },
+    {
+      "order": 13,
+      "uid": "CHE253496327",
+      "company": "Yuon Control AG",
+      "gazettePublished": "2026-05-19",
+      "publicationNumber": "HR02-1006653713",
+      "startup": "yes",
+      "startupReason": "founded 2020, cleantech, VC-backed",
+      "announcedBeforeGazette": null,
+      "status": "evaluated",
+      "verdict": "unverifiable",
+      "evidence": "only announced round is the 2024 seed (matches a 2024 increase); nothing for the 2026 preferred issue",
+      "sources": [
+        "https://www.startupticker.ch/en/news/yuon-control-frisches-geld-fuer-beschleunigte-marktexpansion"
+      ]
+    },
+    {
+      "order": 14,
+      "uid": "CHE187646914",
+      "company": "Haya Therapeutics SA",
+      "gazettePublished": "2026-04-22",
+      "publicationNumber": "HR02-1006632227",
+      "startup": "yes",
+      "startupReason": "RNA biotech, VC-backed",
+      "announcedBeforeGazette": null,
+      "status": "evaluated",
+      "verdict": "unverifiable",
+      "evidence": "last announced round USD 65M Series A 2025-05-08, ~11.5 months before the gazette; possibly a deferred tranche, unconfirmed",
+      "sources": [
+        "https://www.hayatx.com/news/"
+      ]
+    },
+    {
+      "order": 15,
+      "uid": "CHE239055668",
+      "company": "HELVO SA",
+      "gazettePublished": "2026-05-28",
+      "publicationNumber": "HR02-1006661315",
+      "startup": "yes",
+      "startupReason": "founded 2024, SME fintech, seed round",
+      "announcedBeforeGazette": false,
+      "status": "evaluated",
+      "verdict": "verified",
+      "evidence": "CHF 6.2M seed closed, reported within a month after the gazette; seed share classes introduced mid-2026; part set-off (likely converted loans, much from the founder)",
+      "sources": [
+        "https://www.allnews.ch/content/corporate/helvo-une-nouvelle-fintech-au-service-des-pme",
+        "https://www.startupticker.ch/en/news/helvo-financial-operating-system-for-swiss-smes-goes-live"
+      ]
+    },
+    {
+      "order": 16,
+      "uid": "CHE406111054",
+      "company": "ABSTRACT DRINKS SA",
+      "gazettePublished": "2026-04-24",
+      "publicationNumber": "HR02-1006634615",
+      "startup": "unclear",
+      "startupReason": "small company founded 2022 (ex-Sàrl), no sign of VC backing",
+      "announcedBeforeGazette": null,
+      "status": "skipped: not a startup (unclear)",
+      "verdict": "unverifiable",
+      "evidence": "Sàrl→SA conversion with ~CHF 674k set-off into seed preferred; likely shareholder-loan conversion, unconfirmed",
+      "sources": [
+        "https://www.moneyhouse.ch/en/company/abstract-drinks-sa-7600557201"
+      ]
+    },
+    {
+      "order": 17,
+      "uid": "CHE465152120",
+      "company": "Granite Bio AG",
+      "gazettePublished": "2026-07-06",
+      "publicationNumber": "HR02-1006698390",
+      "startup": "yes",
+      "startupReason": "Basel immunology biotech, VC-backed",
+      "announcedBeforeGazette": null,
+      "status": "evaluated",
+      "verdict": "unverifiable",
+      "evidence": "only announced financing USD 100M (2025-04-24); this +0.5% increase looks like options or a minor tranche",
+      "sources": [
+        "https://www.granitebio.com/news/granite-bio-debuts-with-100-million-of-capital"
+      ]
+    },
+    {
+      "order": 18,
+      "uid": "CHE499636858",
+      "company": "NaturalCycles AG",
+      "gazettePublished": "2026-05-26",
+      "publicationNumber": "HR02-1006658684",
+      "startup": "yes",
+      "startupReason": "founded 2013, VC-backed scale-up",
+      "announcedBeforeGazette": null,
+      "status": "not_needed",
+      "verdict": "unverifiable",
+      "evidence": "last primary round Series C May 2024; +2.5% increase could be options",
+      "sources": [
+        "https://femtechinsider.com/natural-cycles-series-c/"
+      ]
+    },
+    {
+      "order": 19,
+      "uid": "CHE334653443",
+      "company": "Swisspod Technologies SA",
+      "gazettePublished": "2026-07-02",
+      "publicationNumber": "HR02-1006695894",
+      "startup": "yes",
+      "startupReason": "founded 2019, hyperloop startup, VC- and crowd-backed",
+      "announcedBeforeGazette": true,
+      "status": "not_needed",
+      "verdict": "unverifiable",
+      "evidence": "announced it is raising a Series A (not closed) before the gazette; the +CHF 24.20 increase does not fit a closed round",
+      "sources": [
+        "https://www.swisspod.com/press-releases/swisspod-hits-new-hyperloop-speed-record-begins-aerys-2-development"
+      ]
+    },
+    {
+      "order": 20,
+      "uid": "CHE191728053",
+      "company": "AVAtronics SA",
+      "gazettePublished": "2026-07-28",
+      "publicationNumber": "HR02-1006718419",
+      "startup": "yes",
+      "startupReason": "founded 2016, EPFL-area ANC startup, VC-backed",
+      "announcedBeforeGazette": null,
+      "status": "not_needed",
+      "verdict": "unverifiable",
+      "evidence": "only announced round 2020 seed; set-off suggests convertible conversion; nothing public",
+      "sources": [
+        "https://www.avatronics.com/publications/press-releases"
+      ]
+    }
+  ]
+}
