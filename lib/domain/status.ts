@@ -36,9 +36,51 @@ export const isClassifierPositive = (tier: Tier | null) => tier === "likely_fina
 
 const NOT_ASSESSED: Status = { state: "not_assessed", pips: "", label: "Not assessed" };
 
-const isConfirmed = (c: ConfirmationLink) =>
+/** An accepted match that counts: high confidence, or low confidence once reviewed. */
+export const isConfirmed = (c: ConfirmationLink) =>
   c.eventMatch === "accepted" && (c.matchConfidence === "high" || c.reviewedAt !== null);
 const isPossible = (c: ConfirmationLink) => !isConfirmed(c) && c.eventMatch !== "rejected";
+
+/** Feed filter groups (design D7); the default shows likely financings and confirmed rounds. */
+export const FEED_FILTERS = [
+  { key: "likely", label: "Likely financing", plural: "likely financings" },
+  { key: "confirmed", label: "Confirmed round", plural: "confirmed rounds" },
+  { key: "undecided", label: "Undecided", plural: "undecided increases" },
+  { key: "increased", label: "Capital increased", plural: "other capital increases" },
+] as const;
+
+/** "likely financings or confirmed rounds" (design ST1 copy). */
+export function feedFilterPhrase(filters: readonly FeedFilter[], joiner: "or" | "and" = "or"): string {
+  const words = FEED_FILTERS.filter((f) => filters.includes(f.key)).map((f) => f.plural);
+  return words.length < 2 ? (words[0] ?? "") : `${words.slice(0, -1).join(", ")} ${joiner} ${words.at(-1)}`;
+}
+export type FeedFilter = (typeof FEED_FILTERS)[number]["key"];
+export const DEFAULT_FEED_FILTERS: readonly FeedFilter[] = ["likely", "confirmed"];
+
+/** A possible confirmation stays in its tier's group: only an accepted match moves a row. */
+export function feedFilterOf(status: Status, tier: Tier | null): FeedFilter {
+  if (status.state === "confirmed" || status.state === "confirmed_missed") return "confirmed";
+  if (tier === "likely_financing") return "likely";
+  if (tier === "abstain") return "undecided";
+  return "increased";
+}
+
+/** Parses `?s=likely&s=confirmed` (or `s=all`); unknown values are dropped, none means the default. */
+export function parseFeedFilters(raw: string | string[] | undefined): { filters: FeedFilter[]; isDefault: boolean } {
+  const values = (Array.isArray(raw) ? raw : raw ? [raw] : []).flatMap((v) => v.split(","));
+  const all = FEED_FILTERS.map((f) => f.key);
+  const picked = values.includes("all") ? all : all.filter((k) => values.includes(k));
+  const filters = picked.length ? picked : [...DEFAULT_FEED_FILTERS];
+  const isDefault = filters.length === DEFAULT_FEED_FILTERS.length && DEFAULT_FEED_FILTERS.every((f) => filters.includes(f));
+  return { filters, isDefault };
+}
+
+/** The canonical `s` value: null for the default, "all" for every group, else the keys in order. */
+export function feedFilterParam(filters: readonly FeedFilter[]): string | null {
+  const keys = FEED_FILTERS.map((f) => f.key).filter((k) => filters.includes(k));
+  if (keys.length === DEFAULT_FEED_FILTERS.length && DEFAULT_FEED_FILTERS.every((f) => keys.includes(f))) return null;
+  return keys.length === FEED_FILTERS.length ? "all" : keys.join(",");
+}
 
 /**
  * @param tier the event's assessment tier, or null when the event has no assessment

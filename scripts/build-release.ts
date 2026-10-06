@@ -7,6 +7,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { and, eq, gte, lte, sql } from "drizzle-orm";
 import { z } from "zod";
 import { db } from "../db/client";
+import { releaseEval } from "../lib/domain/eval-result";
 import { classifications, publications } from "../db/schema";
 import { BACKFILL_START, listCandidateUids, loadCompany, type CompanyBundle } from "../lib/pipeline/candidates";
 import type { StoredClassification } from "../lib/pipeline/classify";
@@ -76,7 +77,8 @@ const days = new Set(
 );
 const confirmationRow = z.object({
   companyUid: z.string(),
-  sourceUrl: z.string(),
+  // Rendered as a link: https only (no javascript:, data: or relative URLs).
+  sourceUrl: z.url({ protocol: /^https$/ }),
   publishedAt: z.string(),
   statedAmount: z.string().nullable(),
   statedCurrency: z.string().nullable(),
@@ -88,11 +90,12 @@ const confirmationRow = z.object({
   matchedPublicationId: z.string().nullable(),
 });
 const confirmations: ConfirmationRow[] = existsSync(CONFIRMATIONS) ? z.array(confirmationRow).parse(JSON.parse(readFileSync(CONFIRMATIONS, "utf8")).confirmations) : [];
-const evalResult = existsSync(EVAL_RESULT) ? JSON.parse(readFileSync(EVAL_RESULT, "utf8")) : null;
+// Validated against the one schema the pages read: a malformed file stops the build here.
+const evalResult = existsSync(EVAL_RESULT) ? releaseEval.parse(JSON.parse(readFileSync(EVAL_RESULT, "utf8"))) : null;
 
 if (dryRun) {
   const tau = cfg.tau ?? 0.5;
-  const derived = deriveRows({ companies, classification: (h) => stored.get(h) ?? null, config: { rules: [], rulesThreshold: cfg.rulesThreshold, tau, tauLow: cfg.tauLow ?? tau - 0.2, modelId: cfg.modelId, promptVersion: cfg.promptVersion, parserVersion: PARSER_VERSION }, snapshotDate });
+  const derived = deriveRows({ companies, classification: (h) => stored.get(h) ?? null, config: { rules: [], rulesThreshold: cfg.rulesThreshold, tau, tauLow: cfg.tauLow ?? tau - 0.2, modelId: cfg.modelId, promptVersion: cfg.promptVersion, parserVersion: PARSER_VERSION }, snapshotDate, backfillStart: BACKFILL_START });
   const tiers = derived.assessments.reduce<Record<string, number>>((a, x) => ((a[x.tier] = (a[x.tier] ?? 0) + 1), a), {});
   console.log(
     JSON.stringify(

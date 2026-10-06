@@ -7,6 +7,9 @@
     "node": ">=24"
   },
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "preregister": "tsx scripts/preregister.ts",
@@ -20,7 +23,8 @@
     "classify": "tsx --env-file=.env.local scripts/classify.ts",
     "build-release": "tsx --env-file=.env.local scripts/build-release.ts",
     "unseal": "tsx --env-file=.env.local scripts/unseal.ts",
-    "eval": "tsx --env-file=.env.local scripts/eval.ts"
+    "eval": "tsx --env-file=.env.local scripts/eval.ts",
+    "leak-check": "tsx scripts/leak-check.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

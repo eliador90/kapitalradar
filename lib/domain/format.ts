@@ -1,3 +1,5 @@
+import { LEGAL_FORM } from "./events";
+
 // Swiss display formats (design DS3): CHF 132’231.38 with a typographic apostrophe, cents
 // dropped when zero; dates "29 Sep 2026"; amounts arrive as decimal strings (Postgres numeric).
 
@@ -40,3 +42,7 @@ export function formatDateRange(start: string, end: string): string {
 
 /** Share issuance as a percentage with one decimal: 0.1234 → "12.3%". */
 export const formatPercent = (fraction: number) => `${(fraction * 100).toFixed(1)}%`;
+
+/** SHAB legal-form code → the short form used across languages. */
+const LEGAL_FORMS: Record<string, string> = { [LEGAL_FORM.AG]: "AG", [LEGAL_FORM.GMBH]: "GmbH" };
+export const formatLegalForm = (code: string) => LEGAL_FORMS[code] ?? code;

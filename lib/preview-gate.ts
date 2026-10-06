@@ -4,7 +4,8 @@
 // (never the password). Misconfiguration fails closed.
 import { createHmac, timingSafeEqual } from "node:crypto";
 
-export const PREVIEW_COOKIE = "kr_preview";
+// __Host- pins the cookie to this exact host (Secure, Path=/, no Domain attribute).
+export const PREVIEW_COOKIE = "__Host-kr_preview";
 export const PREVIEW_PATH = "/preview";
 export const PREVIEW_LOGIN_PATH = "/preview/login";
 export const COOKIE_MAX_AGE_S = 30 * 24 * 60 * 60;

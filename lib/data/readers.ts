@@ -1,13 +1,15 @@
 // Server-side data readers (T10, T14, T15, T17). Every reader checks the preview gate first
 // (eng delta V9: the proxy is not a security boundary) and reads one release, resolved once per
 // request by the caller. Rows are filtered by release_id and published_at <= asOf (db/predicates).
-import { and, eq, gte, inArray, lte } from "drizzle-orm";
+import { and, eq, gte, inArray, lte, or } from "drizzle-orm";
 import { db } from "../../db/client";
 import { visibleAt } from "../../db/predicates";
-import { assessments, companyNames, companySources, confirmations, currentRelease, events, publications, releases } from "../../db/schema";
+import { assessments, classifications, companyNames, companySources, confirmations, currentRelease, events, publications, releases } from "../../db/schema";
 import { coverageFromSources, coverageLine } from "../domain/coverage";
-import type { ReleaseConfig, Tier } from "../domain/schemas";
-import { deriveStatus, type ConfirmationLink, type Status } from "../domain/status";
+import { isCapitalIncrease } from "../domain/events";
+import { shareIssuance, type Issuance, type IssuancePayload } from "../domain/issuance";
+import type { EventMatch, ReleaseConfig, Tier } from "../domain/schemas";
+import { deriveStatus, isConfirmed, type ConfirmationLink, type Status } from "../domain/status";
 import { assertPreviewAccess } from "../preview-gate";
 import { correctedAt, nameAt, visibleEvents } from "./asof-view";
 
@@ -39,32 +41,38 @@ export interface FeedRow {
   publicationNumber: string;
   publicationId: string;
   publishedAt: string;
+  /** Publication language (de/fr/it) for the lang attribute on names and purpose (DS3). */
+  language: string;
   currency: string | null;
   capitalBefore: string | null;
   capitalAfter: string | null;
   sharesBefore: number | null;
   sharesAfter: number | null;
+  issuance: Issuance;
   status: Status;
   tier: Tier | null;
   announcedRound: { url: string; statedAmount: string | null; statedCurrency: string | null } | null;
 }
 
+type EventRow = typeof events.$inferSelect & { publicationNumber: string; language: string };
+type ConfirmationRow = typeof confirmations.$inferSelect;
+
+const isIncrease = (e: EventRow) => e.type === "capital_change" && isCapitalIncrease(e.capitalBefore, e.capitalAfter);
+const linkOf = (c: ConfirmationRow): ConfirmationLink => ({ eventMatch: c.eventMatch, matchConfidence: c.matchConfidence, reviewedAt: c.reviewedAt ? c.reviewedAt.toISOString() : null });
+const issuanceOf = (e: EventRow) => shareIssuance({ ...(e.payload as IssuancePayload), sharesBefore: e.sharesBefore, sharesAfter: e.sharesAfter });
+
 /** Capital increases published in [start, end] (end already capped at asOf), newest first. */
 export async function readFeedWeek(release: ReleaseMeta, asOf: string, start: string, end: string): Promise<FeedRow[]> {
   await assertPreviewAccess();
   const r = release.id;
+  // A cancellation is published on or after the entry it cancels, so start bounds both queries.
   const rows = await db()
-    .select({ e: events, pub: { number: publications.publicationNumber } })
+    .select({ e: events, pub: { number: publications.publicationNumber, language: publications.language } })
     .from(events)
     .innerJoin(publications, eq(publications.id, events.publicationId))
-    .where(and(visibleAt(events, r, asOf), gte(events.publishedAt, start), lte(events.publishedAt, end)));
-  const cancellations = await db()
-    .select({ e: events, pub: { number: publications.publicationNumber } })
-    .from(events)
-    .innerJoin(publications, eq(publications.id, events.publicationId))
-    .where(and(visibleAt(events, r, asOf), eq(events.type, "cancellation")));
-  const all = [...rows, ...cancellations].map(({ e, pub }) => ({ ...e, publicationNumber: pub.number }));
-  const visible = visibleEvents(all, asOf).filter((e) => e.type === "capital_change" && Number(e.capitalAfter) > Number(e.capitalBefore));
+    .where(and(visibleAt(events, r, asOf), gte(events.publishedAt, start), or(lte(events.publishedAt, end), eq(events.type, "cancellation"))));
+  const all = rows.map(({ e, pub }) => ({ ...e, publicationNumber: pub.number, language: pub.language }));
+  const visible = visibleEvents(all, asOf).filter((e) => e.publishedAt <= end && isIncrease(e));
   if (!visible.length) return [];
   const ids = visible.map((e) => e.id);
   const uids = [...new Set(visible.map((e) => e.companyUid))];
@@ -77,8 +85,7 @@ export async function readFeedWeek(release: ReleaseMeta, asOf: string, start: st
     .map((e) => {
       const a = assess.find((x) => x.eventId === e.id);
       const cs = confs.filter((c) => c.matchedEventId === e.id);
-      const links: ConfirmationLink[] = cs.map((c) => ({ eventMatch: c.eventMatch, matchConfidence: c.matchConfidence, reviewedAt: c.reviewedAt ? c.reviewedAt.toISOString() : null }));
-      const accepted = cs.find((c) => c.eventMatch === "accepted" && (c.matchConfidence === "high" || c.reviewedAt));
+      const accepted = cs.find((c) => isConfirmed(linkOf(c)));
       const payload = e.payload as { canton?: string | null; purpose?: string };
       return {
         eventId: e.id,
@@ -89,22 +96,36 @@ export async function readFeedWeek(release: ReleaseMeta, asOf: string, start: st
         publicationNumber: e.publicationNumber,
         publicationId: e.publicationId,
         publishedAt: e.publishedAt,
+        language: e.language,
         currency: e.currency,
         capitalBefore: e.capitalBefore,
         capitalAfter: e.capitalAfter,
         sharesBefore: e.sharesBefore,
         sharesAfter: e.sharesAfter,
+        issuance: issuanceOf(e),
         tier: a?.tier ?? null,
-        status: deriveStatus(a?.tier ?? null, links),
+        status: deriveStatus(a?.tier ?? null, cs.map(linkOf)),
         announcedRound: accepted ? { url: accepted.sourceUrl, statedAmount: accepted.statedAmount, statedCurrency: accepted.statedCurrency } : null,
       };
     })
     .sort((x, y) => y.publishedAt.localeCompare(x.publishedAt) || y.publicationNumber.localeCompare(x.publicationNumber));
 }
 
+export interface Evidence {
+  ruleHits: string[];
+  rulesScore: number;
+  rejectReason: string | null;
+  /** Claude's score; null when the candidate was not classified (pre-filter reject) or errored. */
+  score: number | null;
+}
+
 export interface CompanyRecord {
   uid: string;
   name: string;
+  /** Language of the latest visible publication (lang attribute on the name). */
+  language: string | null;
+  legalForm: string | null;
+  canton: string | null;
   coverage: string;
   foundedOn: string | null;
   entries: {
@@ -119,66 +140,107 @@ export interface CompanyRecord {
     capitalAfter: string | null;
     sharesBefore: number | null;
     sharesAfter: number | null;
+    contributionType: string | null;
+    issuance: Issuance | null;
+    /** Capital increases only; other steps carry no tier. */
     status: Status | null;
+    evidence: Evidence | null;
+    language: string;
     correctedOn: string | null;
     corrects: string | null;
   }[];
-  confirmations: { publishedAt: string; sourceUrl: string; eventMatch: string; matchConfidence: string; reviewed: boolean }[];
+  /** `eventMatch` is null while the matched entry is not yet published at asOf (never leak it). */
+  confirmations: { publishedAt: string; sourceUrl: string; eventMatch: EventMatch | null; matchConfidence: string; reviewed: boolean }[];
 }
 
 /**
- * One company's record at asOf, or null when nothing of it is published by asOf. Unknown and
- * not-yet-published UIDs get the same null, so a rewound page never reveals later existence (A11).
+ * One company's record at asOf, or null. The release holds only companies with a capital
+ * increase in the backfill window, so a page exists only once such an increase is published by
+ * asOf: unknown and not-yet-raising UIDs get the same null, and a rewound page never reveals
+ * that a company raises later (eng delta A11).
  */
 export async function readCompany(release: ReleaseMeta, uid: string, asOf: string): Promise<CompanyRecord | null> {
   await assertPreviewAccess();
   const r = release.id;
   const rows = await db()
-    .select({ e: events, pub: { number: publications.publicationNumber } })
+    .select({ e: events, pub: { number: publications.publicationNumber, language: publications.language } })
     .from(events)
     .innerJoin(publications, eq(publications.id, events.publicationId))
     .where(and(visibleAt(events, r, asOf), eq(events.companyUid, uid)));
-  const all = rows.map(({ e, pub }) => ({ ...e, publicationNumber: pub.number }));
+  const all = rows.map(({ e, pub }) => ({ ...e, publicationNumber: pub.number, language: pub.language }));
   const visible = visibleEvents(all, asOf);
+  if (!visible.some((e) => isIncrease(e) && e.publishedAt >= release.backfillStart)) return null;
   const names = await db().select().from(companyNames).where(and(visibleAt(companyNames, r, asOf), eq(companyNames.companyUid, uid)));
   const name = nameAt(names, asOf);
   if (!name) return null;
   const ids = visible.map((e) => e.id);
+  const visibleIds = new Set(ids);
   const [assess, confs, [src]] = await Promise.all([
-    ids.length ? db().select().from(assessments).where(and(eq(assessments.releaseId, r), inArray(assessments.eventId, ids))) : Promise.resolve([]),
+    db()
+      .select({ a: assessments, score: classifications.score })
+      .from(assessments)
+      .leftJoin(classifications, eq(classifications.id, assessments.classificationId))
+      .where(and(eq(assessments.releaseId, r), inArray(assessments.eventId, ids))),
     db().select().from(confirmations).where(and(visibleAt(confirmations, r, asOf), eq(confirmations.companyUid, uid))),
     db().select().from(companySources).where(eq(companySources.companyUid, uid)),
   ]);
   const corrected = correctedAt(all, asOf);
   const foundedOn = src?.foundedOn && src.foundedOn <= asOf ? src.foundedOn : null;
-  const coverage = src ? coverageLine(coverageFromSources({ ...src, zefixRefs: src.zefixRefs.filter((z) => z.date <= asOf) }), release.backfillStart) : coverageLine({ formationFound: false, foundedOn: null, earliestShabPublished: null, earliestZefixRef: null, historyLookupFailed: true }, release.backfillStart);
+  const coverage = coverageLine(
+    src
+      ? coverageFromSources({
+          ...src,
+          // Every coverage fact is capped at asOf, like the summary (one rewind rule).
+          foundedOn,
+          formationFound: src.formationFound && foundedOn !== null,
+          earliestShabPublished: src.earliestShabPublished && src.earliestShabPublished <= asOf ? src.earliestShabPublished : null,
+          zefixRefs: src.zefixRefs.filter((z) => z.date <= asOf),
+        })
+      : { formationFound: false, foundedOn: null, earliestShabPublished: null, earliestZefixRef: null, historyLookupFailed: true },
+    release.backfillStart,
+  );
+  const sorted = visible.sort((a, b) => a.publishedAt.localeCompare(b.publishedAt) || a.seq - b.seq);
+  const latest = <K extends "legalForm" | "canton">(key: K) =>
+    [...sorted].reverse().map((e) => (e.payload as Partial<Record<K, string | null>>)[key]).find((v): v is string => !!v) ?? null;
   return {
     uid,
     name,
+    language: sorted.at(-1)?.language ?? null,
+    legalForm: latest("legalForm"),
+    canton: latest("canton"),
     coverage,
     foundedOn,
-    entries: visible
-      .sort((a, b) => a.publishedAt.localeCompare(b.publishedAt) || a.seq - b.seq)
-      .map((e) => {
-        const a = assess.find((x) => x.eventId === e.id);
-        const links = confs.filter((c) => c.matchedEventId === e.id).map((c) => ({ eventMatch: c.eventMatch, matchConfidence: c.matchConfidence, reviewedAt: c.reviewedAt ? c.reviewedAt.toISOString() : null }));
-        return {
-          eventId: e.id,
-          type: e.type,
-          publishedAt: e.publishedAt,
-          legalDate: e.legalDate,
-          publicationNumber: e.publicationNumber,
-          publicationId: e.publicationId,
-          payload: e.payload,
-          capitalBefore: e.capitalBefore,
-          capitalAfter: e.capitalAfter,
-          sharesBefore: e.sharesBefore,
-          sharesAfter: e.sharesAfter,
-          status: e.type === "capital_change" ? deriveStatus(a?.tier ?? null, links) : null,
-          correctedOn: corrected.get(e.publicationNumber) ?? null,
-          corrects: e.correctsPublicationNumber,
-        };
-      }),
-    confirmations: confs.map((c) => ({ publishedAt: c.publishedAt, sourceUrl: c.sourceUrl, eventMatch: c.eventMatch, matchConfidence: c.matchConfidence, reviewed: c.reviewedAt !== null })),
+    entries: sorted.map((e) => {
+      const found = assess.find((x) => x.a.eventId === e.id);
+      const a = found?.a;
+      const increase = isIncrease(e);
+      return {
+        eventId: e.id,
+        type: e.type,
+        publishedAt: e.publishedAt,
+        legalDate: e.legalDate,
+        publicationNumber: e.publicationNumber,
+        publicationId: e.publicationId,
+        payload: e.payload,
+        capitalBefore: e.capitalBefore,
+        capitalAfter: e.capitalAfter,
+        sharesBefore: e.sharesBefore,
+        sharesAfter: e.sharesAfter,
+        contributionType: e.contributionType,
+        issuance: e.type === "capital_change" ? issuanceOf(e) : null,
+        status: increase ? deriveStatus(a?.tier ?? null, confs.filter((c) => c.matchedEventId === e.id).map(linkOf)) : null,
+        evidence: increase && a ? { ruleHits: a.ruleHits, rulesScore: a.rulesScore, rejectReason: a.rejectReason, score: found?.score ?? null } : null,
+        language: e.language,
+        correctedOn: corrected.get(e.publicationNumber) ?? null,
+        corrects: e.correctsPublicationNumber,
+      };
+    }),
+    confirmations: confs.map((c) => ({
+      publishedAt: c.publishedAt,
+      sourceUrl: c.sourceUrl,
+      eventMatch: c.matchedEventId && !visibleIds.has(c.matchedEventId) ? null : c.eventMatch,
+      matchConfidence: c.matchConfidence,
+      reviewed: c.reviewedAt !== null,
+    })),
   };
 }

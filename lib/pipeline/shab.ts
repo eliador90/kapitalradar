@@ -90,6 +90,4 @@ export function cachePublicationXml(id: string, xml: string) {
   writeFileSync(join(CACHE_DIR, `${id}.xml`), xml);
 }
 
-export function publicationUrl(id: string): string {
-  return `https://amtsblattportal.ch/#!/search/publications/detail/${id}`;
-}
+export { publicationUrl } from "../domain/shab-link";

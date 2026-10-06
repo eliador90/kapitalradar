@@ -15,3 +15,12 @@ export function formatUid(uid: string): string {
 }
 
 export const isCanonicalUid = (s: string) => CANONICAL.test(s);
+
+/** A UID from a URL path segment; malformed percent-encoding counts as no UID. */
+export function uidFromPathSegment(segment: string): string | null {
+  try {
+    return normalizeUid(decodeURIComponent(segment));
+  } catch {
+    return null;
+  }
+}
