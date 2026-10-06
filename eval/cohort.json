@@ -1,0 +1,415 @@
+{
+  "seed": 2613906888,
+  "window": {
+    "start": "2025-12-01",
+    "end": "2026-04-08"
+  },
+  "matchWindowDays": {
+    "before": 120,
+    "after": 180
+  },
+  "spike": [
+    {
+      "rank": 1,
+      "uid": "CHE213692684",
+      "company": "Ahead Health AG",
+      "announced": "2026-01-13",
+      "url": "https://www.startupticker.ch/en/news/embargo-13-01-8am-preventive-health-startup-ahead-health-secures-6-million",
+      "title": "Preventive health startup Ahead Health secures $6 million"
+    },
+    {
+      "rank": 3,
+      "uid": "CHE478871980",
+      "company": "ORamaVR SA",
+      "announced": "2026-01-30",
+      "url": "https://www.startupticker.ch/en/news/oramavr-secures-4-5m-to-scale-medical-xr-simulations",
+      "title": "ORamaVR secures $4.5M to scale medical XR simulations"
+    },
+    {
+      "rank": 5,
+      "uid": "CHE299451950",
+      "company": "Axi Labs AG",
+      "announced": "2026-03-11",
+      "url": "https://www.startupticker.ch/en/news/fintech-company-axiym-receives-strategic-investment-from-tether",
+      "title": "Fintech company Axiym receives strategic investment from Tether"
+    },
+    {
+      "rank": 7,
+      "uid": "CHE449975270",
+      "company": "ExerGo SA",
+      "announced": "2026-02-18",
+      "url": "https://www.startupticker.ch/en/news/engie-secures-stake-in-exergo",
+      "title": "ENGIE secures stake in ExerGo"
+    },
+    {
+      "rank": 8,
+      "uid": "CHE231678216",
+      "company": "Testmate Health SA",
+      "announced": "2025-12-12",
+      "url": "https://www.startupticker.ch/en/news/new-strategic-investor-to-support-testmate-us-efforts",
+      "title": "New strategic investor to support Testmate US efforts"
+    },
+    {
+      "rank": 9,
+      "uid": "CHE453478419",
+      "company": "Soverli AG",
+      "announced": "2025-12-16",
+      "url": "https://www.startupticker.ch/en/news/soverli-raises-2-6m-pre-seed-capital",
+      "title": "Soverli raises $2.6M pre-seed capital"
+    },
+    {
+      "rank": 12,
+      "uid": "CHE378979051",
+      "company": "STS Digital AG",
+      "announced": "2026-03-02",
+      "url": "https://www.startupticker.ch/en/news/sts-digital-closes-usd-30-million-strategic-round-to-scale-its-crypto-options-trading-platform",
+      "title": "STS Digital raises USD 30 million to scale its crypto options trading platform"
+    },
+    {
+      "rank": 13,
+      "uid": "CHE249673253",
+      "company": "L.E.S.S. SA",
+      "announced": "2026-02-27",
+      "url": "https://www.startupticker.ch/en/news/l-e-s-s-raises-usd-22-million-series-c-financing",
+      "title": "L.E.S.S. raises $22 million Series C Financing"
+    },
+    {
+      "rank": 15,
+      "uid": "CHE342451781",
+      "company": "Aukera Therapeutics AG",
+      "announced": "2025-12-11",
+      "url": "https://www.startupticker.ch/en/news/aukera-therapeutics-welcomes-industry-veteran-as-investor-and-board-member",
+      "title": "Aukera Therapeutics welcomes industry veteran as investor and board member"
+    },
+    {
+      "rank": 17,
+      "uid": "CHE270490998",
+      "company": "Plair SA",
+      "announced": "2026-03-27",
+      "url": "https://www.startupticker.ch/en/news/plair-attracts-investment-from-biomerieux",
+      "title": "Plair attracts investment from bioMérieux"
+    },
+    {
+      "rank": 19,
+      "uid": "CHE291505720",
+      "company": "terralayr AG",
+      "announced": "2026-01-19",
+      "url": "https://www.startupticker.ch/en/news/terralayr-secures-192-million-to-further-grow-its-grid-scale-battery-storage-portfolio",
+      "title": "Terralayr secures €192 million to further grow its grid-scale battery storage portfolio"
+    },
+    {
+      "rank": 25,
+      "uid": "CHE298133861",
+      "company": "CompPair Technologies SA",
+      "announced": "2026-02-18",
+      "url": "https://www.startupticker.ch/en/news/new-funding-to-boost-comppair-growth-and-reinforce-commercial-execution",
+      "title": "New funding to boost CompPair market deployment and growth"
+    },
+    {
+      "rank": 27,
+      "uid": "CHE442791208",
+      "company": "TECregen AG",
+      "announced": "2026-01-09",
+      "url": "https://www.startupticker.ch/en/news/chf-10-million-seed-funding-and-new-board-chair-for-tecregen",
+      "title": "CHF 10 million seed funding and new board chair for TECregen"
+    },
+    {
+      "rank": 28,
+      "uid": "CHE482446338",
+      "company": "Chiral Nano AG",
+      "announced": "2026-02-06",
+      "url": "https://www.startupticker.ch/en/news/chiral-raises-12m-to-unlock-post-silicon-computing-beyond-moore-s-law",
+      "title": "Chiral raises $12M to unlock post-silicon computing beyond Moore’s Law"
+    },
+    {
+      "rank": 29,
+      "uid": "CHE440654730",
+      "company": "Artificialy SA",
+      "announced": "2026-04-02",
+      "url": "https://www.startupticker.ch/en/news/ubs-makes-a-strategic-investment-in-artificialy",
+      "title": "UBS makes a strategic investment in Artificialy"
+    },
+    {
+      "rank": 31,
+      "uid": "CHE218846606",
+      "company": "Alithea Genomics SA",
+      "announced": "2026-03-04",
+      "url": "https://www.startupticker.ch/en/news/alithea-genomics-closes-chf-6-9m-round-and-names-new-ceo",
+      "title": "Alithea Genomics closes CHF 6.9M round and names new CEO"
+    },
+    {
+      "rank": 32,
+      "uid": "CHE318903127",
+      "company": "Agora Care SA",
+      "announced": "2026-03-17",
+      "url": "https://www.startupticker.ch/en/news/chf-2-2-million-to-power-agora-care-ai-experience",
+      "title": "Agora Care increases capital to power AI Experience"
+    },
+    {
+      "rank": 33,
+      "uid": "CHE112158921",
+      "company": "cohaga AG",
+      "announced": "2026-04-02",
+      "url": "https://www.startupticker.ch/en/news/cohaga-sammelt-millionenbetrag-und-lanciert-tool-fuer-praesenz-in-ki-antworten",
+      "title": "Cohaga sammelt Millionenbetrag und lanciert Tool für Präsenz in KI-Antworten"
+    },
+    {
+      "rank": 34,
+      "uid": "CHE294398863",
+      "company": "Sparkli AG",
+      "announced": "2026-01-23",
+      "url": "https://www.startupticker.ch/en/news/edtech-start-up-sparkli-raises-5m-pre-seed-funding",
+      "title": "Edtech start-up Sparkli raises $5M pre-seed funding"
+    },
+    {
+      "rank": 35,
+      "uid": "CHE178002184",
+      "company": "OPTIML AG",
+      "announced": "2026-02-17",
+      "url": "https://www.startupticker.ch/en/news/proptech-startup-optiml-secures-8-million-to-expand-real-estate-ai-platform",
+      "title": "PropTech startup Optiml secures €8 million to expand real estate AI platform"
+    }
+  ],
+  "cohort": [
+    {
+      "rank": 38,
+      "uid": "CHE304999902",
+      "company": "Seprify AG",
+      "announced": "2026-03-10",
+      "url": "https://www.startupticker.ch/en/news/chf-12-25m-to-roll-out-seprify-s-procurement-ready-cellulose-for-industry",
+      "title": "CHF 12.25 million to roll out Seprify's procurement-ready cellulose for industry"
+    },
+    {
+      "rank": 40,
+      "uid": "CHE232368942",
+      "company": "Oxara AG",
+      "announced": "2026-02-06",
+      "url": "https://www.startupticker.ch/en/news/oxara-welcomes-investment-from-medley-ventures",
+      "title": "Oxara welcomes investment from Medley Ventures"
+    },
+    {
+      "rank": 41,
+      "uid": "CHE158616302",
+      "company": "Metafuels AG",
+      "announced": "2026-02-20",
+      "url": "https://www.startupticker.ch/en/news/24m-to-bring-metafuels-synthetic-aviation-fuel-to-market",
+      "title": "Metafuels raises $24M to bring synthetic aviation fuel to market at scale"
+    },
+    {
+      "rank": 45,
+      "uid": "CHE257956279",
+      "company": "FluoSphera SA",
+      "announced": "2026-01-12",
+      "url": "https://www.startupticker.ch/en/news/fluosphera-raises-chf-1-15m-to-scale-human-based-preclinical-platform",
+      "title": "FluoSphera Raises CHF 1.15M to Scale Human-Based Preclinical Platform"
+    },
+    {
+      "rank": 51,
+      "uid": "CHE448817007",
+      "company": "Allegria Therapeutics AG",
+      "announced": "2025-12-12",
+      "url": "https://www.startupticker.ch/en/news/usd-5-million-to-accelerate-allegria-s-anti-allergy-portfolio",
+      "title": "USD 5 million to accelerate ALLEGRIA’s anti-allergy portfolio"
+    },
+    {
+      "rank": 58,
+      "uid": "CHE280524883",
+      "company": "Youdera Group SA",
+      "announced": "2026-04-08",
+      "url": "https://www.startupticker.ch/en/news/amundi-invests-in-youdera-to-scale-distributed-energy-infrastructure",
+      "title": "Amundi invests in Youdera to scale distributed energy infrastructure"
+    },
+    {
+      "rank": 60,
+      "uid": "CHE414169498",
+      "company": "Polares Medical SA",
+      "announced": "2026-03-04",
+      "url": "https://www.startupticker.ch/en/news/50m-to-advance-polares-medical-u-s-expansion-of-mrace",
+      "title": "USD 50 million to advance Polares Medical U.S. expansion"
+    },
+    {
+      "rank": 61,
+      "uid": "CHE343543919",
+      "company": "Clee Medical SA",
+      "announced": "2026-02-25",
+      "url": "https://www.startupticker.ch/en/news/seed-financing-to-advance-clee-medical-real-time-brain-imaging-for-neurosurgery",
+      "title": "Seed financing to advance Clee Medical brain imaging for neurosurgery"
+    },
+    {
+      "rank": 62,
+      "uid": "CHE365410126",
+      "company": "Ionic Wind AG",
+      "announced": "2025-12-15",
+      "url": "https://www.startupticker.ch/en/news/ionic-wind-secures-us-2-1m-to-industrialize-solid-state-cooling-technology",
+      "title": "Ionic Wind secures US $2.1M to industrialize Solid-state cooling technology"
+    },
+    {
+      "rank": 64,
+      "uid": "CHE316234404",
+      "company": "Noriware AG",
+      "announced": "2026-01-16",
+      "url": "https://www.startupticker.ch/en/news/sustainable-materials-company-secures-chf-4-million-ahead-of-market-launch",
+      "title": "Sustainable materials company secures CHF 4 million ahead of market launch"
+    },
+    {
+      "rank": 67,
+      "uid": "CHE106413364",
+      "company": "Algorized SA",
+      "announced": "2026-02-11",
+      "url": "https://www.startupticker.ch/en/news/physical-ai-start-up-algorized-secures-usd-13-million-series-a-funding",
+      "title": "Physical AI start-up Algorized secures USD 13 million Series A funding"
+    },
+    {
+      "rank": 68,
+      "uid": "CHE248792688",
+      "company": "Haelixa AG",
+      "announced": "2026-02-03",
+      "url": "https://www.startupticker.ch/en/news/haelixia-secures-eur-2-million-to-boost-global-growth",
+      "title": "Haelixa secures EUR 2 million to boost global growth"
+    },
+    {
+      "rank": 69,
+      "uid": "CHE382539063",
+      "company": "vyzn AG",
+      "announced": "2025-12-09",
+      "url": "https://www.startupticker.ch/en/news/vyzn-secures-seed-funding-to-accelerate-further-growth",
+      "title": "Proptech startup vyzn secures seed funding to accelerate further growth"
+    },
+    {
+      "rank": 72,
+      "uid": "CHE399512500",
+      "company": "Genknowme SA",
+      "announced": "2025-12-18",
+      "url": "https://www.startupticker.ch/en/news/validation-and-growth-for-genknowme",
+      "title": "Validation and growth for Genknowme"
+    },
+    {
+      "rank": 76,
+      "uid": "CHE171163797",
+      "company": "UMANITEK AG",
+      "announced": "2026-02-10",
+      "url": "https://www.startupticker.ch/en/news/umanitek-expands-its-global-ai-safety-mission-with-a-strategic-investment",
+      "title": "Umanitek expands its global AI safety mission with a strategic investment"
+    },
+    {
+      "rank": 82,
+      "uid": "CHE271699590",
+      "company": "Selma Finance AG",
+      "announced": "2026-03-05",
+      "url": "https://www.startupticker.ch/en/news/investment-fuer-ki-gestuetzte-altersvorsorge",
+      "title": "Investment für KI-gestützte Altersvorsorge"
+    },
+    {
+      "rank": 85,
+      "uid": "CHE452682851",
+      "company": "Pregnolia AG",
+      "announced": "2026-03-11",
+      "url": "https://www.startupticker.ch/en/news/pregnolia-secures-equity-funding-to-bring-preterm-birth-prediction-to-clinical-practice",
+      "title": "Pregnolia secures equity funding to bring preterm birth prediction to clinical practice"
+    },
+    {
+      "rank": 88,
+      "uid": "CHE190466790",
+      "company": "EVIS Bioscience AG",
+      "announced": "2026-03-20",
+      "url": "https://www.startupticker.ch/en/news/evis-bioscience-successfully-closes-740k-pre-seed-round-on-capital-cell",
+      "title": "EVis Bioscience successfully closes €740K pre-seed round on Capital Cell"
+    },
+    {
+      "rank": 89,
+      "uid": "CHE290009772",
+      "company": "Soeder AG",
+      "announced": "2026-03-24",
+      "url": "https://www.startupticker.ch/en/news/soeder-baut-aus-und-um",
+      "title": "Soeder baut aus und um"
+    },
+    {
+      "rank": 92,
+      "uid": "CHE308142728",
+      "company": "Kandou AI Holding SA",
+      "announced": "2026-03-23",
+      "url": "https://www.startupticker.ch/en/news/kandou-ai-closes-225m-series-a-round-to-break-memory-bottlenecks-in-ai",
+      "title": "Kandou AI closes $225m Series A round to break memory bottlenecks in AI"
+    },
+    {
+      "rank": 93,
+      "uid": "CHE361096976",
+      "company": "PAVE Space SA",
+      "announced": "2026-03-25",
+      "url": "https://www.startupticker.ch/en/news/pave-space-raises-40m-to-accelerate-satellite-deployment",
+      "title": "PAVE Space raises $40M to disrupt satellite deployment"
+    },
+    {
+      "rank": 94,
+      "uid": "CHE184306830",
+      "company": "Liom Health AG",
+      "announced": "2025-12-22",
+      "url": "https://www.startupticker.ch/en/news/13-9-million-for-glucose-monitoring-wearable",
+      "title": "€13.9 million for glucose-monitoring wearable"
+    },
+    {
+      "rank": 95,
+      "uid": "CHE380226104",
+      "company": "Winduction AG",
+      "announced": "2026-02-17",
+      "url": "https://www.startupticker.ch/en/news/winduction-raises-chf-1-15m-to-move-wireless-charging-into-real-world-testing",
+      "title": "Winduction raises CHF 1.15M to move wireless charging into real-world testing"
+    },
+    {
+      "rank": 96,
+      "uid": "CHE362641008",
+      "company": "Covalo AG",
+      "announced": "2026-04-02",
+      "url": "https://www.startupticker.ch/en/news/covalo-sichert-sich-finanzierung-in-millionenhoehe-fuer-naechste-wachstumsphase",
+      "title": "Covalo sichert sich Finanzierung in Millionenhöhe für nächste Wachstumsphase"
+    },
+    {
+      "rank": 97,
+      "uid": "CHE199078187",
+      "company": "SolidWatts SA",
+      "announced": "2026-03-26",
+      "url": "https://www.startupticker.ch/en/news/1-8m-seed-round-to-fuel-solidwatts-industrial-process-heating-vision",
+      "title": "1.8M Seed Round to fuel SolidWatts Industrial Process Heating Vision"
+    },
+    {
+      "rank": 98,
+      "uid": "CHE305277059",
+      "company": "nowon AG",
+      "announced": "2026-02-24",
+      "url": "https://www.startupticker.ch/en/news/oesterreichische-verwertungsgesellschaft-investiert-in-luzerner-startup",
+      "title": "Österreichische Verwertungsgesellschaft investiert in Luzerner Startup"
+    },
+    {
+      "rank": 103,
+      "uid": "CHE442270754",
+      "company": "Oviva AG",
+      "announced": "2026-01-22",
+      "url": "https://www.startupticker.ch/en/news/digitalhealth-company-oviva-banks-usd-200m-series-d-funding",
+      "title": "Digitalhealth company Oviva banks USD 220M Series D funding"
+    },
+    {
+      "rank": 104,
+      "uid": "CHE270168752",
+      "company": "Gaisbock AG",
+      "announced": "2026-03-30",
+      "url": "https://www.startupticker.ch/en/news/person-2-investiert-in-obwaldner-startup",
+      "title": "<PERSON_2> investiert in Obwaldner Startup"
+    },
+    {
+      "rank": 105,
+      "uid": "CHE343173900",
+      "company": "DigeHealth SA",
+      "announced": "2025-12-10",
+      "url": "https://www.startupticker.ch/en/news/digehealth-secures-chf-1-25-million-seed-round",
+      "title": "DigeHealth secures CHF 1.25 million seed round"
+    },
+    {
+      "rank": 106,
+      "uid": "CHE195614655",
+      "company": "MIROS Technology SA",
+      "announced": "2026-03-30",
+      "url": "https://www.startupticker.ch/en/news/chf-1m-to-scale-miros-swiss-wide-network-of-connected-workpods",
+      "title": "CHF 1 million to Scale Miros Swiss Network of Connected Workpods"
+    }
+  ]
+}

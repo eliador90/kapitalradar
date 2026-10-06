@@ -1,0 +1,424 @@
+{
+  "entries": [
+    {
+      "uid": "CHE213692684",
+      "company": "Ahead Health AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE478871980",
+      "company": "ORamaVR SA",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE299451950",
+      "company": "Axi Labs AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE449975270",
+      "company": "ExerGo SA",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE231678216",
+      "company": "Testmate Health SA",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE453478419",
+      "company": "Soverli AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE378979051",
+      "company": "STS Digital AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE249673253",
+      "company": "L.E.S.S. SA",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE342451781",
+      "company": "Aukera Therapeutics AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE270490998",
+      "company": "Plair SA",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE291505720",
+      "company": "terralayr AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE298133861",
+      "company": "CompPair Technologies SA",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE442791208",
+      "company": "TECregen AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE482446338",
+      "company": "Chiral Nano AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE440654730",
+      "company": "Artificialy SA",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE218846606",
+      "company": "Alithea Genomics SA",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE318903127",
+      "company": "Agora Care SA",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE112158921",
+      "company": "cohaga AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE294398863",
+      "company": "Sparkli AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE178002184",
+      "company": "OPTIML AG",
+      "source": "spike",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE310255922",
+      "company": "Brielmayer Holding AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE294630698",
+      "company": "Nereva SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE182433340",
+      "company": "Arqh AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE188957647",
+      "company": "Vale Investments SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE371974816",
+      "company": "PreComb Therapeutics AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE377719004",
+      "company": "BSC Transports SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE181869640",
+      "company": "ISP Group AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE352221053",
+      "company": "Great O Legacy Distribution & Co SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE395550588",
+      "company": "PEAKSTAFF AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE354591532",
+      "company": "Hypersimplex SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE294885554",
+      "company": "Alivion AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE109107863",
+      "company": "Heverald Groupe SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE113479003",
+      "company": "Doodle AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE161977858",
+      "company": "Magellan Marketing SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE215174710",
+      "company": "Whitecell Power AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE429263290",
+      "company": "BeeSolar SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE101271542",
+      "company": "InnoMedica Holding AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE115726968",
+      "company": "Gentianes Group SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE496562005",
+      "company": "Viatu AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE419252764",
+      "company": "Compagnie Privée de Conseils et de Fiducie SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE313480585",
+      "company": "OS Capital Partners AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE371959426",
+      "company": "Foxstone SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE223326011",
+      "company": "Geterre AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE455127126",
+      "company": "Horia SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE205544716",
+      "company": "Eraneos Holding AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE154680703",
+      "company": "THEOS INVEST SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE174194506",
+      "company": "FimmCyte AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE360372139",
+      "company": "Paprec Swiss Group SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE112828934",
+      "company": "Abacus Umantis AG",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE108651199",
+      "company": "Profilgest SA",
+      "source": "assignment",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE479313033",
+      "company": "Joran Partners AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE217268552",
+      "company": "flowit AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE424414541",
+      "company": "SwissDrones Operating AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE457582576",
+      "company": "Findependent AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE114362007",
+      "company": "TVP Solar SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE199552591",
+      "company": "Embion Technologies SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE188776100",
+      "company": "SMTM VII SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE485116920",
+      "company": "KAISERHAUS HANDELz AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE141471366",
+      "company": "Bite-Finder AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE373771678",
+      "company": "EH Group Engineering SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE112534906",
+      "company": "Groupe Eric Sturdza SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE169120376",
+      "company": "BSL CH AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE253496327",
+      "company": "Yuon Control AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE187646914",
+      "company": "Haya Therapeutics SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE239055668",
+      "company": "HELVO SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE406111054",
+      "company": "ABSTRACT DRINKS SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE465152120",
+      "company": "Granite Bio AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE499636858",
+      "company": "NaturalCycles AG",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE334653443",
+      "company": "Swisspod Technologies SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    },
+    {
+      "uid": "CHE191728053",
+      "company": "AVAtronics SA",
+      "source": "x1",
+      "added": "2026-10-05"
+    }
+  ]
+}
