@@ -3,6 +3,7 @@
 // its own release failed and never touches the pointer, so visitors keep the live release.
 import { randomUUID } from "node:crypto";
 import { addDays } from "../domain/dates";
+import { isCapitalIncrease } from "../domain/events";
 import { isGazetteDay } from "../domain/holidays";
 import type { ReleaseConfig, Tier } from "../domain/schemas";
 import type { CompanyBundle } from "./candidates";
@@ -110,7 +111,7 @@ export interface BuildResult {
   counts: { companies: number; events: number; assessments: number; candidates: number; names: number; confirmations: number };
 }
 
-export function deriveRows(input: Pick<BuildInput, "companies" | "classification" | "config" | "snapshotDate">) {
+export function deriveRows(input: Pick<BuildInput, "companies" | "classification" | "config" | "snapshotDate" | "backfillStart">) {
   const events: EventRow[] = [];
   const names: NameRow[] = [];
   const assessments: AssessmentRow[] = [];
@@ -154,7 +155,9 @@ export function deriveRows(input: Pick<BuildInput, "companies" | "classification
         });
         if (capital) eventIdByPublication.set(p.id, id);
         const cand = capital ? byPub.get(p.id) : undefined;
-        if (!cand) return;
+        // Only capital increases in the backfill window are assessed; earlier history is context
+        // ("not assessed", plan "Tier") and reductions carry no tier.
+        if (!cand || p.publishedAt < input.backfillStart || !isCapitalIncrease(cand.event.capitalBefore, cand.event.capitalAfter)) return;
         let tier: Tier = "capital_increased";
         let hash: string | null = null;
         if (cand.rules.candidate) {

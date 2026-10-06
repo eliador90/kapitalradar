@@ -80,7 +80,7 @@ async function measure() {
   for (const uid of uids) {
     if (items.length >= n) break;
     const company = await loadCompany(uid);
-    const cand = company.capitalChanges.find((c) => c.rules.candidate && c.publication.publishedAt >= "2025-08-01");
+    const cand = company.capitalChanges.find((c) => c.rules.candidate && c.publication.publishedAt >= BACKFILL_START);
     if (cand) items.push({ inputHash: cand.inputHash, input: cand.input });
   }
   const t0 = Date.now();

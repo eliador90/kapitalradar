@@ -19,4 +19,4 @@ export function textAt(xml: string, path: readonly string[]): string | undefined
 }
 
 /** eCH-0097 legal form codes used in the HR export. */
-export const LEGAL_FORM = { AG: "0106", GMBH: "0107" } as const;
+export { LEGAL_FORM } from "../domain/events";

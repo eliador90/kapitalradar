@@ -95,6 +95,24 @@ describe("release build", () => {
     expect(repo.read()!.assessments[0]!.tier).toBe("likely_financing");
   });
 
+  it("assesses only events inside the backfill window; earlier history stays not assessed", async () => {
+    const repo = new MemoryRepo();
+    const later = "2099-01-01";
+    const r = await buildRelease(input("r1", { backfillStart: later, snapshotDate: later, daysWithEntries: allDays(later, later) }), repo, quiet);
+    expect(r.counts.events).toBeGreaterThan(0);
+    expect(r.counts.assessments).toBe(0);
+    expect(r.counts.candidates).toBe(0);
+  });
+
+  it("gives a capital reduction no assessment (it carries no tier)", async () => {
+    const red = parsePublication(readFileSync("eval/fixtures/shab/fr-reduction.xml", "utf8"));
+    const reducing = { ...assembleCompany(red.companyUid!, [red], null, { weights: {}, threshold: 1 }), parseFailures: [] };
+    const repo = new MemoryRepo();
+    const r = await buildRelease(input("r1", { companies: [reducing], snapshotDate: "2099-01-01", backfillStart: "2000-01-01", daysWithEntries: new Set() }), repo, quiet);
+    expect(r.counts.events).toBeGreaterThan(0);
+    expect(r.counts.assessments).toBe(0);
+  });
+
   it("ignores holidays and weekends when checking for empty gazette days", () => {
     expect(missingGazetteDays(new Set(), "2025-12-24", "2025-12-28")).toEqual(["2025-12-24"]);
   });

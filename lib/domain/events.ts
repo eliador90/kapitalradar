@@ -3,6 +3,12 @@ import { z } from "zod";
 import { contributionType, isoDate } from "./schemas";
 
 export const CURRENCIES = ["CHF", "EUR", "USD", "GBP"] as const;
+
+/** SHAB legal-form codes (eCH-0097). */
+export const LEGAL_FORM = { AG: "0106", GMBH: "0107" } as const;
+
+/** One definition of "this step increased the nominal capital" (amounts as decimal strings). */
+export const isCapitalIncrease = (before: string | null, after: string | null) => before !== null && after !== null && Number(after) > Number(before);
 export const currency = z.enum(CURRENCIES);
 
 export const shareClass = z.object({
