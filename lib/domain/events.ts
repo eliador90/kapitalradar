@@ -65,3 +65,7 @@ export const parsedEvent = z.discriminatedUnion("type", [
   z.object({ type: z.literal("cancellation"), payload: cancellationPayload }),
 ]);
 export type ParsedEvent = z.infer<typeof parsedEvent>;
+export type CapitalEvent = Extract<ParsedEvent, { type: "capital_change" }>;
+
+/** Lower-cased labels of the preferred classes (one definition for "which preferred classes exist"). */
+export const preferredLabels = (classes: readonly ShareClass[] | null) => new Set((classes ?? []).filter((c) => c.preferred).map((c) => (c.label ?? "").toLowerCase()));

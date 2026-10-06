@@ -1,0 +1,856 @@
+{
+  "note": "Dev data only: shapes rules and the threshold, never reported as precision or recall.",
+  "devItems": 46,
+  "excludedUnknown": 3,
+  "positives": 21,
+  "preFilterRecall": 1,
+  "threshold": {
+    "threshold": 1,
+    "f1": 0.9130434782608696,
+    "precision": 0.84,
+    "recall": 1,
+    "tp": 21,
+    "fp": 4,
+    "fn": 0
+  },
+  "ruleStats": {
+    "odd_amount_small_nominal": {
+      "fired": 28,
+      "positives": 19
+    },
+    "young_company": {
+      "fired": 27,
+      "positives": 15
+    },
+    "tech_purpose": {
+      "fired": 24,
+      "positives": 17
+    },
+    "new_preferred_class": {
+      "fired": 6,
+      "positives": 6
+    },
+    "round_amount_holding": {
+      "fired": 1,
+      "positives": 0
+    },
+    "esop_sized_increment": {
+      "fired": 4,
+      "positives": 0
+    },
+    "set_off_only": {
+      "fired": 6,
+      "positives": 0
+    },
+    "in_kind_only": {
+      "fired": 2,
+      "positives": 0
+    },
+    "conditional_capital_issuance": {
+      "fired": 0,
+      "positives": 0
+    },
+    "restructuring_pair": {
+      "fired": 0,
+      "positives": 0
+    },
+    "capital_reduction": {
+      "fired": 0,
+      "positives": 0
+    }
+  },
+  "rows": [
+    {
+      "id": "8fe53ee9-2759-4bdf-afc5-fc7be0e687bf",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006437830",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "young_company",
+        "round_amount_holding",
+        "in_kind_only"
+      ],
+      "score": -2,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "under_2",
+      "contribution": "in_kind"
+    },
+    {
+      "id": "88838525-c0b9-4e78-bcfb-106e45525b33",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006763030",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 1,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "d37ff8bc-fbfb-4582-84c9-c231f1e93a07",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006443721",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "new_preferred_class"
+      ],
+      "score": 3,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "under_2",
+      "contribution": "cash"
+    },
+    {
+      "id": "3dd0638b-a38b-4fb2-b94e-533186eea78d",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006516345",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company"
+      ],
+      "score": 1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "b637fda2-4028-45bd-8832-0b53b148840a",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006700648",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "tech_purpose",
+        "esop_sized_increment",
+        "set_off_only"
+      ],
+      "score": -1,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "6_plus",
+      "contribution": "set_off"
+    },
+    {
+      "id": "1a80a06c-111d-4f87-acad-0b15bcd79197",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006569744",
+      "positive": false,
+      "unknown": true,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "esop_sized_increment"
+      ],
+      "score": 0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "8a5425f1-8ec9-4a60-80e4-8fb2894c56b6",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006399440",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "esop_sized_increment"
+      ],
+      "score": 0,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "unknown",
+      "contribution": "cash"
+    },
+    {
+      "id": "d5fd9c0c-e776-46c2-b5d3-4bfc5d424390",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006717346",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "young_company"
+      ],
+      "score": 0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "under_2",
+      "contribution": "cash"
+    },
+    {
+      "id": "d6df0c2b-8321-4fd8-bcbf-c1ecca474cf4",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006630361",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "young_company"
+      ],
+      "score": 0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "under_2",
+      "contribution": "cash"
+    },
+    {
+      "id": "6812593e-8a19-48a7-9f89-d4c36488cf27",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006754926",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 1,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "b87f32d4-e780-486b-a48d-dd5370f9ac8b",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006584188",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 2,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "d6dfa29e-0a86-4f10-b3d5-5ff1ca78a12f",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006602773",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "set_off_only"
+      ],
+      "score": -1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "unknown",
+      "contribution": "set_off"
+    },
+    {
+      "id": "452ccaf3-ff82-4a3c-bbc3-355c3b221699",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006624970",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "tech_purpose",
+        "esop_sized_increment"
+      ],
+      "score": 0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "unknown",
+      "contribution": "cash"
+    },
+    {
+      "id": "cbf4299e-0c5c-4211-9ee3-bc5457db57bd",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006614438",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 1,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "a8645a4c-73df-4f67-9a92-5cc22ef71c9c",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006567703",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "in_kind_only"
+      ],
+      "score": 0,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "2_to_6",
+      "contribution": "in_kind"
+    },
+    {
+      "id": "9c8ea388-9332-4ce3-bd04-747f77eb77b7",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006500774",
+      "positive": false,
+      "unknown": true,
+      "hits": [],
+      "score": 0,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "6_plus",
+      "contribution": "cash"
+    },
+    {
+      "id": "0d854dd3-316c-4535-9deb-612bc113aebf",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006468887",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "tech_purpose"
+      ],
+      "score": 1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "unknown",
+      "contribution": "cash"
+    },
+    {
+      "id": "8b89001e-3cf9-44f6-8223-235c4ce3c06e",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006624753",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "tech_purpose"
+      ],
+      "score": 0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "unknown",
+      "contribution": "cash"
+    },
+    {
+      "id": "530daedd-1d28-4010-9ccf-4d19d4f3c454",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006408565",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 2,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "013ea014-3497-4783-8246-fafb089d334d",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006498294",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "set_off_only"
+      ],
+      "score": -1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "6_plus",
+      "contribution": "set_off"
+    },
+    {
+      "id": "e26cecfc-ff81-40be-85bf-02aa203e32c1",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006454758",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "young_company"
+      ],
+      "score": 0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "198d58ba-1c50-4c97-bd7c-2cb0e1b66098",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006705679",
+      "positive": false,
+      "unknown": true,
+      "hits": [
+        "odd_amount_small_nominal",
+        "tech_purpose",
+        "esop_sized_increment",
+        "conditional_capital_issuance"
+      ],
+      "score": -0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "6_plus",
+      "contribution": "conditional_capital"
+    },
+    {
+      "id": "37615a86-1390-4c11-aac5-7ea91831477b",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006455102",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "set_off_only"
+      ],
+      "score": -1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "unknown",
+      "contribution": "set_off"
+    },
+    {
+      "id": "def3cbc1-6545-4247-977a-42be618360b9",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006551876",
+      "positive": false,
+      "unknown": false,
+      "hits": [],
+      "score": 0,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "6_plus",
+      "contribution": "cash"
+    },
+    {
+      "id": "f04ae7e9-23d3-481d-b1a7-ef3d362e19c7",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006703096",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "esop_sized_increment"
+      ],
+      "score": 0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "3c9309dd-fe5a-409f-9bdb-d4cefe4ae288",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006429950",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "young_company"
+      ],
+      "score": 0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "under_2",
+      "contribution": "cash"
+    },
+    {
+      "id": "fb2d8792-79db-4ee8-94cb-3e8b06a86845",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006746015",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose",
+        "set_off_only"
+      ],
+      "score": 0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "2_to_6",
+      "contribution": "set_off"
+    },
+    {
+      "id": "a55c1a0b-a590-45ea-8d0f-9d1d69684200",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006728040",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company"
+      ],
+      "score": 1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "mixed"
+    },
+    {
+      "id": "2811fd75-fcaf-4509-a29f-4701c80cdc5b",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006703676",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "tech_purpose"
+      ],
+      "score": 1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "unknown",
+      "contribution": "cash"
+    },
+    {
+      "id": "dc2f7ec3-50d6-468c-a524-9f883538cd11",
+      "source": "assignment",
+      "publicationNumber": "HR02-1006755064",
+      "positive": false,
+      "unknown": false,
+      "hits": [],
+      "score": 0,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "unknown",
+      "contribution": "cash"
+    },
+    {
+      "id": "51be7085-dfcf-464d-8e5c-2dfa09c3e12a",
+      "source": "spike",
+      "publicationNumber": "HR02-1006479540",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose",
+        "new_preferred_class"
+      ],
+      "score": 3.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "under_2",
+      "contribution": "mixed"
+    },
+    {
+      "id": "f5607e1f-e435-4108-ab66-ac04f558c77b",
+      "source": "spike",
+      "publicationNumber": "HR02-1006543104",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 2,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "mixed"
+    },
+    {
+      "id": "8604d669-7b70-4b0a-b4c5-56fdc9d6d820",
+      "source": "spike",
+      "publicationNumber": "HR02-1006647642",
+      "positive": false,
+      "unknown": false,
+      "hits": [
+        "young_company",
+        "tech_purpose",
+        "set_off_only"
+      ],
+      "score": -0.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": false,
+      "ageBucket": "2_to_6",
+      "contribution": "set_off"
+    },
+    {
+      "id": "e5f1b9a5-e4f4-4c3f-a8bd-d95e21ae877e",
+      "source": "spike",
+      "publicationNumber": "HR02-1006518003",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "tech_purpose",
+        "new_preferred_class"
+      ],
+      "score": 3,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "6_plus",
+      "contribution": "cash"
+    },
+    {
+      "id": "b575722a-2206-45b6-8f8a-3c7c6787ff6d",
+      "source": "spike",
+      "publicationNumber": "HR02-1006440626",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose",
+        "new_preferred_class"
+      ],
+      "score": 3.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "under_2",
+      "contribution": "mixed"
+    },
+    {
+      "id": "14c0b626-8db7-468d-a463-707298ce78c5",
+      "source": "spike",
+      "publicationNumber": "HR02-1006582022",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose",
+        "new_preferred_class"
+      ],
+      "score": 3.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "52d4b7a5-f67c-45ab-a4c6-9977090cf94a",
+      "source": "spike",
+      "publicationNumber": "HR02-1006572457",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal"
+      ],
+      "score": 1,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "unknown",
+      "contribution": "cash"
+    },
+    {
+      "id": "5378025a-6334-4f88-bf2c-10c454876a10",
+      "source": "spike",
+      "publicationNumber": "HR02-1006520768",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 2,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "mixed"
+    },
+    {
+      "id": "78f655e5-4d57-4240-ae7d-97dc3413b4cf",
+      "source": "spike",
+      "publicationNumber": "HR02-1006541488",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "tech_purpose"
+      ],
+      "score": 1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "6_plus",
+      "contribution": "cash"
+    },
+    {
+      "id": "d2b87edd-46cf-4f70-9741-78f31a3b2f69",
+      "source": "spike",
+      "publicationNumber": "HR02-1006592964",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 2,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "0d91de04-3f79-4ff2-9a7d-45a291249434",
+      "source": "spike",
+      "publicationNumber": "HR02-1006503788",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company"
+      ],
+      "score": 1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "1a4a43a2-cec8-466c-9d29-ef195a9acd52",
+      "source": "spike",
+      "publicationNumber": "HR02-1006603981",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "tech_purpose"
+      ],
+      "score": 1.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "6_plus",
+      "contribution": "cash"
+    },
+    {
+      "id": "80055a00-9fbe-415d-a068-04964d6073e9",
+      "source": "spike",
+      "publicationNumber": "HR02-1006573579",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 2,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "cash"
+    },
+    {
+      "id": "b9533337-d6f9-4d8a-8086-2b880549aecf",
+      "source": "spike",
+      "publicationNumber": "HR02-1006597667",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose"
+      ],
+      "score": 2,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "mixed"
+    },
+    {
+      "id": "97a4b75c-3334-494c-a2a4-faa6c2eb81fe",
+      "source": "spike",
+      "publicationNumber": "HR02-1006603778",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal"
+      ],
+      "score": 1,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "unknown",
+      "contribution": "cash"
+    },
+    {
+      "id": "3d8f5a7b-fdcd-4e7f-b608-6006e36ecbc3",
+      "source": "spike",
+      "publicationNumber": "HR02-1006579012",
+      "positive": true,
+      "unknown": false,
+      "hits": [
+        "odd_amount_small_nominal",
+        "young_company",
+        "tech_purpose",
+        "new_preferred_class"
+      ],
+      "score": 3.5,
+      "candidate": true,
+      "rejectReason": null,
+      "rulesPositive": true,
+      "ageBucket": "2_to_6",
+      "contribution": "mixed"
+    }
+  ]
+}

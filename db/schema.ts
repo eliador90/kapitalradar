@@ -228,6 +228,27 @@ export const ingestRuns = pgTable("ingest_runs", {
   spend: jsonb("spend").notNull().default({}),
 });
 
+/**
+ * Per-company source state for the history fetch (T5), not release-scoped: like publications,
+ * it describes what the sources hold, refetched on every build (eng V5). Zefix references keep
+ * only dates, ids and change types, never message text (it names people).
+ */
+export const companySources = pgTable("company_sources", {
+  companyUid: text("company_uid").primaryKey(),
+  historyFetchedAt: timestamp("history_fetched_at", { withTimezone: true }).notNull(),
+  /** Publications of this company in `publications` after the fetch. */
+  shabPublicationCount: integer("shab_publication_count").notNull(),
+  earliestShabPublished: date("earliest_shab_published"),
+  formationFound: boolean("formation_found").notNull(),
+  /** Founding date from the HR01 entry, when found. */
+  foundedOn: date("founded_on"),
+  /** Search hits that cite this UID but belong to another company (not stored for it). */
+  foreignMentions: integer("foreign_mentions").notNull().default(0),
+  zefixRefs: jsonb("zefix_refs").$type<{ date: string; shabId: number; mutationTypes: string[] }[]>().notNull().default([]),
+  /** null when Zefix was not needed or answered; otherwise why the fallback failed. */
+  zefixError: text("zefix_error"),
+});
+
 /** Resumable batch state for history fetches and classification runs. */
 export const checkpoints = pgTable(
   "checkpoints",

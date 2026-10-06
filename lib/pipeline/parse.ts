@@ -2,10 +2,9 @@
 // Structured XML fields win (capital, legal form, name, purpose); the text supplies what the
 // XML lacks (currency, share classes, contribution type, statute date, corrections).
 import { addDays, isIsoDate } from "../domain/dates";
-import { CURRENCIES, parsedEvent, type ParsedEvent, type ShareClass } from "../domain/events";
+import { CURRENCIES, parsedEvent, preferredLabels, type ParsedEvent, type ShareClass } from "../domain/events";
 import type { ContributionType } from "../domain/schemas";
 import { normalizeUid } from "../domain/uid";
-import { CAPITAL_BAND, SET_OFF } from "./capital";
 import { clausesOf, splitClauses, type Clause } from "./clauses";
 import { LEGAL_FORM, section, textAt } from "./xml";
 
@@ -25,10 +24,15 @@ export interface ParsedPublication {
   legalForm: string | null;
   previousLegalForm: string | null;
   seat: string;
+  /** Canton of the registering office (SHAB meta), e.g. "ZH". */
+  canton: string | null;
   purpose: string;
   /** Statute-change date from the text, else the journal date, else the publication date. */
   legalDate: string;
   correctsPublicationNumber: string | null;
+  /** Nominal capital before/after from the XML (decimal strings), whether or not it changed. */
+  capitalBefore: string | null;
+  capitalAfter: string | null;
   text: string;
   clauses: Clause[];
   events: ParsedEvent[];
@@ -37,6 +41,12 @@ export interface ParsedPublication {
 }
 
 export class ParseError extends Error {}
+
+// Set-off of creditor claims only: "Verrechnung mit dem Bilanzverlust" or "compensation de
+// pertes" offset losses and are not contributions.
+export const SET_OFF =
+  /Verrechnung (?:einer |von |der )?Forderung|Forderung(?:en)?[\s\S]{0,160}?verrechnet|durch Verrechnung(?! mit)|compensation (?:de |d['’]une |des )créances?|compensazione (?:di |del |dei )credit/i;
+export const CAPITAL_BAND = /Kapitalband|marge de fluctuation|margine di variazione/i;
 
 const CUR = `(${CURRENCIES.join("|")})`;
 const num = (s: string) => s.replace(/[’'\s]/g, "").replace(/,(\d{1,2})$/, ".$1");
@@ -263,7 +273,9 @@ export function parsePublication(xml: string): ParsedPublication {
   const cancel = /(?:Annullierung|annulliert|annulée?|annullata)[\s\S]{0,200}?(?:Meldungsnummer|Publ\.|Pubbl\.|p\.\s*\d+\/)\s*(\d{10})/i.exec(text);
   if (cancel) events.push({ type: "cancellation", payload: { cancelsPublicationNumber: `HR02-${cancel[1]}` } });
 
-  if (subRubric === "HR01") events.push({ type: "formation", payload: { purpose, foundedOn: legalDate } });
+  // An HR01 after a move to another canton's register is a re-registration, not a founding.
+  const seatTransfer = /Sitzverlegung|bisher im Handelsregister|vormals im Handelsregister|transfert du siège|précédemment inscrite|trasferimento della sede|precedentemente iscritt/i.test(text);
+  if (subRubric === "HR01" && !seatTransfer) events.push({ type: "formation", payload: { purpose, foundedOn: legalDate } });
 
   const before = decimal(ac(["capital", "nominal"]));
   const after = decimal(nu(["capital", "nominal"]));
@@ -306,10 +318,10 @@ export function parsePublication(xml: string): ParsedPublication {
       const nominalsAfter = new Set((classesAfter ?? []).map((c) => c.nominal));
       const nominalChanged =
         classesBefore !== null && classesAfter !== null && [...nominalsAfter].some((n) => !nominalsBefore.has(n)) && [...nominalsBefore].some((n) => !nominalsAfter.has(n));
-      const prefBefore = new Set((classesBefore ?? []).filter((c) => c.preferred).map((c) => (c.label ?? "").toLowerCase()));
+      const prefBefore = preferredLabels(classesBefore);
       // Without the previous classes (old French format) "new" is unknowable here: the history
       // fold (T5) compares against the company's previous capital event.
-      const newPreferredClass = classesBefore === null ? null : (classesAfter ?? []).some((c) => c.preferred && !prefBefore.has((c.label ?? "").toLowerCase()));
+      const newPreferredClass = classesBefore === null ? null : [...preferredLabels(classesAfter)].some((k) => !prefBefore.has(k));
       const so = SET_OFF_AMOUNT.exec(active);
       // Case-sensitive and word-bounded: "valeur" must not read as EUR.
       const currencyMatch =
@@ -375,9 +387,12 @@ export function parsePublication(xml: string): ParsedPublication {
     legalForm,
     previousLegalForm,
     seat: nu(["company", "seat"]) ?? "",
+    canton: textAt(xml, ["meta", "cantons"])?.split(/[,\s]+/)[0] ?? null,
     purpose,
     legalDate,
     correctsPublicationNumber,
+    capitalBefore: before,
+    capitalAfter: after,
     text,
     clauses,
     events,

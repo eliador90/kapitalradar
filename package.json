@@ -14,7 +14,10 @@
     "spike": "tsx scripts/spike.ts",
     "x1": "tsx scripts/x1.ts",
     "fixtures": "tsx scripts/fixtures.ts",
-    "ingest": "tsx --env-file=.env.local scripts/ingest.ts"
+    "ingest": "tsx --env-file=.env.local scripts/ingest.ts",
+    "history": "tsx --env-file=.env.local scripts/history.ts",
+    "dev-eval": "tsx --env-file=.env.local scripts/dev-eval.ts",
+    "classify": "tsx --env-file=.env.local scripts/classify.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

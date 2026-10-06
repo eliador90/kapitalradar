@@ -1,14 +1,7 @@
-// Reads the capital change of one SHAB HR publication from its structured XML. The full T4
-// parser (share classes, events) builds on this; scripts share it so set-off and band
-// detection have one definition.
-import { normalizeUid } from "../domain/uid";
-import { LEGAL_FORM, textAt } from "./xml";
-
-// Set-off of creditor claims only: "Verrechnung mit dem Bilanzverlust" or "compensation de
-// pertes" offset losses and are not contributions.
-export const SET_OFF =
-  /Verrechnung (?:einer |von |der )?Forderung|Forderung(?:en)?[\s\S]{0,160}?verrechnet|durch Verrechnung(?! mit)|compensation (?:de |d['’]une |des )créances?|compensazione (?:di |del |dei )credit/i;
-export const CAPITAL_BAND = /Kapitalband|marge de fluctuation|margine di variazione/i;
+// A compact view of one publication's capital change for the eval scripts (sampling, spike,
+// X1, fixtures). Built on the parser, so capital, set-off and band are read in one place.
+import { LEGAL_FORM } from "./xml";
+import { activeText, CAPITAL_BAND, parsePublication, SET_OFF } from "./parse";
 
 export interface CapitalReading {
   /** Canonical UID of the publication's company, or null when the XML carries none. */
@@ -21,25 +14,28 @@ export interface CapitalReading {
   isIncrease: boolean;
   text: string;
   purpose: string;
+  /** The increase is paid at least partly by setting off claims. */
   setOff: boolean;
   capitalBand: boolean;
 }
 
 export function readCapital(xml: string): CapitalReading {
-  const after = Number(textAt(xml, ["commonsNew", "capital", "nominal"]));
-  const before = Number(textAt(xml, ["commonsActual", "capital", "nominal"]));
-  const text = textAt(xml, ["content", "publicationText"]) ?? "";
+  const p = parsePublication(xml);
+  const change = p.events.find((e) => e.type === "capital_change");
+  const before = Number(p.capitalBefore);
+  const after = Number(p.capitalAfter);
   return {
-    uid: normalizeUid(textAt(xml, ["commonsNew", "company", "uid"]) ?? ""),
-    company: textAt(xml, ["commonsNew", "company", "name"]) ?? "",
-    seat: textAt(xml, ["commonsNew", "company", "seat"]) ?? "",
-    isAg: textAt(xml, ["commonsNew", "company", "legalForm"]) === LEGAL_FORM.AG,
+    uid: p.companyUid,
+    company: p.companyName,
+    seat: p.seat,
+    isAg: p.legalForm === LEGAL_FORM.AG,
     before,
     after,
-    isIncrease: Number.isFinite(before) && Number.isFinite(after) && after > before,
-    text,
-    purpose: textAt(xml, ["commonsNew", "purpose"]) ?? "",
-    setOff: SET_OFF.test(text),
-    capitalBand: CAPITAL_BAND.test(text),
+    isIncrease: p.capitalBefore !== null && p.capitalAfter !== null && after > before,
+    text: p.text,
+    purpose: p.purpose,
+    // The parser's own set-off definition, on the entry's active text.
+    setOff: change?.type === "capital_change" && SET_OFF.test(activeText(p.text)),
+    capitalBand: CAPITAL_BAND.test(p.text),
   };
 }

@@ -1,0 +1,9 @@
+{
+  "note": "Frozen classification settings. Rules threshold fitted on dev (decision log #11); tau/tauLow set by `npm run classify -- dev-report` once the dev set is classified. A release snapshots these into releases.config.",
+  "rulesThreshold": 1.0,
+  "tau": null,
+  "tauLow": null,
+  "modelId": "claude-opus-5-5",
+  "promptVersion": "1",
+  "frozenAt": null
+}

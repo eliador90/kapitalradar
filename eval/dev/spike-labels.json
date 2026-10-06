@@ -1,0 +1,165 @@
+{
+  "note": "Claude draft from gazette mechanics + startupticker announcement; pending Remo's review",
+  "labels": [
+    {
+      "id": "51be7085-dfcf-464d-8e5c-2dfa09c3e12a",
+      "uid": "CHE213692684",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/embargo-13-01-8am-preventive-health-startup-ahead-health-secures-6-million"
+    },
+    {
+      "id": "f5607e1f-e435-4108-ab66-ac04f558c77b",
+      "uid": "CHE478871980",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/oramavr-secures-4-5m-to-scale-medical-xr-simulations"
+    },
+    {
+      "id": "8604d669-7b70-4b0a-b4c5-56fdc9d6d820",
+      "uid": "CHE299451950",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "conversion_only",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/fintech-company-axiym-receives-strategic-investment-from-tether"
+    },
+    {
+      "id": "e5f1b9a5-e4f4-4c3f-a8bd-d95e21ae877e",
+      "uid": "CHE449975270",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/engie-secures-stake-in-exergo"
+    },
+    {
+      "id": "b575722a-2206-45b6-8f8a-3c7c6787ff6d",
+      "uid": "CHE453478419",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/soverli-raises-2-6m-pre-seed-capital"
+    },
+    {
+      "id": "14c0b626-8db7-468d-a463-707298ce78c5",
+      "uid": "CHE378979051",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/sts-digital-closes-usd-30-million-strategic-round-to-scale-its-crypto-options-trading-platform"
+    },
+    {
+      "id": "52d4b7a5-f67c-45ab-a4c6-9977090cf94a",
+      "uid": "CHE249673253",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/l-e-s-s-raises-usd-22-million-series-c-financing"
+    },
+    {
+      "id": "5378025a-6334-4f88-bf2c-10c454876a10",
+      "uid": "CHE291505720",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/terralayr-secures-192-million-to-further-grow-its-grid-scale-battery-storage-portfolio"
+    },
+    {
+      "id": "78f655e5-4d57-4240-ae7d-97dc3413b4cf",
+      "uid": "CHE298133861",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/new-funding-to-boost-comppair-growth-and-reinforce-commercial-execution"
+    },
+    {
+      "id": "d2b87edd-46cf-4f70-9741-78f31a3b2f69",
+      "uid": "CHE442791208",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/chf-10-million-seed-funding-and-new-board-chair-for-tecregen"
+    },
+    {
+      "id": "0d91de04-3f79-4ff2-9a7d-45a291249434",
+      "uid": "CHE482446338",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/chiral-raises-12m-to-unlock-post-silicon-computing-beyond-moore-s-law"
+    },
+    {
+      "id": "1a4a43a2-cec8-466c-9d29-ef195a9acd52",
+      "uid": "CHE440654730",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/ubs-makes-a-strategic-investment-in-artificialy"
+    },
+    {
+      "id": "80055a00-9fbe-415d-a068-04964d6073e9",
+      "uid": "CHE218846606",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/alithea-genomics-closes-chf-6-9m-round-and-names-new-ceo"
+    },
+    {
+      "id": "b9533337-d6f9-4d8a-8086-2b880549aecf",
+      "uid": "CHE318903127",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/chf-2-2-million-to-power-agora-care-ai-experience"
+    },
+    {
+      "id": "97a4b75c-3334-494c-a2a4-faa6c2eb81fe",
+      "uid": "CHE112158921",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/cohaga-sammelt-millionenbetrag-und-lanciert-tool-fuer-praesenz-in-ki-antworten"
+    },
+    {
+      "id": "3d8f5a7b-fdcd-4e7f-b608-6006e36ecbc3",
+      "uid": "CHE178002184",
+      "source": "spike",
+      "startup_relevance": "yes",
+      "transaction_type": "new_equity",
+      "labeler": "claude_draft_pending_remo",
+      "provenance": "verified",
+      "sourceUrl": "https://www.startupticker.ch/en/news/proptech-startup-optiml-secures-8-million-to-expand-real-estate-ai-platform"
+    }
+  ]
+}
