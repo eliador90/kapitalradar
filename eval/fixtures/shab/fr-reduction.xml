@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>48797dd2-de6b-44dd-a1c3-a416184ded53</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006768960</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-09-29</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>GE</cantons>
+  <title>
+    <de>Mutation Perrot Duval Holding SA, Genève, neu Infomaniak SA</de>
+    <en>Change Perrot Duval Holding SA, Genève, new Infomaniak SA</en>
+    <it>Cambiamenti Perrot Duval Holding SA, Genève, nuovo Infomaniak SA</it>
+    <fr>Mutation Perrot Duval Holding SA, Genève, nouveau Infomaniak SA</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>23744</journalNumber>
+  <journalDate>2026-09-25</journalDate>
+  <publicationText>Perrot Duval Holding SA, à Genève, CHE-102.440.356 (FOSC du 10.10.2023, p. 0/1005857459). Nouveau but: l'acquisition, la détention, la gestion et la réalisation de tous types de participations, en Suisse et à l'étranger. Capital-actions: CHF 6'724'600, 00, entièrement libéré, divisé en 239'264 actions de CHF 25, au porteur, et 29'720 actions de CHF 25, nominatives. Réduction du capital-actions de CHF 6'724'600, 00 à CHF 67'246, 00, soit d'un montant de CHF 6'657'354, 00, par réduction de la valeur nominale de chaque action de CHF 25 à CHF 0.25 et affectation du montant de la réduction aux réserves issues du capital. Capital-actions: CHF 67'246, 00, entièrement libéré, divisé en 239'264 actions de CHF 0.25, au porteur, et 29'720 actions de CHF 0.25, nominatives. Capital-actions: CHF 67'246, 00, entièrement libéré, divisé en 268'984 actions de CHF 0.25, nominatives. Augmentation ordinaire du capital-actions porté de CHF 67'246, 00 à CHF 1'368'781, 40, soit d'un montant de 1'301'535, 40, par l'émission de 8'050'226 actions de CHF 0.025, privilégiées quant au droit de vote, nominatives, liées selon statuts et 4'401'119 actions de CHF 0.25, ordinaires, nominatives, toutes entièrement libérées par apport en nature. Capital-actions: CHF 1'368'781, 40, entièrement libéré, divisé en 8'050'226 actions de CHF 0.025, privilégiées quant au droit de vote, nominatives, liées selon statuts et 4'670'103 actions de CHF 0.25, ordinaires, nominatives. Apport en nature: selon contrat du 24.09.2026, 21'868'300 actions ordinaires de CHF 0.01, et 40'000'000 actions de CHF 0.001, privilégiées quant au droit de vote et au droit de souscription préférentiel, toutes nominatives, liées selon statuts de la société INFOMANIAK GROUP SA (CHE-114.879.523), à Genève, en contrepartie duquel sont remises 8'050'226 actions de CHF 0.025, privilégiées quant au droit de vote, nominatives, liées selon statuts et 4'401'119 actions de CHF 0.25, ordinaires, nominatives. L'assemblée générale a introduit une clause statutaire relative à une augmentation conditionnelle du capital-actions par décision du 24.09.2026; pour les détails, voir les statuts (art. 5ter). Suppression de la clause statutaire relative à une marge de fluctuation du capital-actions introduite par décision de l'assemblée générale du 28.09.2023. L'assemblée générale a introduit une clause statutaire relative à une marge de fluctuation du capital-actions par décision du 24.09.2026; pour les détails, voir les statuts. Nouvelle raison sociale: Infomaniak SA. Statuts modifiés le 24.09.2026, y compris sur des points non soumis à publication.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Infomaniak SA</name>
+      <uid>CHE-102.440.356</uid>
+      <uidOrganisationId>102440356</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH21701321106</code13>
+      <seat>Genève</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>La société a pour but l'acquisition, la détention, la gestion et la réalisation de tous types de participations, en Suisse et à l'étranger. Toutefois, la société ne pourra cas échéant détenir, directement ou indirectement, d'immeubles en Suisse que s'ils ont une affectation exclusivement commerciale ou industrielle. Dans la poursuite de son but, la société vise un impact sociétal et environnemental positif important dans le cadre de ses activités commerciales et opérationnelles. La société peut en outre, en Suisse et à l'étranger: - créer des succursales ou des filiales, prendre des participations dans, et plus généralement participer à, toutes entreprises et entités ayant un rapport direct ou indirect avec son but; - faire, soit pour son compte, soit pour le compte de tiers, toute opération se rattachant directement ou indirectement à son but ou susceptible de le promouvoir; et - accorder des prêts ou toute autre forme de financement à, et donner des sûretés en tout genre, au bénéfice direct ou indirect de ses actionnaires, de sociétés du même groupe ou de tiers, en particulier sous la forme de garanties, gages ou sûretés sur les actifs de la société.</purpose>
+    <capital>
+      <nominal>1368781.40</nominal>
+      <paid>1368781.40</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Perrot Duval Holding SA</name>
+      <uid>CHE-102.440.356</uid>
+      <uidOrganisationId>102440356</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH21701321106</code13>
+      <seat>Genève</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>participer à toutes entreprises en Suisse et à l'étranger, en particulier dans le domaine de l'automatisation (cf. statuts pour but complet).</purpose>
+    <capital>
+      <nominal>6724600.00</nominal>
+      <paid>6724600.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2023-10-10</lastFoscDate>
+    <lastFoscNumber>196</lastFoscNumber>
+    <lastFoscSequence>1005857459</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>true</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>true</seatChanged>
+        <addressChanged>true</addressChanged>
+        <purposeChanged>true</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Genève</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.25/HR02-export.xsd">
+<meta>
+  <id>3dd0638b-a38b-4fb2-b94e-533186eea78d</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006516345</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2025-12-17</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>VD</cantons>
+  <title>
+    <de>Mutation Vale Investments SA, Saint-Prex</de>
+    <en>Change Vale Investments SA, Saint-Prex</en>
+    <it>Cambiamenti Vale Investments SA, Saint-Prex</it>
+    <fr>Mutation Vale Investments SA, Saint-Prex</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>25045</journalNumber>
+  <journalDate>2025-12-12</journalDate>
+  <publicationText>Vale Investments SA, à Saint-Prex, CHE-188.957.647 (FOSC du 21.05.2024, p. 0/1006036144). Statuts modifiés le 10.12.2025. Nouveau capital-actions entièrement libéré: USD 22'913'482, divisé en 22'913'482 actions nominatives de USD 1.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Vale Investments SA</name>
+      <uid>CHE-188.957.647</uid>
+      <uidOrganisationId>188957647</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH55011976880</code13>
+      <seat>Saint-Prex</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>le but de la Société est: d'acheter, détenir, gérer et vendre des participations directes ou indirectes dans des sociétés ou entreprises principalement à l'étranger, notamment dans des sociétés et entreprises commerciales, industrielles, ou financières (à l'exception des opérations prohibées par la LFAIE); de financer des sociétés et entreprises du groupe et rendre des services commerciaux, financiers, administratifs et légaux à d'autres sociétés et entreprises du groupe en Suisse ou à l'étranger; de donner des garanties ou sûretés, constituer des nantissements ou tout autre type de sûretés ou garanties en faveur de ses actionnaires directs ou indirects, de ses filiales directes ou indirectes, d'autres sociétés dont ses actionnaires ou ses filiales détiennent des actions, ou en faveur de toutes tierces personnes, avec ou sans rémunération.</purpose>
+    <capital>
+      <nominal>22913482.00</nominal>
+      <paid>22913482.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Vale Investments SA</name>
+      <uid>CHE-188.957.647</uid>
+      <uidOrganisationId>188957647</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH55011976880</code13>
+      <seat>Saint-Prex</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>le but de la Société est: d'acheter, détenir, gérer et vendre des participations directes ou indirectes dans des sociétés ou entreprises principalement à l'étranger, notamment dans des sociétés et entreprises commerciales, industrielles, ou financières (à l'exception des opérations prohibées par la LFAIE); de financer des sociétés et entreprises du groupe et rendre des services commerciaux, financiers, administratifs et légaux à d'autres sociétés et entreprises du groupe en Suisse ou à l'étranger; de donner des garanties ou sûretés, constituer des nantissements ou tout autre type de sûretés ou garanties en faveur de ses actionnaires directs ou indirects, de ses filiales directes ou indirectes, d'autres sociétés dont ses actionnaires ou ses filiales détiennent des actions, ou en faveur de toutes tierces personnes, avec ou sans rémunération.</purpose>
+    <capital>
+      <nominal>20895500.00</nominal>
+      <paid>20895500.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2024-05-21</lastFoscDate>
+    <lastFoscNumber>96</lastFoscNumber>
+    <lastFoscSequence>1006036144</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Vaud</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

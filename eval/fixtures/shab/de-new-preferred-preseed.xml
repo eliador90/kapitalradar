@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.25/HR02-export.xsd">
+<meta>
+  <id>d37ff8bc-fbfb-4582-84c9-c231f1e93a07</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006443721</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2025-09-29</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>ZH</cantons>
+  <title>
+    <de>Mutation Arqh AG, Bülach</de>
+    <en>Change Arqh AG, Bülach</en>
+    <it>Cambiamenti Arqh AG, Bülach</it>
+    <fr>Mutation Arqh AG, Bülach</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>42802</journalNumber>
+  <journalDate>2025-09-24</journalDate>
+  <publicationText>Arqh AG, in Bülach, CHE-182.433.340, Aktiengesellschaft (SHAB Nr. 101 vom 27.05.2025, Publ. 1006341500). Statutenänderung: 22.09.2025. Aktienkapital neu: CHF 138'717.94 [bisher: CHF 100'000.00]. Liberierung Aktienkapital neu: CHF 88'717.94 [bisher: CHF 50'000.00]. Aktien neu: 10'000'000 Namenaktien zu CHF 0.01 und 3'871'794 Namenaktien zu CHF 0.01 (Vorzugsaktien Pre-Seed) [bisher: 10'000'000 Namenaktien zu CHF 0.01]. Die Gesellschaft hat mit Beschluss vom 22.09.2025 ein bedingtes Aktienkapital gemäss näherer Umschreibung in den Statuten beschlossen.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Arqh AG</name>
+      <uid>CHE-182.433.340</uid>
+      <uidOrganisationId>182433340</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030556528</code13>
+      <seat>Bülach</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Entwicklung von Kl-Lösungen für Unternehmen. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>138717.94</nominal>
+      <paid>88717.94</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Arqh AG</name>
+      <uid>CHE-182.433.340</uid>
+      <uidOrganisationId>182433340</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030556528</code13>
+      <seat>Bülach</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Entwicklung von Kl-Lösungen für Unternehmen. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>100000.00</nominal>
+      <paid>50000.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2025-05-27</lastFoscDate>
+    <lastFoscNumber>101</lastFoscNumber>
+    <lastFoscSequence>1006341500</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Zürich</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>88838525-c0b9-4e78-bcfb-106e45525b33</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006763030</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-09-22</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>VD</cantons>
+  <title>
+    <de>Mutation Nereva SA, Nyon</de>
+    <en>Change Nereva SA, Nyon</en>
+    <it>Cambiamenti Nereva SA, Nyon</it>
+    <fr>Mutation Nereva SA, Nyon</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>19570</journalNumber>
+  <journalDate>2026-09-17</journalDate>
+  <publicationText>Nereva SA, à Nyon, CHE-294.630.698 (FOSC du 05.06.2026, p. 0/1006669351). Statuts modifiés le 31.08.2026. Augmentation ordinaire du capital-actions. Nouveau capital-actions entièrement libéré: CHF 450'000, divisé en 450 actions nominatives de CHF 1'000, avec restrictions quant à la transmissibilité selon statuts.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Nereva SA</name>
+      <uid>CHE-294.630.698</uid>
+      <uidOrganisationId>294630698</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66008420236</code13>
+      <seat>Nyon</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>la société a pour but la conception, le développement, l'édition, la commercialisation, l'intégration et l'exploitation, en Suisse et à l'étranger, de logiciels et solutions numériques d'orchestration et de synchronisation des flux logistiques opérés par véhicules, en particulier des flux de matériaux, déchets, machines, équipements et bennes liés aux activités de construction, de travaux publics, de recyclage, de transport de chantier et aux secteurs connexes. La société peut notamment fournir, sous forme de logiciel à la demande (Software as a Service) ou de licences, des plateformes de planification, d'exécution, de documentation, de traçabilité et d'archivage des opérations logistiques, ainsi que des services associés de paramétrage, d'intégration, de support, de formation et de conseil. La société peut acquérir, détenir, valoriser, concéder en licence et défendre tout droit de propriété intellectuelle, en particulier brevets, marques, dessins, modèles, droits d'auteur et savoir-faire, en lien direct ou indirect avec son but principal. La société peut effectuer, tant en Suisse qu'à l'étranger, pour son propre compte ou pour le compte de tiers, toutes opérations administratives, techniques, commerciales, financières, mobilières et immobilières en relation directe ou indirecte avec son but principal à l'exception des opérations prohibées par la LFAIE. Elle peut créer des succursales et des filiales en Suisse et à l'étranger, prendre des participations dans des entreprises poursuivant un but similaire ou complémentaire, et accorder des prêts ou garanties à ses filiales et sociétés du groupe. La société n'opère pas d'activité de transport et n'agit pas comme intermédiaire commercial entre donneurs d'ordre et entreprises de transport. Elle ne capte pas la relation contractuelle commerciale entre ses utilisateurs.</purpose>
+    <capital>
+      <nominal>450000.00</nominal>
+      <paid>450000.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Nereva SA</name>
+      <uid>CHE-294.630.698</uid>
+      <uidOrganisationId>294630698</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66008420236</code13>
+      <seat>Nyon</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>la société a pour but la conception, le développement, l'édition, la commercialisation, l'intégration et l'exploitation, en Suisse et à l'étranger, de logiciels et solutions numériques d'orchestration et de synchronisation des flux logistiques opérés par véhicules, en particulier des flux de matériaux, déchets, machines, équipements et bennes liés aux activités de construction, de travaux publics, de recyclage, de transport de chantier et aux secteurs connexes. La société peut notamment fournir, sous forme de logiciel à la demande (Software as a Service) ou de licences, des plateformes de planification, d'exécution, de documentation, de traçabilité et d'archivage des opérations logistiques, ainsi que des services associés de paramétrage, d'intégration, de support, de formation et de conseil. La société peut acquérir, détenir, valoriser, concéder en licence et défendre tout droit de propriété intellectuelle, en particulier brevets, marques, dessins, modèles, droits d'auteur et savoir-faire, en lien direct ou indirect avec son but principal. La société peut effectuer, tant en Suisse qu'à l'étranger, pour son propre compte ou pour le compte de tiers, toutes opérations administratives, techniques, commerciales, financières, mobilières et immobilières en relation directe ou indirecte avec son but principal à l'exception des opérations prohibées par la LFAIE. Elle peut créer des succursales et des filiales en Suisse et à l'étranger, prendre des participations dans des entreprises poursuivant un but similaire ou complémentaire, et accorder des prêts ou garanties à ses filiales et sociétés du groupe. La société n'opère pas d'activité de transport et n'agit pas comme intermédiaire commercial entre donneurs d'ordre et entreprises de transport. Elle ne capte pas la relation contractuelle commerciale entre ses utilisateurs.</purpose>
+    <capital>
+      <nominal>320000.00</nominal>
+      <paid>320000.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2026-06-05</lastFoscDate>
+    <lastFoscNumber>106</lastFoscNumber>
+    <lastFoscSequence>1006669351</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Vaud</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

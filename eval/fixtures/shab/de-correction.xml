@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>0eb1f8a4-d7df-48f6-b895-9292df1cf530</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006711890</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-07-21</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>ZH</cantons>
+  <title>
+    <de>Mutation Soverli AG, Zürich</de>
+    <en>Change Soverli AG, Zürich</en>
+    <it>Cambiamenti Soverli AG, Zürich</it>
+    <fr>Mutation Soverli AG, Zürich</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>34642</journalNumber>
+  <journalDate>2026-07-16</journalDate>
+  <publicationText>Berichtigung des im SHAB vom 20.03.2026 unter Meldungsnummer 1006601905 publizierten TR-Eintrags Nr. 13'506 vom 17.03.2026 Soverli AG, in Zürich, CHE-453.478.419, Aktiengesellschaft (SHAB Nr. 55 vom 20.03.2026, Publ. 1006601905). Liberierung Aktienkapital neu: CHF 86'932.00 [nicht: CHF 136'307.00].</publicationText>
+  <commonsNew>
+    <company>
+      <name>Soverli AG</name>
+      <translations>(Soverli Ltd)</translations>
+      <uid>CHE-453.478.419</uid>
+      <uidOrganisationId>453478419</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030558865</code13>
+      <seat>Zürich</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Erbringung von Dienstleistungen im Bereich Softwaretechnologie. Insbesondere bezweckt die Gesellschaft die Entwicklung von Software für Kommunikationssicherheit sowie Beratungen und Vertrieb. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>136307.00</nominal>
+      <paid>86932.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Soverli AG</name>
+      <translations>(Soverli Ltd)</translations>
+      <uid>CHE-453.478.419</uid>
+      <uidOrganisationId>453478419</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030558865</code13>
+      <seat>Zürich</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Erbringung von Dienstleistungen im Bereich Softwaretechnologie. Insbesondere bezweckt die Gesellschaft die Entwicklung von Software für Kommunikationssicherheit sowie Beratungen und Vertrieb. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>136307.00</nominal>
+      <paid>136307.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2026-03-20</lastFoscDate>
+    <lastFoscNumber>55</lastFoscNumber>
+    <lastFoscSequence>1006601905</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>false</nominal>
+          <paid>true</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Zürich</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

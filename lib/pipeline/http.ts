@@ -26,9 +26,11 @@ export async function politeFetch(url: string, opts: PoliteFetchOptions = {}): P
   const { minIntervalMs = 1000, retries = 3, init = {}, passStatuses = [] } = opts;
   const host = new URL(url).host;
   for (let attempt = 0; ; attempt++) {
-    const wait = (lastRequestAt.get(host) ?? 0) + minIntervalMs - Date.now();
-    if (wait > 0) await sleep(wait);
-    lastRequestAt.set(host, Date.now());
+    // Reserve the slot synchronously, so concurrent callers queue instead of firing together.
+    const now = Date.now();
+    const at = Math.max(now, (lastRequestAt.get(host) ?? 0) + minIntervalMs);
+    lastRequestAt.set(host, at);
+    if (at > now) await sleep(at - now);
     let res: Response | undefined;
     let error: unknown;
     try {

@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>d6dfa29e-0a86-4f10-b3d5-5ff1ca78a12f</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006602773</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-03-20</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>VD</cantons>
+  <title>
+    <de>Mutation Heverald Groupe SA, Lausanne</de>
+    <en>Change Heverald Groupe SA, Lausanne</en>
+    <it>Cambiamenti Heverald Groupe SA, Lausanne</it>
+    <fr>Mutation Heverald Groupe SA, Lausanne</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>6128</journalNumber>
+  <journalDate>2026-03-17</journalDate>
+  <publicationText>Heverald Groupe SA, à Lausanne, CHE-109.107.863 (FOSC du 30.03.2022, p. 0/1005439032). Statuts modifiés le 09.03.2026. Nouvelle raison de commerce: Heverald Groupe SA (Heverald Groupe Ltd) (Heverald Groupe AG). Nouveau but: la société a pour but la détention et la gestion de participations de toute société ou autre entreprise en Suisse et à l'étranger, étant précisé qu'elle pourra détenir des participations dans des sociétés immobilières à affectation exclusivement commerciale en Suisse. Augmentation ordinaire du capital-actions par compensation d'une créance de CHF 8'606'525.59; en contrepartie, il est remis 1 action de CHF 100. Nouveau capital-actions entièrement libéré: CHF 200'100, divisé en 2'001 actions nominatives de CHF 100, avec restrictions quant à la transmissibilité selon statuts.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Heverald Groupe SA</name>
+      <translations>(Heverald Groupe Ltd) (Heverald Groupe AG)</translations>
+      <uid>CHE-109.107.863</uid>
+      <uidOrganisationId>109107863</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH55010254290</code13>
+      <seat>Lausanne</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>la société a pour but la détention et la gestion de participations de toute société ou autre entreprise en Suisse et à l'étranger, étant précisé qu'elle pourra détenir des participations dans des sociétés immobilières à affectation exclusivement commerciale en Suisse. La société peut constituer des succursales et des filiales en Suisse ou à l'étranger. La société peut fournir de l'assistance financière à toute société affiliée (à savoir des filiales directes ou indirectes, sœurs ou mères), y compris fournir des prêts, des avances, des garanties ou sûretés de toutes formes, contre rémunération ou à titre gratuit. Elle peut également octroyer des prêts, des avances, des garanties ou des sûretés de toutes formes à des tiers. La société peut acquérir, détenir et aliéner des immeubles exclusivement à affectation commerciale en Suisse. La société peut lever des fonds par emprunt sous quelque forme que ce soit ou par tout type d'émissions, y compris de titres, d'instruments de dette ou d'obligations, et peut émettre d'une manière générale des titres de quelque nature que ce soit. La société peut en outre effectuer toutes les opérations qui favorisent ou facilitent son développement ou qui se rapportent directement ou indirectement à son but social.</purpose>
+    <capital>
+      <nominal>200100.00</nominal>
+      <paid>200100.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Heverald Groupe SA</name>
+      <uid>CHE-109.107.863</uid>
+      <uidOrganisationId>109107863</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH55010254290</code13>
+      <seat>Lausanne</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>la société a pour but: détention et gestion de participations de toute société en Suisse et à l'étranger, détention de marques et d'autres droits de la propriété intellectuelle, prestation de services en faveur d'autres sociétéa du groupe (pour but complet cf. statuts).</purpose>
+    <capital>
+      <nominal>200000.00</nominal>
+      <paid>200000.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2022-03-30</lastFoscDate>
+    <lastFoscNumber>63</lastFoscNumber>
+    <lastFoscSequence>1005439032</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>true</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Vaud</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

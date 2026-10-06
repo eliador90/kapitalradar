@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>def3cbc1-6545-4247-977a-42be618360b9</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006551876</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-01-27</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>JU</cantons>
+  <title>
+    <de>Mutation Horia Holding Sàrl, Courtételle, neu Horia SA</de>
+    <en>Change Horia Holding Sàrl, Courtételle, new Horia SA</en>
+    <it>Cambiamenti Horia Holding Sàrl, Courtételle, nuovo Horia SA</it>
+    <fr>Mutation Horia Holding Sàrl, Courtételle, nouveau Horia SA</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>594</journalNumber>
+  <journalDate>2026-01-22</journalDate>
+  <publicationText>Horia Holding Sàrl, à Courtételle, CHE-455.127.126, société à responsabilité limitée (No. FOSC 15 du 23.01.2026, Publ. 1006548974). Modification des statuts: 22.12.2025. Transformation: la société à responsabilité limitée est transformée en société anonyme conformément au projet de transformation du 22.12.2025 et bilan au 30.06.2025, présentant (avant augmentation du capital) des actifs de CHF 3'584'974.00 et des passifs envers les tiers de CHF 1'288'084.00, contre attribution à l'associé de 100 actions nominatives de CHF 1'000.00 chacune, entièrement libérées. Nouvelle raison sociale: Horia SA. Nouvelle nature juridique: société anonyme. Nouveau but: Fabrication, commercialisation sous toutes ses formes d'appareils dans le domaine de la mécanique et exploitation d'un atelier mécanique. Nouveau capital-actions: CHF 100'000.00 [précédemment: CHF 20'000.00]. Nouveau capital-actions libéré: CHF 100'000.00. Nouvelles actions: 100 actions nominatives de CHF 1'000.00. Nouveaux faits qualifiés: [biffé: Reprise de biens envisagée: la société envisage de reprendre les 130 actions nominatives de CHF 1'000.00 chacune, entièrement libérées, de la société "Horia S.A.", à Courtételle (CHE-106.414.257), pour un prix maximum de CHF 1'815'000.00.]. Suppression de la disposition relative à la reprise de biens envisagée suite à l'abrogation de l'art. 628 aCO. Capital social porté de CHF 20'000.00 à CHF 100'000.00 par l'émission de 80 parts sociales de CHF 1'000.00 chacune souscrites par l'associé &lt;PERSON_1&gt;. Nouvelle restriction à la transmissibilité: Restriction à la transmissibilité des actions nominatives: selon statuts.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Horia SA</name>
+      <uid>CHE-455.127.126</uid>
+      <uidOrganisationId>455127126</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH67040079552</code13>
+      <seat>Courtételle</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Fabrication, commercialisation sous toutes ses formes d'appareils dans le domaine de la mécanique et exploitation d'un atelier mécanique. A cet effet, la société peut exercer toute activité financière, commerciale ou industrielle, mobilière ou immobilière, en rapport direct ou indirect avec son but; créer des succursales ou des filiales en Suisse et à l'étranger; participer à d'autres entreprises en Suisse et à l'étranger, acquérir des entreprises visant un but identique ou analogue ou fusionner avec de telles entreprises; acquérir ou vendre des immeubles; accorder des prêts ou des garanties à des actionnaires ou des tiers, si cela favorise ses intérêts; faire toutes opérations et conclure tous contrats propres à développer et à étendre son but ou s'y rapportant directement ou indirectement.</purpose>
+    <capital>
+      <nominal>100000.00</nominal>
+      <paid>100000.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Horia Holding Sàrl</name>
+      <uid>CHE-455.127.126</uid>
+      <uidOrganisationId>455127126</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH67040079552</code13>
+      <seat>Courtételle</seat>
+      <legalForm>0107</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Acquisition et administration de participations et de titres (cf. statuts pour but complet).</purpose>
+    <capital>
+      <nominal>20000.00</nominal>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2026-01-23</lastFoscDate>
+    <lastFoscNumber>15</lastFoscNumber>
+    <lastFoscSequence>1006548974</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>true</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>true</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>true</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton du Jura</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>1a4a43a2-cec8-466c-9d29-ef195a9acd52</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>it</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006603981</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-03-23</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutazione dell'ente giuridico indicato è stata riportata nel registro di commercio. &lt;br />Pubblicazione secondo gli articoli 9 e 35 ORC.</legalRemedy>
+  <cantons>TI</cantons>
+  <secondaryTenants>
+    <tenantCode>kabti</tenantCode>
+    <publicationDate>2026-03-23</publicationDate>
+  </secondaryTenants>
+  <title>
+    <de>Mutation Artificialy SA, Lugano</de>
+    <en>Change Artificialy SA, Lugano</en>
+    <it>Cambiamenti Artificialy SA, Lugano</it>
+    <fr>Mutation Artificialy SA, Lugano</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>4098</journalNumber>
+  <journalDate>2026-03-18</journalDate>
+  <publicationText>Artificialy SA, in Lugano, CHE-440.654.730, società anonima (Nr. FUSC 44 del 05.03.2026, Pubbl. 1006587732). Statuti modificati: 17.03.2026. Nuovo capitale azionario: CHF 1'446'965.00 [finora: CHF 1'374'762.00]. Nuovo capitale azionario liberato: CHF 1'446'965.00 [finora: CHF 1'374'762.00]. Nuove azioni: 1'446'965 azioni nominative da CHF 1.00 [finora: 1'374'762 azioni nominative da CHF 1.00]. Aumento ordinario del capitale azionario e del capitale di partecipazione. Nuova limitazione della trasferibilità: La trasferibilità delle azioni nominative è limitata dallo statuto.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Artificialy SA</name>
+      <uid>CHE-440.654.730</uid>
+      <uidOrganisationId>440654730</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH50130222572</code13>
+      <seat>Lugano</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>La prestazione di consulenza in ambito tecnologico e lo sviluppo di soluzioni tecnologiche, in particolare nel campo dell'intelligenza artificiale e della scienza dei dati; lo sfruttamento scientifico e industriale dei diritti di proprietà immateriale e industriale, quali brevetti e marchi, come pure l'acquisizione e la concessione in licenza di tali diritti; la fornitura di servizi per l'introduzione, l'uso e l'adattamento di apparecchiature informatiche e software.</purpose>
+    <capital>
+      <nominal>1446965.00</nominal>
+      <paid>1446965.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Artificialy SA</name>
+      <uid>CHE-440.654.730</uid>
+      <uidOrganisationId>440654730</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH50130222572</code13>
+      <seat>Lugano</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>La prestazione di consulenza in ambito tecnologico e lo sviluppo di soluzioni tecnologiche, in particolare nel campo dell'intelligenza artificiale e della scienza dei dati; lo sfruttamento scientifico e industriale dei diritti di proprietà immateriale e industriale, quali brevetti e marchi, come pure l'acquisizione e la concessione in licenza di tali diritti; la fornitura di servizi per l'introduzione, l'uso e l'adattamento di apparecchiature informatiche e software.</purpose>
+    <capital>
+      <nominal>1374762.00</nominal>
+      <paid>1374762.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2026-03-05</lastFoscDate>
+    <lastFoscNumber>44</lastFoscNumber>
+    <lastFoscSequence>1006587732</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registro di commercio del Cantone Ticino</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>3d98242b-9348-4edf-90cc-046da9f6900d</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006636729</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-04-28</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>SO</cantons>
+  <title>
+    <de>Mutation Eishockey Club Olten AG EHCO, Olten</de>
+    <en>Change Eishockey Club Olten AG EHCO, Olten</en>
+    <it>Cambiamenti Eishockey Club Olten AG EHCO, Olten</it>
+    <fr>Mutation Eishockey Club Olten AG EHCO, Olten</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>2303</journalNumber>
+  <journalDate>2026-04-23</journalDate>
+  <publicationText>Eishockey Club Olten AG EHCO, in Olten, CHE-105.601.785, Aktiengesellschaft (SHAB Nr. 28 vom 11.02.2026, Publ. 1006566610). Statutenänderung: 22.04.2026. Aktien neu: 3'385'796 Namenaktien zu CHF 0.50 [bisher: 1'692'898 Namenaktien zu CHF 1.00]. Kapitalherabsetzung und Wiedererhöhung: Bei der Kapitalherabsetzung vom 27.10.2025 auf CHF 846'449.00 zur Beseitigung einer Überschuldung wird der Nennwert der 1'692'898 Namenaktien zu CHF 1.00 auf CHF 0.50 herabgesetzt. Gleichzeitig werden durch ordentliche Kapitalerhöhung 1'692'898 voll liberierte Namenaktien zu CHF 0.50 ausgegeben. Qualifizierte Tatbestände neu: Verrechnung: Ordentliche Kapitalerhöhung durch Verrechnung einer Forderung von CHF 310'000.00, wofür 620'000 Namenaktien zu CHF 0.50 ausgegeben werden.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Eishockey Club Olten AG EHCO</name>
+      <uid>CHE-105.601.785</uid>
+      <uidOrganisationId>105601785</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH24930033502</code13>
+      <seat>Olten</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Führen von Eishockey-Mannschaften in allen wettspielberechtigten Kategorien. Kann alle damit zusammenhängenden Aktivitäten ausüben, insbesondere Kauf und Verkauf von Spielerrechten, Betrieb eines Restaurants sowie Handel mit Souvenirartikeln. Kann im In- und Ausland Zweigniederlassungen errichten, sich an anderen Unternehmungen beteiligen, gleichartige oder verwandte Unternehmen erwerben oder sich mit solchen zusammenschliessen, Liegenschaften, Wertschriften und immaterielle Güter erwerben, verwalten, vermitteln und veräussern, sowie alle Geschäfte eingehen und Verträge abschliessen, die geeignet sind, den Zweck der Gesellschaft zu fördern oder die direkt oder indirekt mit ihm in Zusammenhang stehen. Die Eishockey Club Olten AG EHCO ist nicht gewinnorientiert. Sie setzt sich für einen gesunden, respektvollen, fairen und erfolgreichen Sport ein und anerkennt die jeweils geltende Ethik-Charta des Schweizer Sports.</purpose>
+    <capital>
+      <nominal>1692898.00</nominal>
+      <paid>1692898.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Eishockey Club Olten AG EHCO</name>
+      <uid>CHE-105.601.785</uid>
+      <uidOrganisationId>105601785</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH24930033502</code13>
+      <seat>Olten</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Führen von Eishockey-Mannschaften in allen wettspielberechtigten Kategorien. Kann alle damit zusammenhängenden Aktivitäten ausüben, insbesondere Kauf und Verkauf von Spielerrechten, Betrieb eines Restaurants sowie Handel mit Souvenirartikeln. Kann im In- und Ausland Zweigniederlassungen errichten, sich an anderen Unternehmungen beteiligen, gleichartige oder verwandte Unternehmen erwerben oder sich mit solchen zusammenschliessen, Liegenschaften, Wertschriften und immaterielle Güter erwerben, verwalten, vermitteln und veräussern, sowie alle Geschäfte eingehen und Verträge abschliessen, die geeignet sind, den Zweck der Gesellschaft zu fördern oder die direkt oder indirekt mit ihm in Zusammenhang stehen. Die Eishockey Club Olten AG EHCO ist nicht gewinnorientiert. Sie setzt sich für einen gesunden, respektvollen, fairen und erfolgreichen Sport ein und anerkennt die jeweils geltende Ethik-Charta des Schweizer Sports.</purpose>
+    <capital>
+      <nominal>1692898.00</nominal>
+      <paid>1692898.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2026-02-11</lastFoscDate>
+    <lastFoscNumber>28</lastFoscNumber>
+    <lastFoscSequence>1006566610</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>false</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Solothurn</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

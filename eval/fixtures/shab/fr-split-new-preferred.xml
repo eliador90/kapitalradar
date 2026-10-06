@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>49643db5-fd91-4dd8-998d-088e14e6350b</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006716136</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-07-24</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>VD</cantons>
+  <title>
+    <de>Mutation EH Group Engineering SA, Nyon</de>
+    <en>Change EH Group Engineering SA, Nyon</en>
+    <it>Cambiamenti EH Group Engineering SA, Nyon</it>
+    <fr>Mutation EH Group Engineering SA, Nyon</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>15396</journalNumber>
+  <journalDate>2026-07-21</journalDate>
+  <publicationText>EH Group Engineering SA, à Nyon, CHE-373.771.678 (FOSC du 21.04.2022, p. 0/1005455688). Statuts modifiés le 29.06.2026. Les 6'580 actions nominatives de CHF 100 sont transformées en 5'597'572 actions nominatives de CHF 0.10, et 982'428 actions nominatives de CHF 0.10, privilégiées quant au dividende et au produit de liquidation, toutes avec restrictions quant à la transmissibilité selon statuts. L'assemblée générale a modifié une clause statutaire relative à une augmentation conditionnelle du capital (selon décision du 19.06.2020) par décision du 29.06.2026. L'assemblée générale a supprimé une clause statutaire relative à une augmentation conditionnelle du capital (selon décision du 29.03.2022) par décision du 29.06.2026. Capital-actions réduit de CHF 658'000 à CHF 305'725 par destruction de 3'522'750 actions propres de CHF 0.10. Le montant de la réduction sert à réduire la réserve pour les actions propres. Nouveau capital-actions: CHF 305'725, entièrement libéré, divisé en 2'074'822 actions nominatives de CHF 0.10 et 982'428 actions nominatives de CHF 0.10, privilégiées quant au dividende et au produit de liquidation, toutes avec restrictions quant à la transmissibilité selon statuts. Augmentation ordinaire du capital-actions en espèces et par compensation de créances de CHF 6'467'733; en contrepartie de ces créances, il est remis 6'563'208 actions nominatives de CHF 0.10, privilégiées quant au dividende et au produit de liquidation. Nouveau capital-actions entièrement libéré: CHF 2'073'896.10, divisé en 2'074'822 actions nominatives de CHF 0.10 et 18'664'139 actions nominatives de CHF 0.10, privilégiées quant au dividende et au produit de liquidation, toutes avec restrictions quant à la transmissibilité selon statuts.</publicationText>
+  <commonsNew>
+    <company>
+      <name>EH Group Engineering SA</name>
+      <uid>CHE-373.771.678</uid>
+      <uidOrganisationId>373771678</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH55011742709</code13>
+      <seat>Nyon</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>la société a pour but tous conseils en matière d'ingénierie, de conception et de développement, de simulation et de calculs; la conception et le développement de prototypes de systèmes de piles à combustible à basse et haute température; la conception et le développement d'unités de production d'hydrogène, ainsi que de tous autres types d'unités production d'énergie, notamment dans le domaine des énergies renouvelables; la conception et la distribution de ses propres produits et logiciels; toutes opérations au moyen de contrats de licence permettant la distribution de technologie en Suisse et à l'étranger. La société peut créer des filiales et des succursales ainsi que détenir des participations dans toutes entreprises. La société peut acquérir, détenir et aliéner des immeubles (à l'exclusion des opérations immobilières non admissibles au regard de la LFAIE) et des droits de propriété intellectuelle. La société peut exécuter toutes opérations commerciales, financières ou autres qui sont en rapport direct ou indirect avec son but social. La société peut fournir des financements directs ou indirects, que ce soit sous forme de prêts et/ou sous toutes autres formes de financement, contre rémunération ou non, à des tiers ou à des sociétés dans lesquelles elle détient des participations directes ou indirectes, ainsi qu'à ses actionnaires directs ou indirects et aux sociétés dans lesquelles ceux-ci détiennent des participations directes ou indirectes. La société peut également fournir toute sorte de sûretés ou de garanties afin de garantir ses obligations ou les obligations de chacune desdites personnes, y compris sous forme de droits de gages, de cessions ou de transferts à titre de sûretés, de garanties en tout genre ou d'engagements d'indemnisation, contre rémunération ou non. La société peut fournir ces financements, sûretés ou garanties quand bien même cela serait dans l'intérêt exclusif de tiers ou de sociétés dans lesquelles elle détient des participations directes ou indirectes, ou dans celui de ses actionnaires directs ou indirects ou des sociétés dans lesquelles ceux-ci détiennent des participations directes ou indirectes.</purpose>
+    <capital>
+      <nominal>2073896.10</nominal>
+      <paid>2073896.10</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>EH Group Engineering SA</name>
+      <uid>CHE-373.771.678</uid>
+      <uidOrganisationId>373771678</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH55011742709</code13>
+      <seat>Nyon</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>la société a pour but tous conseils en matière d'ingénierie, de conception et de développement, de simulation et de calculs; la conception et le développement de prototypes de systèmes de piles à combustible à basse et haute température; la conception et le développement d'unités de production d'hydrogène, ainsi que de tous autres types d'unités production d'énergie, notamment dans le domaine des énergies renouvelables; la conception et la distribution de ses propres produits et logiciels; toutes opérations au moyen de contrats de licence permettant la distribution de technologie en Suisse et à l'étranger. La société peut créer des filiales et des succursales ainsi que détenir des participations dans toutes entreprises. La société peut acquérir, détenir et aliéner des immeubles (à l'exclusion des opérations immobilières non admissibles au regard de la LFAIE) et des droits de propriété intellectuelle. La société peut exécuter toutes opérations commerciales, financières ou autres qui sont en rapport direct ou indirect avec son but social. La société peut fournir des financements directs ou indirects, que ce soit sous forme de prêts et/ou sous toutes autres formes de financement, contre rémunération ou non, à des tiers ou à des sociétés dans lesquelles elle détient des participations directes ou indirectes, ainsi qu'à ses actionnaires directs ou indirects et aux sociétés dans lesquelles ceux-ci détiennent des participations directes ou indirectes. La société peut également fournir toute sorte de sûretés ou de garanties afin de garantir ses obligations ou les obligations de chacune desdites personnes, y compris sous forme de droits de gages, de cessions ou de transferts à titre de sûretés, de garanties en tout genre ou d'engagements d'indemnisation, contre rémunération ou non. La société peut fournir ces financements, sûretés ou garanties quand bien même cela serait dans l'intérêt exclusif de tiers ou de sociétés dans lesquelles elle détient des participations directes ou indirectes, ou dans celui de ses actionnaires directs ou indirects ou des sociétés dans lesquelles ceux-ci détiennent des participations directes ou indirectes.</purpose>
+    <capital>
+      <nominal>658000.00</nominal>
+      <paid>658000.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2022-04-21</lastFoscDate>
+    <lastFoscNumber>77</lastFoscNumber>
+    <lastFoscSequence>1005455688</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Vaud</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

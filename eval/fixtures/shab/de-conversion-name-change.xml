@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.17/HR02-export.xsd">
+<meta>
+  <id>9ecce1f4-e55f-4179-8302-d00b317f8a2c</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1005735305</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2023-05-01</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>ZH</cantons>
+  <title>
+    <de>Mutation OPTIML GmbH, Zürich, neu OPTIML AG</de>
+    <en>Change OPTIML GmbH, Zürich, new OPTIML AG</en>
+    <it>Cambiamenti OPTIML GmbH, Zürich, nuovo OPTIML AG</it>
+    <fr>Mutation OPTIML GmbH, Zürich, nouveau OPTIML AG</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>17400</journalNumber>
+  <journalDate>2023-04-26</journalDate>
+  <publicationText>OPTIML GmbH, in Zürich, CHE-178.002.184, Gesellschaft mit beschränkter Haftung (SHAB Nr. 50 vom 13.03.2023, Publ. 1005698406). Statutenänderung: 19.04.2023. Umwandlung: Die Gesellschaft mit beschränkter Haftung hat das Stammkapital auf CHF 102'840.00 erhöht und wird gemäss Umwandlungsplan vom 19.04.2023 und Bilanz per 14.02.2023 mit Aktiven von CHF 139'024.29 und Passiven (Fremdkapital) von CHF 127'088.16 in eine Aktiengesellschaft umgewandelt. Firma neu: OPTIML AG. Uebersetzungen der Firma neu: (OPTIML SA) (OPTIML Ltd). Rechtsform neu: Aktiengesellschaft. Zweck neu: Die Gesellschaft bezweckt die Entwicklung von Software in den Bereichen Infrastruktur und Nachhaltigkeit sowie die Erbringung von Dienstleistungen im erwähnten Bereich. Aktienkapital neu: CHF 132'640.00 [bisher: CHF 20'000.00]. Liberierung Aktienkapital neu: CHF 132'640.00. Aktien neu: 97'000 Namenaktien zu CHF 1.00 und 35'640 Namenaktien zu CHF 1.00 (Vorzugsaktien Pre-Seed). Die Gesellschaft hat mit Beschluss vom 19.04.2023 ein Kapitalband gemäss näherer Umschreibung in den Statuten beschlossen. Qualifizierte Tatbestände neu: Bei der Kapitalerhöhung vom 19.04.2023 werden Forderungen in der Höhe von insgesamt CHF 100'000.00 verrechnet, wofür 82'840 Stammanteile zu CHF 1.00 ausgegeben werden. Vinkulierung neu: Die Übertragbarkeit der Namenaktien ist nach Massgabe der Statuten beschränkt.</publicationText>
+  <commonsNew>
+    <company>
+      <name>OPTIML AG</name>
+      <translations>(OPTIML SA) (OPTIML Ltd)</translations>
+      <uid>CHE-178.002.184</uid>
+      <uidOrganisationId>178002184</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02040788645</code13>
+      <seat>Zürich</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Entwicklung von Software in den Bereichen Infrastruktur und Nachhaltigkeit sowie die Erbringung von Dienstleistungen im erwähnten Bereich. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften in der Schweiz und/oder im Ausland errichten und sich an anderen Unternehmen in der Schweiz und/oder im Ausland beteiligen, Liegenschaften in der Schweiz und/oder im Ausland erwerben, halten, belasten und veräussern sowie alle kommerziellen, finanziellen oder anderen Geschäfte tätigen, die mit dem Gesellschaftszweck direkt oder indirekt im Zusammenhang stehen. Die Gesellschaft kann überdies ihren direkten oder indirekten Muttergesellschaften und deren direkten oder indirekten Tochtergesellschaften sowie Dritten, einschliesslich ihren direkten oder indirekten Aktionären, entgeltlich oder unentgeltlich Darlehen oder andere Finanzierungen gewähren und für die Verbindlichkeiten solcher Personen oder Konzerngesellschaften Sicherheiten aller Art stellen, einschliesslich Garantien, Pfandrechte und fiduziarische Übereignungen von Aktiven der Gesellschaft. Zudem kann sie mit Konzerngesellschaften Liquiditätsausgleiche/Nettoliquiditätszentralisierungen (Cash-Pooling), einschliesslich periodischer Saldoanpassungen (Balancing), betreiben oder sich daran beteiligen, und zwar ebenfalls ohne Gegenleistung, zu Vorzugskonditionen, zinslos, unter Ausschluss der Gewinnerzielungsabsicht der Gesellschaft und unter Übernahme von Klumpenrisiken.</purpose>
+    <capital>
+      <nominal>132640.00</nominal>
+      <paid>132640.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>OPTIML GmbH</name>
+      <translations>(OPTIML LLC)</translations>
+      <uid>CHE-178.002.184</uid>
+      <uidOrganisationId>178002184</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02040788645</code13>
+      <seat>Zürich</seat>
+      <legalForm>0107</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Entwicklung von Software in den Bereichen Infrastruktur und Nachhaltigkeit sowie die Erbringung von Dienstleistungen im erwähnten Bereich. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>20000.00</nominal>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2023-03-13</lastFoscDate>
+    <lastFoscNumber>50</lastFoscNumber>
+    <lastFoscSequence>1005698406</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>true</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>true</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>true</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Zürich</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

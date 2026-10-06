@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.25/HR02-export.xsd">
+<meta>
+  <id>8fe53ee9-2759-4bdf-afc5-fc7be0e687bf</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006437830</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2025-09-19</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>TG</cantons>
+  <title>
+    <de>Mutation Brielmayer Holding AG, Braunau</de>
+    <en>Change Brielmayer Holding AG, Braunau</en>
+    <it>Cambiamenti Brielmayer Holding AG, Braunau</it>
+    <fr>Mutation Brielmayer Holding AG, Braunau</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>5407</journalNumber>
+  <journalDate>2025-09-16</journalDate>
+  <publicationText>Brielmayer Holding AG, in Braunau, CHE-310.255.922, Aktiengesellschaft (SHAB Nr. 115 vom 17.06.2024, Publ. 1006058862). Statutenänderung: 15.07.2025. Aktienkapital neu: CHF 120'000.00 [bisher: CHF 100'000.00]. Liberierung Aktienkapital neu: CHF 120'000.00 [bisher: CHF 100'000.00]. Aktien neu: 120 Namenaktien zu CHF 1'000.00 [bisher: 100 Namenaktien zu CHF 1'000.00]. Qualifizierte Tatbestände neu: Sacheinlage: Die Gesellschaft übernimmt bei der Kapitalerhöhung vom 15.07.2025 gemäss Vertrag vom 11.07.2025 Vermögenswerte gemäss näherer Umschreibung im Vertrag, wofür 20 Namenaktien zu CHF 1'000.00 ausgegeben werden.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Brielmayer Holding AG</name>
+      <uid>CHE-310.255.922</uid>
+      <uidOrganisationId>310255922</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH44030415496</code13>
+      <seat>Braunau</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Übernahme, den Kauf, den Verkauf sowie die Verwaltung von Beteiligungen an in- und ausländischen Unternehmen aller Art. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>120000.00</nominal>
+      <paid>120000.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Brielmayer Holding AG</name>
+      <uid>CHE-310.255.922</uid>
+      <uidOrganisationId>310255922</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH44030415496</code13>
+      <seat>Braunau</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Übernahme, den Kauf, den Verkauf sowie die Verwaltung von Beteiligungen an in- und ausländischen Unternehmen aller Art. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>100000.00</nominal>
+      <paid>100000.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2024-06-17</lastFoscDate>
+    <lastFoscNumber>115</lastFoscNumber>
+    <lastFoscSequence>1006058862</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Thurgau</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

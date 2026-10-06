@@ -4,7 +4,10 @@
 import { normalizeUid } from "../domain/uid";
 import { LEGAL_FORM, textAt } from "./xml";
 
-export const SET_OFF = /Verrechnung|compensation de créances?|compensazione/i;
+// Set-off of creditor claims only: "Verrechnung mit dem Bilanzverlust" or "compensation de
+// pertes" offset losses and are not contributions.
+export const SET_OFF =
+  /Verrechnung (?:einer |von |der )?Forderung|Forderung(?:en)?[\s\S]{0,160}?verrechnet|durch Verrechnung(?! mit)|compensation (?:de |d['’]une |des )créances?|compensazione (?:di |del |dei )credit/i;
 export const CAPITAL_BAND = /Kapitalband|marge de fluctuation|margine di variazione/i;
 
 export interface CapitalReading {

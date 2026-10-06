@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR01:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR01="https://shab.ch/shab/HR01-export" xsi:schemaLocation="https://shab.ch/shab/HR01-export https://amtsblattportal.ch/api/v1/schemas/shab/1.7/HR01-export.xsd">
+<meta>
+  <id>060d8eb8-48f4-493e-9620-f334b669ad3d</id>
+  <rubric>HR</rubric>
+  <subRubric>HR01</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR01-1004804379</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2020-01-14</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>L'entité juridique mentionnée a été inscrite au registre du commerce et jouit de la capacité juridique. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>VD</cantons>
+  <title>
+    <de>Neueintragung ComPair Technologies SA, Ecublens (VD)</de>
+    <en>New entries ComPair Technologies SA, Ecublens (VD)</en>
+    <it>Nuove registrazioni ComPair Technologies SA, Ecublens (VD)</it>
+    <fr>Nouvelles entrées ComPair Technologies SA, Ecublens (VD)</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>496</journalNumber>
+  <journalDate>2020-01-09</journalDate>
+  <publicationText>ComPair Technologies SA (ComPair Technologies AG) (ComPair Technologies Ltd), à Ecublens (VD), EPFL Innovation Park, Bâtiment C, 1015 Lausanne, CHE-298.133.861. Statuts: 17 décembre 2019. But: la société a pour but le développement, la fabrication et la commercialisation de produits, concepts, solutions et autres technologies dans le domaine des matériaux composites et polymériques, ainsi que la fourniture de tous services s'y rapportant (pour but complet cf. statuts). Capital-actions: CHF 100'000, libéré à concurrence de CHF 50'000, divisé en 10'000'000 actions nominatives de CHF 0.01, avec restrictions quant à la transmissibilité selon statuts. L'assemblée générale a introduit une clause statutaire relative à une augmentation conditionnelle du capital par décision du 17 décembre 2019.</publicationText>
+  <commonsNew>
+    <company>
+      <name>ComPair Technologies SA</name>
+      <translations>(ComPair Technologies AG) (ComPair Technologies Ltd)</translations>
+      <uid>CHE-298.133.861</uid>
+      <uidOrganisationId>298133861</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH55011886302</code13>
+      <seat>Ecublens (VD)</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>la société a pour but le développement, la fabrication et la commercialisation de produits, concepts, solutions et autres technologies dans le domaine des matériaux composites et polymériques, ainsi que la fourniture de tous services s'y rapportant (pour but complet cf. statuts).</purpose>
+    <capital>
+      <nominal>100000.00</nominal>
+      <paid>50000.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <transaction>
+    <registration>true</registration>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Vaud</officeName>
+  </senderOffice>
+</content>
+</HR01:publication>

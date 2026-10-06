@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>b637fda2-4028-45bd-8832-0b53b148840a</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006700648</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-07-08</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>ZH</cantons>
+  <title>
+    <de>Mutation PreComb Therapeutics AG, Hombrechtikon</de>
+    <en>Change PreComb Therapeutics AG, Hombrechtikon</en>
+    <it>Cambiamenti PreComb Therapeutics AG, Hombrechtikon</it>
+    <fr>Mutation PreComb Therapeutics AG, Hombrechtikon</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>32197</journalNumber>
+  <journalDate>2026-07-03</journalDate>
+  <publicationText>PreComb Therapeutics AG, in Hombrechtikon, CHE-371.974.816, Aktiengesellschaft (SHAB Nr. 74 vom 20.04.2026, Publ. 1006629095). Statutenänderung: 25.06.2026. Aktienkapital neu: CHF 410'780.70 [bisher: CHF 406'369.10]. Liberierung Aktienkapital neu: CHF 410'780.70 [bisher: CHF 406'369.10]. Aktien neu: 1'020'000 Namenaktien zu CHF 0.10, 1'029'410 Namenaktien zu CHF 0.10 (Vorzugsaktien Serie S) und 2'058'397 Namenaktien zu CHF 0.10 (Vorzugsaktien Serie A) [bisher: 2'014'281 Namenaktien zu CHF 0.10 (Vorzugsaktien Serie A), 1'020'000 Namenaktien zu CHF 0.10 und 1'029'410 Namenaktien zu CHF 0.10 (Vorzugsaktien Serie S)]. Ordentliche Kapitalerhöhung innerhalb des Kapitalbandes. Qualifizierte Tatbestände neu: Bei der Kapitalerhöhung vom 25.06.2026 werden Forderungen von CHF 137'862.50 verrechnet, wofür 44'116 Namenaktien zu CHF 0.10 (Vorzugsaktien Serie A) ausgegeben werden.</publicationText>
+  <commonsNew>
+    <company>
+      <name>PreComb Therapeutics AG</name>
+      <translations>(PreComb Therapeutics SA) (PreComb Therapeutics Ltd)</translations>
+      <uid>CHE-371.974.816</uid>
+      <uidOrganisationId>371974816</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030457235</code13>
+      <seat>Hombrechtikon</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Forschung, Entwicklung und den Vertrieb von pharmazeutischen, biologischen, medizinischen, diagnostischen oder ähnlichen Produkten, der Entwicklung von Verfahren zur Identifizierung neuer Produkte sowie die Erbringung von damit zusammenhängenden Dienstleistungen. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften in der Schweiz und/oder im Ausland errichten und sich an anderen Unternehmen in der Schweiz und/oder im Ausland beteiligen, Grundstücke oder Immaterialgüterrechte in der Schweiz und/oder im Ausland erwerben, halten, belasten und veräussern sowie alle kommerziellen, finanziellen oder anderen Geschäfte tätigen, die mit dem Gesellschaftszweck direkt oder indirekt im Zusammenhang stehen. Die Gesellschaft kann überdies ihren direkten oder indirekten Aktionären und deren direkten oder indirekten Tochtergesellschaften sowie Dritten entgeltlich oder unentgeltlich Darlehen oder andere Finanzierungen gewähren und für die Verbindlichkeiten solcher Personen oder Konzerngesellschaften Sicherheiten aller Art stellen, einschliesslich Garantien, Pfandrechte und fiduziarische Übereignungen von Aktiven der Gesellschaft. Zudem kann sie mit Konzerngesellschaften Liquiditätsausgleiche/Nettoliquiditätszentralisierungen (Cash-Pooling), einschliesslich periodischer Saldoanpassungen (Balancing), betreiben oder sich daran beteiligen, und zwar ebenfalls ohne Gegenleistung, zu Vorzugskonditionen, zinslos, unter Ausschluss der Gewinnerzielungsabsicht der Gesellschaft und unter Übernahme von Klumpenrisiken.</purpose>
+    <capital>
+      <nominal>410780.70</nominal>
+      <paid>410780.70</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>PreComb Therapeutics AG</name>
+      <translations>(PreComb Therapeutics SA) (PreComb Therapeutics Ltd)</translations>
+      <uid>CHE-371.974.816</uid>
+      <uidOrganisationId>371974816</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030457235</code13>
+      <seat>Hombrechtikon</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Forschung, Entwicklung und den Vertrieb von pharmazeutischen, biologischen, medizinischen, diagnostischen oder ähnlichen Produkten, der Entwicklung von Verfahren zur Identifizierung neuer Produkte sowie die Erbringung von damit zusammenhängenden Dienstleistungen. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften in der Schweiz und/oder im Ausland errichten und sich an anderen Unternehmen in der Schweiz und/oder im Ausland beteiligen, Grundstücke oder Immaterialgüterrechte in der Schweiz und/oder im Ausland erwerben, halten, belasten und veräussern sowie alle kommerziellen, finanziellen oder anderen Geschäfte tätigen, die mit dem Gesellschaftszweck direkt oder indirekt im Zusammenhang stehen. Die Gesellschaft kann überdies ihren direkten oder indirekten Aktionären und deren direkten oder indirekten Tochtergesellschaften sowie Dritten entgeltlich oder unentgeltlich Darlehen oder andere Finanzierungen gewähren und für die Verbindlichkeiten solcher Personen oder Konzerngesellschaften Sicherheiten aller Art stellen, einschliesslich Garantien, Pfandrechte und fiduziarische Übereignungen von Aktiven der Gesellschaft. Zudem kann sie mit Konzerngesellschaften Liquiditätsausgleiche/Nettoliquiditätszentralisierungen (Cash-Pooling), einschliesslich periodischer Saldoanpassungen (Balancing), betreiben oder sich daran beteiligen, und zwar ebenfalls ohne Gegenleistung, zu Vorzugskonditionen, zinslos, unter Ausschluss der Gewinnerzielungsabsicht der Gesellschaft und unter Übernahme von Klumpenrisiken.</purpose>
+    <capital>
+      <nominal>406369.10</nominal>
+      <paid>406369.10</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2026-04-20</lastFoscDate>
+    <lastFoscNumber>74</lastFoscNumber>
+    <lastFoscSequence>1006629095</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Zürich</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

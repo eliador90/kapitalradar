@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.24/HR02-export.xsd">
+<meta>
+  <id>8a5425f1-8ec9-4a60-80e4-8fb2894c56b6</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006399440</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2025-08-04</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>ZH</cantons>
+  <title>
+    <de>Mutation ISP Group AG, Zürich</de>
+    <en>Change ISP Group AG, Zürich</en>
+    <it>Cambiamenti ISP Group AG, Zürich</it>
+    <fr>Mutation ISP Group AG, Zürich</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>33832</journalNumber>
+  <journalDate>2025-07-29</journalDate>
+  <publicationText>ISP Group AG, in Zürich, CHE-181.869.640, Aktiengesellschaft (SHAB Nr. 36 vom 21.02.2025, Publ. 1006263324). Statutenänderung: 18.07.2025. Aktienkapital neu: CHF 512'339.75 [bisher: CHF 507'015.89]. Liberierung Aktienkapital neu: CHF 462'339.75 [bisher: CHF 457'015.89]. Aktien neu: 51'233'975 Namenaktien zu CHF 0.01 [bisher: 50'701'589 Namenaktien zu CHF 0.01]. [Streichung der Statutenbestimmung über das mit Ermächtigungsbeschluss vom 20.06.2022 eingeführte genehmigte Kapital infolge Zeitablaufs.] [gestrichen: Die Gesellschaft hat mit Beschluss vom 20.06.2022 eine genehmigte Kapitalerhöhung gemäss näherer Umschreibung in den Statuten beschlossen.]. Die Gesellschaft hat mit Beschluss vom 18.07.2025 ein Kapitalband gemäss näherer Umschreibung in den Statuten beschlossen. Qualifizierte Tatbestände neu: [Die Bestimmung über die Sacheinlage bei der Kapitalerhöhung ist aus den Statuten gestrichen worden.] [gestrichen: Sacheinlage: Die Gesellschaft übernimmt bei der Kapitalerhöhung vom 08.12.2014 gemäss Vertrag vom 08.12.2014 4'515 Namenaktien zu CHF 50.00 der ISP Financial Services AG (CHE-110.583.041), in Zürich, und 200 Stammanteile zu CHF 100.00 der RT Financial Services GmbH (CHE-402.137.238), in Oberrieden, wofür der Nennwert der 2'000 Namenaktien von CHF 50.00 auf CHF 172.875 erhöht wird.]</publicationText>
+  <commonsNew>
+    <company>
+      <name>ISP Group AG</name>
+      <translations>(ISP Group SA) (ISP Group Ltd)</translations>
+      <uid>CHE-181.869.640</uid>
+      <uidOrganisationId>181869640</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030413303</code13>
+      <seat>Zürich</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Zweck der Gesellschaft ist die direkte oder indirekte Beteiligung an Unternehmen aller Art in der Schweiz und im Ausland, insbesondere an Unternehmen im Finanzbereich. Sie kann Unternehmen gründen, sich an bestehenden mehr- oder minderheitlich beteiligen und sie finanzieren. Die Gesellschaft ist berechtigt, Liegenschaften im In- und Ausland zu erwerben, zu belasten und zu verkaufen.</purpose>
+    <capital>
+      <nominal>512339.75</nominal>
+      <paid>462339.75</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>ISP Group AG</name>
+      <translations>(ISP Group SA) (ISP Group Ltd)</translations>
+      <uid>CHE-181.869.640</uid>
+      <uidOrganisationId>181869640</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030413303</code13>
+      <seat>Zürich</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Zweck der Gesellschaft ist die direkte oder indirekte Beteiligung an Unternehmen aller Art in der Schweiz und im Ausland, insbesondere an Unternehmen im Finanzbereich. Sie kann Unternehmen gründen, sich an bestehenden mehr- oder minderheitlich beteiligen und sie finanzieren. Die Gesellschaft ist berechtigt, Liegenschaften im In- und Ausland zu erwerben, zu belasten und zu verkaufen.</purpose>
+    <capital>
+      <nominal>507015.89</nominal>
+      <paid>457015.89</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2025-02-21</lastFoscDate>
+    <lastFoscNumber>36</lastFoscNumber>
+    <lastFoscSequence>1006263324</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Zürich</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

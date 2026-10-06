@@ -162,7 +162,7 @@ function evalDataFiles(dir = "eval"): string[] {
   return readdirSync(dir).flatMap((f) => {
     const p = join(dir, f);
     if (statSync(p).isDirectory()) return evalDataFiles(p);
-    return /.(json|csv|md)$/.test(f) ? [p] : [];
+    return /\.(json|csv|md|xml)$/.test(f) ? [p] : [];
   });
 }
 

@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>d6df0c2b-8321-4fd8-bcbf-c1ecca474cf4</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006630361</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-04-21</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>ZH</cantons>
+  <title>
+    <de>Mutation PEAKSTAFF GmbH, Zürich, neu PEAKSTAFF AG</de>
+    <en>Change PEAKSTAFF GmbH, Zürich, new PEAKSTAFF AG</en>
+    <it>Cambiamenti PEAKSTAFF GmbH, Zürich, nuovo PEAKSTAFF AG</it>
+    <fr>Mutation PEAKSTAFF GmbH, Zürich, nouveau PEAKSTAFF AG</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>19426</journalNumber>
+  <journalDate>2026-04-16</journalDate>
+  <publicationText>PEAKSTAFF GmbH, in Zürich, CHE-395.550.588, Gesellschaft mit beschränkter Haftung (SHAB Nr. 197 vom 10.10.2024, Publ. 1006150485). Statutenänderung: 10.04.2026. Umwandlung: Die Gesellschaft mit beschränkter Haftung hat das Stammkapital auf CHF 100'000.00 erhöht und wird gemäss Umwandlungsplan vom 10.04.2026 und Bilanz per 31.12.2025 mit Aktiven von CHF 416'639.96 und Passiven (Fremdkapital) von CHF 328'840.25 in eine Aktiengesellschaft umgewandelt. Firma neu: PEAKSTAFF AG. Rechtsform neu: Aktiengesellschaft. Aktienkapital neu: CHF 100'000.00 [bisher: CHF 20'000.00]. Liberierung Aktienkapital neu: CHF 100'000.00. Aktien neu: 1'000 Namenaktien zu CHF 100.00.</publicationText>
+  <commonsNew>
+    <company>
+      <name>PEAKSTAFF AG</name>
+      <uid>CHE-395.550.588</uid>
+      <uidOrganisationId>395550588</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02040853781</code13>
+      <seat>Zürich</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt ist der Verleih und die Vermittlung von Personal im Event- und Gastronomiebereich sowie für alle Dienstleistungen auf dem Gebiet von Gesundheit, Freizeit und Unterhaltung. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Sicherheiten für Verbindlichkeiten verbundener Gesellschaften abgeben.</purpose>
+    <capital>
+      <nominal>100000.00</nominal>
+      <paid>100000.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>PEAKSTAFF GmbH</name>
+      <uid>CHE-395.550.588</uid>
+      <uidOrganisationId>395550588</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02040853781</code13>
+      <seat>Zürich</seat>
+      <legalForm>0107</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt ist der Verleih und die Vermittlung von Personal im Event- und Gastronomiebereich sowie für alle Dienstleistungen auf dem Gebiet von Gesundheit, Freizeit und Unterhaltung. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Sicherheiten für Verbindlichkeiten verbundener Gesellschaften abgeben.</purpose>
+    <capital>
+      <nominal>20000.00</nominal>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2024-10-10</lastFoscDate>
+    <lastFoscNumber>197</lastFoscNumber>
+    <lastFoscSequence>1006150485</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>true</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>true</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Zürich</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

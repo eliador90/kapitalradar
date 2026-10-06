@@ -7,7 +7,7 @@ import { formatUid } from "../domain/uid";
 import { fetchJson, fetchText } from "./http";
 
 const API = "https://amtsblattportal.ch/api/v1/publications";
-const MIN_INTERVAL_MS = 500;
+const MIN_INTERVAL_MS = 250; // ~4 req/s; the spike saw no throttling at this rate
 const CACHE_DIR = ".data/shab";
 
 const metaSchema = z.object({

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.25/HR02-export.xsd">
+<meta>
+  <id>51be7085-dfcf-464d-8e5c-2dfa09c3e12a</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006479540</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2025-11-10</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>ZH</cantons>
+  <title>
+    <de>Mutation Ahead Health AG, Zürich</de>
+    <en>Change Ahead Health AG, Zürich</en>
+    <it>Cambiamenti Ahead Health AG, Zürich</it>
+    <fr>Mutation Ahead Health AG, Zürich</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>49574</journalNumber>
+  <journalDate>2025-11-05</journalDate>
+  <publicationText>Ahead Health AG, in Zürich, CHE-213.692.684, Aktiengesellschaft (SHAB Nr. 208 vom 28.10.2025, Publ. 1006468425). Statutenänderung: 28.10.2025. Aktienkapital neu: CHF 170'151.13 [bisher: CHF 100'000.00]. Liberierung Aktienkapital neu: CHF 120'151.13 [bisher: CHF 50'000.00]. Aktien neu: 13'282'500 Namenaktien zu CHF 0.01 und 3'732'613 Namenaktien zu CHF 0.01 (Vorzugsaktien Seed) [bisher: 10'000'000 Namenaktien zu CHF 0.01]. Die Gesellschaft hat mit Beschluss vom 28.10.2025 die mit Beschluss vom 08.07.2024 eingeführte Bestimmung betreffend bedingtes Aktienkapital gemäss näherer Umschreibung in den Statuten geändert. [bisher: Die Gesellschaft hat bei der Gründung vom 08.07.2024 ein bedingtes Aktienkapital gemäss näherer Umschreibung in den Statuten beschlossen.]. Die Gesellschaft hat mit Beschluss vom 28.10.2025 ein Kapitalband gemäss näherer Umschreibung in den Statuten beschlossen. Kapitalerhöhung aus bedingtem Aktienkapital. Qualifizierte Tatbestände neu: Bei der Kapitalerhöhung vom 28.10.2025 werden Forderungen von CHF 1'573'255.97 verrechnet, wofür 1'436'929 Namenaktien zu CHF 0.01 (Vorzugsaktien Seed) ausgegeben werden.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Ahead Health AG</name>
+      <translations>(Ahead Health Inc.) (Ahead Health SA)</translations>
+      <uid>CHE-213.692.684</uid>
+      <uidOrganisationId>213692684</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030546743</code13>
+      <seat>Zürich</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt das Erbringen von Dienstleistungen und anderen Tätigkeiten im Bereich der medizinischen Vorsorge sowie die Errichtung, den Erwerb, die Veräusserung, die Verwaltung und die Umstrukturierung von medizinischen Einrichtungen. Die Gesellschaft kann alle Geschäfte eingehen und Verträge abschliessen sowie alles unternehmen, was direkt oder indirekt den Gesellschaftszweck fördert oder in den Geschäftsbereich der Gesellschaft fällt. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten, sich an Unternehmen im In- und Ausland beteiligen, Vertretungen übernehmen, Finanzierungen für eigene oder fremde Rechnung vornehmen, Grundstücke erwerben, halten, verwalten, belasten und veräussern wie auch Patente, Lizenzen und weiteres geistiges Eigentum erwerben, verwerten, belasten und verkaufen. Die Gesellschaft kann Finanzierungs-, Sanierungs- und Interzessionsmassnahmen zu Gunsten von Konzerngesellschaften oder Dritten vornehmen, einschliesslich ihnen Darlehen oder Sicherheiten gewähren.</purpose>
+    <capital>
+      <nominal>170151.13</nominal>
+      <paid>120151.13</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Ahead Health AG</name>
+      <translations>(Ahead Health Inc.) (Ahead Health SA)</translations>
+      <uid>CHE-213.692.684</uid>
+      <uidOrganisationId>213692684</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH02030546743</code13>
+      <seat>Zürich</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt das Erbringen von Dienstleistungen und anderen Tätigkeiten im Bereich der medizinischen Vorsorge sowie die Errichtung, den Erwerb, die Veräusserung, die Verwaltung und die Umstrukturierung von medizinischen Einrichtungen. Die Gesellschaft kann alle Geschäfte eingehen und Verträge abschliessen sowie alles unternehmen, was direkt oder indirekt den Gesellschaftszweck fördert oder in den Geschäftsbereich der Gesellschaft fällt. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten, sich an Unternehmen im In- und Ausland beteiligen, Vertretungen übernehmen, Finanzierungen für eigene oder fremde Rechnung vornehmen, Grundstücke erwerben, halten, verwalten, belasten und veräussern wie auch Patente, Lizenzen und weiteres geistiges Eigentum erwerben, verwerten, belasten und verkaufen. Die Gesellschaft kann Finanzierungs-, Sanierungs- und Interzessionsmassnahmen zu Gunsten von Konzerngesellschaften oder Dritten vornehmen, einschliesslich ihnen Darlehen oder Sicherheiten gewähren.</purpose>
+    <capital>
+      <nominal>100000.00</nominal>
+      <paid>50000.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2025-10-28</lastFoscDate>
+    <lastFoscNumber>208</lastFoscNumber>
+    <lastFoscSequence>1006468425</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Zürich</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.12/HR02-export.xsd">
+<meta>
+  <id>2e4ddd28-3ae2-4aa6-a1ad-98740494825b</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1005205992</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2021-06-03</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>VS</cantons>
+  <title>
+    <de>Mutation ExerGo SA, Sion</de>
+    <en>Change ExerGo SA, Sion</en>
+    <it>Cambiamenti ExerGo SA, Sion</it>
+    <fr>Mutation ExerGo SA, Sion</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>2283</journalNumber>
+  <journalDate>2021-05-31</journalDate>
+  <publicationText>Rectification de l'inscription au registre journalier no 2'189 du 25.05.2021, publiée dans la FOSC no 101 du 28.05.2021 . ExerGo SA, à Sion, CHE-449.975.270, société anonyme (No. FOSC 101 du 28.05.2021, Publ. 1005197281). Augmentation conditionnelle du capital fondée sur la décision relative à l'octroi de droits du 31.01.2020. [non: Augmentation autorisée du capital].</publicationText>
+  <commonsNew>
+    <company>
+      <name>ExerGo SA</name>
+      <uid>CHE-449.975.270</uid>
+      <uidOrganisationId>449975270</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH62640188044</code13>
+      <seat>Sion</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Les prestations de service et conseil concernant les solutions énergétiques, et en particulier les réseaux de trigénération à CO2 (cf. statuts pour but complet)</purpose>
+    <capital>
+      <nominal>205000.00</nominal>
+      <paid>205000.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>ExerGo SA</name>
+      <uid>CHE-449.975.270</uid>
+      <uidOrganisationId>449975270</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH62640188044</code13>
+      <seat>Sion</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Les prestations de service et conseil concernant les solutions énergétiques, et en particulier les réseaux de trigénération à CO2 (cf. statuts pour but complet)</purpose>
+    <capital>
+      <nominal>205000.00</nominal>
+      <paid>205000.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2021-05-28</lastFoscDate>
+    <lastFoscNumber>101</lastFoscNumber>
+    <lastFoscSequence>1005197281</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>true</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>false</nominal>
+          <paid>false</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Valais Central</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

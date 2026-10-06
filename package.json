@@ -12,7 +12,9 @@
     "preregister": "tsx scripts/preregister.ts",
     "assignment": "tsx scripts/assignment.ts",
     "spike": "tsx scripts/spike.ts",
-    "x1": "tsx scripts/x1.ts"
+    "x1": "tsx scripts/x1.ts",
+    "fixtures": "tsx scripts/fixtures.ts",
+    "ingest": "tsx --env-file=.env.local scripts/ingest.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>f5607e1f-e435-4108-ab66-ac04f558c77b</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006543104</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-01-19</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>GE</cantons>
+  <title>
+    <de>Mutation ORamaVR SA, Plan-les-Ouates</de>
+    <en>Change ORamaVR SA, Plan-les-Ouates</en>
+    <it>Cambiamenti ORamaVR SA, Plan-les-Ouates</it>
+    <fr>Mutation ORamaVR SA, Plan-les-Ouates</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>1217</journalNumber>
+  <journalDate>2026-01-14</journalDate>
+  <publicationText>ORamaVR SA, à Plan-les-Ouates, CHE-478.871.980 (FOSC du 04.12.2024, p. 0/1006195283). Augmentation ordinaire du capital-actions porté de CHF 108'737.80 à CHF 558'537.32 par l'émission de 44'979'952 actions de CHF 0.01, privilégiées quant au produit de liquidation, nominatives, liées selon statuts, dont 27'310'612 actions libérées par compensation de créances à hauteur de CHF 2'166'800, et 17'669'340 actions libérées en espèces. Capital-actions: CHF 558'537.32, entièrement libéré, divisé en 7'673'369 actions ordinaires de CHF 0.01 et 48'180'363 actions de CHF 0.01, privilégiées quant au produit de liquidation, toutes nominatives, liées selon statuts. Radiation de la disposition statutaire relative à une reprise de biens envisagée. Statuts modifiés le 23.12.2025.</publicationText>
+  <commonsNew>
+    <company>
+      <name>ORamaVR SA</name>
+      <uid>CHE-478.871.980</uid>
+      <uidOrganisationId>478871980</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66018470208</code13>
+      <seat>Plan-les-Ouates</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>en Suisse et à l'étranger, l'offre de tous conseils, services et prestations, de même que l'exercice de toutes activités dans le domaine de la simulation expérientielle pour la formation et l'évaluation médicales avec la réalité virtuelle (VR) de pointe (cf. statuts pour but complet).</purpose>
+    <capital>
+      <nominal>558537.32</nominal>
+      <paid>558537.32</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>ORamaVR SA</name>
+      <uid>CHE-478.871.980</uid>
+      <uidOrganisationId>478871980</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66018470208</code13>
+      <seat>Plan-les-Ouates</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>en Suisse et à l'étranger, l'offre de tous conseils, services et prestations, de même que l'exercice de toutes activités dans le domaine de la simulation expérientielle pour la formation et l'évaluation médicales avec la réalité virtuelle (VR) de pointe (cf. statuts pour but complet).</purpose>
+    <capital>
+      <nominal>108737.80</nominal>
+      <paid>108737.80</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2024-12-04</lastFoscDate>
+    <lastFoscNumber>236</lastFoscNumber>
+    <lastFoscSequence>1006195283</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Genève</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

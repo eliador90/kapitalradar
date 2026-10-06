@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>a55c1a0b-a590-45ea-8d0f-9d1d69684200</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006728040</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-08-10</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>GE</cantons>
+  <title>
+    <de>Mutation Paprec Swiss Group SA, Vernier</de>
+    <en>Change Paprec Swiss Group SA, Vernier</en>
+    <it>Cambiamenti Paprec Swiss Group SA, Vernier</it>
+    <fr>Mutation Paprec Swiss Group SA, Vernier</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>19772</journalNumber>
+  <journalDate>2026-08-05</journalDate>
+  <publicationText>Paprec Swiss Group SA , à Vernier, CHE-360.372.139 (FOSC du 04.08.2026, p. 0/1006723987). Augmentation ordinaire du capital-actions porté de CHF 46'878'211, 00 à CHF 92'689'019, 00 par l'émission de 45'810'808 actions de CHF 1, nominatives, dont 27'806'706 actions libérées par compensation de créances à hauteur de CHF 82'390'000. Capital-actions: CHF 92'689'019, 00, entièrement libéré, divisé en 92'689'019 actions de CHF 1, nominatives. Statuts modifiés le 29.07.2026.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Paprec Swiss Group SA</name>
+      <uid>CHE-360.372.139</uid>
+      <uidOrganisationId>360372139</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66042930203</code13>
+      <seat>Vernier</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>La société a pour but, plus particulièrement dans le domaine de la gestion des déchets, l'acquisition, la détention, la gestion et la réalisation de participations dans tous types d'entreprises commerciales, financières et industrielles, en Suisse et à l'étranger, à l'exclusion de participations dans des sociétés non cotées auprès d'une bourse suisse et ayant un but immobilier. La Société doit avoir un impact positif important sur la société et l'environnement, dans le cadre de ses activités commerciales et opérationnelles. La société pourra effectuer, tant en Suisse qu'à l'étranger, pour son propre compte ou pour le compte de tiers, toutes opérations commerciales, financières, industrielles et mobilières en relation directe ou indirecte avec son but principal. Elle pourra créer des succursales et/ou des filiales en Suisse et à l'étranger. La société peut exécuter des opérations de financement, accorder des prêts à des tiers ainsi qu'à des sociétés du groupe et aux actionnaires directs ou indirects de la société et accorder des sûretés de toute nature pour des propres engagements ou pour les engagements des sociétés susmentionnées vis-à-vis de tiers, y compris des gages, des transferts de sûretés et des garanties, même si ces prêts ou ces sûretés sont dans l'intérêt exclusif des sociétés susmentionnées et qu'ils sont accordés sans que la société ne reçoive de rémunération en contrepartie. En outre, elle peut conclure des contrats de cash pooling avec d'autres sociétés du groupe. Dans le cadre de son but, la société peut acquérir et détenir des biens immobiliers suisses ou des actions de sociétés immobilières détenant des biens immobiliers suisses pour autant les biens immobiliers aient une affectation exclusivement commerciale ou industrielle.</purpose>
+    <capital>
+      <nominal>92689019.00</nominal>
+      <paid>92689019.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Paprec Swiss Group SA</name>
+      <uid>CHE-360.372.139</uid>
+      <uidOrganisationId>360372139</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66042930203</code13>
+      <seat>Vernier</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>La société a pour but, plus particulièrement dans le domaine de la gestion des déchets, l'acquisition, la détention, la gestion et la réalisation de participations dans tous types d'entreprises commerciales, financières et industrielles, en Suisse et à l'étranger, à l'exclusion de participations dans des sociétés non cotées auprès d'une bourse suisse et ayant un but immobilier. La Société doit avoir un impact positif important sur la société et l'environnement, dans le cadre de ses activités commerciales et opérationnelles. La société pourra effectuer, tant en Suisse qu'à l'étranger, pour son propre compte ou pour le compte de tiers, toutes opérations commerciales, financières, industrielles et mobilières en relation directe ou indirecte avec son but principal. Elle pourra créer des succursales et/ou des filiales en Suisse et à l'étranger. La société peut exécuter des opérations de financement, accorder des prêts à des tiers ainsi qu'à des sociétés du groupe et aux actionnaires directs ou indirects de la société et accorder des sûretés de toute nature pour des propres engagements ou pour les engagements des sociétés susmentionnées vis-à-vis de tiers, y compris des gages, des transferts de sûretés et des garanties, même si ces prêts ou ces sûretés sont dans l'intérêt exclusif des sociétés susmentionnées et qu'ils sont accordés sans que la société ne reçoive de rémunération en contrepartie. En outre, elle peut conclure des contrats de cash pooling avec d'autres sociétés du groupe. Dans le cadre de son but, la société peut acquérir et détenir des biens immobiliers suisses ou des actions de sociétés immobilières détenant des biens immobiliers suisses pour autant les biens immobiliers aient une affectation exclusivement commerciale ou industrielle.</purpose>
+    <capital>
+      <nominal>46878211.00</nominal>
+      <paid>46878211.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2026-08-04</lastFoscDate>
+    <lastFoscNumber>148</lastFoscNumber>
+    <lastFoscSequence>1006723987</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Genève</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>198d58ba-1c50-4c97-bd7c-2cb0e1b66098</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006705679</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-07-13</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>GE</cantons>
+  <title>
+    <de>Mutation Foxstone SA, Genève</de>
+    <en>Change Foxstone SA, Genève</en>
+    <it>Cambiamenti Foxstone SA, Genève</it>
+    <fr>Mutation Foxstone SA, Genève</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>17768</journalNumber>
+  <journalDate>2026-07-08</journalDate>
+  <publicationText>Foxstone SA, à Genève, CHE-371.959.426 (FOSC du 12.09.2025, p. 0/1006432393). Augmentation du capital-actions au moyen d'un capital conditionnel, fondée sur la décision relative à l'octroi de droits du 31.10.2017, porté de CHF 179'567, 84 à CHF 179'778, 59 par l'émission de 21'075 actions de CHF 0.01, nominatives, liées selon statuts. Capital-actions: CHF 179'778, 59, entièrement libéré, divisé en 11'388'498 actions de CHF 0.01 et 6'589'361 actions de CHF 0.01 privilégiées quant au produit de liquidation, toutes nominatives, liées selon statuts. Création d'un capital-participation au moyen d'un capital-participation conditionnel, fondée sur la clause statutaire introduite en date du 04.09.2025, par l'émission de 3'075'663 bons de CHF 0.01, nominatifs, liés selon statuts. Capital-participation: CHF 30'756, 63, entièrement libéré, divisé en 3'075'663 bons de CHF 0.01, nominatifs, liés selon statuts. Radiation de la clause statutaire relative à une augmentation du capital au moyen d'un capital conditionnel, introduite par décision du 31.10.2017. Statuts modifiés le 30.06.2026.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Foxstone SA</name>
+      <uid>CHE-371.959.426</uid>
+      <uidOrganisationId>371959426</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66026690164</code13>
+      <seat>Genève</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>développement, exploitation et gestion d'une plateforme d'investissement et de financement participatif; réalisation, conception, développement, utilisation, exploitation, conseil, commercialisation de plateformes d'investissement, de financement participatif et de logiciels informatiques; fourniture de services, notamment courtage, gestion, conseil, expertise, pilotage notamment dans le domaine immobilier (cf. statuts pour but complet).</purpose>
+    <capital>
+      <nominal>179778.59</nominal>
+      <paid>179778.59</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Foxstone SA</name>
+      <uid>CHE-371.959.426</uid>
+      <uidOrganisationId>371959426</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66026690164</code13>
+      <seat>Genève</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>développement, exploitation et gestion d'une plateforme d'investissement et de financement participatif; réalisation, conception, développement, utilisation, exploitation, conseil, commercialisation de plateformes d'investissement, de financement participatif et de logiciels informatiques; fourniture de services, notamment courtage, gestion, conseil, expertise, pilotage notamment dans le domaine immobilier (cf. statuts pour but complet).</purpose>
+    <capital>
+      <nominal>179567.84</nominal>
+      <paid>179567.84</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2025-09-12</lastFoscDate>
+    <lastFoscNumber>176</lastFoscNumber>
+    <lastFoscSequence>1006432393</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Genève</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>
