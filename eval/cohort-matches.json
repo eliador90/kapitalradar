@@ -1,0 +1,772 @@
+{
+  "unsealedAt": "2026-10-06T12:35:14.386Z",
+  "frozenAt": "2026-10-06T12:33:21.556Z",
+  "matchWindowDays": {
+    "before": 120,
+    "after": 180
+  },
+  "rows": [
+    {
+      "rank": 38,
+      "uid": "CHE304999902",
+      "company": "Seprify AG",
+      "announced": "2026-03-10",
+      "publications": 5,
+      "earliestPublication": "2022-10-12",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [
+        {
+          "id": "68ed6f4a-2d81-4eb3-828b-8b85e4aae282",
+          "publicationNumber": "HR02-1006567830",
+          "publishedAt": "2026-02-12",
+          "lagDays": -26,
+          "before": 100000.04,
+          "after": 182561.64,
+          "setOff": true,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 40,
+      "uid": "CHE232368942",
+      "company": "Oxara AG",
+      "announced": "2026-02-06",
+      "publications": 9,
+      "earliestPublication": "2019-10-25",
+      "formationFound": true,
+      "increasesTotal": 0,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 41,
+      "uid": "CHE158616302",
+      "company": "Metafuels AG",
+      "announced": "2026-02-20",
+      "publications": 11,
+      "earliestPublication": "2021-10-19",
+      "formationFound": true,
+      "increasesTotal": 7,
+      "candidates": [
+        {
+          "id": "cdeb11d7-e34b-47e6-9808-84d1a7f8fc63",
+          "publicationNumber": "HR02-1006599283",
+          "publishedAt": "2026-03-18",
+          "lagDays": 26,
+          "before": 344305,
+          "after": 345571,
+          "setOff": false,
+          "capitalBand": false
+        },
+        {
+          "id": "ac48fc52-88fe-4d97-82f0-8584920d3e71",
+          "publicationNumber": "HR02-1006547623",
+          "publishedAt": "2026-01-23",
+          "lagDays": -28,
+          "before": 261713,
+          "after": 344305,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 45,
+      "uid": "CHE257956279",
+      "company": "FluoSphera SA",
+      "announced": "2026-01-12",
+      "publications": 15,
+      "earliestPublication": "2021-11-17",
+      "formationFound": true,
+      "increasesTotal": 3,
+      "candidates": [
+        {
+          "id": "e12062e4-c265-41a3-b986-8b1334d07c5a",
+          "publicationNumber": "HR02-1006548934",
+          "publishedAt": "2026-01-23",
+          "lagDays": 11,
+          "before": 102272.73,
+          "after": 259065.6,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 51,
+      "uid": "CHE448817007",
+      "company": "Allegria Therapeutics AG",
+      "announced": "2025-12-12",
+      "publications": 8,
+      "earliestPublication": "2024-01-05",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "bfeee751-b25d-477e-bac8-3662528bdb7d",
+          "publicationNumber": "HR02-1006511349",
+          "publishedAt": "2025-12-12",
+          "lagDays": 0,
+          "before": 100000,
+          "after": 497989.95,
+          "setOff": true,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 58,
+      "uid": "CHE280524883",
+      "company": "Youdera Group SA",
+      "announced": "2026-04-08",
+      "publications": 10,
+      "earliestPublication": "2018-10-02",
+      "formationFound": false,
+      "increasesTotal": 6,
+      "candidates": [
+        {
+          "id": "1173c4f2-ef77-46b8-a11f-bb48300dd393",
+          "publicationNumber": "HR02-1006593439",
+          "publishedAt": "2026-03-11",
+          "lagDays": -28,
+          "before": 168175.6,
+          "after": 215408.2,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 60,
+      "uid": "CHE414169498",
+      "company": "Polares Medical SA",
+      "announced": "2026-03-04",
+      "publications": 10,
+      "earliestPublication": "2019-07-02",
+      "formationFound": false,
+      "increasesTotal": 8,
+      "candidates": [
+        {
+          "id": "2589adb0-d6f4-4eab-a1d8-e12fbb27d01f",
+          "publicationNumber": "HR02-1006569780",
+          "publishedAt": "2026-02-13",
+          "lagDays": -19,
+          "before": 4103636.04,
+          "after": 4486969.36,
+          "setOff": true,
+          "capitalBand": true
+        },
+        {
+          "id": "c7dd5bc9-a9dc-483b-9afa-3d591026e3ec",
+          "publicationNumber": "HR02-1006535334",
+          "publishedAt": "2026-01-12",
+          "lagDays": -51,
+          "before": 2680654.48,
+          "after": 4103636.04,
+          "setOff": true,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 61,
+      "uid": "CHE343543919",
+      "company": "Clee Medical SA",
+      "announced": "2026-02-25",
+      "publications": 4,
+      "earliestPublication": "2024-10-14",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "80852fc0-40c0-41ca-ab38-d8620c46e127",
+          "publicationNumber": "HR02-1006580034",
+          "publishedAt": "2026-02-25",
+          "lagDays": 0,
+          "before": 100000,
+          "after": 152923.28,
+          "setOff": true,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 62,
+      "uid": "CHE365410126",
+      "company": "Ionic Wind AG",
+      "announced": "2025-12-15",
+      "publications": 4,
+      "earliestPublication": "2025-03-25",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "8597d830-7577-4b8d-a033-27598a4f7bc3",
+          "publicationNumber": "HR02-1006647926",
+          "publishedAt": "2026-05-11",
+          "lagDays": 147,
+          "before": 100000,
+          "after": 166150.7,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 64,
+      "uid": "CHE316234404",
+      "company": "Noriware AG",
+      "announced": "2026-01-16",
+      "publications": 5,
+      "earliestPublication": "2022-10-18",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [
+        {
+          "id": "c2920801-c4cd-473e-93a7-ea9bed8c4608",
+          "publicationNumber": "HR02-1006548464",
+          "publishedAt": "2026-01-23",
+          "lagDays": 7,
+          "before": 125013.7,
+          "after": 182680.1,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 67,
+      "uid": "CHE106413364",
+      "company": "Algorized SA",
+      "announced": "2026-02-11",
+      "publications": 12,
+      "earliestPublication": "2019-01-10",
+      "formationFound": false,
+      "increasesTotal": 3,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 68,
+      "uid": "CHE248792688",
+      "company": "Haelixa AG",
+      "announced": "2026-02-03",
+      "publications": 8,
+      "earliestPublication": "2019-09-13",
+      "formationFound": false,
+      "increasesTotal": 1,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 69,
+      "uid": "CHE382539063",
+      "company": "vyzn AG",
+      "announced": "2025-12-09",
+      "publications": 13,
+      "earliestPublication": "2022-07-07",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "ad491317-c90a-4977-ab4f-b53a9e456748",
+          "publicationNumber": "HR02-1006503939",
+          "publishedAt": "2025-12-05",
+          "lagDays": -4,
+          "before": 100000,
+          "after": 159251.55,
+          "setOff": true,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 72,
+      "uid": "CHE399512500",
+      "company": "Genknowme SA",
+      "announced": "2025-12-18",
+      "publications": 5,
+      "earliestPublication": "2019-01-25",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 76,
+      "uid": "CHE171163797",
+      "company": "UMANITEK AG",
+      "announced": "2026-02-10",
+      "publications": 5,
+      "earliestPublication": "2025-03-14",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [
+        {
+          "id": "b4a17975-5049-49ba-a0e2-8eb0c5aa7ef2",
+          "publicationNumber": "HR02-1006722444",
+          "publishedAt": "2026-08-03",
+          "lagDays": 174,
+          "before": 115318.1,
+          "after": 117818.7,
+          "setOff": false,
+          "capitalBand": true
+        },
+        {
+          "id": "8dc09c2e-74d1-4638-bf64-2a39f6202226",
+          "publicationNumber": "HR02-1006471188",
+          "publishedAt": "2025-10-30",
+          "lagDays": -103,
+          "before": 105000,
+          "after": 115318.1,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 82,
+      "uid": "CHE271699590",
+      "company": "Selma Finance AG",
+      "announced": "2026-03-05",
+      "publications": 5,
+      "earliestPublication": "2021-03-15",
+      "formationFound": false,
+      "increasesTotal": 1,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 85,
+      "uid": "CHE452682851",
+      "company": "Pregnolia AG",
+      "announced": "2026-03-11",
+      "publications": 11,
+      "earliestPublication": "2019-02-19",
+      "formationFound": false,
+      "increasesTotal": 7,
+      "candidates": [
+        {
+          "id": "49eb8b60-8709-456d-8350-7a84e8c29c1b",
+          "publicationNumber": "HR02-1006557678",
+          "publishedAt": "2026-02-03",
+          "lagDays": -36,
+          "before": 389676,
+          "after": 420489,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 88,
+      "uid": "CHE190466790",
+      "company": "EVIS Bioscience AG",
+      "announced": "2026-03-20",
+      "publications": 5,
+      "earliestPublication": "2024-06-17",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "055f31e0-b679-44cb-8ea5-dc3283f86837",
+          "publicationNumber": "HR02-1006745478",
+          "publishedAt": "2026-09-02",
+          "lagDays": 166,
+          "before": 100000,
+          "after": 106589,
+          "setOff": true,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 89,
+      "uid": "CHE290009772",
+      "company": "Soeder AG",
+      "announced": "2026-03-24",
+      "publications": 19,
+      "earliestPublication": "2019-10-23",
+      "formationFound": false,
+      "increasesTotal": 7,
+      "candidates": [
+        {
+          "id": "9815f77b-fb72-43cc-b0c9-4f4b6dd283e1",
+          "publicationNumber": "HR02-1006516935",
+          "publishedAt": "2025-12-18",
+          "lagDays": -96,
+          "before": 1210927,
+          "after": 1401654.2,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 92,
+      "uid": "CHE308142728",
+      "company": "Kandou AI Holding SA",
+      "announced": "2026-03-23",
+      "publications": 22,
+      "earliestPublication": "2019-01-29",
+      "formationFound": false,
+      "increasesTotal": 11,
+      "candidates": [
+        {
+          "id": "6cc46161-651d-4a98-b149-c9b2d7d39a12",
+          "publicationNumber": "HR02-1006620617",
+          "publishedAt": "2026-04-09",
+          "lagDays": 17,
+          "before": 1428379.85,
+          "after": 1474069.29,
+          "setOff": false,
+          "capitalBand": false
+        },
+        {
+          "id": "261fdefb-8e67-4831-b2e0-d7048b7a18d4",
+          "publicationNumber": "HR02-1006586515",
+          "publishedAt": "2026-03-04",
+          "lagDays": -19,
+          "before": 1063381.91,
+          "after": 1428379.85,
+          "setOff": false,
+          "capitalBand": true
+        },
+        {
+          "id": "95eb35b8-6672-4d5e-8c60-6487b31f1ca9",
+          "publicationNumber": "HR02-1006557245",
+          "publishedAt": "2026-02-02",
+          "lagDays": -49,
+          "before": 190750.24,
+          "after": 1063381.91,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 93,
+      "uid": "CHE361096976",
+      "company": "PAVE Space SA",
+      "announced": "2026-03-25",
+      "publications": 5,
+      "earliestPublication": "2023-11-27",
+      "formationFound": true,
+      "increasesTotal": 3,
+      "candidates": [
+        {
+          "id": "2e9b665d-4284-4f46-a53f-f90185a5f9e7",
+          "publicationNumber": "HR02-1006665265",
+          "publishedAt": "2026-06-02",
+          "lagDays": 69,
+          "before": 189893.84,
+          "after": 206672.37,
+          "setOff": false,
+          "capitalBand": true
+        },
+        {
+          "id": "97a186e2-dc0a-45b9-9339-71d62c36d956",
+          "publicationNumber": "HR02-1006643556",
+          "publishedAt": "2026-05-05",
+          "lagDays": 41,
+          "before": 138239.77,
+          "after": 189893.84,
+          "setOff": true,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 94,
+      "uid": "CHE184306830",
+      "company": "Liom Health AG",
+      "announced": "2025-12-22",
+      "publications": 14,
+      "earliestPublication": "2018-10-26",
+      "formationFound": false,
+      "increasesTotal": 4,
+      "candidates": [
+        {
+          "id": "77239ff8-6806-4a9f-976c-380a25a9b238",
+          "publicationNumber": "HR02-1006528545",
+          "publishedAt": "2026-01-05",
+          "lagDays": 14,
+          "before": 255942.42,
+          "after": 283411.42,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 95,
+      "uid": "CHE380226104",
+      "company": "Winduction AG",
+      "announced": "2026-02-17",
+      "publications": 2,
+      "earliestPublication": "2024-11-27",
+      "formationFound": true,
+      "increasesTotal": 0,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 96,
+      "uid": "CHE362641008",
+      "company": "Covalo AG",
+      "announced": "2026-04-02",
+      "publications": 6,
+      "earliestPublication": "2021-01-18",
+      "formationFound": true,
+      "increasesTotal": 5,
+      "candidates": [
+        {
+          "id": "c68947b4-3de7-4642-b493-4186c4f862a6",
+          "publicationNumber": "HR02-1006603135",
+          "publishedAt": "2026-03-23",
+          "lagDays": -10,
+          "before": 129809,
+          "after": 177340,
+          "setOff": false,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 97,
+      "uid": "CHE199078187",
+      "company": "SolidWatts SA",
+      "announced": "2026-03-26",
+      "publications": 3,
+      "earliestPublication": "2022-11-02",
+      "formationFound": true,
+      "increasesTotal": 2,
+      "candidates": [
+        {
+          "id": "15b90a4e-b2a0-4ee0-b1e2-efed94f0ce11",
+          "publicationNumber": "HR02-1006625791",
+          "publishedAt": "2026-04-15",
+          "lagDays": 20,
+          "before": 158850.84,
+          "after": 164980.17,
+          "setOff": false,
+          "capitalBand": true
+        },
+        {
+          "id": "93076a18-2556-467f-8291-e071f476ea88",
+          "publicationNumber": "HR02-1006524791",
+          "publishedAt": "2025-12-24",
+          "lagDays": -92,
+          "before": 100000,
+          "after": 158850.84,
+          "setOff": true,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 98,
+      "uid": "CHE305277059",
+      "company": "nowon AG",
+      "announced": "2026-02-24",
+      "publications": 5,
+      "earliestPublication": "2020-12-14",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 103,
+      "uid": "CHE442270754",
+      "company": "Oviva AG",
+      "announced": "2026-01-22",
+      "publications": 12,
+      "earliestPublication": "2019-06-06",
+      "formationFound": false,
+      "increasesTotal": 6,
+      "candidates": [
+        {
+          "id": "fd946e75-a31c-4bd8-b48e-b621194415de",
+          "publicationNumber": "HR02-1006549477",
+          "publishedAt": "2026-01-26",
+          "lagDays": 4,
+          "before": 898243,
+          "after": 998124,
+          "setOff": false,
+          "capitalBand": false
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 104,
+      "uid": "CHE270168752",
+      "company": "Gaisbock AG",
+      "announced": "2026-03-30",
+      "publications": 4,
+      "earliestPublication": "2023-03-13",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 105,
+      "uid": "CHE343173900",
+      "company": "DigeHealth SA",
+      "announced": "2025-12-10",
+      "publications": 6,
+      "earliestPublication": "2023-12-28",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "0ac9f9e2-6131-4084-b228-fc669e5c5e5d",
+          "publicationNumber": "HR02-1006548665",
+          "publishedAt": "2026-01-23",
+          "lagDays": 44,
+          "before": 100000,
+          "after": 133761.79,
+          "setOff": true,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    },
+    {
+      "rank": 106,
+      "uid": "CHE195614655",
+      "company": "MIROS Technology SA",
+      "announced": "2026-03-30",
+      "publications": 3,
+      "earliestPublication": "2023-10-16",
+      "formationFound": true,
+      "increasesTotal": 1,
+      "candidates": [
+        {
+          "id": "72bcf891-8cb1-471a-be48-d078dd3fc937",
+          "publicationNumber": "HR02-1006605332",
+          "publishedAt": "2026-03-24",
+          "lagDays": -6,
+          "before": 100000,
+          "after": 116533.84,
+          "setOff": true,
+          "capitalBand": true
+        }
+      ],
+      "adjudication": {
+        "accepted": null,
+        "note": ""
+      }
+    }
+  ]
+}
