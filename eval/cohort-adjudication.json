@@ -1,0 +1,215 @@
+{
+  "reviewedBy": "claude_proposal_pending_remo",
+  "rows": [
+    {
+      "rank": 38,
+      "uid": "CHE304999902",
+      "verdict": "accepted",
+      "publicationId": "68ed6f4a-2d81-4eb3-828b-8b85e4aae282",
+      "note": "new Series A preferred class, −26 d"
+    },
+    {
+      "rank": 40,
+      "uid": "CHE232368942",
+      "verdict": "none",
+      "publicationId": null,
+      "note": "no capital increase in the window (0 in total): a miss"
+    },
+    {
+      "rank": 41,
+      "uid": "CHE158616302",
+      "verdict": "accepted",
+      "publicationId": "ac48fc52-88fe-4d97-82f0-8584920d3e71",
+      "note": "large increase (261k→344k nominal), −28 d; the +26 d entry is a small follow-on"
+    },
+    {
+      "rank": 45,
+      "uid": "CHE257956279",
+      "verdict": "accepted",
+      "publicationId": "e12062e4-c265-41a3-b986-8b1334d07c5a",
+      "note": "new preferred shares, +11 d"
+    },
+    {
+      "rank": 51,
+      "uid": "CHE448817007",
+      "verdict": "accepted",
+      "publicationId": "bfeee751-b25d-477e-bac8-3662528bdb7d",
+      "note": "new Seed class, same day as the announcement"
+    },
+    {
+      "rank": 58,
+      "uid": "CHE280524883",
+      "verdict": "accepted",
+      "publicationId": "1173c4f2-ef77-46b8-a11f-bb48300dd393",
+      "note": "shares converted into preferred A plus an increase, −28 d"
+    },
+    {
+      "rank": 60,
+      "uid": "CHE414169498",
+      "verdict": "accepted",
+      "publicationId": "c7dd5bc9-a9dc-483b-9afa-3d591026e3ec",
+      "note": "cash + set-off USD 14.4m into new shares, −51 d; the −19 d entry is a USD 1.5m set-off second close"
+    },
+    {
+      "rank": 61,
+      "uid": "CHE343543919",
+      "verdict": "accepted",
+      "publicationId": "80852fc0-40c0-41ca-ab38-d8620c46e127",
+      "note": "seed financing registered on the announcement day (set-off + conditional capital)"
+    },
+    {
+      "rank": 62,
+      "uid": "CHE365410126",
+      "verdict": "accepted",
+      "publicationId": "8597d830-7577-4b8d-a033-27598a4f7bc3",
+      "note": "new Seed1 preferred class, +147 d (late registration)"
+    },
+    {
+      "rank": 64,
+      "uid": "CHE316234404",
+      "verdict": "accepted",
+      "publicationId": "c2920801-c4cd-473e-93a7-ea9bed8c4608",
+      "note": "new preferred class, +7 d"
+    },
+    {
+      "rank": 67,
+      "uid": "CHE106413364",
+      "verdict": "none",
+      "publicationId": null,
+      "note": "no capital increase in the window (3 in total): a miss"
+    },
+    {
+      "rank": 68,
+      "uid": "CHE248792688",
+      "verdict": "none",
+      "publicationId": null,
+      "note": "no capital increase in the window (1 in total): a miss"
+    },
+    {
+      "rank": 69,
+      "uid": "CHE382539063",
+      "verdict": "accepted",
+      "publicationId": "ad491317-c90a-4977-ab4f-b53a9e456748",
+      "note": "new preferred class, −4 d"
+    },
+    {
+      "rank": 72,
+      "uid": "CHE399512500",
+      "verdict": "none",
+      "publicationId": null,
+      "note": "no capital increase in the window (2 in total): a miss"
+    },
+    {
+      "rank": 76,
+      "uid": "CHE171163797",
+      "verdict": "uncertain",
+      "publicationId": null,
+      "note": "two small increases inside the capital band (−103 d, +174 d); neither clearly the strategic investment"
+    },
+    {
+      "rank": 82,
+      "uid": "CHE271699590",
+      "verdict": "none",
+      "publicationId": null,
+      "note": "no capital increase in the window (1 in total): a miss"
+    },
+    {
+      "rank": 85,
+      "uid": "CHE452682851",
+      "verdict": "accepted",
+      "publicationId": "49eb8b60-8709-456d-8350-7a84e8c29c1b",
+      "note": "+30,813 CHF 1 shares (+8%) within the band, −36 d; plausible for CHF 3.4m"
+    },
+    {
+      "rank": 88,
+      "uid": "CHE190466790",
+      "verdict": "accepted",
+      "publicationId": "055f31e0-b679-44cb-8ea5-dc3283f86837",
+      "note": "+166 d, set-off: the crowd round registered late via conversion; may count as a miss by definition (conversion_only)"
+    },
+    {
+      "rank": 89,
+      "uid": "CHE290009772",
+      "verdict": "accepted",
+      "publicationId": "9815f77b-fb72-43cc-b0c9-4f4b6dd283e1",
+      "note": "+16% within the band, −96 d (round closed September per the article)"
+    },
+    {
+      "rank": 92,
+      "uid": "CHE308142728",
+      "verdict": "accepted",
+      "publicationId": "95eb35b8-6672-4d5e-8c60-6487b31f1ca9",
+      "note": "capital ×5.5 with the rename, −49 d; −19 d entry adds type A preferred within the band (possible second step), +17 d is conditional capital: check"
+    },
+    {
+      "rank": 93,
+      "uid": "CHE361096976",
+      "verdict": "accepted",
+      "publicationId": "97a186e2-dc0a-45b9-9339-71d62c36d956",
+      "note": "uncertain pick: May set-off + conditional (SAFE conversion?) vs June ordinary increase within the band: check"
+    },
+    {
+      "rank": 94,
+      "uid": "CHE184306830",
+      "verdict": "accepted",
+      "publicationId": "77239ff8-6806-4a9f-976c-380a25a9b238",
+      "note": "+11% in CHF 0.01 shares, +14 d"
+    },
+    {
+      "rank": 95,
+      "uid": "CHE380226104",
+      "verdict": "none",
+      "publicationId": null,
+      "note": "no capital increase in the window (0 in total): a miss"
+    },
+    {
+      "rank": 96,
+      "uid": "CHE362641008",
+      "verdict": "accepted",
+      "publicationId": "c68947b4-3de7-4642-b493-4186c4f862a6",
+      "note": "Seed class extended, −10 d"
+    },
+    {
+      "rank": 97,
+      "uid": "CHE199078187",
+      "verdict": "accepted",
+      "publicationId": "93076a18-2556-467f-8291-e071f476ea88",
+      "note": "new Seed class with set-off, −92 d; the +20 d entry is a second close"
+    },
+    {
+      "rank": 98,
+      "uid": "CHE305277059",
+      "verdict": "none",
+      "publicationId": null,
+      "note": "no capital increase in the window (1 in total): a miss"
+    },
+    {
+      "rank": 103,
+      "uid": "CHE442270754",
+      "verdict": "accepted",
+      "publicationId": "fd946e75-a31c-4bd8-b48e-b621194415de",
+      "note": "new preferred classes, +4 d"
+    },
+    {
+      "rank": 104,
+      "uid": "CHE270168752",
+      "verdict": "none",
+      "publicationId": null,
+      "note": "no capital increase in the window (1 in total): a miss"
+    },
+    {
+      "rank": 105,
+      "uid": "CHE343173900",
+      "verdict": "accepted",
+      "publicationId": "0ac9f9e2-6131-4084-b228-fc669e5c5e5d",
+      "note": "cash + set-off into Seed preferred, +44 d"
+    },
+    {
+      "rank": 106,
+      "uid": "CHE195614655",
+      "verdict": "accepted",
+      "publicationId": "72bcf891-8cb1-471a-be48-d078dd3fc937",
+      "note": "cash + set-off, −6 d"
+    }
+  ]
+}

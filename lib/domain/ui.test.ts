@@ -43,6 +43,7 @@ describe("feed filters", () => {
 describe("release eval", () => {
   const e: ReleaseEval = {
     evaluatedOn: "2026-10-08",
+    provisional: false,
     cohortSize: 30,
     systems: {
       rulesPlusClaude: { precision: { lo: 0.62, hi: 0.91, estimateLo: 0.8, estimateHi: 0.8, n: 15 }, recall: { hits: 21, n: 30 } },

@@ -171,11 +171,13 @@ async function run(releaseId: string) {
   if (!existsSync(ADJ)) throw new Error(`${ADJ} missing: adjudicate the cohort first`);
   const cfg = loadClassificationConfig();
   const rec = await computeRecall();
+  let provisional = (JSON.parse(readFileSync(ADJ, "utf8")) as { reviewedBy: string }).reviewedBy !== "remo";
   let rulesPrecision = null;
   let claudePrecision = null;
   if (existsSync(PRECISION_VERDICTS)) {
     const sample = precisionSample.parse(JSON.parse(readFileSync(PRECISION_SAMPLE, "utf8")));
     const verdicts = precisionVerdicts.parse(JSON.parse(readFileSync(PRECISION_VERDICTS, "utf8")));
+    if (verdicts.reviewedBy !== "remo") provisional = true;
     const byKey = new Map(verdicts.rows.map((v) => [v.key, v.verdict]));
     const missing = sample.items.filter((i) => !byKey.has(i.key));
     if (missing.length) throw new Error(`${missing.length} sampled items have no verdict`);
@@ -184,6 +186,7 @@ async function run(releaseId: string) {
     rulesPrecision = asSchema(weightedPrecision(systemStrata(sample.populations, joined, "rules")));
     claudePrecision = asSchema(weightedPrecision(systemStrata(sample.populations, joined, "claude")));
   } else console.log(`precision: ${PRECISION_VERDICTS} missing, reported as not measured`);
+  if (provisional) console.log("PROVISIONAL: adjudication or precision verdicts not yet reviewed by Remo; build-release will refuse this artifact");
 
   const sealed = sealedUids({ includeLedger: true });
   const rejected = (await releaseIncreases(releaseId)).filter((r) => !sealed.has(r.uid) && !r.rulesPositive && !isClassifierPositive(r.tier as Tier));
@@ -202,6 +205,7 @@ async function run(releaseId: string) {
 
   const result: ReleaseEval = releaseEval.parse({
     evaluatedOn: today(),
+    provisional,
     cohortSize: rec.cohort,
     systems: {
       rulesPlusClaude: { precision: claudePrecision, recall: { hits: rec.rulesPlusClaude.detected, n: rec.cohort } },

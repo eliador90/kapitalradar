@@ -20,6 +20,8 @@ const system = z.object({ precision: precision.nullable(), recall });
 
 export const releaseEval = z.object({
   evaluatedOn: isoDate,
+  /** True while the cohort adjudication or the precision verdicts await Remo's review: never ships. */
+  provisional: z.boolean(),
   cohortSize: z.number().int().nonnegative(),
   systems: z.object({ rulesPlusClaude: system, rulesOnly: system }),
   /** Secondary figure (decision log #17): likely financing or undecided counts as a hit. */

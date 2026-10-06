@@ -1,0 +1,185 @@
+{
+  "reviewedBy": "claude_proposal_pending_remo",
+  "rows": [
+    {
+      "key": "b3e2af5a-8b71-4860-876c-3f5177c0cf54",
+      "verdict": "unverifiable",
+      "source": "https://www.topadur.com/news",
+      "note": "Venture-backed clinical-stage biotech, but its news page and press coverage through May 2026 (board/CEO appointments, orphan designation) announce no 2026 financing, so nothing outside confirms the +15,310-share step published 2026-08-20; the last known round is a Series C extension from Oct 2024."
+    },
+    {
+      "key": "e3535d5b-457d-40bb-9fca-172b5b1963b8",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "This is an operator of mental-health practices in Lausanne (group practices listed on onedoc.ch), not a typical venture startup; no outside source on a funding round or on the 2025 capital increase was found."
+    },
+    {
+      "key": "8d283fcb-e284-418e-86f2-fddfc3fe54ba",
+      "verdict": "unverifiable",
+      "source": "https://news.bloomberglaw.com/private-equity/goldman-sachs-alternatives-arm-buys-stake-in-swiss-ai-firm-blp",
+      "note": "The only 2026 deal found is a secondary, which creates no new shares, and it came ~160 days before the 2026-10-02 SHAB step; nothing explains the +10.9M-share increase (it could be ESOP or an unannounced primary)."
+    },
+    {
+      "key": "4b6efb62-fb82-4ebe-b5f8-5e0b582eb912",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Basel clinical-trial software startup (founded 2020, accelerator-backed per CB Insights), but no public announcement of a 2025 round matching the +158,803-share step was found."
+    },
+    {
+      "key": "c59251f4-55a1-4f2a-a54c-aa047c2d4e6d",
+      "verdict": "unverifiable",
+      "source": "https://bioalps.org/hemostod-secures-chf-4-3-million-seed-extension/",
+      "note": "Real VC seed extension, but announced ~283 days before the 2026-07-16 SHAB step (outside window); the step could be a later tranche, but no source says so, and the Feb 2026 Innosuisse grant is not equity."
+    },
+    {
+      "key": "8630a5d4-cc3d-468f-9a27-467c904e4217",
+      "verdict": "unverifiable",
+      "source": "https://www.startupticker.ch/en/companies/oxyprem",
+      "note": "The only financing found is the March 2025 crowdinvesting round, ~14 months before the 2026-05-01 SHAB step and far outside the window; no 2026 round was found."
+    },
+    {
+      "key": "6fd6e9e6-ae5d-44f4-b01b-73e1b0d49575",
+      "verdict": "unverifiable",
+      "source": "https://www.startup.ch/AI2C",
+      "note": "ETH Zurich spin-off AI startup, but its funding details are behind a login on startup.ch and no public announcement matching the +40,695-share step (2025-10) was found."
+    },
+    {
+      "key": "76ad0618-cca4-4eec-96eb-46a0f2dd53c7",
+      "verdict": "unverifiable",
+      "source": "https://www.rtwfunds.com/news/news/windward-bio-announces-165m-crossover-financing-to-advance-pipeline-of-long-acting-immunology-therapies-with-best-in-disease-potential/",
+      "note": "VC-backed biotech, but neither round falls in the window around the 2025-08-28 step (Series A ~225 days earlier, crossover ~250 days later); the small +9.3M-share step could be a tranche, licensor equity or ESOP."
+    },
+    {
+      "key": "02fc6899-3d4e-41c4-9c83-0158cd9f8d83",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "St. Gallen golf-club startup; an undated (now expired) job ad says it has secured growth financing, but no dated announcement matching the 100k->464k nominal step (2026-07) was found."
+    },
+    {
+      "key": "bf94a5e8-ba88-42e2-8672-b779e31acfde",
+      "verdict": "unverifiable",
+      "source": "https://seekingalpha.com/pr/20148999-sceye-receives-investment-from-softbank-corp-to-scale-stratospheric-platform-development-and",
+      "note": "Real VC/strategic equity, but announced ~165 days before the 2025-12-08 SHAB step (just outside the -120 window), and USD 15M at the stated valuation implies ~0.35M shares vs the +0.76M registered, so a match is plausible but unconfirmed."
+    },
+    {
+      "key": "90e227fa-e9d4-47a3-9c26-d067d0852141",
+      "verdict": "verified",
+      "source": "https://pitchbook.com/profiles/company/472079-44",
+      "note": "PitchBook public snippet lists a later Series A closing on 2025-08-25, 22 days before the SHAB date; 30,087 new CHF 1 shares for ~USD 2.5M (~CHF 66/share) is consistent with a priced extension of the round announced as an 'initial closing' in Oct 2024."
+    },
+    {
+      "key": "3a852b60-97f0-4175-95d1-213dcd68c5b5",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "VC-backed ETH spin-out (CHF 15.5M seed, May 2022), but no outside announcement of a 2025 round was found; the ~5x share-count increase could be a new round or a conversion and cannot be attributed."
+    },
+    {
+      "key": "01912014-df8f-4cca-9eca-e511c299cc0e",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Early-stage point-of-care diagnostics company (Bad Ragaz) whose website is a placeholder; no funding announcement, press or investor-portfolio mention found."
+    },
+    {
+      "key": "ea3dae8a-c147-4021-8418-b10d0fe8deb6",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "No web presence found for this Geneva travel-marketplace company under its name or UID; no financing news either way."
+    },
+    {
+      "key": "650c4632-fb30-4ee3-b9a0-845822630595",
+      "verdict": "verified",
+      "source": "https://www.sika.com/en/media/media-releases/2026/sika-advances-digitalization-with-strategic-stake-in-mesh.html",
+      "note": "Round publicly announced 13 days after the SHAB date; the 7,500 new shares fit a priced round, though at CHF 2.9M the implied price is high, so this step may be one tranche (e.g. the strategic investors) of a round registered in more than one step."
+    },
+    {
+      "key": "f0e2b6ed-dbbf-4f9c-b9d8-a9aec389f7c6",
+      "verdict": "unverifiable",
+      "source": "https://www.biopole.ch/?p=12227",
+      "note": "The only known round (Series A, May 2025) is ~9 months before the SHAB date, outside the window, and the share count stays unchanged in this step (nominal-only change), so no outside source ties this step to new financing."
+    },
+    {
+      "key": "0842b62d-68ce-481b-b284-e26c28613e69",
+      "verdict": "unverifiable",
+      "source": "https://kellerhals-carrard.ch/fr/news-et-publications/news/deal-ticker-kellerhals-carrard-is-pleased-to-have-advised-grensol-ag-on-its-chf-1-8-million-seed-financing-round",
+      "note": "The seed was announced as closed about 137 days before the SHAB date (outside the window), and the 8,333 new shares (+0.7%) are far too small to be that CHF 1.8M round; this step may be a late subscriber or ESOP but no source says so."
+    },
+    {
+      "key": "09a6dad2-29e5-44ae-84cf-ebad39ac8061",
+      "verdict": "refuted",
+      "source": "https://www.indexbox.io/blog/zen-noh-global-subsidiary-acquires-30-stake-in-brazilian-agribusiness-grupo-cereal/",
+      "note": "A Geneva holding (founded 2025) serving as the international platform of Japan's Zen-Noh agricultural cooperative group, so not a startup; the step, which also halves the share count, is an intra-group recapitalization or restructuring."
+    },
+    {
+      "key": "6d23e991-36d1-4db5-8797-c95c819316d4",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "A long-established Geneva holding of banking and financial-sector participations, clearly not a venture, but no outside source found that explains this step (the share count rises while the nominal rises only slightly, which suggests a share-class restructuring)."
+    },
+    {
+      "key": "020181a4-0ad0-4086-ae88-5ff02199eb6f",
+      "verdict": "unverifiable",
+      "source": "https://www.healthclubmanagement.co.uk/health-club-management-news/Grand-Hotel-des-Bains-Kempinski-St-Moritz-partners-with-the-Image-Regenerative-Institute/362078",
+      "note": "A regenerative and aesthetic medicine clinic (sister of a Milan clinic) that opened at the Kempinski St. Moritz on 2025-12-09, one day before the SHAB date; this is a clinic launch, not a venture, and no source describes outside equity investors."
+    },
+    {
+      "key": "f2b83583-9f88-429c-86b3-38d79f7114d9",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Zug entity registered Feb 2026 as part of the Royalty Access Studio royalty-advance platform (operating site names an Irish DAC); the June 2025 launch press covers USD 20m of capital to deploy to artists, not equity raised by this AG, and nothing explains the July 2026 step from 100k to 157,480 (intra-group capitalisation as plausible as an outside round)."
+    },
+    {
+      "key": "c6512e4a-13fa-4c86-bcd2-39995e3a37c6",
+      "verdict": "unverifiable",
+      "source": "https://www.lucendra.com",
+      "note": "Established MedTech regulatory/quality consulting partnership (four senior partners, several Swiss offices), not a venture; the 102 -> 171 shares of CHF 1,000 look like a partner buy-in, but no source says so and no financing round is reported."
+    },
+    {
+      "key": "9d1c8e50-48cf-4538-bd35-59f60af89a85",
+      "verdict": "verified",
+      "source": "https://www.moneycab.com/schwyz/schwyz-wirtschaft-politik/collateral-good-investiert-32-millionen-franken-in-climatex/amp/",
+      "note": "Fresh-capital round announced 17 days after the SHAB date; 500 new CHF 500 shares (CHF 250k nominal) is consistent with CHF 3.2m raised at a premium."
+    },
+    {
+      "key": "ddd955c0-f678-49d9-8848-a1c77c2ceaab",
+      "verdict": "unverifiable",
+      "source": "https://www.b-momerable.com/en",
+      "note": "Vevey hospitality design/consulting and hotel-operator firm founded 2024 (not a tech venture); the step to 142,857.10 gives a new holder exactly 30%, but no investor or round is reported anywhere."
+    },
+    {
+      "key": "0417d8f3-46b5-4e98-9370-6bfecf42f183",
+      "verdict": "verified",
+      "source": "https://www.linkedin.com/company/visorway",
+      "note": "Company LinkedIn post (shown as 1 day old on 2026-10-06, so about +66 days after SHAB) announces the closed angel pre-seed; the 21k -> 100k step (1,000,000 shares at CHF 0.10) fits it, though it may also reflect the GmbH-to-AG move, so the amount match is loose."
+    },
+    {
+      "key": "8b44f33f-950a-40e1-841a-6534464de392",
+      "verdict": "unverifiable",
+      "source": "https://www.markt-kom.com/en/?p=203142",
+      "note": "Established digital-printing/plotting service business in Schlieren (lineage of the Neidhart + Schoen group's AAA digital print unit), not a startup; the round 500k -> 600k step (1,000 CHF 100 shares) has no reported explanation or investor."
+    },
+    {
+      "key": "e5f558f4-3fd8-474b-932b-c2a587d208c9",
+      "verdict": "unverifiable",
+      "source": "https://www.startupticker.ch/en/news/fit-supports-nu-glass-and-consulto-ch",
+      "note": "Genuine EPFL deep-tech venture (seed stage, FIT loan, SBB/SNCF contracts), but no equity round is reported around June 2026, and the tiny +2,500 CHF 1 shares step looks more like an ESOP or small angel top-up."
+    },
+    {
+      "key": "5060cefa-fd13-498c-b561-90a51ad3b9c3",
+      "verdict": "unverifiable",
+      "source": "https://ch.linkedin.com/company/chip-ing",
+      "note": "Smart golf-ball startup in Buchs ZH (founded 2015, earlier Indiegogo campaign); no financing announcement found around the July 2026 step (+12,020 CHF 1 shares), and the CHIP'd hits belong to an unrelated US company."
+    },
+    {
+      "key": "e06fd004-831b-40e4-9cd4-b1d3caed4a23",
+      "verdict": "unverifiable",
+      "source": "https://optimio.com/",
+      "note": "IT support/managed-services SME in Glattbrugg founded 2018, not a venture; the step to 111,111 gives a new holder exactly 10% (typical of a partner or management stake), but no source explains it."
+    },
+    {
+      "key": "49620a9f-dd58-4774-95bc-e3d45e34e6c8",
+      "verdict": "unverifiable",
+      "source": "https://www.startupticker.ch/en/companies/boxs",
+      "note": "The increase follows the Recoplast acquisition by about four weeks, so it may be a share-for-share contribution in kind rather than cash from investors; no source states the deal terms or a cash round (the 'BOXS USD 1.6m seed' hits refer to an unrelated Indian company)."
+    }
+  ]
+}

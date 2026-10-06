@@ -1,0 +1,373 @@
+{
+  "reviewedBy": "claude_proposal_pending_remo",
+  "cohort": 30,
+  "notClassified": 0,
+  "preFilter": {
+    "detected": 21,
+    "cohort": 30,
+    "rate": 0.7,
+    "interval": {
+      "lo": 0.5212421254128504,
+      "hi": 0.8333525173175619
+    }
+  },
+  "rulesOnly": {
+    "detected": 19,
+    "cohort": 30,
+    "rate": 0.6333333333333333,
+    "interval": {
+      "lo": 0.4551356365479487,
+      "hi": 0.7812607919389929
+    }
+  },
+  "rulesPlusClaude": {
+    "detected": 17,
+    "cohort": 30,
+    "rate": 0.5666666666666667,
+    "interval": {
+      "lo": 0.3919730700081361,
+      "hi": 0.7262251442353347
+    }
+  },
+  "rulesPlusClaudeIncludingUndecided": {
+    "detected": 18,
+    "cohort": 30,
+    "rate": 0.6,
+    "interval": {
+      "lo": 0.42320360253322475,
+      "hi": 0.7540937188319815
+    }
+  },
+  "rows": [
+    {
+      "rank": 38,
+      "company": "Seprify AG",
+      "announced": "2026-03-10",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": false,
+      "tier": "capital_increased",
+      "score": 0.25,
+      "reason": ""
+    },
+    {
+      "rank": 40,
+      "company": "Oxara AG",
+      "announced": "2026-02-06",
+      "verdict": "none",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "no gazette increase matched"
+    },
+    {
+      "rank": 41,
+      "company": "Metafuels AG",
+      "announced": "2026-02-20",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.96,
+      "reason": ""
+    },
+    {
+      "rank": 45,
+      "company": "FluoSphera SA",
+      "announced": "2026-01-12",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "capital_increased",
+      "score": 0.3,
+      "reason": ""
+    },
+    {
+      "rank": 51,
+      "company": "Allegria Therapeutics AG",
+      "announced": "2025-12-12",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "abstain",
+      "score": 0.4,
+      "reason": ""
+    },
+    {
+      "rank": 58,
+      "company": "Youdera Group SA",
+      "announced": "2026-04-08",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.75,
+      "reason": ""
+    },
+    {
+      "rank": 60,
+      "company": "Polares Medical SA",
+      "announced": "2026-03-04",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.88,
+      "reason": ""
+    },
+    {
+      "rank": 61,
+      "company": "Clee Medical SA",
+      "announced": "2026-02-25",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.72,
+      "reason": ""
+    },
+    {
+      "rank": 62,
+      "company": "Ionic Wind AG",
+      "announced": "2025-12-15",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.95,
+      "reason": ""
+    },
+    {
+      "rank": 64,
+      "company": "Noriware AG",
+      "announced": "2026-01-16",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.9,
+      "reason": ""
+    },
+    {
+      "rank": 67,
+      "company": "Algorized SA",
+      "announced": "2026-02-11",
+      "verdict": "none",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "no gazette increase matched"
+    },
+    {
+      "rank": 68,
+      "company": "Haelixa AG",
+      "announced": "2026-02-03",
+      "verdict": "none",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "no gazette increase matched"
+    },
+    {
+      "rank": 69,
+      "company": "vyzn AG",
+      "announced": "2025-12-09",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.95,
+      "reason": ""
+    },
+    {
+      "rank": 72,
+      "company": "Genknowme SA",
+      "announced": "2025-12-18",
+      "verdict": "none",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "no gazette increase matched"
+    },
+    {
+      "rank": 76,
+      "company": "UMANITEK AG",
+      "announced": "2026-02-10",
+      "verdict": "uncertain",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "match uncertain (excluded from hits)"
+    },
+    {
+      "rank": 82,
+      "company": "Selma Finance AG",
+      "announced": "2026-03-05",
+      "verdict": "none",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "no gazette increase matched"
+    },
+    {
+      "rank": 85,
+      "company": "Pregnolia AG",
+      "announced": "2026-03-11",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.66,
+      "reason": ""
+    },
+    {
+      "rank": 88,
+      "company": "EVIS Bioscience AG",
+      "announced": "2026-03-20",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": false,
+      "tier": "capital_increased",
+      "score": 0.2,
+      "reason": ""
+    },
+    {
+      "rank": 89,
+      "company": "Soeder AG",
+      "announced": "2026-03-24",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.62,
+      "reason": ""
+    },
+    {
+      "rank": 92,
+      "company": "Kandou AI Holding SA",
+      "announced": "2026-03-23",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.65,
+      "reason": ""
+    },
+    {
+      "rank": 93,
+      "company": "PAVE Space SA",
+      "announced": "2026-03-25",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.96,
+      "reason": ""
+    },
+    {
+      "rank": 94,
+      "company": "Liom Health AG",
+      "announced": "2025-12-22",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.7,
+      "reason": ""
+    },
+    {
+      "rank": 95,
+      "company": "Winduction AG",
+      "announced": "2026-02-17",
+      "verdict": "none",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "no gazette increase matched"
+    },
+    {
+      "rank": 96,
+      "company": "Covalo AG",
+      "announced": "2026-04-02",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.88,
+      "reason": ""
+    },
+    {
+      "rank": 97,
+      "company": "SolidWatts SA",
+      "announced": "2026-03-26",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.93,
+      "reason": ""
+    },
+    {
+      "rank": 98,
+      "company": "nowon AG",
+      "announced": "2026-02-24",
+      "verdict": "none",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "no gazette increase matched"
+    },
+    {
+      "rank": 103,
+      "company": "Oviva AG",
+      "announced": "2026-01-22",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.93,
+      "reason": ""
+    },
+    {
+      "rank": 104,
+      "company": "Gaisbock AG",
+      "announced": "2026-03-30",
+      "verdict": "none",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "no gazette increase matched"
+    },
+    {
+      "rank": 105,
+      "company": "DigeHealth SA",
+      "announced": "2025-12-10",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.93,
+      "reason": ""
+    },
+    {
+      "rank": 106,
+      "company": "MIROS Technology SA",
+      "announced": "2026-03-30",
+      "verdict": "accepted",
+      "candidate": true,
+      "rulesPositive": true,
+      "tier": "likely_financing",
+      "score": 0.8,
+      "reason": ""
+    }
+  ]
+}

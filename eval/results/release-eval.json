@@ -1,0 +1,167 @@
+{
+  "evaluatedOn": "2026-10-06",
+  "provisional": true,
+  "cohortSize": 30,
+  "systems": {
+    "rulesPlusClaude": {
+      "precision": {
+        "lo": 0.03605492137218896,
+        "hi": 1,
+        "estimateLo": 0.12867132867132866,
+        "estimateHi": 1,
+        "n": 16
+      },
+      "recall": {
+        "hits": 17,
+        "n": 30
+      }
+    },
+    "rulesOnly": {
+      "precision": {
+        "lo": 0.03872262171059535,
+        "hi": 0.9936620236765054,
+        "estimateLo": 0.13807792207792208,
+        "estimateHi": 0.9644155844155844,
+        "n": 29
+      },
+      "recall": {
+        "hits": 19,
+        "n": 30
+      }
+    }
+  },
+  "recallIncludingUndecided": {
+    "hits": 18,
+    "n": 30
+  },
+  "misses": [
+    {
+      "company": "Seprify AG",
+      "announced": "2026-03-10",
+      "reason": "classifier score 0.25 (below threshold)"
+    },
+    {
+      "company": "Oxara AG",
+      "announced": "2026-02-06",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "FluoSphera SA",
+      "announced": "2026-01-12",
+      "reason": "classifier score 0.30 (below threshold)"
+    },
+    {
+      "company": "Allegria Therapeutics AG",
+      "announced": "2025-12-12",
+      "reason": "classifier score 0.40 (undecided)"
+    },
+    {
+      "company": "Algorized SA",
+      "announced": "2026-02-11",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Haelixa AG",
+      "announced": "2026-02-03",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Genknowme SA",
+      "announced": "2025-12-18",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "UMANITEK AG",
+      "announced": "2026-02-10",
+      "reason": "match uncertain (excluded from hits)"
+    },
+    {
+      "company": "Selma Finance AG",
+      "announced": "2026-03-05",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "EVIS Bioscience AG",
+      "announced": "2026-03-20",
+      "reason": "classifier score 0.20 (below threshold)"
+    },
+    {
+      "company": "Winduction AG",
+      "announced": "2026-02-17",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "nowon AG",
+      "announced": "2026-02-24",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Gaisbock AG",
+      "announced": "2026-03-30",
+      "reason": "no gazette increase matched"
+    }
+  ],
+  "rejections": [
+    {
+      "company": "Bity SA",
+      "publishedAt": "2025-08-11",
+      "reason": "Classifier score 0.30, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "O.R. Oguey Raymond SA",
+      "publishedAt": "2025-11-05",
+      "reason": "Classifier score 0.01, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Landskroner Bräu AG",
+      "publishedAt": "2026-02-05",
+      "reason": "Classifier score 0.10, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Saxo Holding AG",
+      "publishedAt": "2026-04-10",
+      "reason": "Classifier score 0.02, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "SIC invent AG",
+      "publishedAt": "2026-04-27",
+      "reason": "Classifier score 0.05, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "STA Kiener Holding AG",
+      "publishedAt": "2026-05-05",
+      "reason": "Classifier score 0.10, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Prosalix AG",
+      "publishedAt": "2026-06-05",
+      "reason": "Classifier score 0.03, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Enerfin Holding AG",
+      "publishedAt": "2026-07-10",
+      "reason": "Classifier score 0.04, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Renova Sol SA",
+      "publishedAt": "2026-07-23",
+      "reason": "Classifier score 0.02, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Schneider Logistics Group AG",
+      "publishedAt": "2026-07-29",
+      "reason": "Classifier score 0.06, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "SpineArt SA",
+      "publishedAt": "2026-08-03",
+      "reason": "Classifier score 0.03, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "TwoMoons AG",
+      "publishedAt": "2026-08-07",
+      "reason": "Classifier score 0.30, below the undecided threshold (0.35); rules score below 1.0"
+    }
+  ],
+  "confirmationSource": "Confirmed rounds come from hand-checked announcements."
+}
