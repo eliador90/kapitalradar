@@ -1,5 +1,5 @@
 {
-  "reviewedBy": "claude_proposal_pending_remo",
+  "reviewedBy": "remo",
   "rows": [
     {
       "key": "b3e2af5a-8b71-4860-876c-3f5177c0cf54",
@@ -51,9 +51,9 @@
     },
     {
       "key": "02fc6899-3d4e-41c4-9c83-0158cd9f8d83",
-      "verdict": "unverifiable",
-      "source": null,
-      "note": "St. Gallen golf-club startup; an undated (now expired) job ad says it has secured growth financing, but no dated announcement matching the 100k->464k nominal step (2026-07) was found."
+      "verdict": "refuted",
+      "source": "moneyhouse.ch (register entry)",
+      "note": "All new shares were issued against claims set off (CHF 13.72m): debt conversion, no fresh money."
     },
     {
       "key": "bf94a5e8-ba88-42e2-8672-b779e31acfde",
@@ -63,9 +63,9 @@
     },
     {
       "key": "90e227fa-e9d4-47a3-9c26-d067d0852141",
-      "verdict": "verified",
-      "source": "https://pitchbook.com/profiles/company/472079-44",
-      "note": "PitchBook public snippet lists a later Series A closing on 2025-08-25, 22 days before the SHAB date; 30,087 new CHF 1 shares for ~USD 2.5M (~CHF 66/share) is consistent with a priced extension of the round announced as an 'initial closing' in Oct 2024."
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Company reports its Series A initial closing in Oct 2024; the Aug 2025 closing rests on an unreproducible PitchBook snippet. Plausible later closing, not verified."
     },
     {
       "key": "3a852b60-97f0-4175-95d1-213dcd68c5b5",
@@ -106,8 +106,8 @@
     {
       "key": "09a6dad2-29e5-44ae-84cf-ebad39ac8061",
       "verdict": "refuted",
-      "source": "https://www.indexbox.io/blog/zen-noh-global-subsidiary-acquires-30-stake-in-brazilian-agribusiness-grupo-cereal/",
-      "note": "A Geneva holding (founded 2025) serving as the international platform of Japan's Zen-Noh agricultural cooperative group, so not a startup; the step, which also halves the share count, is an intra-group recapitalization or restructuring."
+      "source": "app2.ge.ch (register entry)",
+      "note": "New shares issued in exchange for shares of another company: contribution in kind, no new money."
     },
     {
       "key": "6d23e991-36d1-4db5-8797-c95c819316d4",
@@ -155,7 +155,7 @@
       "key": "8b44f33f-950a-40e1-841a-6534464de392",
       "verdict": "unverifiable",
       "source": "https://www.markt-kom.com/en/?p=203142",
-      "note": "Established digital-printing/plotting service business in Schlieren (lineage of the Neidhart + Schoen group's AAA digital print unit), not a startup; the round 500k -> 600k step (1,000 CHF 100 shares) has no reported explanation or investor."
+      "note": "No financing source. Review flag checked: the register lookup showed the Jan 2025 step (CHF 400k -> 500k, outside the window); the sampled step is the 28 Sep 2026 entry (500k -> 600k), which the release has right."
     },
     {
       "key": "e5f558f4-3fd8-474b-932b-c2a587d208c9",
@@ -177,9 +177,9 @@
     },
     {
       "key": "49620a9f-dd58-4774-95bc-e3d45e34e6c8",
-      "verdict": "unverifiable",
-      "source": "https://www.startupticker.ch/en/companies/boxs",
-      "note": "The increase follows the Recoplast acquisition by about four weeks, so it may be a share-for-share contribution in kind rather than cash from investors; no source states the deal terms or a cash round (the 'BOXS USD 1.6m seed' hits refer to an unrelated Indian company)."
+      "verdict": "verified",
+      "source": "Aargau press report",
+      "note": "Recoplast takeover reported as financed by a BOXS capital increase with existing and new shareholders; part set off against claims, most preferred-D shares paid in."
     }
   ]
 }
