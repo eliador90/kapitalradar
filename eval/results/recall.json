@@ -1,41 +1,41 @@
 {
-  "reviewedBy": "claude_proposal_pending_remo",
+  "reviewedBy": "remo",
   "cohort": 30,
   "notClassified": 0,
   "preFilter": {
-    "detected": 21,
+    "detected": 20,
     "cohort": 30,
-    "rate": 0.7,
+    "rate": 0.6666666666666666,
     "interval": {
-      "lo": 0.5212421254128504,
-      "hi": 0.8333525173175619
+      "lo": 0.4878005164454384,
+      "hi": 0.8076950191632386
     }
   },
   "rulesOnly": {
-    "detected": 19,
-    "cohort": 30,
-    "rate": 0.6333333333333333,
-    "interval": {
-      "lo": 0.4551356365479487,
-      "hi": 0.7812607919389929
-    }
-  },
-  "rulesPlusClaude": {
-    "detected": 17,
-    "cohort": 30,
-    "rate": 0.5666666666666667,
-    "interval": {
-      "lo": 0.3919730700081361,
-      "hi": 0.7262251442353347
-    }
-  },
-  "rulesPlusClaudeIncludingUndecided": {
     "detected": 18,
     "cohort": 30,
     "rate": 0.6,
     "interval": {
       "lo": 0.42320360253322475,
       "hi": 0.7540937188319815
+    }
+  },
+  "rulesPlusClaude": {
+    "detected": 16,
+    "cohort": 30,
+    "rate": 0.5333333333333333,
+    "interval": {
+      "lo": 0.36142299619873297,
+      "hi": 0.6976761109230025
+    }
+  },
+  "rulesPlusClaudeIncludingUndecided": {
+    "detected": 17,
+    "cohort": 30,
+    "rate": 0.5666666666666667,
+    "interval": {
+      "lo": 0.3919730700081361,
+      "hi": 0.7262251442353347
     }
   },
   "rows": [
@@ -241,12 +241,12 @@
       "rank": 89,
       "company": "Soeder AG",
       "announced": "2026-03-24",
-      "verdict": "accepted",
-      "candidate": true,
-      "rulesPositive": true,
-      "tier": "likely_financing",
-      "score": 0.62,
-      "reason": ""
+      "verdict": "none",
+      "candidate": false,
+      "rulesPositive": false,
+      "tier": null,
+      "score": null,
+      "reason": "no gazette increase matched"
     },
     {
       "rank": 92,

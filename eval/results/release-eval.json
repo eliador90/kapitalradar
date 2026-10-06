@@ -1,6 +1,6 @@
 {
   "evaluatedOn": "2026-10-06",
-  "provisional": true,
+  "provisional": false,
   "cohortSize": 30,
   "systems": {
     "rulesPlusClaude": {
@@ -12,7 +12,7 @@
         "n": 16
       },
       "recall": {
-        "hits": 17,
+        "hits": 16,
         "n": 30
       }
     },
@@ -25,13 +25,13 @@
         "n": 29
       },
       "recall": {
-        "hits": 19,
+        "hits": 18,
         "n": 30
       }
     }
   },
   "recallIncludingUndecided": {
-    "hits": 18,
+    "hits": 17,
     "n": 30
   },
   "misses": [
@@ -84,6 +84,11 @@
       "company": "EVIS Bioscience AG",
       "announced": "2026-03-20",
       "reason": "classifier score 0.20 (below threshold)"
+    },
+    {
+      "company": "Soeder AG",
+      "announced": "2026-03-24",
+      "reason": "no gazette increase matched"
     },
     {
       "company": "Winduction AG",
