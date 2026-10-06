@@ -20,8 +20,8 @@ Release v1 (`r2`, data as of 6 Oct 2026), evaluated 6 Oct 2026. Generated from
 | Rules + Claude | 10–94 % estimate, 95 % interval 2–99 % (n=16) | 16/30 |
 | Rules only | 10–93 % estimate, 95 % interval 3–99 % (n=29) | 18/30 |
 
-Recall ceiling is 21/30: nine announced rounds have no capital increase in the gazette within
-the pre-registered window. Precision is wide because 24 of 30 sampled increases have no public
+Recall ceiling is 20/30: nine announced rounds have no capital increase in the gazette within
+the pre-registered window, and one match stays uncertain. Precision is wide because 24 of 30 sampled increases have no public
 evidence either way (4 verified, 2 refuted): most capital increases are never announced. Known
 parser issues of this release are listed on the methodology page and fixed in v2.
 
