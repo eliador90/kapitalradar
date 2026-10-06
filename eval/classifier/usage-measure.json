@@ -1,0 +1,26 @@
+{
+  "items": 100,
+  "cached": 0,
+  "classified": 100,
+  "errors": {},
+  "refusals": 0,
+  "stoppedForUsageLimit": false,
+  "stoppedAtCap": false,
+  "usage": {
+    "inputTokens": 200,
+    "cacheCreationTokens": 150512,
+    "cacheReadTokens": 115900,
+    "outputTokens": 21352,
+    "costUsd": 1.655116
+  },
+  "sampled": 100,
+  "wallClockMinutes": 2.7,
+  "perClassification": {
+    "input": 2666,
+    "output": 214,
+    "apiEquivalentUsd": 0.0166
+  },
+  "apiEquivalentUsdPer100": 1.66,
+  "at": "2026-10-06T12:28:53.175Z",
+  "promptVersion": "1"
+}

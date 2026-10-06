@@ -17,7 +17,8 @@
     "ingest": "tsx --env-file=.env.local scripts/ingest.ts",
     "history": "tsx --env-file=.env.local scripts/history.ts",
     "dev-eval": "tsx --env-file=.env.local scripts/dev-eval.ts",
-    "classify": "tsx --env-file=.env.local scripts/classify.ts"
+    "classify": "tsx --env-file=.env.local scripts/classify.ts",
+    "build-release": "tsx --env-file=.env.local scripts/build-release.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

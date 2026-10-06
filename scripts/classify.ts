@@ -2,16 +2,20 @@
 //
 //   npm run classify -- probe             context check: nothing beyond the prompt enters the session
 //   npm run classify -- measure --n 100   usage on N items (dev set first, then seeded non-cohort candidates)
-//   npm run classify -- dev-report        τ/τ_low on dev, model-memory test, identifiability probe
+//   npm run classify -- dev-report [--freeze]  τ/τ_low by the pre-stated rule, model-memory test
+//   npm run classify -- identify          identifiability probe on the dev items
+//   npm run classify -- backfill          all candidates of companies with complete history (idempotent)
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { z } from "zod";
 import { db } from "../db/client";
-import { companySources } from "../db/schema";
+import { checkpoints, companySources } from "../db/schema";
+import { and, eq } from "drizzle-orm";
 import { cohortUids } from "../eval/lib/ledger";
 import { seededShuffle } from "../eval/lib/seeded";
-import { loadCompany, type CapitalCandidate } from "../lib/pipeline/candidates";
+import { BACKFILL_START, loadCompany, type CapitalCandidate } from "../lib/pipeline/candidates";
 import { dbClassificationStore } from "../lib/pipeline/classification-store";
-import { ClaudeCliBackend, classifyOne, loadPrompt, PROMPT_VERSION, runClassifications, tierFor, totalInputTokens, type Usage } from "../lib/pipeline/classify";
+import { ClaudeCliBackend, classifyOne, freezeThresholds, loadPrompt, PROMPT_VERSION, runClassifications, tierFor, totalInputTokens, type Usage } from "../lib/pipeline/classify";
+import { CONFIG_FILE, loadClassificationConfig, ruleConfigFrom } from "../lib/pipeline/config";
 import { inputHash, type ClassifierInput } from "../lib/pipeline/redact";
 import { fitThreshold } from "../lib/pipeline/rules";
 
@@ -101,9 +105,11 @@ async function devReport() {
   }
   const scored = rows.filter((r) => !r.unknown && r.score !== null);
   const fit = fitThreshold(scored.map((r) => ({ score: r.score!, positive: r.positive, candidate: r.candidate })));
-  // τ_low: an abstain band 0.2 wide below τ (decision log #13).
-  const tau = Math.min(fit.threshold, 0.95);
-  const tauLow = Math.max(0, +(tau - 0.2).toFixed(2));
+  // The pre-stated rule, not the max-F1 edge (decision log #17).
+  const { tau, tauLow } = freezeThresholds(
+    scored.filter((r) => r.positive).map((r) => r.score!),
+    scored.filter((r) => !r.positive).map((r) => r.score!),
+  );
 
   // Model-memory test: announced dev rounds scored with and without the company's identity.
   const memory = [];
@@ -132,6 +138,28 @@ async function devReport() {
   };
   write("dev-report.json", report);
   console.log(JSON.stringify({ ...report, rows: undefined, memoryTest: { ...report.memoryTest, items: undefined } }, null, 2));
+  if (args.includes("--freeze")) {
+    const cfg = loadClassificationConfig();
+    if (cfg.frozenAt) throw new Error(`τ already frozen at ${cfg.frozenAt}: changing it needs a new holdout`);
+    writeFileSync(CONFIG_FILE, JSON.stringify({ note: "Frozen classification settings (decision log #11, #17). Changing tau/tauLow after the holdout is seen requires a new holdout.", ...cfg, tau, tauLow, frozenAt: new Date().toISOString() }, null, 2) + "\n");
+    console.log(`frozen τ=${tau} τ_low=${tauLow} → ${CONFIG_FILE}`);
+  }
+}
+
+async function backfill() {
+  // Every pre-filter candidate of companies whose history fetch is complete (inputs depend on it).
+  const done = new Set((await db().select({ uid: checkpoints.itemKey }).from(checkpoints).where(and(eq(checkpoints.job, `history:${arg("run") ?? "2026-10-06"}`), eq(checkpoints.status, "done")))).map((r) => r.uid));
+  const ruleConfig = ruleConfigFrom(loadClassificationConfig());
+  const items: { inputHash: string; input: ClassifierInput }[] = [];
+  for (const uid of [...done].sort()) {
+    for (const c of (await loadCompany(uid, ruleConfig)).capitalChanges) {
+      if (c.rules.candidate && c.publication.publishedAt >= BACKFILL_START) items.push({ inputHash: c.inputHash, input: c.input });
+    }
+  }
+  console.log(`${done.size} companies with complete history → ${items.length} candidates`);
+  const stats = await runClassifications(items, new ClaudeCliBackend(), dbClassificationStore, { systemPrompt: loadPrompt(), log: console.log });
+  console.log(JSON.stringify({ ...stats, apiEquivalentUsd: +stats.usage.costUsd.toFixed(2) }, null, 2));
+  if (stats.stoppedForUsageLimit) process.exitCode = 3;
 }
 
 async function identify() {
@@ -157,7 +185,7 @@ async function identify() {
 }
 
 const [cmd] = args;
-const commands: Record<string, () => Promise<void>> = { probe, measure, "dev-report": devReport, identify };
+const commands: Record<string, () => Promise<void>> = { probe, measure, "dev-report": devReport, identify, backfill };
 const run = commands[cmd ?? ""];
 if (!run) {
   console.error(`usage: classify <${Object.keys(commands).join("|")}>`);

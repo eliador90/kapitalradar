@@ -1,0 +1,580 @@
+{
+  "note": "Dev data only; never reported as precision or recall. τ frozen from this run.",
+  "tau": 0.6,
+  "tauLow": 0.35,
+  "fit": {
+    "threshold": 0.5,
+    "f1": 1,
+    "precision": 1,
+    "recall": 1,
+    "tp": 21,
+    "fp": 0,
+    "fn": 0
+  },
+  "rows": [
+    {
+      "id": "8fe53ee9-2759-4bdf-afc5-fc7be0e687bf",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.02,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "88838525-c0b9-4e78-bcfb-106e45525b33",
+      "source": "assignment",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.55,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "d37ff8bc-fbfb-4582-84c9-c231f1e93a07",
+      "source": "assignment",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.96,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "3dd0638b-a38b-4fb2-b94e-533186eea78d",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.05,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "b637fda2-4028-45bd-8832-0b53b148840a",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.1,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "1a80a06c-111d-4f87-acad-0b15bcd79197",
+      "source": "assignment",
+      "positive": false,
+      "unknown": true,
+      "candidate": true,
+      "score": 0.1,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "8a5425f1-8ec9-4a60-80e4-8fb2894c56b6",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.12,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "d5fd9c0c-e776-46c2-b5d3-4bfc5d424390",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.03,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "d6df0c2b-8321-4fd8-bcbf-c1ecca474cf4",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.03,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "6812593e-8a19-48a7-9f89-d4c36488cf27",
+      "source": "assignment",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.5,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "b87f32d4-e780-486b-a48d-dd5370f9ac8b",
+      "source": "assignment",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.82,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "d6dfa29e-0a86-4f10-b3d5-5ff1ca78a12f",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.02,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "452ccaf3-ff82-4a3c-bbc3-355c3b221699",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.18,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "cbf4299e-0c5c-4211-9ee3-bc5457db57bd",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.15,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "a8645a4c-73df-4f67-9a92-5cc22ef71c9c",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.1,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "9c8ea388-9332-4ce3-bd04-747f77eb77b7",
+      "source": "assignment",
+      "positive": false,
+      "unknown": true,
+      "candidate": true,
+      "score": 0.12,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "0d854dd3-316c-4535-9deb-612bc113aebf",
+      "source": "assignment",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.6,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "8b89001e-3cf9-44f6-8223-235c4ce3c06e",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.05,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "530daedd-1d28-4010-9ccf-4d19d4f3c454",
+      "source": "assignment",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.75,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "013ea014-3497-4783-8246-fafb089d334d",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.02,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "e26cecfc-ff81-40be-85bf-02aa203e32c1",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.02,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "198d58ba-1c50-4c97-bd7c-2cb0e1b66098",
+      "source": "assignment",
+      "positive": false,
+      "unknown": true,
+      "candidate": true,
+      "score": 0.04,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "37615a86-1390-4c11-aac5-7ea91831477b",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.02,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "def3cbc1-6545-4247-977a-42be618360b9",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.03,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "f04ae7e9-23d3-481d-b1a7-ef3d362e19c7",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.1,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "3c9309dd-fe5a-409f-9bdb-d4cefe4ae288",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.03,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "fb2d8792-79db-4ee8-94cb-3e8b06a86845",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.3,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "a55c1a0b-a590-45ea-8d0f-9d1d69684200",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.2,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "2811fd75-fcaf-4509-a29f-4701c80cdc5b",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.25,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "dc2f7ec3-50d6-468c-a524-9f883538cd11",
+      "source": "assignment",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.03,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "51be7085-dfcf-464d-8e5c-2dfa09c3e12a",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.85,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "f5607e1f-e435-4108-ab66-ac04f558c77b",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.85,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "8604d669-7b70-4b0a-b4c5-56fdc9d6d820",
+      "source": "spike",
+      "positive": false,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.2,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "e5f1b9a5-e4f4-4c3f-a8bd-d95e21ae877e",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.88,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "b575722a-2206-45b6-8f8a-3c7c6787ff6d",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.93,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "14c0b626-8db7-468d-a463-707298ce78c5",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.85,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "52d4b7a5-f67c-45ab-a4c6-9977090cf94a",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.65,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "5378025a-6334-4f88-bf2c-10c454876a10",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.82,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "78f655e5-4d57-4240-ae7d-97dc3413b4cf",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.7,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "d2b87edd-46cf-4f70-9741-78f31a3b2f69",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.9,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "0d91de04-3f79-4ff2-9a7d-45a291249434",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.82,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "1a4a43a2-cec8-466c-9d29-ef195a9acd52",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.6,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "80055a00-9fbe-415d-a068-04964d6073e9",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.75,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "b9533337-d6f9-4d8a-8086-2b880549aecf",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.85,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "97a4b75c-3334-494c-a2a4-faa6c2eb81fe",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.6,
+      "refusal": false,
+      "error": null
+    },
+    {
+      "id": "3d8f5a7b-fdcd-4e7f-b608-6006e36ecbc3",
+      "source": "spike",
+      "positive": true,
+      "unknown": false,
+      "candidate": true,
+      "score": 0.93,
+      "refusal": false,
+      "error": null
+    }
+  ],
+  "memoryTest": {
+    "n": 16,
+    "meanAbsDelta": 0.03312500000000001,
+    "tierFlips": 2,
+    "pass": false,
+    "items": [
+      {
+        "id": "51be7085-dfcf-464d-8e5c-2dfa09c3e12a",
+        "redacted": 0.85,
+        "named": 0.9,
+        "flip": false
+      },
+      {
+        "id": "f5607e1f-e435-4108-ab66-ac04f558c77b",
+        "redacted": 0.85,
+        "named": 0.88,
+        "flip": false
+      },
+      {
+        "id": "8604d669-7b70-4b0a-b4c5-56fdc9d6d820",
+        "redacted": 0.2,
+        "named": 0.2,
+        "flip": false
+      },
+      {
+        "id": "e5f1b9a5-e4f4-4c3f-a8bd-d95e21ae877e",
+        "redacted": 0.88,
+        "named": 0.9,
+        "flip": false
+      },
+      {
+        "id": "b575722a-2206-45b6-8f8a-3c7c6787ff6d",
+        "redacted": 0.93,
+        "named": 0.93,
+        "flip": false
+      },
+      {
+        "id": "14c0b626-8db7-468d-a463-707298ce78c5",
+        "redacted": 0.85,
+        "named": 0.9,
+        "flip": false
+      },
+      {
+        "id": "52d4b7a5-f67c-45ab-a4c6-9977090cf94a",
+        "redacted": 0.65,
+        "named": 0.72,
+        "flip": false
+      },
+      {
+        "id": "5378025a-6334-4f88-bf2c-10c454876a10",
+        "redacted": 0.82,
+        "named": 0.85,
+        "flip": false
+      },
+      {
+        "id": "78f655e5-4d57-4240-ae7d-97dc3413b4cf",
+        "redacted": 0.7,
+        "named": 0.75,
+        "flip": false
+      },
+      {
+        "id": "d2b87edd-46cf-4f70-9741-78f31a3b2f69",
+        "redacted": 0.9,
+        "named": 0.9,
+        "flip": false
+      },
+      {
+        "id": "0d91de04-3f79-4ff2-9a7d-45a291249434",
+        "redacted": 0.82,
+        "named": 0.85,
+        "flip": false
+      },
+      {
+        "id": "1a4a43a2-cec8-466c-9d29-ef195a9acd52",
+        "redacted": 0.6,
+        "named": 0.55,
+        "flip": true
+      },
+      {
+        "id": "80055a00-9fbe-415d-a068-04964d6073e9",
+        "redacted": 0.75,
+        "named": 0.8,
+        "flip": false
+      },
+      {
+        "id": "b9533337-d6f9-4d8a-8086-2b880549aecf",
+        "redacted": 0.85,
+        "named": 0.85,
+        "flip": false
+      },
+      {
+        "id": "97a4b75c-3334-494c-a2a4-faa6c2eb81fe",
+        "redacted": 0.6,
+        "named": 0.5,
+        "flip": true
+      },
+      {
+        "id": "3d8f5a7b-fdcd-4e7f-b608-6006e36ecbc3",
+        "redacted": 0.93,
+        "named": 0.93,
+        "flip": false
+      }
+    ]
+  }
+}

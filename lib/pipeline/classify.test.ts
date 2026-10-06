@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from "vitest";
 import type { ParsedEvent } from "../domain/events";
 import {
   classifyOne,
+  freezeThresholds,
   runClassifications,
   tierFor,
   UsageLimitError,
@@ -78,6 +79,18 @@ describe("classifyOne failure modes", () => {
 
   it("propagates usage-limit errors", async () => {
     await expect(classifyOne(new FakeBackend(() => new UsageLimitError("limit")), "sys", input())).rejects.toThrow(UsageLimitError);
+  });
+});
+
+describe("freezeThresholds (decision log #17)", () => {
+  it("applies the pre-stated rule to the dev scores", () => {
+    const pos = [0.5, 0.55, 0.6, 0.6, 0.6, 0.65, 0.7, 0.75, 0.75, 0.82, 0.82, 0.82, 0.85, 0.85, 0.85, 0.85, 0.88, 0.9, 0.93, 0.93, 0.96];
+    const neg = [0.02, 0.02, 0.03, 0.05, 0.1, 0.12, 0.15, 0.18, 0.2, 0.25, 0.3];
+    expect(freezeThresholds(pos, neg)).toEqual({ tau: 0.6, tauLow: 0.35 });
+  });
+
+  it("raises τ above any dev negative", () => {
+    expect(freezeThresholds([0.5, 0.6, 0.7, 0.8, 0.9], [0.1, 0.65])).toEqual({ tau: 0.7, tauLow: 0.7 });
   });
 });
 

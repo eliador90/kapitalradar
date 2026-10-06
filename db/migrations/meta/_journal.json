@@ -15,6 +15,13 @@
       "when": 1791287985336,
       "tag": "0001_company_sources",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791289711171,
+      "tag": "0002_release_failure_reason",
+      "breakpoints": true
     }
   ]
 }

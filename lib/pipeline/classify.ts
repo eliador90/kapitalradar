@@ -206,6 +206,23 @@ const safeJson = (s: string): unknown => {
   }
 };
 
+/**
+ * The pre-stated threshold rule (decision log #17, advisors' counsel): τ = 20th percentile of dev
+ * positive scores rounded down to 0.05; τ_low = highest dev negative + 0.05 rounded up to 0.05;
+ * τ is raised in 0.05 steps until dev precision at τ is 1.0. Nothing is optimized on dev.
+ */
+export function freezeThresholds(positiveScores: readonly number[], negativeScores: readonly number[]): { tau: number; tauLow: number } {
+  if (!positiveScores.length || !negativeScores.length) throw new Error("freezeThresholds needs dev positives and negatives");
+  const pos = [...positiveScores].sort((a, b) => a - b);
+  const q = pos[Math.floor(0.2 * (pos.length - 1))]!;
+  const round = (x: number) => Math.round(x * 100) / 100;
+  let tau = round(Math.floor(q / 0.05 + 1e-9) * 0.05);
+  const maxNeg = Math.max(...negativeScores);
+  while (negativeScores.some((s) => s >= tau) && tau < 1) tau = round(tau + 0.05);
+  const tauLow = Math.min(round(Math.ceil((maxNeg + 0.05) / 0.05 - 1e-9) * 0.05), tau);
+  return { tau, tauLow };
+}
+
 /** Plan tier mapping: ≥ τ likely financing; τ_low ≤ score < τ abstain; below τ_low capital increased. */
 export function tierFor(score: number | null, tau: number, tauLow: number, refusal = false): Tier {
   if (refusal || score === null) return "abstain";

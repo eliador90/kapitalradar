@@ -69,6 +69,8 @@ export const releases = pgTable("releases", {
   evalResult: jsonb("eval_result"),
   createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
   activatedAt: timestamp("activated_at", { withTimezone: true }),
+  /** Why a build failed (gates or writes); null for ready releases. */
+  failureReason: text("failure_reason"),
 });
 
 /** Singleton pointer, flipped in one transaction after the gates pass (eng V3). */
