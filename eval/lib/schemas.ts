@@ -54,7 +54,7 @@ export const cohortFile = z.object({
 });
 export type CohortFile = z.infer<typeof cohortFile>;
 
-export const INSPECTED_SOURCES = ["spike", "assignment", "x1", "adhoc"] as const;
+export const INSPECTED_SOURCES = ["spike", "assignment", "x1", "adhoc", "precision"] as const;
 export const inspectedEntry = z.object({
   uid,
   company: z.string(),

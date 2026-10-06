@@ -8,7 +8,12 @@ import { getRelease, hrefWith } from "../_lib/release";
 export const metadata: Metadata = { title: "Methodology · Kapitalradar" };
 
 type System = ReleaseEval["systems"]["rulesOnly"];
-const precision = (s: System) => (s.precision ? `${pct(s.precision.point)} (95% interval ${pct(s.precision.lo)}–${pct(s.precision.hi)}, n=${s.precision.n})` : "not measured");
+const precision = (s: System) => {
+  const p = s.precision;
+  if (!p) return "not measured";
+  const est = p.estimateLo === p.estimateHi ? pct(p.estimateLo) : `${pct(p.estimateLo)}–${pct(p.estimateHi)} (unverifiable counted as false / true)`;
+  return `${est}; 95% interval ${pct(p.lo)}–${pct(p.hi)}, n=${p.n}`;
+};
 const recall = (s: System) => `${s.recall.hits} of ${s.recall.n} announced rounds`;
 
 // A current-eval surface outside rewind (design J2): not filtered by asOf.

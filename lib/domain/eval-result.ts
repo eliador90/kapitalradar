@@ -9,7 +9,9 @@ const precision = z.object({
   /** Wilson 95% interval bounds on the weighted precision. */
   lo: z.number().min(0).max(1),
   hi: z.number().min(0).max(1),
-  point: z.number().min(0).max(1),
+  /** Point estimate with unverifiable labels counted as false (low) and as true (high). */
+  estimateLo: z.number().min(0).max(1),
+  estimateHi: z.number().min(0).max(1),
   /** This system's sample size. */
   n: z.number().int().nonnegative(),
 });

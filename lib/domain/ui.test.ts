@@ -45,7 +45,7 @@ describe("release eval", () => {
     evaluatedOn: "2026-10-08",
     cohortSize: 30,
     systems: {
-      rulesPlusClaude: { precision: { lo: 0.62, hi: 0.91, point: 0.8, n: 15 }, recall: { hits: 21, n: 30 } },
+      rulesPlusClaude: { precision: { lo: 0.62, hi: 0.91, estimateLo: 0.8, estimateHi: 0.8, n: 15 }, recall: { hits: 21, n: 30 } },
       rulesOnly: { precision: null, recall: { hits: 17, n: 30 } },
     },
     recallIncludingUndecided: null,
