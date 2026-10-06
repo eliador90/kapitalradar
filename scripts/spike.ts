@@ -6,68 +6,24 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { cohortUids } from "../eval/lib/ledger";
 import { cohortFile } from "../eval/lib/schemas";
-import { daysBetween } from "../lib/domain/dates";
 import { readCapital } from "../lib/pipeline/capital";
 import { rateLimitedCount } from "../lib/pipeline/http";
-import { cachePublicationXml, fetchPublicationXml, searchByUid, searchPage } from "../lib/pipeline/shab";
+import { fetchPublicationXml, searchPage } from "../lib/pipeline/shab";
+import { matchRound } from "../eval/lib/match";
 
 const OUT_DIR = "eval/spike";
 
-interface Increase {
-  id: string;
-  publicationNumber: string;
-  publishedAt: string;
-  lagDays: number; // publishedAt − announced; negative = gazette first
-  before: number;
-  after: number;
-  setOff: boolean;
-  capitalBand: boolean;
-}
 
 async function match() {
   const { spike, matchWindowDays } = cohortFile.parse(JSON.parse(readFileSync("eval/cohort.json", "utf8")));
   const sealed = cohortUids();
   const rows = [];
   for (const round of spike) {
-    // The UID keyword search also returns entries that merely cite the UID (mergers, parents):
-    // keep only the company's own publications, and never cache a cohort company's entry.
-    const own = [];
-    for (const m of await searchByUid(round.uid)) {
-      const xml = await fetchPublicationXml(m.id, { cache: false });
-      const c = readCapital(xml);
-      if (c.uid && sealed.has(c.uid)) continue;
-      if (c.uid !== round.uid) continue;
-      cachePublicationXml(m.id, xml);
-      own.push({ m, c });
-    }
-    const increases: Increase[] = own
-      .filter(({ m, c }) => m.subRubric === "HR02" && c.isIncrease)
-      .map(({ m, c }) => ({
-        id: m.id,
-        publicationNumber: m.publicationNumber,
-        publishedAt: m.publishedAt,
-        lagDays: daysBetween(round.announced, m.publishedAt),
-        before: c.before,
-        after: c.after,
-        setOff: c.setOff,
-        capitalBand: c.capitalBand,
-      }));
-    const inWindow = increases.filter((i) => i.lagDays >= -matchWindowDays.before && i.lagDays <= matchWindowDays.after);
-    rows.push({
-      rank: round.rank,
-      uid: round.uid,
-      company: round.company,
-      announced: round.announced,
-      publications: own.length,
-      earliestPublication: own.map(({ m }) => m.publishedAt).sort()[0] ?? null,
-      formationFound: own.some(({ m }) => m.subRubric === "HR01"),
-      increasesTotal: increases.length,
-      candidates: inWindow,
-      // Filled by hand: accepted publication id, or null with a reason (eng V6 adjudication).
-      adjudication: { accepted: null as string | null, note: "" },
-    });
-    const c = inWindow.map((i) => `${i.publishedAt} (${i.lagDays >= 0 ? "+" : ""}${i.lagDays}d)`).join(", ");
-    console.log(`${round.rank} ${round.company}: ${own.length} pubs, ${increases.length} increases, window: ${c || "none"}`);
+    // Never cache or use a cohort company's entry (sealed until the freeze).
+    const row = await matchRound(round, matchWindowDays, sealed);
+    rows.push(row);
+    const c = row.candidates.map((i) => `${i.publishedAt} (${i.lagDays >= 0 ? "+" : ""}${i.lagDays}d)`).join(", ");
+    console.log(`${round.rank} ${round.company}: ${row.publications} pubs, ${row.increasesTotal} increases, window: ${c || "none"}`);
   }
   mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(`${OUT_DIR}/matches.json`, JSON.stringify({ matchWindowDays, rows }, null, 2) + "\n");

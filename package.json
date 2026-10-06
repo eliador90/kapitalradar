@@ -18,7 +18,8 @@
     "history": "tsx --env-file=.env.local scripts/history.ts",
     "dev-eval": "tsx --env-file=.env.local scripts/dev-eval.ts",
     "classify": "tsx --env-file=.env.local scripts/classify.ts",
-    "build-release": "tsx --env-file=.env.local scripts/build-release.ts"
+    "build-release": "tsx --env-file=.env.local scripts/build-release.ts",
+    "unseal": "tsx --env-file=.env.local scripts/unseal.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",
