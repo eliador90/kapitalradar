@@ -45,7 +45,7 @@ export class ParseError extends Error {}
 // Set-off of creditor claims only: "Verrechnung mit dem Bilanzverlust" or "compensation de
 // pertes" offset losses and are not contributions.
 export const SET_OFF =
-  /Verrechnung (?:einer |von |der )?Forderung|Forderung(?:en)?[\s\S]{0,160}?verrechnet|durch Verrechnung(?! mit)|compensation (?:de |d['’]une |des )créances?|compensazione (?:di |del |dei )credit/i;
+  /Verrechnung (?:einer |von |der )?Forderung|Forderung(?:en)?[\s\S]{0,160}?(?:verrechnet|zur Verrechnung)|durch Verrechnung(?! mit)|compensation (?:de |d['’]une |des )créances?|compensazione (?:di |del |dei )credit/i;
 export const CAPITAL_BAND = /Kapitalband|marge de fluctuation|margine di variazione/i;
 
 const CUR = `(${CURRENCIES.join("|")})`;
@@ -216,6 +216,8 @@ const EXECUTED_INCREASE = /ordentliche Kapitalerhöhung|Ordentliche (?:Erhöhung
 // The pair is the accordion operation: reduce (usually to absorb losses) and re-increase at once.
 const SAME_OPERATION = /gleichzeitig|Wiedererhöhung|Unterbilanz|Überschuldung|Verlust|simultané|immédiatement|en vue de (?:la )?(?:compensation|couverture) de(?:s)? pertes|pertes|contemporaneamente|perdite/i;
 const TREASURY_ONLY = /eigene(?:n)? Aktien|actions propres|azioni proprie/i;
+const REDENOMINATION =
+  /monnaie du capital[\s\S]{0,200}?(?:a été )?converti|Währung des (?:Aktien)?[Kk]apitals[\s\S]{0,200}?(?:umgestellt|umgewandelt|geändert)|Umstellung (?:der Währung|des Aktienkapitals auf)|valuta del capitale[\s\S]{0,200}?convertit/i;
 
 // ---- main ----------------------------------------------------------------------------------
 
@@ -296,7 +298,14 @@ export function parsePublication(xml: string): ParsedPublication {
     const reductionClauses = splitClauses(active).map((c) => c.text).filter((c) => REDUCTION.test(c));
     const treasuryOnly = reductionClauses.length > 0 && reductionClauses.every((c) => TREASURY_ONLY.test(c));
     const pair = reductionClauses.length > 0 && EXECUTED_INCREASE.test(active) && SAME_OPERATION.test(active) && !treasuryOnly;
-    const direction = Number(after) > Number(before) ? "increase" : Number(after) < Number(before) ? "reduction" : "unchanged";
+    // A change of capital currency (CHF 105'000 → USD 124'136.25, same shares) is not an increase:
+    // the two nominal figures are in different currencies and can't be compared.
+    const classCurrencies = (cs: ShareClass[] | null) => new Set((cs ?? []).map((c) => c.currency));
+    const redenominated =
+      REDENOMINATION.test(active) ||
+      (classesBefore !== null && classesAfter !== null && classesBefore.length > 0 && classesAfter.length > 0 && [...classCurrencies(classesAfter)].some((c) => !classCurrencies(classesBefore).has(c)));
+    if (redenominated) warnings.push("capital currency changed: compared as unchanged");
+    const direction = redenominated ? "unchanged" : Number(after) > Number(before) ? "increase" : Number(after) < Number(before) ? "reduction" : "unchanged";
     const sharesAfter = total(classesAfter);
     let sharesBefore = total(classesBefore);
     if (sharesBefore === null && sharesIssued !== null && sharesAfter !== null && !pair && direction === "increase") {
