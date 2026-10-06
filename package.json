@@ -24,7 +24,8 @@
     "build-release": "tsx --env-file=.env.local scripts/build-release.ts",
     "unseal": "tsx --env-file=.env.local scripts/unseal.ts",
     "eval": "tsx --env-file=.env.local scripts/eval.ts",
-    "leak-check": "tsx scripts/leak-check.ts"
+    "leak-check": "tsx scripts/leak-check.ts",
+    "export": "tsx --env-file=.env.local scripts/export.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",
