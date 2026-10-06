@@ -1,0 +1,191 @@
+{
+  "n": 46,
+  "hits": 8,
+  "hitRate": 0.17391304347826086,
+  "items": [
+    {
+      "id": "8fe53ee9-2759-4bdf-afc5-fc7be0e687bf",
+      "hit": false
+    },
+    {
+      "id": "88838525-c0b9-4e78-bcfb-106e45525b33",
+      "hit": false
+    },
+    {
+      "id": "d37ff8bc-fbfb-4582-84c9-c231f1e93a07",
+      "hit": false
+    },
+    {
+      "id": "3dd0638b-a38b-4fb2-b94e-533186eea78d",
+      "hit": false
+    },
+    {
+      "id": "b637fda2-4028-45bd-8832-0b53b148840a",
+      "hit": false
+    },
+    {
+      "id": "1a80a06c-111d-4f87-acad-0b15bcd79197",
+      "hit": false
+    },
+    {
+      "id": "8a5425f1-8ec9-4a60-80e4-8fb2894c56b6",
+      "hit": false
+    },
+    {
+      "id": "d5fd9c0c-e776-46c2-b5d3-4bfc5d424390",
+      "hit": false
+    },
+    {
+      "id": "d6df0c2b-8321-4fd8-bcbf-c1ecca474cf4",
+      "hit": false
+    },
+    {
+      "id": "6812593e-8a19-48a7-9f89-d4c36488cf27",
+      "hit": false
+    },
+    {
+      "id": "b87f32d4-e780-486b-a48d-dd5370f9ac8b",
+      "hit": true
+    },
+    {
+      "id": "d6dfa29e-0a86-4f10-b3d5-5ff1ca78a12f",
+      "hit": false
+    },
+    {
+      "id": "452ccaf3-ff82-4a3c-bbc3-355c3b221699",
+      "hit": true
+    },
+    {
+      "id": "cbf4299e-0c5c-4211-9ee3-bc5457db57bd",
+      "hit": false
+    },
+    {
+      "id": "a8645a4c-73df-4f67-9a92-5cc22ef71c9c",
+      "hit": false
+    },
+    {
+      "id": "9c8ea388-9332-4ce3-bd04-747f77eb77b7",
+      "hit": false
+    },
+    {
+      "id": "0d854dd3-316c-4535-9deb-612bc113aebf",
+      "hit": false
+    },
+    {
+      "id": "8b89001e-3cf9-44f6-8223-235c4ce3c06e",
+      "hit": false
+    },
+    {
+      "id": "530daedd-1d28-4010-9ccf-4d19d4f3c454",
+      "hit": false
+    },
+    {
+      "id": "013ea014-3497-4783-8246-fafb089d334d",
+      "hit": false
+    },
+    {
+      "id": "e26cecfc-ff81-40be-85bf-02aa203e32c1",
+      "hit": false
+    },
+    {
+      "id": "198d58ba-1c50-4c97-bd7c-2cb0e1b66098",
+      "hit": true
+    },
+    {
+      "id": "37615a86-1390-4c11-aac5-7ea91831477b",
+      "hit": false
+    },
+    {
+      "id": "def3cbc1-6545-4247-977a-42be618360b9",
+      "hit": false
+    },
+    {
+      "id": "f04ae7e9-23d3-481d-b1a7-ef3d362e19c7",
+      "hit": false
+    },
+    {
+      "id": "3c9309dd-fe5a-409f-9bdb-d4cefe4ae288",
+      "hit": false
+    },
+    {
+      "id": "fb2d8792-79db-4ee8-94cb-3e8b06a86845",
+      "hit": false
+    },
+    {
+      "id": "a55c1a0b-a590-45ea-8d0f-9d1d69684200",
+      "hit": false
+    },
+    {
+      "id": "2811fd75-fcaf-4509-a29f-4701c80cdc5b",
+      "hit": false
+    },
+    {
+      "id": "dc2f7ec3-50d6-468c-a524-9f883538cd11",
+      "hit": false
+    },
+    {
+      "id": "51be7085-dfcf-464d-8e5c-2dfa09c3e12a",
+      "hit": false
+    },
+    {
+      "id": "f5607e1f-e435-4108-ab66-ac04f558c77b",
+      "hit": false
+    },
+    {
+      "id": "8604d669-7b70-4b0a-b4c5-56fdc9d6d820",
+      "hit": false
+    },
+    {
+      "id": "e5f1b9a5-e4f4-4c3f-a8bd-d95e21ae877e",
+      "hit": true
+    },
+    {
+      "id": "b575722a-2206-45b6-8f8a-3c7c6787ff6d",
+      "hit": false
+    },
+    {
+      "id": "14c0b626-8db7-468d-a463-707298ce78c5",
+      "hit": false
+    },
+    {
+      "id": "52d4b7a5-f67c-45ab-a4c6-9977090cf94a",
+      "hit": false
+    },
+    {
+      "id": "5378025a-6334-4f88-bf2c-10c454876a10",
+      "hit": false
+    },
+    {
+      "id": "78f655e5-4d57-4240-ae7d-97dc3413b4cf",
+      "hit": true
+    },
+    {
+      "id": "d2b87edd-46cf-4f70-9741-78f31a3b2f69",
+      "hit": false
+    },
+    {
+      "id": "0d91de04-3f79-4ff2-9a7d-45a291249434",
+      "hit": true
+    },
+    {
+      "id": "1a4a43a2-cec8-466c-9d29-ef195a9acd52",
+      "hit": true
+    },
+    {
+      "id": "80055a00-9fbe-415d-a068-04964d6073e9",
+      "hit": true
+    },
+    {
+      "id": "b9533337-d6f9-4d8a-8086-2b880549aecf",
+      "hit": false
+    },
+    {
+      "id": "97a4b75c-3334-494c-a2a4-faa6c2eb81fe",
+      "hit": false
+    },
+    {
+      "id": "3d8f5a7b-fdcd-4e7f-b608-6006e36ecbc3",
+      "hit": false
+    }
+  ]
+}
