@@ -146,7 +146,8 @@ export function deriveRows(input: Pick<BuildInput, "companies" | "classification
           sharesBefore: capital ? (byPub.get(p.id)?.context.sharesBefore ?? capital.sharesBefore) : null,
           sharesAfter: capital?.sharesAfter ?? null,
           contributionType: capital?.contributionType ?? null,
-          payload: capital ? { ...capital.payload, context: byPub.get(p.id)?.context ?? null } : e.payload,
+          // Company facts as published in this entry (as-of correct for the event's own date).
+          payload: capital ? { ...capital.payload, context: byPub.get(p.id)?.context ?? null, canton: p.canton, purpose: p.purpose, legalForm: p.legalForm } : e.payload,
           spans,
           correctsPublicationNumber: p.correctsPublicationNumber,
           cancelsPublicationNumber: e.type === "cancellation" ? e.payload.cancelsPublicationNumber : null,
