@@ -37,6 +37,8 @@ export function allocate(pop: Populations, n = PRECISION_N, min = PER_SYSTEM_MIN
       if (c > pop.claude_only) continue;
       const a: Allocation = { both: b, rules_only: r, claude_only: c };
       if (rulesN(a) < needRules || claudeN(a) < needClaude) continue;
+      // Every non-empty stratum needs a sampled item, or its weighted share has no estimate.
+      if (STRATA.some((k) => pop[k] > 0 && a[k] === 0 && size >= STRATA.filter((s) => pop[s] > 0).length)) continue;
       const cost = STRATA.reduce((s, k) => s + (a[k] - target(k)) ** 2, 0);
       if (cost < bestCost - 1e-9) [best, bestCost] = [a, cost];
     }

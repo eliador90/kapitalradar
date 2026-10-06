@@ -671,6 +671,186 @@
       "company": "Feinheit AG",
       "source": "adhoc",
       "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE481951668",
+      "company": "Topadur Pharma AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE303819191",
+      "company": "Novapsy SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE295990745",
+      "company": "BLP Digital AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE187858267",
+      "company": "PharmaTrail AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE278248627",
+      "company": "HemostOD SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE179226970",
+      "company": "OxyPrem AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE305229942",
+      "company": "AI2C Technologies AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE418299421",
+      "company": "Windward Bio Group AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE457142007",
+      "company": "Golfyr AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE349962539",
+      "company": "SCEYE SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE327137395",
+      "company": "Somagenetix AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE218178555",
+      "company": "Engimmune Therapeutics AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE274461895",
+      "company": "RICB DIAGNOSTICS AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE231726281",
+      "company": "Wintergreen Switzerland SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE480705003",
+      "company": "Mesh AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE330109790",
+      "company": "Hedera Dx SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE341961559",
+      "company": "Grensol AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE315599547",
+      "company": "Zen-Noh Global Holdings SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE112110937",
+      "company": "HdeP Continuation Groupe SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE260253221",
+      "company": "Image Regenerative Institute AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE275242203",
+      "company": "Royalty Access Studio Switzerland AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE264048772",
+      "company": "Lucendra SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE114552080",
+      "company": "Climatex AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE256965761",
+      "company": "Momerable SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE418883761",
+      "company": "Visorway AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE373574037",
+      "company": "AAA DIGITAL AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE175619862",
+      "company": "Nu Glass SA",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE214709436",
+      "company": "Chip-ing AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE188125167",
+      "company": "optimio AG",
+      "source": "precision",
+      "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE243223785",
+      "company": "BOXS AG",
+      "source": "precision",
+      "added": "2026-10-06"
     }
   ]
 }

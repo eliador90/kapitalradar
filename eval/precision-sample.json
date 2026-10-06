@@ -1,0 +1,257 @@
+{
+  "release": "r1",
+  "seed": 20261007,
+  "drawnAt": "2026-10-06T14:35:20.185Z",
+  "populations": {
+    "both": 552,
+    "rules_only": 548,
+    "claude_only": 20
+  },
+  "allocation": {
+    "both": 15,
+    "rules_only": 14,
+    "claude_only": 1
+  },
+  "items": [
+    {
+      "key": "b3e2af5a-8b71-4860-876c-3f5177c0cf54",
+      "uid": "CHE481951668",
+      "company": "Topadur Pharma AG",
+      "publishedAt": "2026-08-20",
+      "publicationId": "5b25cb46-efff-499c-9c81-cda1abec68f7",
+      "stratum": "both"
+    },
+    {
+      "key": "e3535d5b-457d-40bb-9fca-172b5b1963b8",
+      "uid": "CHE303819191",
+      "company": "Novapsy SA",
+      "publishedAt": "2025-08-08",
+      "publicationId": "c2cca1b0-26fa-4315-a9dc-d428e65d3109",
+      "stratum": "both"
+    },
+    {
+      "key": "8d283fcb-e284-418e-86f2-fddfc3fe54ba",
+      "uid": "CHE295990745",
+      "company": "BLP Digital AG",
+      "publishedAt": "2026-10-02",
+      "publicationId": "b4946cff-5182-45e2-94eb-0637365a8412",
+      "stratum": "both"
+    },
+    {
+      "key": "4b6efb62-fb82-4ebe-b5f8-5e0b582eb912",
+      "uid": "CHE187858267",
+      "company": "PharmaTrail AG",
+      "publishedAt": "2025-11-12",
+      "publicationId": "2a2dae3a-26f5-438b-add3-3e7e3b9f2454",
+      "stratum": "both"
+    },
+    {
+      "key": "c59251f4-55a1-4f2a-a54c-aa047c2d4e6d",
+      "uid": "CHE278248627",
+      "company": "HemostOD SA",
+      "publishedAt": "2026-07-16",
+      "publicationId": "038e999f-173f-4254-abf2-c4223c9d21e5",
+      "stratum": "both"
+    },
+    {
+      "key": "8630a5d4-cc3d-468f-9a27-467c904e4217",
+      "uid": "CHE179226970",
+      "company": "OxyPrem AG",
+      "publishedAt": "2026-05-01",
+      "publicationId": "c3872235-ac7a-40b3-a500-409cedc75319",
+      "stratum": "both"
+    },
+    {
+      "key": "6fd6e9e6-ae5d-44f4-b01b-73e1b0d49575",
+      "uid": "CHE305229942",
+      "company": "AI2C Technologies AG",
+      "publishedAt": "2025-10-08",
+      "publicationId": "fd44529a-db8a-4986-9531-772e3273732f",
+      "stratum": "both"
+    },
+    {
+      "key": "76ad0618-cca4-4eec-96eb-46a0f2dd53c7",
+      "uid": "CHE418299421",
+      "company": "Windward Bio Group AG",
+      "publishedAt": "2025-08-28",
+      "publicationId": "502fe224-6d4e-4c51-a44f-8c2e4a8d3c23",
+      "stratum": "both"
+    },
+    {
+      "key": "02fc6899-3d4e-41c4-9c83-0158cd9f8d83",
+      "uid": "CHE457142007",
+      "company": "Golfyr AG",
+      "publishedAt": "2026-07-10",
+      "publicationId": "12c762a8-3204-464a-af93-a1cbabe6f1a2",
+      "stratum": "both"
+    },
+    {
+      "key": "bf94a5e8-ba88-42e2-8672-b779e31acfde",
+      "uid": "CHE349962539",
+      "company": "SCEYE SA",
+      "publishedAt": "2025-12-08",
+      "publicationId": "5f960de9-07b3-46ac-b8ef-fce61ad39b79",
+      "stratum": "both"
+    },
+    {
+      "key": "90e227fa-e9d4-47a3-9c26-d067d0852141",
+      "uid": "CHE327137395",
+      "company": "Somagenetix AG",
+      "publishedAt": "2025-09-16",
+      "publicationId": "dba51d5e-ed65-4818-8c2a-92d9f51792cc",
+      "stratum": "both"
+    },
+    {
+      "key": "3a852b60-97f0-4175-95d1-213dcd68c5b5",
+      "uid": "CHE218178555",
+      "company": "Engimmune Therapeutics AG",
+      "publishedAt": "2025-12-29",
+      "publicationId": "b1d51c58-8635-4233-94a5-944a31f27843",
+      "stratum": "both"
+    },
+    {
+      "key": "01912014-df8f-4cca-9eca-e511c299cc0e",
+      "uid": "CHE274461895",
+      "company": "RICB DIAGNOSTICS AG",
+      "publishedAt": "2026-05-04",
+      "publicationId": "d1956b4a-ee50-44f7-90a7-0ec609dfc237",
+      "stratum": "both"
+    },
+    {
+      "key": "ea3dae8a-c147-4021-8418-b10d0fe8deb6",
+      "uid": "CHE231726281",
+      "company": "Wintergreen Switzerland SA",
+      "publishedAt": "2025-08-12",
+      "publicationId": "8063bcf4-78f4-4320-a1d0-44b05880c87a",
+      "stratum": "both"
+    },
+    {
+      "key": "650c4632-fb30-4ee3-b9a0-845822630595",
+      "uid": "CHE480705003",
+      "company": "Mesh AG",
+      "publishedAt": "2026-03-13",
+      "publicationId": "787a5ea3-3e80-43df-b04e-c9be668909a1",
+      "stratum": "both"
+    },
+    {
+      "key": "f0e2b6ed-dbbf-4f9c-b9d8-a9aec389f7c6",
+      "uid": "CHE330109790",
+      "company": "Hedera Dx SA",
+      "publishedAt": "2026-02-18",
+      "publicationId": "52a93f32-b49b-46be-a076-6eba08d3c36e",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "0842b62d-68ce-481b-b284-e26c28613e69",
+      "uid": "CHE341961559",
+      "company": "Grensol AG",
+      "publishedAt": "2025-12-19",
+      "publicationId": "d22196da-96ba-4221-9498-114b1a60bf89",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "09a6dad2-29e5-44ae-84cf-ebad39ac8061",
+      "uid": "CHE315599547",
+      "company": "Zen-Noh Global Holdings SA",
+      "publishedAt": "2026-05-29",
+      "publicationId": "46523bd9-e1fc-40fa-ae90-1bfedf444bd6",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "6d23e991-36d1-4db5-8797-c95c819316d4",
+      "uid": "CHE112110937",
+      "company": "HdeP Continuation Groupe SA",
+      "publishedAt": "2026-01-21",
+      "publicationId": "7bc53b88-55ad-4952-9336-03882483f036",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "020181a4-0ad0-4086-ae88-5ff02199eb6f",
+      "uid": "CHE260253221",
+      "company": "Image Regenerative Institute AG",
+      "publishedAt": "2025-12-10",
+      "publicationId": "c3976158-a01e-481f-928c-8b8b69f5ce0b",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "f2b83583-9f88-429c-86b3-38d79f7114d9",
+      "uid": "CHE275242203",
+      "company": "Royalty Access Studio Switzerland AG",
+      "publishedAt": "2026-07-16",
+      "publicationId": "595cf84a-b4f3-46d9-b80a-4d267a1875d8",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "c6512e4a-13fa-4c86-bcd2-39995e3a37c6",
+      "uid": "CHE264048772",
+      "company": "Lucendra SA",
+      "publishedAt": "2025-12-08",
+      "publicationId": "7cf0a2a0-b32e-4674-9760-71a8fe388073",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "9d1c8e50-48cf-4538-bd35-59f60af89a85",
+      "uid": "CHE114552080",
+      "company": "Climatex AG",
+      "publishedAt": "2026-02-09",
+      "publicationId": "b9a4b5f9-c701-490b-b5f1-38574f9224b5",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "ddd955c0-f678-49d9-8848-a1c77c2ceaab",
+      "uid": "CHE256965761",
+      "company": "Momerable SA",
+      "publishedAt": "2026-02-17",
+      "publicationId": "50b370e5-1214-4ac2-aefa-d60ebe8845e2",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "0417d8f3-46b5-4e98-9370-6bfecf42f183",
+      "uid": "CHE418883761",
+      "company": "Visorway AG",
+      "publishedAt": "2026-07-31",
+      "publicationId": "3d705085-e08d-4c4f-9271-500f925f22bf",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "8b44f33f-950a-40e1-841a-6534464de392",
+      "uid": "CHE373574037",
+      "company": "AAA DIGITAL AG",
+      "publishedAt": "2026-09-28",
+      "publicationId": "57751c9c-c5c3-47cc-83bf-e6bfff4cf2d9",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "e5f558f4-3fd8-474b-932b-c2a587d208c9",
+      "uid": "CHE175619862",
+      "company": "Nu Glass SA",
+      "publishedAt": "2026-06-15",
+      "publicationId": "1db57978-867e-4340-a461-91f574b4b15f",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "5060cefa-fd13-498c-b561-90a51ad3b9c3",
+      "uid": "CHE214709436",
+      "company": "Chip-ing AG",
+      "publishedAt": "2026-07-16",
+      "publicationId": "dc07b093-ef1b-4ad3-9f9c-5ddd9e3a0863",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "e06fd004-831b-40e4-9cd4-b1d3caed4a23",
+      "uid": "CHE188125167",
+      "company": "optimio AG",
+      "publishedAt": "2026-02-10",
+      "publicationId": "95e52e19-41a3-4fd3-9a2d-0d272059826e",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "49620a9f-dd58-4774-95bc-e3d45e34e6c8",
+      "uid": "CHE243223785",
+      "company": "BOXS AG",
+      "publishedAt": "2025-11-20",
+      "publicationId": "e3d7333d-f1c9-4c49-b849-880851c80e7a",
+      "stratum": "claude_only"
+    }
+  ]
+}

@@ -15,6 +15,9 @@ describe("precision sample allocation", () => {
     const a = allocate({ both: 2, rules_only: 100, claude_only: 3 });
     expect(a.both + a.claude_only).toBe(5);
   });
+  it("samples every non-empty stratum, even a tiny one (r1: 552 / 548 / 20)", () => {
+    expect(allocate({ both: 552, rules_only: 548, claude_only: 20 })).toEqual({ both: 15, rules_only: 14, claude_only: 1 });
+  });
   it("draws the same items for the same seed, regardless of input order", () => {
     const items = Array.from({ length: 40 }, (_, i) => ({ key: `p${i}`, stratum: stratumOf(i % 2 === 0, i % 3 === 0)! })).filter((x) => x.stratum);
     const alloc = { both: 3, rules_only: 4, claude_only: 2 };
