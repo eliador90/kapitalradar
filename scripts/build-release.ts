@@ -13,6 +13,7 @@ import { BACKFILL_START, listCandidateUids, loadCompany, type CompanyBundle } fr
 import type { StoredClassification } from "../lib/pipeline/classify";
 import { loadClassificationConfig, releaseConfigFrom, ruleConfigFrom } from "../lib/pipeline/config";
 import { PARSER_VERSION } from "../lib/pipeline/parse";
+import { RULES_FINGERPRINT } from "../lib/domain/rule-catalog";
 import { buildRelease, deriveRows, missingGazetteDays, rollback, type ConfirmationRow } from "../lib/pipeline/release";
 import { dbReleaseRepo } from "../lib/pipeline/release-repo";
 
@@ -95,7 +96,7 @@ const parsedEval = existsSync(EVAL_RESULT) ? releaseEval.parse(JSON.parse(readFi
 // Unreviewed labels never ship: a provisional artifact counts as no eval (the gate fails). Nor
 // does an eval of another system (parser, model, prompt or thresholds): it measured something else.
 const s = parsedEval?.system;
-const sameSystem = !!s && s.parserVersion === PARSER_VERSION && s.modelId === cfg.modelId && s.promptVersion === cfg.promptVersion && s.tau === cfg.tau && s.tauLow === cfg.tauLow && s.rulesThreshold === cfg.rulesThreshold;
+const sameSystem = !!s && s.parserVersion === PARSER_VERSION && s.modelId === cfg.modelId && s.promptVersion === cfg.promptVersion && s.tau === cfg.tau && s.tauLow === cfg.tauLow && s.rulesThreshold === cfg.rulesThreshold && s.rules === RULES_FINGERPRINT;
 if (parsedEval?.provisional) console.log(`${EVAL_RESULT} is provisional (labels await review): treated as missing`);
 else if (parsedEval && !sameSystem) console.log(`${EVAL_RESULT} measured another system (${JSON.stringify(s ?? "no system recorded")}): treated as missing`);
 const evalResult = parsedEval?.provisional || !sameSystem ? null : parsedEval;

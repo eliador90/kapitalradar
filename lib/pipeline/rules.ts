@@ -89,6 +89,8 @@ export function evaluateRules(input: RuleInput, config: RuleConfig = defaultRule
   if (event.contributionType === "set_off") hits.push("set_off_only");
   if (event.contributionType === "in_kind") hits.push("in_kind_only");
   if (event.contributionType === "conditional_capital") hits.push("conditional_capital_issuance");
+  if (p.fromReserves) hits.push("reserves_funded");
+  if (p.withConversion) hits.push("conversion_from_gmbh");
 
   const score = hits.reduce((s, id) => s + (config.weights[id] ?? 0), 0);
   const candidate = rejectReason === null;

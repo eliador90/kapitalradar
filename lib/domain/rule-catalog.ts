@@ -82,6 +82,22 @@ export const RULES = [
     display: "Shares issued out of conditional capital, as when options are exercised.",
   },
   {
+    // v3 (decision log #45/#46): weight by analogy with the other "no new money" rules.
+    id: "reserves_funded",
+    kind: "negative",
+    weight: -1.5,
+    claude: "The increase is paid out of the company's own freely available equity (a bonus issue), with no new money.",
+    display: "Paid out of the company's own reserves, with no new money.",
+  },
+  {
+    // v3: softer than the no-new-money rules, since real rounds do happen at conversion.
+    id: "conversion_from_gmbh",
+    kind: "negative",
+    weight: -1.0,
+    claude: "The capital change happens as part of converting a GmbH into an AG.",
+    display: "Part of converting the company from a GmbH into an AG.",
+  },
+  {
     id: "restructuring_pair",
     kind: "hard_negative",
     weight: 0,
@@ -106,3 +122,6 @@ export const isRuleId = (id: string): id is RuleId => BY_ID.has(id);
 
 /** The one-line catalog the classifier prompt embeds. */
 export const claudeCatalog = () => RULES.map((r) => `- ${r.id}: ${r.claude}`).join("\n");
+
+/** Fingerprint of what the rules compute (ids, kinds, weights): part of the system an eval measured. */
+export const RULES_FINGERPRINT = RULES.map((r) => `${r.id}:${r.kind}:${r.weight}`).join("|");

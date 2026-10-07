@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.24/HR02-export.xsd">
+<meta>
+  <id>35d3fc28-c8a1-45e1-aff5-6fc5ab34920c</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006415021</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2025-08-22</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>TG</cantons>
+  <title>
+    <de>Mutation Wolko Bauer &amp; Köppel Consulting GmbH, Pfyn, neu Wolko Bauer &amp; Köppel Consulting AG</de>
+    <en>Change Wolko Bauer &amp; Köppel Consulting GmbH, Pfyn, new Wolko Bauer &amp; Köppel Consulting AG</en>
+    <it>Cambiamenti Wolko Bauer &amp; Köppel Consulting GmbH, Pfyn, nuovo Wolko Bauer &amp; Köppel Consulting AG</it>
+    <fr>Mutation Wolko Bauer &amp; Köppel Consulting GmbH, Pfyn, nouveau Wolko Bauer &amp; Köppel Consulting AG</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>4812</journalNumber>
+  <journalDate>2025-08-19</journalDate>
+  <publicationText>Wolko Bauer &amp; Köppel Consulting GmbH, in Pfyn, CHE-353.406.425, Gesellschaft mit beschränkter Haftung (SHAB Nr. 7 vom 11.01.2023, Publ. 1005649890). Statutenänderung: 27.06.2025. 27.06.2025. 27.06.2025. Umwandlung: Die Gesellschaft mit beschränkter Haftung hat das Stammkapital auf CHF 102'000.00 erhöht und wird gemäss Umwandlungsplan vom 27.06.2025 und Bilanz per 31.12.2024 mit Aktiven von CHF 262'553.63 und Passiven (Fremdkapital) von CHF 102'142.99 in eine Aktiengesellschaft umgewandelt. Die Gesellschafter erhalten für ihre bisherigen Stammanteile 1'020 Namenaktien zu CHF 100.00. Firma neu: Wolko Bauer &amp; Köppel Consulting AG. Rechtsform neu: Aktiengesellschaft. Aktienkapital neu: CHF 102'000.00 [bisher: CHF 21'000.00]. Liberierung Aktienkapital neu: CHF 102'000.00. Aktien neu: 1'020 Namenaktien zu CHF 100.00. Qualifizierte Tatbestände neu: Bei der Kapitalerhöhung wird frei verwendbares Eigenkapital in der Höhe von CHF 81'000.00 umgewandelt. Vinkulierung neu: Die Übertragbarkeit der Namenaktien ist nach Massgabe der Statuten beschränkt.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Wolko Bauer &amp; Köppel Consulting AG</name>
+      <uid>CHE-353.406.425</uid>
+      <uidOrganisationId>353406425</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH44040392231</code13>
+      <seat>Pfyn</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Erbringung von Leistungen aller Art im Bereich der Informations- und Kommunikationstechnologie, insbesondere von Beratungsdienstleistungen (Contracting), Entwicklung von Software, Integration von Systemen und Vertrieb von Informatiklösungen. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>102000.00</nominal>
+      <paid>102000.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Wolko Bauer &amp; Köppel Consulting GmbH</name>
+      <uid>CHE-353.406.425</uid>
+      <uidOrganisationId>353406425</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH44040392231</code13>
+      <seat>Pfyn</seat>
+      <legalForm>0107</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Erbringung von Leistungen aller Art im Bereich der Informations- und Kommunikationstechnologie, insbesondere von Beratungsdienstleistungen (Contracting), Entwicklung von Software, Integration von Systemen und Vertrieb von Informatiklösungen. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>21000.00</nominal>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2023-01-11</lastFoscDate>
+    <lastFoscNumber>7</lastFoscNumber>
+    <lastFoscSequence>1005649890</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>true</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>true</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Thurgau</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

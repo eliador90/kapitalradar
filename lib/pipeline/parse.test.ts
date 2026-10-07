@@ -115,6 +115,17 @@ describe("parse v3: cases found through the v1 precision sample (decision log #3
   });
 });
 
+describe("parse v4: increases paid from reserves (v2 precision sample, decision log #45)", () => {
+  it("flags a GmbH → AG conversion paid out of freely available equity", () => {
+    const e = capital("de-conversion-from-reserves");
+    expect(e.payload.withConversion).toBe(true);
+    expect(e.payload.fromReserves).toBe(true);
+  });
+  it("does not flag an ordinary cash increase", () => {
+    expect(capital("de-new-preferred-preseed").payload.fromReserves).toBe(false);
+  });
+});
+
 describe("parse: other events", () => {
   it("emits conversions with their capital change", () => {
     expect(types("de-conversion-gmbh-ag")).toEqual(["conversion_to_ag", "capital_change", "name_change"]);

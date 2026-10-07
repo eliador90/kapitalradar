@@ -8,7 +8,7 @@ import { normalizeUid } from "../domain/uid";
 import { clausesOf, splitClauses, type Clause } from "./clauses";
 import { LEGAL_FORM, section, textAt } from "./xml";
 
-export const PARSER_VERSION = "3";
+export const PARSER_VERSION = "4";
 
 export interface ParsedPublication {
   id: string;
@@ -216,6 +216,9 @@ const EXECUTED_INCREASE = /ordentliche Kapitalerhöhung|Ordentliche (?:Erhöhung
 // The pair is the accordion operation: reduce (usually to absorb losses) and re-increase at once.
 const SAME_OPERATION = /gleichzeitig|Wiedererhöhung|Unterbilanz|Überschuldung|Verlust|simultané|immédiatement|en vue de (?:la )?(?:compensation|couverture) de(?:s)? pertes|pertes|contemporaneamente|perdite/i;
 const TREASURY_ONLY = /eigene(?:n)? Aktien|actions propres|azioni proprie/i;
+/** Increase paid out of the company's own equity (a bonus issue): no new money comes in. */
+const FROM_RESERVES =
+  /frei verwendbare[sn]? Eigenkapital|aus (?:frei verwendbarem )?Eigenkapital|Umwandlung von (?:Reserven|Eigenkapital)|fonds propres librement disponibles|incorporation de réserves|conversion de (?:fonds propres|réserves)|capitale proprio liberamente disponibile/i;
 /** Further wording of an executed increase ("Bei der Kapitalerhöhung vom 25.03.2026 …"). */
 const STATED_INCREASE = /Kapitalerhöhung vom \d|l['’]augmentation (?:ordinaire )?du capital du \d|aumento (?:ordinario )?del capitale del \d/i;
 const FRENCH_CURRENCY_BEFORE = new RegExp(`monnaie du capital-actions de\\s+${CUR}\\b`, "i");
@@ -393,6 +396,7 @@ export function parsePublication(xml: string): ParsedPublication {
           nominalChanged,
           participationCapital: participation,
           currencyBefore,
+          fromReserves: FROM_RESERVES.test(executedClauses),
         },
       });
     }
