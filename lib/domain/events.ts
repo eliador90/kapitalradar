@@ -50,6 +50,8 @@ export const capitalChangePayload = z.object({
   participationCapital: z.boolean(),
   /** Previous capital currency when this step changes it (amounts before/after are then not comparable); absent before parser v3. */
   currencyBefore: currency.nullable().optional(),
+  /** Paid out of the company's own equity (bonus issue, "aus frei verwendbarem Eigenkapital"); absent before parser v4. */
+  fromReserves: z.boolean().optional(),
 });
 export type CapitalChangePayload = z.infer<typeof capitalChangePayload>;
 

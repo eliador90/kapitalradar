@@ -50,6 +50,14 @@
       "fired": 0,
       "positives": 0
     },
+    "reserves_funded": {
+      "fired": 0,
+      "positives": 0
+    },
+    "conversion_from_gmbh": {
+      "fired": 5,
+      "positives": 0
+    },
     "restructuring_pair": {
       "fired": 0,
       "positives": 0
@@ -191,9 +199,10 @@
       "positive": false,
       "unknown": false,
       "hits": [
-        "young_company"
+        "young_company",
+        "conversion_from_gmbh"
       ],
-      "score": 0.5,
+      "score": -0.5,
       "candidate": true,
       "rejectReason": null,
       "rulesPositive": false,
@@ -207,9 +216,10 @@
       "positive": false,
       "unknown": false,
       "hits": [
-        "young_company"
+        "young_company",
+        "conversion_from_gmbh"
       ],
-      "score": 0.5,
+      "score": -0.5,
       "candidate": true,
       "rejectReason": null,
       "rulesPositive": false,
@@ -326,8 +336,10 @@
       "publicationNumber": "HR02-1006500774",
       "positive": false,
       "unknown": true,
-      "hits": [],
-      "score": 0,
+      "hits": [
+        "conversion_from_gmbh"
+      ],
+      "score": -1,
       "candidate": true,
       "rejectReason": null,
       "rulesPositive": false,
@@ -358,9 +370,10 @@
       "positive": false,
       "unknown": false,
       "hits": [
-        "tech_purpose"
+        "tech_purpose",
+        "conversion_from_gmbh"
       ],
-      "score": 0.5,
+      "score": -0.5,
       "candidate": true,
       "rejectReason": null,
       "rulesPositive": false,
@@ -408,9 +421,10 @@
       "positive": false,
       "unknown": false,
       "hits": [
-        "young_company"
+        "young_company",
+        "conversion_from_gmbh"
       ],
-      "score": 0.5,
+      "score": -0.5,
       "candidate": true,
       "rejectReason": null,
       "rulesPositive": false,
@@ -458,8 +472,10 @@
       "publicationNumber": "HR02-1006551876",
       "positive": false,
       "unknown": false,
-      "hits": [],
-      "score": 0,
+      "hits": [
+        "conversion_from_gmbh"
+      ],
+      "score": -1,
       "candidate": true,
       "rejectReason": null,
       "rulesPositive": false,
