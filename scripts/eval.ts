@@ -18,6 +18,7 @@ import { recall, weightedPrecision } from "../lib/domain/metrics";
 import type { Tier } from "../lib/domain/schemas";
 import { publicationUrl } from "../lib/domain/shab-link";
 import { isClassifierPositive } from "../lib/domain/status";
+import { PARSER_VERSION } from "../lib/pipeline/parse";
 import { loadCompany } from "../lib/pipeline/candidates";
 import { dbClassificationStore } from "../lib/pipeline/classification-store";
 import { tierFor } from "../lib/pipeline/classify";
@@ -207,6 +208,7 @@ async function run(releaseId: string) {
   const result: ReleaseEval = releaseEval.parse({
     evaluatedOn: today(),
     provisional,
+    system: { parserVersion: PARSER_VERSION, modelId: cfg.modelId, promptVersion: cfg.promptVersion, tau: cfg.tau!, tauLow: cfg.tauLow!, rulesThreshold: cfg.rulesThreshold },
     cohortSize: rec.cohort,
     systems: {
       rulesPlusClaude: { precision: claudePrecision, recall: { hits: rec.rulesPlusClaude.detected, n: rec.cohort } },

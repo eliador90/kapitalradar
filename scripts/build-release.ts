@@ -92,9 +92,13 @@ const confirmationRow = z.object({
 const confirmations: ConfirmationRow[] = existsSync(CONFIRMATIONS) ? z.array(confirmationRow).parse(JSON.parse(readFileSync(CONFIRMATIONS, "utf8")).confirmations) : [];
 // Validated against the one schema the pages read: a malformed file stops the build here.
 const parsedEval = existsSync(EVAL_RESULT) ? releaseEval.parse(JSON.parse(readFileSync(EVAL_RESULT, "utf8"))) : null;
-// Unreviewed labels never ship: a provisional artifact counts as no eval (the gate fails).
+// Unreviewed labels never ship: a provisional artifact counts as no eval (the gate fails). Nor
+// does an eval of another system (parser, model, prompt or thresholds): it measured something else.
+const s = parsedEval?.system;
+const sameSystem = !!s && s.parserVersion === PARSER_VERSION && s.modelId === cfg.modelId && s.promptVersion === cfg.promptVersion && s.tau === cfg.tau && s.tauLow === cfg.tauLow && s.rulesThreshold === cfg.rulesThreshold;
 if (parsedEval?.provisional) console.log(`${EVAL_RESULT} is provisional (labels await review): treated as missing`);
-const evalResult = parsedEval?.provisional ? null : parsedEval;
+else if (parsedEval && !sameSystem) console.log(`${EVAL_RESULT} measured another system (${JSON.stringify(s ?? "no system recorded")}): treated as missing`);
+const evalResult = parsedEval?.provisional || !sameSystem ? null : parsedEval;
 
 if (dryRun) {
   const tau = cfg.tau ?? 0.5;

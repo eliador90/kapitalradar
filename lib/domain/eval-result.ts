@@ -22,6 +22,8 @@ export const releaseEval = z.object({
   evaluatedOn: isoDate,
   /** True while the cohort adjudication or the precision verdicts await Remo's review: never ships. */
   provisional: z.boolean(),
+  /** The system this eval measured; build-release only accepts an eval of the system it builds. Absent on the v1 artifact. */
+  system: z.object({ parserVersion: z.string(), modelId: z.string(), promptVersion: z.string(), tau: z.number(), tauLow: z.number(), rulesThreshold: z.number() }).optional(),
   cohortSize: z.number().int().nonnegative(),
   systems: z.object({ rulesPlusClaude: system, rulesOnly: system }),
   /** Secondary figure (decision log #17): likely financing or undecided counts as a hit. */
