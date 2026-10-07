@@ -89,6 +89,25 @@ describe("parse v3: cases found through the v1 precision sample (decision log #3
     const e = p.events.find((x) => x.type === "capital_change");
     expect(e?.type === "capital_change" ? e.payload.direction : "no capital event").not.toBe("increase");
   });
+  // The review's inputs (2026-10-07): extra clauses spliced into the redenomination fixture.
+  const withClause = (clause: string) =>
+    parsePublication(readFileSync("eval/fixtures/shab/de-redenomination-resplit.xml", "utf8").replace("</publicationText>", ` ${clause}</publicationText>`));
+  const direction = (p: ReturnType<typeof parsePublication>) => {
+    const e = p.events.find((x) => x.type === "capital_change");
+    return e?.type === "capital_change" ? e.payload.direction : "none";
+  };
+  it("does not read a statute-only clause about conditional capital as an issuance", () => {
+    expect(direction(withClause("Die Gesellschaft hat mit Beschluss vom 25.03.2026 die Bestimmung betreffend Kapitalerhöhung aus bedingtem Aktienkapital geändert."))).not.toBe("increase");
+  });
+  it("reads 'Bei der Kapitalerhöhung vom … wofür N Aktien' across a currency change as an increase", () => {
+    expect(
+      direction(withClause("Qualifizierte Tatbestände neu: Verrechnung: Bei der Kapitalerhöhung vom 25.03.2026 werden Forderungen in der Höhe von USD 10'000.00 zur Verrechnung gebracht, wofür 1'000'000 Namenaktien zu USD 0.01 ausgegeben werden.")),
+    ).toBe("increase");
+  });
+  it("does not read a loss offset as a set-off contribution", () => {
+    expect(contributionOf("Ordentliche Kapitalerhöhung. Die Forderungen der Gläubiger sind trotz der Herabsetzung voll gedeckt. Der Herabsetzungsbetrag wird zur Verrechnung mit dem Bilanzverlust verwendet.")).toBe("cash");
+    expect(contributionOf("Ordentliche Kapitalerhöhung. Forderungsverzicht der Aktionäre zur Verrechnung mit Verlusten.")).toBe("cash");
+  });
   it("keeps a stated increase across a currency change, flagged so amounts aren't compared", () => {
     const e = capital("de-redenomination-with-increase");
     expect(e.payload.direction).toBe("increase");

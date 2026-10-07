@@ -57,7 +57,7 @@ export interface FeedRow {
 type EventRow = typeof events.$inferSelect & { publicationNumber: string; language: string };
 type ConfirmationRow = typeof confirmations.$inferSelect;
 
-const isIncrease = (e: EventRow) => e.type === "capital_change" && isCapitalIncrease(e.capitalBefore, e.capitalAfter);
+const isIncrease = (e: EventRow) => e.type === "capital_change" && isCapitalIncrease(e.payload);
 const linkOf = (c: ConfirmationRow): ConfirmationLink => ({ eventMatch: c.eventMatch, matchConfidence: c.matchConfidence, reviewedAt: c.reviewedAt ? c.reviewedAt.toISOString() : null });
 const issuanceOf = (e: EventRow) => shareIssuance({ ...(e.payload as IssuancePayload), sharesBefore: e.sharesBefore, sharesAfter: e.sharesAfter });
 

@@ -157,7 +157,7 @@ export function deriveRows(input: Pick<BuildInput, "companies" | "classification
         const cand = capital ? byPub.get(p.id) : undefined;
         // Only capital increases in the backfill window are assessed; earlier history is context
         // ("not assessed", plan "Tier") and reductions carry no tier.
-        if (!cand || p.publishedAt < input.backfillStart || !isCapitalIncrease(cand.event.capitalBefore, cand.event.capitalAfter)) return;
+        if (!cand || p.publishedAt < input.backfillStart || !isCapitalIncrease(cand.event.payload)) return;
         let tier: Tier = "capital_increased";
         let hash: string | null = null;
         if (cand.rules.candidate) {

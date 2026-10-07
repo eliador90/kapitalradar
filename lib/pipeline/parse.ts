@@ -45,7 +45,7 @@ export class ParseError extends Error {}
 // Set-off of creditor claims only: "Verrechnung mit dem Bilanzverlust" or "compensation de
 // pertes" offset losses and are not contributions.
 export const SET_OFF =
-  /Verrechnung (?:einer |von |der )?Forderung|Forderung(?:en)?[\s\S]{0,160}?(?:verrechnet|zur Verrechnung)|durch Verrechnung(?! mit)|compensation (?:de |d['’]une |des )créances?|compensazione (?:di |del |dei )credit/i;
+  /Verrechnung (?:einer |von |der )?Forderung|Forderung(?:en)?\b[\s\S]{0,160}?(?:verrechnet|zur Verrechnung(?!\s+mit\s+(?:dem\s+|den\s+)?(?:Bilanzverlust|Verlust|Unterbilanz)))|durch Verrechnung(?! mit)|compensation (?:de |d['’]une |des )créances?|compensazione (?:di |del |dei )credit/i;
 export const CAPITAL_BAND = /Kapitalband|marge de fluctuation|margine di variazione/i;
 
 const CUR = `(${CURRENCIES.join("|")})`;
@@ -216,6 +216,8 @@ const EXECUTED_INCREASE = /ordentliche Kapitalerhöhung|Ordentliche (?:Erhöhung
 // The pair is the accordion operation: reduce (usually to absorb losses) and re-increase at once.
 const SAME_OPERATION = /gleichzeitig|Wiedererhöhung|Unterbilanz|Überschuldung|Verlust|simultané|immédiatement|en vue de (?:la )?(?:compensation|couverture) de(?:s)? pertes|pertes|contemporaneamente|perdite/i;
 const TREASURY_ONLY = /eigene(?:n)? Aktien|actions propres|azioni proprie/i;
+/** Further wording of an executed increase ("Bei der Kapitalerhöhung vom 25.03.2026 …"). */
+const STATED_INCREASE = /Kapitalerhöhung vom \d|l['’]augmentation (?:ordinaire )?du capital du \d|aumento (?:ordinario )?del capitale del \d/i;
 const FRENCH_CURRENCY_BEFORE = new RegExp(`monnaie du capital-actions de\\s+${CUR}\\b`, "i");
 
 /**
@@ -318,7 +320,15 @@ export function parsePublication(xml: string): ParsedPublication {
     // says one was executed ("Ordentliche Kapitalerhöhung", "aus bedingtem Kapital"); a plain
     // redenomination, even one that re-splits the shares to keep the nominal, issues nothing.
     const currencyBefore = capitalCurrencyBefore(active, classesBefore, classesAfter);
-    const statedIncrease = EXECUTED_INCREASE.test(active) || CONDITIONAL_ISSUANCE.test(active);
+    // Statute-only clauses ("die Bestimmung über … aus bedingtem Kapital geändert") restate the
+    // capital in the new currency and are not an issuance; they are dropped as in contributionOf.
+    const executedClauses = splitClauses(active).map((c) => c.text).filter((c) => !ADOPTION_NOTICE.test(c)).join(" ");
+    const statedIncrease =
+      EXECUTED_INCREASE.test(executedClauses) ||
+      CONDITIONAL_ISSUANCE.test(executedClauses) ||
+      STATED_INCREASE.test(executedClauses) ||
+      sharesIssued !== null ||
+      SET_OFF_SHARES.test(executedClauses);
     const direction = currencyBefore
       ? statedIncrease
         ? "increase"

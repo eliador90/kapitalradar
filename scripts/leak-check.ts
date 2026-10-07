@@ -44,10 +44,10 @@ const sample = Array.from({ length: Math.min(N, uids.length) }, () => uids[Math.
 let checked = 0;
 const failures: string[] = [];
 for (const uid of [...new Set(sample)]) {
-  const evs = await db().select({ publishedAt: events.publishedAt, number: publications.publicationNumber, type: events.type, before: events.capitalBefore, after: events.capitalAfter }).from(events).innerJoin(publications, eq(publications.id, events.publicationId)).where(and(eq(events.releaseId, rel.id), eq(events.companyUid, uid)));
+  const evs = await db().select({ publishedAt: events.publishedAt, number: publications.publicationNumber, type: events.type, payload: events.payload }).from(events).innerJoin(publications, eq(publications.id, events.publicationId)).where(and(eq(events.releaseId, rel.id), eq(events.companyUid, uid)));
   const names = await db().select({ name: companyNames.name, publishedAt: companyNames.publishedAt }).from(companyNames).where(and(eq(companyNames.releaseId, rel.id), eq(companyNames.companyUid, uid)));
   const dates = [...new Set(evs.map((e) => e.publishedAt).filter((d) => d >= rel.backfill))].sort();
-  const firstIncrease = evs.filter((e) => e.type === "capital_change" && e.publishedAt >= rel.backfill && isCapitalIncrease(e.before, e.after)).map((e) => e.publishedAt).sort()[0];
+  const firstIncrease = evs.filter((e) => e.type === "capital_change" && e.publishedAt >= rel.backfill && isCapitalIncrease(e.payload)).map((e) => e.publishedAt).sort()[0];
   // Rewind to the day before each publication: that publication and everything later must be absent.
   for (const d of dates) {
     const asOf = addDays(d, -1);
