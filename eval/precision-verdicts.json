@@ -1,0 +1,185 @@
+{
+  "reviewedBy": "claude_proposal_pending_remo",
+  "rows": [
+    {
+      "key": "f8d876e1-f3e2-429a-84a3-4ce1c3d95508",
+      "verdict": "verified",
+      "source": "https://investors.oculis.com/news-releases/news-release-details/oculis-announces-oversubscribed-110-million-financing-accelerate",
+      "note": "Register: Ordinary increase within the capital band, statutes changed 03.11.2025; no claims or in-kind mentioned (cash). The company said exactly 2,635,801 new shares would come from the capital band, which equals the registered +2,635,801 shares, and the statute date matches the closing date; this is new external equity, though a Nasdaq-listed follow-on offering, not a venture round."
+    },
+    {
+      "key": "831985c1-ba10-4c37-8624-82457747d21a",
+      "verdict": "verified",
+      "source": "https://itbrief.co.uk/story/mosaic-soc-raises-usd-3-8m-to-power-smart-devices",
+      "note": "Register: 2,315,707 new 'Vorzugsaktien Pre-Seed'; 168,244 of them against a CHF 156,690.89 claim (likely a converted loan), the remaining ~2.15M paid in cash. A new 'Pre-Seed' preferred class in the register plus a publicly announced pre-seed round 44 days after the SHAB date, mostly paid in cash, ties this increase to the round."
+    },
+    {
+      "key": "5161c354-6db5-49f9-b269-d1961d6662ca",
+      "verdict": "verified",
+      "source": "https://tech.eu/2026/04/29/all3-raises-25m-to-boost-construction-productivity-with-robotics-and-ai",
+      "note": "Register: 46,058 new preferred shares; 13,673 against a partial set-off of a CHF 6.25M claim (likely converted notes), the remaining ~32,385 apparently in cash. The seed was announced 14 days after the SHAB date, and the implied ~CHF 457/share times 46,058 preferred shares (~CHF 21M) is consistent with USD 25M including a converted note."
+    },
+    {
+      "key": "aa5487eb-f3f9-4369-ae4b-55e88da1ab6f",
+      "verdict": "unverifiable",
+      "source": "https://www.venturekick.ch/OptimalPSI-gets-CHF-150000-from-Venture-Kick-to-develop-patientspecific-spinal-fusion-implants",
+      "note": "Register: 875,000 shares against claims of CHF 700,000 and 1,500,000 shares in cash. Real ETH spin-off (spinal implants) with a genuine cash portion, but no announced 2026 round or named new investors was found to tie to this step."
+    },
+    {
+      "key": "c65f2065-3cd5-45e0-8795-5ad46c87173e",
+      "verdict": "unverifiable",
+      "source": "https://zam.care",
+      "note": "Register: Ordinary increase, no claims or in-kind noted (cash). A Zurich Spitex/home-care service operator rather than a typical venture startup; no outside source on investors or a round was found either way."
+    },
+    {
+      "key": "813364d5-bd8b-4517-b486-3b5c0ccb3988",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase, no claims or in-kind noted (cash); same day the name changed from IOLUTION Holding AG; a prior cash increase was registered Jan 2026. An Olten holding of an ophthalmic medtech maker (IOL injectors) with repeated cash increases, but no announced financing or named investor was found."
+    },
+    {
+      "key": "84a12582-b444-4324-892e-f8176e4210c8",
+      "verdict": "unverifiable",
+      "source": "https://www.vcbacked.co/company/zappter",
+      "note": "Register: Ordinary increase (+59% shares), no claims or in-kind noted; board chair replaced at the same time. A seed-backed no-code startup with a large increase and a board change that could mean a new investor, but nothing public in the window confirms it."
+    },
+    {
+      "key": "03f62bd7-6692-4b7d-8d59-3ee9edd0f5d6",
+      "verdict": "unverifiable",
+      "source": "https://www.be-brave.ch/en/",
+      "note": "Register: Ordinary increase within the capital band (+828k shares at CHF 0.01), no claims or in-kind noted; a similar increase was registered Dec 2025; bankruptcy opened 02.09.2026, then revoked (SHAB 2026-10-05). A 2014-founded AI and data-center company raising small amounts repeatedly; no outside source names investors or a round, so nothing either way."
+    },
+    {
+      "key": "9bf12c55-b59f-447d-bb91-ad98db622ed7",
+      "verdict": "unverifiable",
+      "source": "https://ggba.swiss/en/three-innovative-geneva-based-start-ups-receive-fif-funding/",
+      "note": "Register: Ordinary increase within the capital band (+1,871,691 shares at CHF 0.01), no compensation de créances or in-kind noted. Geneva cleantech startup, but the only known funding is an Oct 2024 seed loan (debt, outside the window), and no 2025 round was found."
+    },
+    {
+      "key": "9215cc4e-29af-456a-952b-2aeb3e52627b",
+      "verdict": "unverifiable",
+      "source": "https://www.vcbacked.co/company/boum",
+      "note": "Register: 29,131 of the 35,886 new shares against claims of CHF 2,069,757.55 (likely converted loans); only ~6,755 shares in cash. Mostly a conversion of claims with a small cash part; no announced 2025 round ties the claims or the cash to an outside financing, so it cannot be verified, and the cash part stops it from being refuted."
+    },
+    {
+      "key": "83387cdb-b594-4ead-bb45-87d3df6ff38d",
+      "verdict": "unverifiable",
+      "source": "https://amtsblattportal.ch/api/v1/publications/2c26472b-848c-44a3-a057-77555c700b99/xml",
+      "note": "Register: Ordinary increase within the capital band: 1,376,608 new shares of CHF 0.01, of which 690,215 paid by set-off of claims (CHF 448,639.75, i.e. CHF 0.65/share); the remaining 686,393 shares implicitly paid in cash (about CHF 446k if at the same price).. Mixed increase: about half is a debt-to-equity conversion, the other half is new cash. UNIGE spin-off whose only announced round is the CHF 1.5m seed of Jan 2023 (outside the window). No 2026 round, investor or crowd campaign found that ties the cash half to this increase."
+    },
+    {
+      "key": "e10ccf14-f035-4091-a7dc-470bc8ae7ffc",
+      "verdict": "unverifiable",
+      "source": "https://www.clyos.ch",
+      "note": "Register: Ordinary increase (Ordentliche Erhöhung), 57,144 new shares of CHF 0.10, no set-off or contribution in kind stated; the conditional capital created at founding (Jan 2025) was not used.. Young UZH-programme startup (character-strengths assessment), founded Feb 2025. The register suggests a small cash issue (5.7% dilution), but no announcement, investor or round could be found in German or English searches."
+    },
+    {
+      "key": "269c55b2-0900-4093-bd37-60f1b36e0f82",
+      "verdict": "unverifiable",
+      "source": "https://cutiss.swiss/cutiss-closes-chf-56m-series-c-round-and-signs-agreement-with-leading-european-burn-center/",
+      "note": "Register: Ordinary increase (statutes 26.03.2026): +160,192 preferred shares (Vorzugsaktien) of CHF 0.10, common shares unchanged; no set-off or contribution in kind stated. The Series C second tranche had already been registered in Aug 2025 (SHAB 2025-08-25: +181,562 preferred).. New preferred shares strongly suggest investor equity, but the only matching announcement (Series C closed, 10 Sep 2025) is 215 days before this SHAB date and was already registered in Aug 2025. No later closing, extension or new investor (2026 press: only board changes) was found, so this issue, which would be roughly CHF 27m at the Series C price, is unexplained."
+    },
+    {
+      "key": "0b192c84-d362-4cf6-997e-c7ba74118f41",
+      "verdict": "unverifiable",
+      "source": "https://amtsblattportal.ch/api/v1/publications/2dd2d936-9d99-466b-b2a6-1e1b944aa39a/xml",
+      "note": "Register: Increase from conditional capital (augmentation conditionnelle) created 15.11.2024: 46,667 new shares of CHF 1 issued 'suite à l'exercice des droits d'option et de conversion'; the conditional-capital clause was then deleted (fully used).. Software arm of the established Swisscoding medical-coding group (founded 2007). A single full exercise of option/conversion rights granted a year earlier is more consistent with a convertible conversion or a pre-agreed option than with a fresh round. No financing announcement or holder was found, so the case cannot be refuted on evidence either."
+    },
+    {
+      "key": "b523a46d-4800-4e8d-acdd-7f9d753422f7",
+      "verdict": "unverifiable",
+      "source": "https://amtsblattportal.ch/api/v1/publications/3d2865e6-b7fd-47b9-9fe6-cdbae36d0136/xml",
+      "note": "Register: Ordinary increase within the capital band (12.11.2025): 177,949 new shares of CHF 0.10, of which 107,097 issued against set-off of claims of CHF 310,000 (about CHF 2.89/share); the remaining 70,852 shares implicitly in cash (about CHF 205k at the same price). A further increase followed (SHAB 2026-05-18).. Mixed conversion-plus-cash issue at a small angel-backed SaaS company (earlier investors include Alternative Bank Switzerland, 2023). Dec 2025 news covers only a commercial ewz white-label deal, not equity, and no 2025 round announcement was found."
+    },
+    {
+      "key": "580ab4e7-e22b-4534-aeab-f5ad49858537",
+      "verdict": "unverifiable",
+      "source": "https://amtsblattportal.ch/api/v1/publications/63a1d7ab-8f6f-49fd-9504-dde036735e04/xml",
+      "note": "Register: Increase from conditional capital based on grants of 03.12.2014 and 22.07.2020 (option/conversion rights exercised): +4,256,001 shares of CHF 0.01; another conditional-capital exercise followed in Sept 2026.. Established craft brewery (founded 2014), not a venture-style raise. The increase is the exercise of rights granted in 2014 and 2020 (options or convertibles), not a new round. No fundraising or crowd campaign was found, and nothing identifies who exercised, so insider exercise cannot be shown."
+    },
+    {
+      "key": "e31f7bf0-a939-4bd0-8199-df24fd43c3a5",
+      "verdict": "unverifiable",
+      "source": "https://www.climartis.ch/newsroom",
+      "note": "Register: Ordinary increase within the capital band (statutes 10.08.2026): 6,250 new registered shares of CHF 1, no set-off or contribution in kind stated.. Buy-and-build holding of energy-transition SMEs whose only announced capital increase was Oct 2024 (outside the window). The newsroom stops at Feb 2025 (Soleco acquisition). A 4.5% issue could be an investor top-up or a seller/management rollover, and no source says which."
+    },
+    {
+      "key": "c5f53221-0937-4fd5-9a2a-fc41c70637d8",
+      "verdict": "unverifiable",
+      "source": "https://amtsblattportal.ch/api/v1/publications/77cb2a05-2bbe-44f7-b758-ccacc3fb1f16/xml",
+      "note": "Register: Ordinary increase (statutes 22.08.2025, two weeks after founding): 32,353 new shares of CHF 1, no set-off or contribution in kind stated.. Newly formed holding c/o a joint-sealing contractor (Raffa Fugendichtungen AG), whose purpose is acquiring stakes in sealing and fire-protection firms. It looks like a buy-out vehicle bringing in co-investors or management, not a venture round, but no source describes the deal."
+    },
+    {
+      "key": "d37f2dc0-d6fd-4a4b-ac12-06e4e6aec82d",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase (statutes 05.02.2026): 30,000 new shares of CHF 1, no set-off or contribution in kind stated.. Zug IT-services/software AG run by its founder family. A hushtalks.com anonymous audio app exists, but the link to this AG is unconfirmed. No investor, round or crowd campaign was found."
+    },
+    {
+      "key": "99700e66-5bce-4dd4-ada2-3468f493bb98",
+      "verdict": "unverifiable",
+      "source": "https://amtsblattportal.ch/api/v1/publications/dbbcdff7-4e62-439e-9251-3fa9f8186518/xml",
+      "note": "Register: Ordinary increase in cash AND by set-off of a EUR 3.9m claim: 353,886,000 of the 473,705,952 new CHF 0.01 shares were issued against the claim; about 119.8m shares in cash (at least CHF 1.2m nominal).. Long-running ECGi cardiac-mapping medtech (EUR 10m raise in 2016, PE-backed). About 75% of the new shares convert an existing EUR 3.9m loan. The cash part is real but no 2026 financing announcement or new investor was found (searches only return wrong-company hits such as EPH)."
+    },
+    {
+      "key": "67291943-a042-4425-800f-1f846b15a489",
+      "verdict": "unverifiable",
+      "source": "https://www.cbinsights.com/company/fore-ai/financials",
+      "note": "Register: Ordinary increase within capital band, 3,075 new 'Vorzugsaktien Seed' (CHF 1 nominal), no qualified facts (cash); follows the Feb 2026 increase that created 45,391 Seed preferred shares. VC-backed startup (pre-seed Dec 2023, Moonfire/tiny.vc/Agile Partners; since renamed Klarent) and the new shares are Seed preferred, consistent with a second Seed closing, but no source ties new money or a new investor to this May 2026 step (the May 2026 Sword Startup Challenge win is a venture-clienting prize, not equity)."
+    },
+    {
+      "key": "48f5c746-1405-438a-97a1-c1e00b09cc16",
+      "verdict": "refuted",
+      "source": "https://amtsblattportal.ch/#!/search/publications/detail/35d3fc28-c8a1-45e1-aff5-6fc5ab34920c",
+      "note": "Register: GmbH-to-AG conversion; increase 21k to 102k by converting CHF 81,000 of freely disposable equity (reserves); existing partners receive all 1,020 shares. Capital increase out of own reserves during a legal-form conversion: no fresh money and no new shareholders."
+    },
+    {
+      "key": "05ed10c3-fa04-4676-bfc6-94c245880d88",
+      "verdict": "refuted",
+      "source": "https://amtsblattportal.ch/#!/search/publications/detail/b3b3baf8-5aa6-4af1-9197-a5749963a7a1",
+      "note": "Register: GmbH-to-AG conversion; Stammkapital raised to 50k beforehand, AG capital 100k only 50% paid; existing partners receive all 100,000 shares for their quotas. Legal-form conversion of an IT-services SME with shares going only to the existing partners (one partner exited): a capitalisation step, not external financing."
+    },
+    {
+      "key": "34eb8693-f842-492e-9b64-29d6129007ac",
+      "verdict": "refuted",
+      "source": "https://amtsblattportal.ch/#!/search/publications/detail/05df0bef-494d-46a8-be7d-0539b02fe4d9",
+      "note": "Register: Share split (100 x CHF 1,000 into 10M x CHF 0.01) plus ordinary increase of 5.15M shares; only CHF 1,500 of the CHF 51,500 new nominal paid in. A generic private participations holding domiciled c/o a private individual, not a venture; the new capital is almost entirely unpaid and there is no trace of any investor or operating business."
+    },
+    {
+      "key": "44251ba0-5523-4e80-91c2-6b58c0a66e4b",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase within capital band, 3,470 new common shares, no qualified facts (cash); earlier 2023 round was partly by Verrechnung, 2025 step +116k shares. Small cash top-up (about 1% dilution) at an AI/logistics robotics company with no findable web, press or funding coverage after five queries."
+    },
+    {
+      "key": "54ef338b-fd72-4d51-abfc-baaeff5bb906",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase, 15,594 new shares, no qualified facts (cash); transfer restriction removed at the same time; prior +10,500 shares in Nov 2025. Cash increase with removal of the transfer restriction hints at broadening the shareholder base, but no source names investors or a round; the company was declared bankrupt in September 2026."
+    },
+    {
+      "key": "94929253-2408-4cf8-af5a-603cd9c478ce",
+      "verdict": "refuted",
+      "source": "https://amtsblattportal.ch/#!/search/publications/detail/27e543f6-b881-4f08-bebe-0dae723d425f",
+      "note": "Register: Increase within capital band of 10,749,937 shares, of which 10,124,419 (94%) issued against Verrechnung of claims totalling CHF 5,568,430.45; the rest presumably cash. Overwhelmingly a debt-to-equity conversion (same pattern as the 2022 and 2025 steps) at a 2011-founded jewellery holding, with no announced round to tie the claims or the small cash residue to."
+    },
+    {
+      "key": "6964a3e0-d130-447e-92af-7590d47b1d67",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: GmbH (TECTIC GmbH, founded March 2026) increased Stammkapital 20k to 100k plus CHF 70,000 agio before conversion to AG; payment form not stated (no qualified facts); the three existing partners plus one new board member registered. A premium-priced cash increase alongside a new outside board member could reflect an angel investor, but who subscribed is not public and no web trace of the company exists."
+    },
+    {
+      "key": "8eca89c0-3e5e-4657-b75a-9ea72e440fe1",
+      "verdict": "refuted",
+      "source": "https://amtsblattportal.ch/#!/search/publications/detail/733c36e6-8ba5-4ee7-a921-136e7438daa9",
+      "note": "Register: Issuance of 827,211 ordinary shares from conditional capital, based on a rights-grant decision of 18.01.2024 (exercise of previously granted options/warrants). This step is an exercise of rights granted in 2024 (one of a recurring series of conditional-capital issues), not a new financing round; the company's preferred-share financings appear as separate ordinary increases (Dec 2025 cash, Jul 2026 by claims)."
+    },
+    {
+      "key": "9565b742-9c5d-44a1-bf1e-fc39c831a588",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase of 3,195 shares; 603 shares against Verrechnung of a CHF 98,160.51 claim (implied price about CHF 163/share), remaining 2,592 shares apparently cash (about CHF 420k implied). Mixed claims/cash increase at a 2011 FHNW mobile-mapping spin-off; no press or database source on new investors or a round found."
+    }
+  ]
+}

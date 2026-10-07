@@ -1,0 +1,181 @@
+{
+  "evaluatedOn": "2026-10-07",
+  "provisional": true,
+  "system": {
+    "parserVersion": "3",
+    "modelId": "claude-opus-5-5",
+    "promptVersion": "1",
+    "tau": 0.6,
+    "tauLow": 0.35,
+    "rulesThreshold": 1
+  },
+  "cohortSize": 30,
+  "systems": {
+    "rulesPlusClaude": {
+      "precision": {
+        "lo": 0.06800950014398414,
+        "hi": 1,
+        "estimateLo": 0.19300184162062617,
+        "estimateHi": 1,
+        "n": 16
+      },
+      "recall": {
+        "hits": 16,
+        "n": 30
+      }
+    },
+    "rulesOnly": {
+      "precision": {
+        "lo": 0.03588839511971175,
+        "hi": 0.9197853300724506,
+        "estimateLo": 0.10184645286686103,
+        "estimateHi": 0.8247258086908232,
+        "n": 29
+      },
+      "recall": {
+        "hits": 18,
+        "n": 30
+      }
+    }
+  },
+  "recallIncludingUndecided": {
+    "hits": 17,
+    "n": 30
+  },
+  "misses": [
+    {
+      "company": "Seprify AG",
+      "announced": "2026-03-10",
+      "reason": "classifier score 0.25 (below threshold)"
+    },
+    {
+      "company": "Oxara AG",
+      "announced": "2026-02-06",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "FluoSphera SA",
+      "announced": "2026-01-12",
+      "reason": "classifier score 0.30 (below threshold)"
+    },
+    {
+      "company": "Allegria Therapeutics AG",
+      "announced": "2025-12-12",
+      "reason": "classifier score 0.40 (undecided)"
+    },
+    {
+      "company": "Algorized SA",
+      "announced": "2026-02-11",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Haelixa AG",
+      "announced": "2026-02-03",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Genknowme SA",
+      "announced": "2025-12-18",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "UMANITEK AG",
+      "announced": "2026-02-10",
+      "reason": "match uncertain (excluded from hits)"
+    },
+    {
+      "company": "Selma Finance AG",
+      "announced": "2026-03-05",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "EVIS Bioscience AG",
+      "announced": "2026-03-20",
+      "reason": "classifier score 0.20 (below threshold)"
+    },
+    {
+      "company": "Soeder AG",
+      "announced": "2026-03-24",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Winduction AG",
+      "announced": "2026-02-17",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "nowon AG",
+      "announced": "2026-02-24",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Gaisbock AG",
+      "announced": "2026-03-30",
+      "reason": "no gazette increase matched"
+    }
+  ],
+  "rejections": [
+    {
+      "company": "RAILplus AG",
+      "publishedAt": "2025-08-29",
+      "reason": "Classifier score 0.03, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "PAROS 5 SA",
+      "publishedAt": "2025-11-28",
+      "reason": "Classifier score 0.02, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Trion FSO Holding SA",
+      "publishedAt": "2025-12-29",
+      "reason": "Classifier score 0.05, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "ADINOV SA",
+      "publishedAt": "2026-01-08",
+      "reason": "Classifier score 0.25, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Fixposition AG",
+      "publishedAt": "2026-04-14",
+      "reason": "Classifier score 0.05, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "FiberSense AG",
+      "publishedAt": "2026-05-08",
+      "reason": "Classifier score 0.15, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Kinderpraxis Gebenstorf AG",
+      "publishedAt": "2026-05-29",
+      "reason": "Classifier score 0.03, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Züstim Immobilien AG",
+      "publishedAt": "2026-06-03",
+      "reason": "Classifier score 0.02, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Baubeginn Schiess AG",
+      "publishedAt": "2026-06-17",
+      "reason": "Classifier score 0.03, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Metrics Group AG",
+      "publishedAt": "2026-06-17",
+      "reason": "Classifier score 0.12, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "DocMorris AG",
+      "publishedAt": "2026-06-26",
+      "reason": "Classifier score 0.04, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Arcis Partners AG",
+      "publishedAt": "2026-08-03",
+      "reason": "Classifier score 0.03, below the undecided threshold (0.35); rules score below 1.0"
+    }
+  ],
+  "confirmationSource": "Confirmed rounds come from hand-checked announcements.",
+  "knownIssues": []
+}
