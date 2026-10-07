@@ -12,18 +12,20 @@ Private preview. The live link and GIF land with the public launch.
 
 ## Evaluation
 
-Release v1 (`r2`, data as of 6 Oct 2026), evaluated 6 Oct 2026. Generated from
-[`eval/results/release-eval.json`](eval/results/release-eval.json).
+Release v2 (`r4`, parser v3, data as of 6 Oct 2026), evaluated 7 Oct 2026. Generated from
+[`eval/results/release-eval.json`](eval/results/release-eval.json); v1 is archived in
+[`eval/v1/`](eval/v1/).
 
 | System | Precision (n) | Recall on 30 announced rounds |
 |---|---|---|
-| Rules + Claude | 10–94 % estimate, 95 % interval 2–99 % (n=16) | 16/30 |
-| Rules only | 10–93 % estimate, 95 % interval 3–99 % (n=29) | 18/30 |
+| Rules + Claude | 19–100 % estimate, 95 % interval 7–100 % (n=16) | 16/30 |
+| Rules only | 10–82 % estimate, 95 % interval 4–92 % (n=29) | 18/30 |
 
 Recall ceiling is 20/30: nine announced rounds have no capital increase in the gazette within
-the pre-registered window, and one match stays uncertain. Precision is wide because 24 of 30 sampled increases have no public
-evidence either way (4 verified, 2 refuted): most capital increases are never announced. Known
-parser issues of this release are listed on the methodology page and fixed in v2.
+the pre-registered window, and one match stays uncertain. Precision is wide because 22 of 30
+sampled increases have no public evidence either way (3 verified, 5 refuted): most capital
+increases are never announced. Each release is measured on its own fresh sample of companies
+nobody had inspected; the v1 sample found the two parser bugs that v2 fixes.
 
 How it is measured: [methodology](app/methodology/page.tsx) ·
 pre-registration in [`eval/preregistration/`](eval/preregistration/PREREGISTRATION.md) ·
