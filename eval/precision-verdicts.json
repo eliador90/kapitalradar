@@ -1,11 +1,11 @@
 {
-  "reviewedBy": "claude_proposal_pending_remo",
+  "reviewedBy": "remo",
   "rows": [
     {
       "key": "f8d876e1-f3e2-429a-84a3-4ce1c3d95508",
       "verdict": "verified",
       "source": "https://investors.oculis.com/news-releases/news-release-details/oculis-announces-oversubscribed-110-million-financing-accelerate",
-      "note": "Register: Ordinary increase within the capital band, statutes changed 03.11.2025; no claims or in-kind mentioned (cash). The company said exactly 2,635,801 new shares would come from the capital band, which equals the registered +2,635,801 shares, and the statute date matches the closing date; this is new external equity, though a Nasdaq-listed follow-on offering, not a venture round."
+      "note": "Register: Ordinary increase within the capital band, statutes changed 03.11.2025; no claims or in-kind mentioned (cash). The company said exactly 2,635,801 new shares would come from the capital band, which equals the registered +2,635,801 shares, and the statute date matches the closing date; this is new external equity, though a Nasdaq-listed follow-on offering, not a venture round. Remo: verified; any new outside equity counts, listed companies included."
     },
     {
       "key": "831985c1-ba10-4c37-8624-82457747d21a",

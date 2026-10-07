@@ -1,6 +1,6 @@
 {
   "evaluatedOn": "2026-10-07",
-  "provisional": true,
+  "provisional": false,
   "system": {
     "parserVersion": "3",
     "modelId": "claude-opus-5-5",
