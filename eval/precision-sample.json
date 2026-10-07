@@ -1,0 +1,257 @@
+{
+  "release": "r3",
+  "seed": 20261007,
+  "drawnAt": "2026-10-07T09:34:56.694Z",
+  "populations": {
+    "both": 524,
+    "rules_only": 505,
+    "claude_only": 19
+  },
+  "allocation": {
+    "both": 15,
+    "rules_only": 14,
+    "claude_only": 1
+  },
+  "items": [
+    {
+      "key": "f8d876e1-f3e2-429a-84a3-4ce1c3d95508",
+      "uid": "CHE396695611",
+      "company": "Oculis Holding AG",
+      "publishedAt": "2025-11-05",
+      "publicationId": "e77587ac-683a-477e-99e4-b8d1a2e7ce6a",
+      "stratum": "both"
+    },
+    {
+      "key": "831985c1-ba10-4c37-8624-82457747d21a",
+      "uid": "CHE149134783",
+      "company": "Mosaic SoC AG",
+      "publishedAt": "2026-03-17",
+      "publicationId": "5822164a-3d77-4fb4-95f8-8292389c2f7d",
+      "stratum": "both"
+    },
+    {
+      "key": "5161c354-6db5-49f9-b269-d1961d6662ca",
+      "uid": "CHE327335653",
+      "company": "All3 Global AG",
+      "publishedAt": "2026-04-15",
+      "publicationId": "5c5b8368-879b-474e-bc06-e9b333df449c",
+      "stratum": "both"
+    },
+    {
+      "key": "aa5487eb-f3f9-4369-ae4b-55e88da1ab6f",
+      "uid": "CHE483517372",
+      "company": "OptimalPSI AG",
+      "publishedAt": "2026-06-11",
+      "publicationId": "5e7e757f-29b3-416a-a4cb-9d91ca0e0c4c",
+      "stratum": "both"
+    },
+    {
+      "key": "c65f2065-3cd5-45e0-8795-5ad46c87173e",
+      "uid": "CHE366849996",
+      "company": "ZAM.care AG",
+      "publishedAt": "2026-08-21",
+      "publicationId": "f2eefb3f-2c4f-4368-844b-6def5c4d58e8",
+      "stratum": "both"
+    },
+    {
+      "key": "813364d5-bd8b-4517-b486-3b5c0ccb3988",
+      "uid": "CHE114555641",
+      "company": "IOLUTION AG",
+      "publishedAt": "2026-08-24",
+      "publicationId": "8376459d-72d4-4d31-961e-6b793e3b9f0d",
+      "stratum": "both"
+    },
+    {
+      "key": "84a12582-b444-4324-892e-f8176e4210c8",
+      "uid": "CHE180542811",
+      "company": "Zappter AG",
+      "publishedAt": "2026-05-12",
+      "publicationId": "db7f4c7f-24b9-445c-97cb-70f6492b3228",
+      "stratum": "both"
+    },
+    {
+      "key": "03f62bd7-6692-4b7d-8d59-3ee9edd0f5d6",
+      "uid": "CHE165820836",
+      "company": "BE BRAVE AG",
+      "publishedAt": "2026-06-02",
+      "publicationId": "6d8a8370-1846-479f-9420-ac0d4c779a3d",
+      "stratum": "both"
+    },
+    {
+      "key": "9bf12c55-b59f-447d-bb91-ad98db622ed7",
+      "uid": "CHE441217757",
+      "company": "Dyneo Technologies SA",
+      "publishedAt": "2025-12-03",
+      "publicationId": "402efbf9-da17-4886-80ef-811497dac248",
+      "stratum": "both"
+    },
+    {
+      "key": "9215cc4e-29af-456a-952b-2aeb3e52627b",
+      "uid": "CHE261996431",
+      "company": "Boum AG",
+      "publishedAt": "2025-12-04",
+      "publicationId": "841d38c7-3886-4bb3-aec2-960ae2a4e519",
+      "stratum": "both"
+    },
+    {
+      "key": "83387cdb-b594-4ead-bb45-87d3df6ff38d",
+      "uid": "CHE432161098",
+      "company": "MPC Therapeutics SA",
+      "publishedAt": "2026-08-28",
+      "publicationId": "2c26472b-848c-44a3-a057-77555c700b99",
+      "stratum": "both"
+    },
+    {
+      "key": "e10ccf14-f035-4091-a7dc-470bc8ae7ffc",
+      "uid": "CHE360446654",
+      "company": "CLYOS AG",
+      "publishedAt": "2025-12-15",
+      "publicationId": "9849e79a-f32a-4b90-9453-5f7336ac7508",
+      "stratum": "both"
+    },
+    {
+      "key": "269c55b2-0900-4093-bd37-60f1b36e0f82",
+      "uid": "CHE233237662",
+      "company": "CUTISS AG",
+      "publishedAt": "2026-04-13",
+      "publicationId": "ebe1395e-af12-400c-b418-6151d1dd1ffe",
+      "stratum": "both"
+    },
+    {
+      "key": "0b192c84-d362-4cf6-997e-c7ba74118f41",
+      "uid": "CHE344733718",
+      "company": "Swisscoding Technologies SA",
+      "publishedAt": "2025-12-11",
+      "publicationId": "2dd2d936-9d99-466b-b2a6-1e1b944aa39a",
+      "stratum": "both"
+    },
+    {
+      "key": "b523a46d-4800-4e8d-acdd-7f9d753422f7",
+      "uid": "CHE409048498",
+      "company": "zevvy AG",
+      "publishedAt": "2025-12-15",
+      "publicationId": "3d2865e6-b7fd-47b9-9fe6-cdbae36d0136",
+      "stratum": "both"
+    },
+    {
+      "key": "580ab4e7-e22b-4534-aeab-f5ad49858537",
+      "uid": "CHE487447776",
+      "company": "La Nébuleuse SA",
+      "publishedAt": "2025-08-27",
+      "publicationId": "63a1d7ab-8f6f-49fd-9504-dde036735e04",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "e31f7bf0-a939-4bd0-8199-df24fd43c3a5",
+      "uid": "CHE282766032",
+      "company": "Climartis AG",
+      "publishedAt": "2026-08-14",
+      "publicationId": "f02545d7-ba7d-46fa-a206-c64d89c7b18a",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "c5f53221-0937-4fd5-9a2a-fc41c70637d8",
+      "uid": "CHE208390059",
+      "company": "Helvetic Sealing Group AG",
+      "publishedAt": "2025-09-04",
+      "publicationId": "77cb2a05-2bbe-44f7-b758-ccacc3fb1f16",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "d37f2dc0-d6fd-4a4b-ac12-06e4e6aec82d",
+      "uid": "CHE227196546",
+      "company": "HUSHTALKS AG",
+      "publishedAt": "2026-02-17",
+      "publicationId": "081f4bf6-1398-4aa0-b7b5-b581b5ed9931",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "99700e66-5bce-4dd4-ada2-3468f493bb98",
+      "uid": "CHE424316163",
+      "company": "EP Solutions SA",
+      "publishedAt": "2026-05-12",
+      "publicationId": "dbbcdff7-4e62-439e-9251-3fa9f8186518",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "67291943-a042-4425-800f-1f846b15a489",
+      "uid": "CHE367656224",
+      "company": "fore ai AG",
+      "publishedAt": "2026-06-02",
+      "publicationId": "e4bcb71a-2f82-4a9d-bdd9-bb7d143876cd",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "48f5c746-1405-438a-97a1-c1e00b09cc16",
+      "uid": "CHE353406425",
+      "company": "Wolko Bauer & Köppel Consulting AG",
+      "publishedAt": "2025-08-22",
+      "publicationId": "35d3fc28-c8a1-45e1-aff5-6fc5ab34920c",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "05ed10c3-fa04-4676-bfc6-94c245880d88",
+      "uid": "CHE407383253",
+      "company": "onmit ag",
+      "publishedAt": "2026-03-26",
+      "publicationId": "b3b3baf8-5aa6-4af1-9197-a5749963a7a1",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "34eb8693-f842-492e-9b64-29d6129007ac",
+      "uid": "CHE408600128",
+      "company": "Simona Capital SA",
+      "publishedAt": "2025-09-02",
+      "publicationId": "05df0bef-494d-46a8-be7d-0539b02fe4d9",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "44251ba0-5523-4e80-91c2-6b58c0a66e4b",
+      "uid": "CHE440130651",
+      "company": "Delivery Glider AG",
+      "publishedAt": "2025-12-12",
+      "publicationId": "0ee1c017-afd5-404c-bb93-fe9ed8ea2d02",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "54ef338b-fd72-4d51-abfc-baaeff5bb906",
+      "uid": "CHE292812780",
+      "company": "The Bike Company AG",
+      "publishedAt": "2026-01-28",
+      "publicationId": "83d1ffd4-66da-4a1d-8430-0741c045351e",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "94929253-2408-4cf8-af5a-603cd9c478ce",
+      "uid": "CHE382705278",
+      "company": "Glambou Holding AG",
+      "publishedAt": "2026-07-06",
+      "publicationId": "27e543f6-b881-4f08-bebe-0dae723d425f",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "6964a3e0-d130-447e-92af-7590d47b1d67",
+      "uid": "CHE262198900",
+      "company": "Acribion AG",
+      "publishedAt": "2026-10-05",
+      "publicationId": "a3b3154b-2130-4d05-a9e4-459a0211ecf7",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "8eca89c0-3e5e-4657-b75a-9ea72e440fe1",
+      "uid": "CHE308828725",
+      "company": "T.O.A.D. Oncology SA",
+      "publishedAt": "2026-02-25",
+      "publicationId": "733c36e6-8ba5-4ee7-a921-136e7438daa9",
+      "stratum": "rules_only"
+    },
+    {
+      "key": "9565b742-9c5d-44a1-bf1e-fc39c831a588",
+      "uid": "CHE201335237",
+      "company": "iNovitas AG",
+      "publishedAt": "2025-11-14",
+      "publicationId": "40a6059b-d405-4b4f-93cb-b6fc2e83acb5",
+      "stratum": "claude_only"
+    }
+  ]
+}
