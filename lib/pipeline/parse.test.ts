@@ -72,6 +72,49 @@ describe("parse: capital changes (expectations checked by hand against each fixt
   });
 });
 
+describe("parse v3: cases found through the v1 precision sample (decision log #37)", () => {
+  it("reads 'Forderungen … zur Verrechnung gebracht' covering every new share as set-off only", () => {
+    const e = capital("de-set-off-zur-verrechnung");
+    expect(e.contributionType).toBe("set_off");
+    expect(e.payload.direction).toBe("increase");
+  });
+  it("treats a redenomination that re-splits shares to keep the nominal as no increase", () => {
+    const e = capital("de-redenomination-resplit");
+    expect(e.payload.currencyBefore).toBe("CHF");
+    expect(e.currency).toBe("USD");
+    expect(e.payload.direction).toBe("unchanged");
+  });
+  it("treats the old French 'la monnaie du capital-actions … a été convertie' as no increase", () => {
+    const p = fixture("fr-redenomination");
+    const e = p.events.find((x) => x.type === "capital_change");
+    expect(e?.type === "capital_change" ? e.payload.direction : "no capital event").not.toBe("increase");
+  });
+  // The review's inputs (2026-10-07): extra clauses spliced into the redenomination fixture.
+  const withClause = (clause: string) =>
+    parsePublication(readFileSync("eval/fixtures/shab/de-redenomination-resplit.xml", "utf8").replace("</publicationText>", ` ${clause}</publicationText>`));
+  const direction = (p: ReturnType<typeof parsePublication>) => {
+    const e = p.events.find((x) => x.type === "capital_change");
+    return e?.type === "capital_change" ? e.payload.direction : "none";
+  };
+  it("does not read a statute-only clause about conditional capital as an issuance", () => {
+    expect(direction(withClause("Die Gesellschaft hat mit Beschluss vom 25.03.2026 die Bestimmung betreffend Kapitalerhöhung aus bedingtem Aktienkapital geändert."))).not.toBe("increase");
+  });
+  it("reads 'Bei der Kapitalerhöhung vom … wofür N Aktien' across a currency change as an increase", () => {
+    expect(
+      direction(withClause("Qualifizierte Tatbestände neu: Verrechnung: Bei der Kapitalerhöhung vom 25.03.2026 werden Forderungen in der Höhe von USD 10'000.00 zur Verrechnung gebracht, wofür 1'000'000 Namenaktien zu USD 0.01 ausgegeben werden.")),
+    ).toBe("increase");
+  });
+  it("does not read a loss offset as a set-off contribution", () => {
+    expect(contributionOf("Ordentliche Kapitalerhöhung. Die Forderungen der Gläubiger sind trotz der Herabsetzung voll gedeckt. Der Herabsetzungsbetrag wird zur Verrechnung mit dem Bilanzverlust verwendet.")).toBe("cash");
+    expect(contributionOf("Ordentliche Kapitalerhöhung. Forderungsverzicht der Aktionäre zur Verrechnung mit Verlusten.")).toBe("cash");
+  });
+  it("keeps a stated increase across a currency change, flagged so amounts aren't compared", () => {
+    const e = capital("de-redenomination-with-increase");
+    expect(e.payload.direction).toBe("increase");
+    expect(e.payload.currencyBefore).toBe("CHF");
+  });
+});
+
 describe("parse: other events", () => {
   it("emits conversions with their capital change", () => {
     expect(types("de-conversion-gmbh-ag")).toEqual(["conversion_to_ag", "capital_change", "name_change"]);

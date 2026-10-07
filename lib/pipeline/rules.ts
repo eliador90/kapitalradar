@@ -68,7 +68,8 @@ export function evaluateRules(input: RuleInput, config: RuleConfig = defaultRule
   else if (p.direction !== "increase") rejectReason = "not_increase";
 
   // Positive rules.
-  const increase = Number(event.capitalAfter) - Number(event.capitalBefore);
+  // Across a currency change the two nominal amounts can't be subtracted: amount rules don't apply.
+  const increase = p.currencyBefore ? 0 : Number(event.capitalAfter) - Number(event.capitalBefore);
   const nominals = (p.classesAfter ?? []).map((c) => Number(c.nominal));
   const smallNominal = nominals.length > 0 && Math.min(...nominals) <= SMALL_NOMINAL;
   const roundIncrease = increase > 0 && Math.abs(increase % 1000) < 0.005;

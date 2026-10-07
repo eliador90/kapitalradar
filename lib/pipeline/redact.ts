@@ -82,7 +82,8 @@ export function buildClassifierInput(args: {
     canton: args.canton,
     companyAge: args.ageBucket,
     currency: e.currency,
-    nominalCapitalBefore: e.capitalBefore,
+    // Only a currency change alters this field, so every other input (and its cached hash) stays as it was.
+    nominalCapitalBefore: e.payload.currencyBefore ? `${e.capitalBefore} ${e.payload.currencyBefore} (capital currency changed)` : e.capitalBefore,
     nominalCapitalAfter: e.capitalAfter,
     sharesBefore: args.sharesBefore ?? "unknown",
     sharesAfter: e.sharesAfter ?? "unknown",

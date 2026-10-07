@@ -851,6 +851,18 @@
       "company": "BOXS AG",
       "source": "precision",
       "added": "2026-10-06"
+    },
+    {
+      "uid": "CHE397477057",
+      "company": "Novel Lab AG",
+      "source": "adhoc",
+      "added": "2026-10-07"
+    },
+    {
+      "uid": "CHE236132373",
+      "company": "Alarko Capital AG",
+      "source": "adhoc",
+      "added": "2026-10-07"
     }
   ]
 }

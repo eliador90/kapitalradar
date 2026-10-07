@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>5785685c-ca37-4492-842f-35195c7ec344</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006612025</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-03-31</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>OW</cantons>
+  <secondaryTenants>
+    <tenantCode>kabow</tenantCode>
+    <publicationDate>2026-03-31</publicationDate>
+  </secondaryTenants>
+  <title>
+    <de>Mutation Novel Lab AG, Sarnen</de>
+    <en>Change Novel Lab AG, Sarnen</en>
+    <it>Cambiamenti Novel Lab AG, Sarnen</it>
+    <fr>Mutation Novel Lab AG, Sarnen</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>357</journalNumber>
+  <journalDate>2026-03-26</journalDate>
+  <publicationText>Novel Lab AG, in Sarnen, CHE-397.477.057, Aktiengesellschaft (SHAB Nr. 247 vom 22.12.2025, Publ. 1006520630). Statutenänderung: 25.03.2026. Aktienkapital neu: USD 348'853.60 [bisher: CHF 279'239.25]. Liberierung Aktienkapital neu: USD 348'853.60 [bisher: CHF 279'239.25]. Aktien neu: 34'885'360 Namenaktien zu USD 0.01 [bisher: 27'923'925 Namenaktien zu CHF 0.01].</publicationText>
+  <commonsNew>
+    <company>
+      <name>Novel Lab AG</name>
+      <translations>(Novel Lab Inc) (Novel Lab SA)</translations>
+      <uid>CHE-397.477.057</uid>
+      <uidOrganisationId>397477057</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH14034405943</code13>
+      <seat>Sarnen</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Erforschung, Entwicklung und Unterstützung bei der Erforschung und Entwicklung. Sie betreibt auch Forschung im Auftrag Dritter. Die Gesellschaft kann im In- und Ausland Immaterialgüterrechte erwerben, verwerten, veräussern und verwalten. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Die Gesellschaft kann Dritten oder Gesellschaften, an denen sie direkt oder indirekt beteiligt ist, sowie direkten oder indirekten Aktionären oder Gesellschaften, an denen solche direkt oder indirekt beteiligt sind, direkte oder indirekte Finanzierungen gewähren, sei es mittels Darlehen und/oder anderen Finanzierungen, einschliesslich im Rahmen von Cash Pooling Vereinbarungen, ob gegen Entgelt oder nicht. Die Gesellschaft kann für ihre eigenen Verbindlichkeiten oder die Verbindlichkeiten der vorgenannten Personen Sicherheiten jeglicher Art bestellen, einschliesslich mittels Pfandrechten, Abtretungen, fiduziarischen Übereignungen, Garantien jeglicher Art oder mittels Ausgleichsverpflichtungen, ob gegen Entgelt oder nicht, auch wenn solche Finanzierungen, Sicherheiten oder Garantien im ausschliesslichen Interesse von Dritten oder Gesellschaften, an denen sie direkt oder indirekt beteiligt ist, oder von direkten oder indirekten Aktionären oder Gesellschaften, an denen solche direkt oder indirekt beteiligt sind, liegen.</purpose>
+    <capital>
+      <nominal>348853.60</nominal>
+      <paid>348853.60</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Novel Lab AG</name>
+      <translations>(Novel Lab Inc) (Novel Lab SA)</translations>
+      <uid>CHE-397.477.057</uid>
+      <uidOrganisationId>397477057</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH14034405943</code13>
+      <seat>Sarnen</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die Erforschung, Entwicklung und Unterstützung bei der Erforschung und Entwicklung. Sie betreibt auch Forschung im Auftrag Dritter. Die Gesellschaft kann im In- und Ausland Immaterialgüterrechte erwerben, verwerten, veräussern und verwalten. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Die Gesellschaft kann Dritten oder Gesellschaften, an denen sie direkt oder indirekt beteiligt ist, sowie direkten oder indirekten Aktionären oder Gesellschaften, an denen solche direkt oder indirekt beteiligt sind, direkte oder indirekte Finanzierungen gewähren, sei es mittels Darlehen und/oder anderen Finanzierungen, einschliesslich im Rahmen von Cash Pooling Vereinbarungen, ob gegen Entgelt oder nicht. Die Gesellschaft kann für ihre eigenen Verbindlichkeiten oder die Verbindlichkeiten der vorgenannten Personen Sicherheiten jeglicher Art bestellen, einschliesslich mittels Pfandrechten, Abtretungen, fiduziarischen Übereignungen, Garantien jeglicher Art oder mittels Ausgleichsverpflichtungen, ob gegen Entgelt oder nicht, auch wenn solche Finanzierungen, Sicherheiten oder Garantien im ausschliesslichen Interesse von Dritten oder Gesellschaften, an denen sie direkt oder indirekt beteiligt ist, oder von direkten oder indirekten Aktionären oder Gesellschaften, an denen solche direkt oder indirekt beteiligt sind, liegen.</purpose>
+    <capital>
+      <nominal>279239.25</nominal>
+      <paid>279239.25</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2025-12-22</lastFoscDate>
+    <lastFoscNumber>247</lastFoscNumber>
+    <lastFoscSequence>1006520630</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregisteramt des Kantons Obwalden</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>

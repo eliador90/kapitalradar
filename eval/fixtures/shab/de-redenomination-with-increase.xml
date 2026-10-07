@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>48b47de4-4b6e-43b4-919f-71862a05b382</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>de</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006765900</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-09-25</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>Die Mutation der aufgeführten Rechtseinheit wurde im Handelsregister vorgenommen. &lt;br />Publikation nach HRegV Art. 9 und Art. 35.</legalRemedy>
+  <cantons>ZG</cantons>
+  <secondaryTenants>
+    <tenantCode>kabzg</tenantCode>
+    <publicationDate>2026-09-25</publicationDate>
+  </secondaryTenants>
+  <title>
+    <de>Mutation Alarko Capital AG, Zug</de>
+    <en>Change Alarko Capital AG, Zug</en>
+    <it>Cambiamenti Alarko Capital AG, Zug</it>
+    <fr>Mutation Alarko Capital AG, Zug</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>18414</journalNumber>
+  <journalDate>2026-09-22</journalDate>
+  <publicationText>Alarko Capital AG, in Zug, CHE-236.132.373, Aktiengesellschaft (SHAB Nr. 118 vom 23.06.2026, Publ. 1006685328). Statutenänderung: 21.09.2026. Aktienkapital neu: USD 12'600'000.00 [bisher: CHF 100'000.00]. Liberierung Aktienkapital neu: USD 12'600'000.00 [bisher: CHF 100'000.00]. Aktien neu: 12'600'000 vinkulierte Namenaktien zu USD 1.00 [bisher: 1'000 vinkulierte Namenaktien zu CHF 100.00]. Ordentliche Kapitalerhöhung.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Alarko Capital AG</name>
+      <uid>CHE-236.132.373</uid>
+      <uidOrganisationId>236132373</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH17030527978</code13>
+      <seat>Zug</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die private Vermögensverwaltung. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>12600000.00</nominal>
+      <paid>12600000.00</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Alarko Capital AG</name>
+      <uid>CHE-236.132.373</uid>
+      <uidOrganisationId>236132373</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH17030527978</code13>
+      <seat>Zug</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>Die Gesellschaft bezweckt die private Vermögensverwaltung. Die Gesellschaft kann Zweigniederlassungen und Tochtergesellschaften im In- und Ausland errichten und sich an anderen Unternehmen im In- und Ausland beteiligen sowie alle Geschäfte tätigen, die direkt oder indirekt mit ihrem Zweck in Zusammenhang stehen. Die Gesellschaft kann im In- und Ausland Grundeigentum erwerben, belasten, veräussern und verwalten. Sie kann auch Finanzierungen für eigene oder fremde Rechnung vornehmen sowie Garantien und Bürgschaften für Tochtergesellschaften und Dritte eingehen.</purpose>
+    <capital>
+      <nominal>100000.00</nominal>
+      <paid>100000.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2026-06-23</lastFoscDate>
+    <lastFoscNumber>118</lastFoscNumber>
+    <lastFoscSequence>1006685328</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>false</seatChanged>
+        <addressChanged>false</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>true</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Handelsregister- und Konkursamt des Kantons Zug</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>
