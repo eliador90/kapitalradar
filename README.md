@@ -44,6 +44,16 @@ immutable release that the app reads as of any date.
 
 ## Runbook
 
+**Automated:** `.github/workflows/daily.yml` runs `npm run daily` on weekdays at 09:15 UTC:
+ingest the latest gazette days, fetch history for new companies, classify new candidates (Claude
+subscription via `CLAUDE_CODE_OAUTH_TOKEN`), build a release that goes live only if every gate
+passes (including an eval of the same system), and prune old releases (current + one rollback
+target are kept). A failed run emails the repo owner and leaves the live release untouched.
+Secrets: `DATABASE_URL`, `CLAUDE_CODE_OAUTH_TOKEN`. A new eval is needed only when the parser,
+rules, model, prompt or thresholds change; the gate refuses to publish otherwise.
+
+**Manual (backfill, first setup, or debugging):**
+
 Prerequisites: Node 24, `.env.local` with `DATABASE_URL` (Neon), and for the app
 `PREVIEW_PASSWORD` (≥ 20 random characters) and `PREVIEW_COOKIE_SECRET` (≥ 32).
 

@@ -5,7 +5,7 @@ import { describe, expect, it, vi } from "vitest";
 import type { ReleaseConfig } from "../domain/schemas";
 import { assembleCompany } from "./candidates";
 import { parsePublication } from "./parse";
-import { buildRelease, missingGazetteDays, rollback, type BuildInput, type ReleaseRepo } from "./release";
+import { buildRelease, missingGazetteDays, releasesToPrune, rollback, type BuildInput, type ReleaseRepo } from "./release";
 
 vi.mock("../../db/client", () => ({ db: () => { throw new Error("no DB in unit tests"); } }));
 
@@ -115,5 +115,18 @@ describe("release build", () => {
 
   it("ignores holidays and weekends when checking for empty gazette days", () => {
     expect(missingGazetteDays(new Set(), "2025-12-24", "2025-12-28")).toEqual(["2025-12-24"]);
+  });
+});
+
+describe("releasesToPrune", () => {
+  const r = (id: string, status = "ready") => ({ id, status });
+  it("keeps the current and the newest other ready release; drops older and failed builds", () => {
+    expect(releasesToPrune([r("r1", "failed"), r("r2"), r("r3", "failed"), r("r4"), r("r5", "failed"), r("r6")], "r6")).toEqual(["r1", "r2", "r3", "r5"]);
+  });
+  it("never prunes the current release, even after a rollback to an older one", () => {
+    expect(releasesToPrune([r("r4"), r("r6"), r("r7")], "r4")).toEqual(["r6"]);
+  });
+  it("leaves a build in progress alone", () => {
+    expect(releasesToPrune([r("r6"), r("r7", "building")], "r6")).toEqual([]);
   });
 });

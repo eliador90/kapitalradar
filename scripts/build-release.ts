@@ -32,9 +32,14 @@ if (arg("rollback")) {
   console.log(`current_release → ${arg("rollback")}`);
   process.exit(0);
 }
-const releaseId = arg("release");
+// "auto": the next free id (daily job); ids are never reused, failed builds included.
+const nextReleaseId = async () => {
+  const ids = (await db().execute(sql`select id from releases`)).rows.map((r) => Number(String((r as { id: string }).id).slice(1))).filter(Number.isInteger);
+  return `r${Math.max(0, ...ids) + 1}`;
+};
+const releaseId = arg("release") === "auto" ? await nextReleaseId() : arg("release");
 if (!releaseId || !/^r\d+$/.test(releaseId)) {
-  console.error("usage: build-release --release r<N> [--snapshot YYYY-MM-DD] [--dry-run] | --rollback r<N>");
+  console.error("usage: build-release --release r<N>|auto [--snapshot YYYY-MM-DD] [--dry-run] | --rollback r<N>");
   process.exit(1);
 }
 const dryRun = args.includes("--dry-run");

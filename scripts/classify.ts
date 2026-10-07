@@ -8,11 +8,10 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { z } from "zod";
 import { db } from "../db/client";
-import { checkpoints, companySources } from "../db/schema";
-import { and, eq } from "drizzle-orm";
+import { companySources } from "../db/schema";
 import { cohortUids } from "../eval/lib/ledger";
 import { seededShuffle } from "../eval/lib/seeded";
-import { BACKFILL_START, loadCompany, type CapitalCandidate } from "../lib/pipeline/candidates";
+import { BACKFILL_START, listCandidateUids, loadCompany, type CapitalCandidate } from "../lib/pipeline/candidates";
 import { dbClassificationStore } from "../lib/pipeline/classification-store";
 import { ClaudeCliBackend, classifyOne, freezeThresholds, loadPrompt, PROMPT_VERSION, runClassifications, tierFor, totalInputTokens, type Usage } from "../lib/pipeline/classify";
 import { CONFIG_FILE, loadClassificationConfig, ruleConfigFrom } from "../lib/pipeline/config";
@@ -147,8 +146,10 @@ async function devReport() {
 }
 
 async function backfill() {
-  // Every pre-filter candidate of companies whose history fetch is complete (inputs depend on it).
-  const done = new Set((await db().select({ uid: checkpoints.itemKey }).from(checkpoints).where(and(eq(checkpoints.job, `history:${arg("run") ?? "2026-10-06"}`), eq(checkpoints.status, "done")))).map((r) => r.uid));
+  // Every pre-filter candidate of companies whose history has been fetched (inputs depend on it):
+  // a company_sources row is written only after a complete history fetch.
+  const withHistory = new Set((await db().select({ uid: companySources.companyUid }).from(companySources)).map((r) => r.uid));
+  const done = new Set((await listCandidateUids(BACKFILL_START)).filter((u) => withHistory.has(u)));
   const ruleConfig = ruleConfigFrom(loadClassificationConfig());
   const items: { inputHash: string; input: ClassifierInput }[] = [];
   for (const uid of [...done].sort()) {

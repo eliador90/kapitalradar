@@ -1,0 +1,38 @@
+# The daily job (scripts/daily.ts): ingest → history for new companies → classify new candidates
+# → build a release (activated only if every gate passes) → prune old releases.
+# A failed run emails the repo owner (GitHub default) and leaves the live release untouched.
+#
+# Secrets (set by Remo in Settings → Secrets and variables → Actions):
+#   DATABASE_URL             Neon owner connection string (the job writes releases)
+#   CLAUDE_CODE_OAUTH_TOKEN  from `claude setup-token` (Claude subscription, no API billing)
+name: daily
+on:
+  schedule:
+    # Weekdays 09:15 UTC: the gazette publishes in the morning, Swiss time.
+    - cron: "15 9 * * 1-5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm install -g @anthropic-ai/claude-code
+      - run: npm run daily
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          CLAUDE_BIN: claude

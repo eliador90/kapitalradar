@@ -21,4 +21,4 @@ Deferred work with its reason. Keep this short: anything under ~10 minutes gets 
 
 ## Deferred from the v1 eval (2026-10-06)
 
-- **v2 release** (parser v3 merged in PR #1, decision log #42): classify the 48 changed inputs, build r3, draw a fresh precision sample from uninspected companies, verdicts, eval, activate.
+- **Automatic confirmations from startupticker's free feed** (Remo, 2026-10-07): match announced rounds to gazette increases daily; publish only high-confidence matches (exact company, date window, amount fits), list the rest as possible confirmations. Why deferred: the daily automation ships first.

@@ -232,3 +232,15 @@ export async function buildRelease(input: BuildInput, repo: ReleaseRepo, log = c
 
 /** Rollback = activate the previous release (plan: "re-points to the previous release"). */
 export const rollback = (repo: ReleaseRepo, toReleaseId: string) => repo.activate(toReleaseId);
+
+/**
+ * Releases to delete so the database stays small (Neon free tier): keep the current release and
+ * the newest `keep - 1` other ready releases (rollback targets); every older or failed build goes.
+ * Never returns the current release.
+ */
+export function releasesToPrune(all: readonly { id: string; status: string }[], currentId: string | null, keep = 2): string[] {
+  const num = (id: string) => Number(id.slice(1));
+  const ready = all.filter((r) => r.status === "ready" && r.id !== currentId).sort((a, b) => num(b.id) - num(a.id));
+  const kept = new Set([...(currentId ? [currentId] : []), ...ready.slice(0, Math.max(0, keep - 1)).map((r) => r.id)]);
+  return all.filter((r) => !kept.has(r.id) && r.status !== "building").map((r) => r.id).sort((a, b) => num(a) - num(b));
+}

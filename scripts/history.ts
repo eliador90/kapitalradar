@@ -4,8 +4,11 @@
 //   npm run history -- --run 2026-10-06 --dry-run
 //   npm run history -- --run 2026-10-06 [--limit 20]
 //   npm run history -- --run any --recompute   re-derive founding/coverage columns, no network
+//   npm run history -- --run daily --only-new   companies without a fetched history (daily job)
 import { BACKFILL_START, listCandidateUids } from "../lib/pipeline/candidates";
 import { recomputeSources, runHistory } from "../lib/pipeline/history";
+import { db } from "../db/client";
+import { companySources } from "../db/schema";
 
 const args = process.argv.slice(2);
 const arg = (name: string) => {
@@ -24,7 +27,10 @@ if (args.includes("--recompute")) {
   process.exit(0);
 }
 
-const all = await listCandidateUids(BACKFILL_START);
+// --only-new: companies without a fetched history yet (the daily run); otherwise every candidate.
+const candidates = await listCandidateUids(BACKFILL_START);
+const known = args.includes("--only-new") ? new Set((await db().select({ uid: companySources.companyUid }).from(companySources)).map((r) => r.uid)) : new Set<string>();
+const all = candidates.filter((u) => !known.has(u));
 const limit = arg("limit") === undefined ? all.length : Number(arg("limit"));
 if (!Number.isInteger(limit) || limit < 0) {
   console.error("--limit needs a non-negative integer");
