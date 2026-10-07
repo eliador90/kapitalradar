@@ -73,7 +73,12 @@ export class ClaudeCliBackend implements ClassifierBackend {
     private readonly cwd = resolve(".data/classifier-cwd"),
     private readonly timeoutMs = 180_000,
   ) {
-    if (!existsSync(join(configDir, ".credentials.json"))) throw new BackendError(`no login in ${configDir}: run claude once with CLAUDE_CONFIG_DIR set and /login`);
+    // Locally: a login stored in the isolated config dir. In CI: the subscription token from
+    // `claude setup-token`, passed as CLAUDE_CODE_OAUTH_TOKEN (never written to disk by us).
+    if (!process.env.CLAUDE_CODE_OAUTH_TOKEN && !existsSync(join(configDir, ".credentials.json"))) {
+      throw new BackendError(`no login in ${configDir}: run claude once with CLAUDE_CONFIG_DIR set and /login, or set CLAUDE_CODE_OAUTH_TOKEN`);
+    }
+    mkdirSync(configDir, { recursive: true });
     mkdirSync(cwd, { recursive: true });
   }
 
