@@ -8,7 +8,7 @@ scores which increases look like a financing round. It serves the result as a da
 can rewind: the round is often in the gazette before the press release (spike: median 10.5
 days earlier, 13 of 16 matched rounds).
 
-Private preview. The live link and GIF land with the public launch.
+Live (private preview): [kapitalradar.vercel.app](https://kapitalradar.vercel.app). Updated automatically every weekday.
 
 ## Evaluation
 
@@ -93,6 +93,20 @@ npm run build-release -- --rollback r0
 
 Checks: `npm run typecheck`, `npm test`, `npm run build`, and against a running server
 `npm run leak-check -- --base http://localhost:3000`. CI never calls a model or the SHAB.
+
+## Data sources and terms
+
+- **Swiss Official Gazette of Commerce (SOGC/SHAB)**, Official Gazettes Portal, SECO
+  ([amtsblattportal.ch](https://www.amtsblattportal.ch)). Its terms of use (§3.1–3.3) allow personal
+  and commercial use of the data, with source attribution, no impression of an official
+  publication, and compliance with Swiss data protection law.
+- **Zefix**, Federal Office of Justice ([zefix.admin.ch](https://www.zefix.admin.ch)): OGD "Open use.
+  Must provide the source."
+- **startupticker.ch**: the recall cohort lists company names, announcement dates and links only;
+  no article text is copied.
+
+This is not an official publication. The authoritative data are those on the Official Gazettes
+Portal that bear the SECO electronic signature or stamp.
 
 ## Data and privacy
 
