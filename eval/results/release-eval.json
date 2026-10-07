@@ -1,0 +1,182 @@
+{
+  "evaluatedOn": "2026-10-07",
+  "provisional": true,
+  "system": {
+    "parserVersion": "4",
+    "modelId": "claude-opus-5-5",
+    "promptVersion": "1",
+    "tau": 0.6,
+    "tauLow": 0.35,
+    "rulesThreshold": 1,
+    "rules": "odd_amount_small_nominal:positive:1|young_company:positive:0.5|tech_purpose:positive:0.5|new_preferred_class:positive:1.5|round_amount_holding:negative:-1|esop_sized_increment:negative:-1|set_off_only:negative:-1.5|in_kind_only:negative:-1.5|conditional_capital_issuance:negative:-1|reserves_funded:negative:-1.5|conversion_from_gmbh:negative:-1|restructuring_pair:hard_negative:0|capital_reduction:hard_negative:0"
+  },
+  "cohortSize": 30,
+  "systems": {
+    "rulesPlusClaude": {
+      "precision": {
+        "lo": 0.0710843333634036,
+        "hi": 1,
+        "estimateLo": 0.21735976789168276,
+        "estimateHi": 1,
+        "n": 17
+      },
+      "recall": {
+        "hits": 16,
+        "n": 30
+      }
+    },
+    "rulesOnly": {
+      "precision": {
+        "lo": 0.04221740983566949,
+        "hi": 0.9628692446331315,
+        "estimateLo": 0.1373038967611336,
+        "estimateHi": 0.895242914979757,
+        "n": 29
+      },
+      "recall": {
+        "hits": 18,
+        "n": 30
+      }
+    }
+  },
+  "recallIncludingUndecided": {
+    "hits": 17,
+    "n": 30
+  },
+  "misses": [
+    {
+      "company": "Seprify AG",
+      "announced": "2026-03-10",
+      "reason": "classifier score 0.25 (below threshold)"
+    },
+    {
+      "company": "Oxara AG",
+      "announced": "2026-02-06",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "FluoSphera SA",
+      "announced": "2026-01-12",
+      "reason": "classifier score 0.30 (below threshold)"
+    },
+    {
+      "company": "Allegria Therapeutics AG",
+      "announced": "2025-12-12",
+      "reason": "classifier score 0.40 (undecided)"
+    },
+    {
+      "company": "Algorized SA",
+      "announced": "2026-02-11",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Haelixa AG",
+      "announced": "2026-02-03",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Genknowme SA",
+      "announced": "2025-12-18",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "UMANITEK AG",
+      "announced": "2026-02-10",
+      "reason": "match uncertain (excluded from hits)"
+    },
+    {
+      "company": "Selma Finance AG",
+      "announced": "2026-03-05",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "EVIS Bioscience AG",
+      "announced": "2026-03-20",
+      "reason": "classifier score 0.20 (below threshold)"
+    },
+    {
+      "company": "Soeder AG",
+      "announced": "2026-03-24",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Winduction AG",
+      "announced": "2026-02-17",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "nowon AG",
+      "announced": "2026-02-24",
+      "reason": "no gazette increase matched"
+    },
+    {
+      "company": "Gaisbock AG",
+      "announced": "2026-03-30",
+      "reason": "no gazette increase matched"
+    }
+  ],
+  "rejections": [
+    {
+      "company": "Lötschental Infrastruktur AG",
+      "publishedAt": "2025-09-24",
+      "reason": "Classifier score 0.04, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "NanoCleanAir AG",
+      "publishedAt": "2025-10-17",
+      "reason": "Classifier score 0.42, below the likely-financing threshold (0.60); rules score below 1.0"
+    },
+    {
+      "company": "MARTIMMO AG",
+      "publishedAt": "2025-12-30",
+      "reason": "Classifier score 0.02, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "HHT Holding SA",
+      "publishedAt": "2026-01-12",
+      "reason": "Classifier score 0.12, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Universitäres Psychiatrisches Zentrum Bern AG",
+      "publishedAt": "2026-06-29",
+      "reason": "Classifier score 0.02, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Osteobalance Zürich AG",
+      "publishedAt": "2026-07-07",
+      "reason": "Classifier score 0.03, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "InRoll AG",
+      "publishedAt": "2026-07-10",
+      "reason": "Classifier score 0.04, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "SwissCG SA",
+      "publishedAt": "2026-07-29",
+      "reason": "Classifier score 0.03, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "VN Manage AG",
+      "publishedAt": "2026-08-17",
+      "reason": "Classifier score 0.02, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "J-M Rey SA",
+      "publishedAt": "2026-09-07",
+      "reason": "Classifier score 0.03, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "Swiss AI Group AG",
+      "publishedAt": "2026-09-16",
+      "reason": "Classifier score 0.15, below the undecided threshold (0.35); rules score below 1.0"
+    },
+    {
+      "company": "S2PIN SA",
+      "publishedAt": "2026-09-18",
+      "reason": "Classifier score 0.04, below the undecided threshold (0.35); rules score below 1.0"
+    }
+  ],
+  "confirmationSource": "Confirmed rounds come from hand-checked announcements.",
+  "knownIssues": []
+}

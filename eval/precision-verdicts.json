@@ -1,0 +1,185 @@
+{
+  "reviewedBy": "claude_proposal_pending_remo",
+  "rows": [
+    {
+      "key": "a3dfae8c-8c60-44b2-b5c8-772bb443aee3",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase (statutes 14.07.2026): 19,746 new registered shares CHF 1.00, fully paid; no set-off, contribution in kind or reserves mentioned (cash). Cash increase at an angel-backed medtech, but no announcement found after 5+ queries; latest public round is the Dec 2024 BAS round, far outside the window."
+    },
+    {
+      "key": "ff6d8d24-d54d-41df-8647-17e1e94bf219",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase (22.06.2026): 1,110,756 new CHF 0.10 shares; 819,089 issued against set-off of claims CHF 1,474,360.20 (~CHF 1.80/share), remaining ~291,667 shares for cash (~CHF 0.5M implied). Mostly a debt conversion; the cash portion is not linked to any announced round (Jan 2026 Corvaglia deal is a licensing partnership, no equity mentioned)."
+    },
+    {
+      "key": "ee055dcc-e47b-4d90-921b-815939721ec2",
+      "verdict": "verified",
+      "source": "https://pitchbook.com/profiles/company/501610-51",
+      "note": "Register: Ordinary increase (statutes 26.02.2026) in cash and by set-off of CHF 300,000 (41,538 Seed shares); new 'Seed' preferred class of 328,152 shares created, so ~286,600 Seed shares for cash. New Seed preferred class in the register plus a data-provider seed round dated the same day, amount roughly consistent (~CHF 2.4M implied); caveat: the PitchBook date equals the statute date, so it may be register-derived."
+    },
+    {
+      "key": "af739f19-98a3-429e-9384-0b36351ed55f",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase (30.03.2026): 459,644 new CHF 0.10 shares, paid in (paid-in capital rises by the same CHF 45,964.40; CHF 50,000 unpaid carried over); no set-off or in-kind mentioned (cash). Venture-backed fintech said to be raising a seed round, but no source ties new money or investors to this March 2026 increase."
+    },
+    {
+      "key": "4978261c-f1fe-4f50-bdb1-30ea78d880f7",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase (statutes 16.01.2026): 197,811 new 'Série A' preferred shares CHF 0.10 (new class); no set-off or in-kind mentioned (cash). New Series A preferred class is a strong register signal, but no public Series A announcement found (data providers list only the 2023 seed and grants/accelerator)."
+    },
+    {
+      "key": "7d0b35e1-18f5-46ed-b5a0-61ac79435930",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase within capital band (17.09.2025): 18,041 new CHF 1.00 shares; 17,170 issued against set-off of claims CHF 1,132,042.75 (~CHF 65.9/share), only ~871 shares (~CHF 57k) for cash. About 95% is a loan conversion with no source tying it to an announced round; the small cash part has no public source either (last public round Sep 2024)."
+    },
+    {
+      "key": "c256387b-ca72-4cbf-b401-5aa69832950c",
+      "verdict": "unverifiable",
+      "source": "https://kellerhals-carrard.ch/de/deals/deal-ticker-kellerhals-carrard-advises-be-wtr-in-the-chf-39-million-series-c-financing-round-led-by-convent-capital",
+      "note": "Register: Ordinary increase within capital band (17.07.2025), in cash and by set-off of CHF 4,567,159 (354,204 Series C shares); 586,868 new Series C preferred shares in total, ~232,664 for cash (~CHF 3M implied at the same price). Looks like a second Series C tranche (same class; first closing registered Nov 2024), but the only announcement is ~9 months before the SHAB date, outside the window, and the cash part is not separately sourced."
+    },
+    {
+      "key": "a09d7b72-5cb8-409f-bf01-9d616c4838b9",
+      "verdict": "verified",
+      "source": "https://startuprise.co.uk/spacetech-startup-stellar-alpina-raises-e3-8m-funding-in-pre-seed-round/",
+      "note": "Register: Ordinary increase (26.05.2026): 3,030,817 new 'Pre-Seed' preferred shares CHF 0.01 (new class); 28,724 against set-off of CHF 25,000, the rest for cash; conditional capital and capital band also created. Pre-Seed preferred class issued on the same day the VC-led pre-seed round was announced; amount not inconsistent."
+    },
+    {
+      "key": "7d7e04b8-0116-47de-a44d-9587c4dfd326",
+      "verdict": "verified",
+      "source": "https://www.bilanz.ch/unternehmen/checksum-wird-aduno-pay-post-und-der-fruehere-migros-cfo-mischen-mit/1521fyv",
+      "note": "Register: Ordinary increase (14.04.2026): 180,716 new 'Seed' preferred shares CHF 1.00 (new class; 60,606 existing shares reclassified as Pre-Seed); 50,854 issued against set-off of CHF 750,000 (~CHF 14.75/share), ~129,862 for cash (~CHF 1.9M implied). A strategic investor's equity stake reported +125 days and the April 2026 Seed issue is the company's only capital increase since 2025, so the stake most plausibly came in here (caveat: the article gives no mechanics)."
+    },
+    {
+      "key": "42b674af-a35b-4f79-9655-e0fe41aa53a2",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase (statutes 09.10.2025): 8,108 new CHF 1.00 shares (7.5% of the company), fully paid; no set-off or in-kind mentioned (cash). Young solar installer, not clearly a venture; the small cash issue could be a new partner joining, but no funding source found."
+    },
+    {
+      "key": "e14dd5ad-b354-4545-ab58-3636bf6bd6e6",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase within the capital band (Statutenänderung 06.02.2026), +15,164,648 shares at CHF 0.01; no set-off or contribution in kind recorded (ZH records these as qualifying facts), so presumably cash. Young AI company (founded Oct 2024; earlier CHF 220k to 825k increase in Mar 2025) with no public funding news found after 5+ queries; the later Mar 2026 increase is a separate conditional-capital (option) exercise."
+    },
+    {
+      "key": "94616a04-726d-4863-b1b9-77bcd7694c6c",
+      "verdict": "unverifiable",
+      "source": "https://likemagic.tech/about-us",
+      "note": "Register: Ordinary increase (Statutenänderung 29.05.2026), +19,300,000 shares at CHF 0.01; no qualifying facts (no set-off/in-kind), presumably cash. Company says it spun out of SV Group as an investor-backed platform, and it had a larger increase in Jan 2026 too, but no source dates or names a round for the May 2026 step."
+    },
+    {
+      "key": "5a1e7551-70d7-44a2-b1fe-c48da0fc0052",
+      "verdict": "unverifiable",
+      "source": "https://swisspreneur.org/podcast/sean-wassermann-constantin-marakhov-ep421",
+      "note": "Register: Ordinary increase (16.03.2026), +464,317 shares at CHF 0.01, no qualifying facts (presumably cash); same meeting created conditional capital and a capital band. The only round reference (seed raise in progress, Jul 2024) is ~20 months before this increase, outside the window; no 2026 funding news found."
+    },
+    {
+      "key": "022f44a6-f937-4bc3-b843-978bffce8b02",
+      "verdict": "unverifiable",
+      "source": "https://www.vcbacked.co/company/aeler-technologies",
+      "note": "Register: Ordinary increase within capital band (30.09.2025) in cash and by set-off of CHF 90,000 claims (61,132 Series A-1 shares); net +847,335 Pre-Series A and +2,030,178 Series A-1 preferred shares, i.e. mostly cash. Register shows a mostly cash tranche of the named Series A-1 preferred class (earlier A-1 tranches Dec 2024/Mar 2025 were debt conversions), but the only dated round source (Jul 2026) is ~265 days later, outside the window."
+    },
+    {
+      "key": "a46347d0-4081-427f-8ca1-2ac6f35a5b7c",
+      "verdict": "unverifiable",
+      "source": "https://www.cbinsights.com/company/edwatec/financials",
+      "note": "Register: Ordinary increase (13.10.2025), +12,158 shares at CHF 1; no set-off or contribution in kind recorded (VD publishes these), presumably cash; in Apr 2026 exactly these 12,158 shares were converted to liquidation-preferred shares. Converting exactly the new shares into a preferred class points to an investor entry, but the only dated financing found is a FIT loan (debt) and no equity round or investor is named."
+    },
+    {
+      "key": "b199ac91-df72-4e1f-9c17-6d4878cab2ff",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase (08.07.2026), +1,603,174 shares at CHF 0.01, no qualifying facts (presumably cash); new capital band; follows a Nov 2025 increase of +1,870,371 shares. 2025 Technopark measurement-systems startup with two cash-like increases, but no public funding announcement or investor found after 5+ queries."
+    },
+    {
+      "key": "e83b35a0-1af3-4734-9161-b7af771448b5",
+      "verdict": "unverifiable",
+      "source": "https://www.vcbacked.co/company/rebels-00",
+      "note": "Register: Ordinary increase (19.02.2026), +75,414 shares at CHF 0.10, no qualifying facts (the Sep 2024 increase did record a CHF 350k set-off, so this one is presumably cash); capital band renewed. REBELS 0.0% brand has documented 2022 and 2024 angel rounds, but none links to this small Feb 2026 increase (2024 round is ~17 months earlier)."
+    },
+    {
+      "key": "e6dd9fde-ab9f-46f1-a9ee-3f869b8c649a",
+      "verdict": "refuted",
+      "source": "https://www.legal500.com/firms/10418-niederer-kraft-frey-ltd/c-switzerland/news-and-developments/medermis-clinics-continues-its-growth-and-enters-into-a-partnership-with-plaza-kliniken",
+      "note": "Register: Ordinary increase (05.12.2025), +60,353 shares at CHF 1, no qualifying facts; share transfer restriction removed; purpose states the company is part of a group. Swiss sub-holding of the medermis clinics buy-and-build dermatology group expanding through acquisitions; the increase is intra-group funding or deal-related, not new outside venture equity."
+    },
+    {
+      "key": "411a1827-c2b4-45a7-add7-4c51a62ba288",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase (17.07.2025), +12,500 shares at CHF 1; no set-off or contribution in kind recorded (VD); in Dec 2025, shares were converted into preferred participation certificates plus a bonus issue of certificates from reserves. Pure holding company with two board members from the same family and preferred participation certificates since 2020 (an estate/holding structure, not a venture), but nothing found that explains who subscribed the 2025 shares."
+    },
+    {
+      "key": "06a47bc0-0305-4a2b-90b6-989788a27b62",
+      "verdict": "unverifiable",
+      "source": "https://orgprints.org/id/eprint/56600/8/SME%20Initiatives.pdf",
+      "note": "Register: Ordinary increase (29.01.2026), +23,375,828 shares at CHF 0.01 (capital roughly doubled), no qualifying facts (presumably cash); capital band deleted; board reshuffle; domicile moved c/o Parkview Invest AG (multi-family office). Doubling the capital, adding new board seats and moving the domicile to a family office suggests a new or anchor investor, but no source names a 2026 round, its investors or whether the money is new or from existing shareholders."
+    },
+    {
+      "key": "94054528-2b0a-436d-9f75-e2d1c1ae3d01",
+      "verdict": "refuted",
+      "source": "https://amtsblattportal.ch/api/v1/publications/51c9f20a-7fc8-4b90-97fe-8afc539834fa/xml",
+      "note": "Register: Ordinary increase entirely by set-off of claims (Verrechnung von Forderungen EUR 85,054,317.63 for all 8,393,651 new shares); remaining shares are a re-split of the old 100 shares. All new shares were paid by converting claims in a bank-holding vehicle controlled by a single shareholder (which took control of Aegean Baltic Bank in 2025), so there is no fresh outside equity and no round."
+    },
+    {
+      "key": "b4fcb326-d79b-43b0-8e61-26fcb9364355",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase of CHF 13,666 (137,158 -> 150,824 shares at CHF 1), no qualified facts (cash presumed); capital band renewed. Probably a cash increase, but searches (Finanzierungsrunde, Investoren, crowdfunding, company name variants) found no public source on a round or new shareholders."
+    },
+    {
+      "key": "a2dcf6fb-2950-47f5-bccd-94fcf43273b5",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase within the capital band, +5,183 shares at CHF 1, no qualified facts (cash presumed). Small cash issue by a regional coworking operator (capital later rose again to CHF 128,233); no source on who subscribed or why."
+    },
+    {
+      "key": "60f55c53-58ad-4bca-a74b-9a1c1938000d",
+      "verdict": "verified",
+      "source": "https://realunit.ch/download/ad-hoc-kapitalerhoehung-aus-dem-kapitalband-unter-aufhebung-des-bezugsrechts-17-09-2026/",
+      "note": "Register: Ordinary increase within capital band, 2,368,145 new registered shares at CHF 1, fully paid in cash (per ad hoc: contributions in money by 24.09.2026). Ad hoc notice from this BX Swiss-listed company matches the share count and capital exactly and describes a cash placement with strategic investors, which is new outside equity."
+    },
+    {
+      "key": "2e94f09a-cc8f-4abb-9c1b-21d0383503d3",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Increase within capital band of 999,942 shares at CHF 0.10; 464,500 shares against set-off of claims of CHF 3,357,206.92, the remaining 535,442 shares presumably cash. About 46% of the new shares were issued against claims; searches only found the 2019 change of control and a 2024 angel investment in X-Bionic, so nothing links new money to this 2026 step."
+    },
+    {
+      "key": "5cac941a-e19d-47b1-a884-56fd06aef29d",
+      "verdict": "refuted",
+      "source": "https://www.greaterzuricharea.com/en/success-stories/estun",
+      "note": "Register: Ordinary increase CHF 1.0m -> 1.5m (500,000 shares at CHF 1), no qualified facts (cash presumed). European headquarters subsidiary of the Chinese robot maker Estun Automation; the CHF 0.5m increase is an intra-group capital injection by the parent, not outside equity."
+    },
+    {
+      "key": "9b48701c-65a1-44aa-bac1-4b01584aa829",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase CHF 118,000 -> 121,000 (12.1m shares at CHF 0.01), capital only partly paid (CHF 71,000 paid in). Tiny CHF 3,000 nominal increase in a partly paid medical-device trading company; searches only found unrelated companies with similar names (CooperVision's Biomedics lens brand, Biocorp)."
+    },
+    {
+      "key": "f240b5a4-b304-42a3-a0a4-1f9c984e1299",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase CHF 100,000 -> 160,000 (600 new restricted registered shares at CHF 100), no qualified facts (cash presumed). A pharmacy on the Papieri development site in Cham with no public financing information; probably owner funding, but no source says so."
+    },
+    {
+      "key": "01a5d28b-8c51-4190-8b59-a42f8117646a",
+      "verdict": "unverifiable",
+      "source": null,
+      "note": "Register: Ordinary increase of CHF 405,000 creating 20,250,000 preferred shares (Vorzugsaktien, dividend and liquidation preference) at CHF 0.02; 1,250,000 of them paid by set-off of USD 1,000,000 claims (likely a converted note), the rest presumably cash; new conditional capital; board expanded with new members. The register strongly suggests a priced preferred round (a new preference class, a converted note and new board seats), but no public announcement was found. The 2026-07-01 seed of the LA-based Traverse Therapeutics is a different company."
+    },
+    {
+      "key": "9be24a52-680b-41f3-829f-d386fd9f3a88",
+      "verdict": "verified",
+      "source": "https://news.cision.com/talkpool-ag/r/talkpool-resolves-on-a-directed-share-issue-of-eur-1-65-million-to-a-group-of-strategic-investors-le,c4327572",
+      "note": "Register: Ordinary increase within capital band, +1,500,000 shares at CHF 0.05, no qualified facts (cash). This listed company's directed cash issue to new strategic investors matches the 1.5m new shares exactly, 68 days before the SHAB date; the Q2 2026 report confirms 10 new shareholders and cash payment."
+    }
+  ]
+}
