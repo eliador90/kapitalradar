@@ -1,5 +1,5 @@
 {
-  "reviewedBy": "claude_proposal_pending_remo",
+  "reviewedBy": "remo",
   "rows": [
     {
       "key": "a3dfae8c-8c60-44b2-b5c8-772bb443aee3",
@@ -15,9 +15,9 @@
     },
     {
       "key": "ee055dcc-e47b-4d90-921b-815939721ec2",
-      "verdict": "verified",
+      "verdict": "unverifiable",
       "source": "https://pitchbook.com/profiles/company/501610-51",
-      "note": "Register: Ordinary increase (statutes 26.02.2026) in cash and by set-off of CHF 300,000 (41,538 Seed shares); new 'Seed' preferred class of 328,152 shares created, so ~286,600 Seed shares for cash. New Seed preferred class in the register plus a data-provider seed round dated the same day, amount roughly consistent (~CHF 2.4M implied); caveat: the PitchBook date equals the statute date, so it may be register-derived."
+      "note": "Remo: unverifiable; the same-day PitchBook datapoint may be register-derived and no independent source corroborates a 2026 round (same reasoning as Somagenetix in v1)."
     },
     {
       "key": "af739f19-98a3-429e-9384-0b36351ed55f",
@@ -51,9 +51,9 @@
     },
     {
       "key": "7d7e04b8-0116-47de-a44d-9587c4dfd326",
-      "verdict": "verified",
+      "verdict": "unverifiable",
       "source": "https://www.bilanz.ch/unternehmen/checksum-wird-aduno-pay-post-und-der-fruehere-migros-cfo-mischen-mit/1521fyv",
-      "note": "Register: Ordinary increase (14.04.2026): 180,716 new 'Seed' preferred shares CHF 1.00 (new class; 60,606 existing shares reclassified as Pre-Seed); 50,854 issued against set-off of CHF 750,000 (~CHF 14.75/share), ~129,862 for cash (~CHF 1.9M implied). A strategic investor's equity stake reported +125 days and the April 2026 Seed issue is the company's only capital increase since 2025, so the stake most plausibly came in here (caveat: the article gives no mechanics)."
+      "note": "Remo: unverifiable; the investor's later stake is confirmed but no source says it subscribed the new shares (could be a secondary purchase)."
     },
     {
       "key": "42b674af-a35b-4f79-9655-e0fe41aa53a2",
@@ -105,9 +105,9 @@
     },
     {
       "key": "e6dd9fde-ab9f-46f1-a9ee-3f869b8c649a",
-      "verdict": "refuted",
+      "verdict": "unverifiable",
       "source": "https://www.legal500.com/firms/10418-niederer-kraft-frey-ltd/c-switzerland/news-and-developments/medermis-clinics-continues-its-growth-and-enters-into-a-partnership-with-plaza-kliniken",
-      "note": "Register: Ordinary increase (05.12.2025), +60,353 shares at CHF 1, no qualifying facts; share transfer restriction removed; purpose states the company is part of a group. Swiss sub-holding of the medermis clinics buy-and-build dermatology group expanding through acquisitions; the increase is intra-group funding or deal-related, not new outside venture equity."
+      "note": "Remo: unverifiable; an internal or acquisition-related explanation is plausible but not proven: refuted needs positive evidence."
     },
     {
       "key": "411a1827-c2b4-45a7-add7-4c51a62ba288",
@@ -153,9 +153,9 @@
     },
     {
       "key": "5cac941a-e19d-47b1-a884-56fd06aef29d",
-      "verdict": "refuted",
+      "verdict": "unverifiable",
       "source": "https://www.greaterzuricharea.com/en/success-stories/estun",
-      "note": "Register: Ordinary increase CHF 1.0m -> 1.5m (500,000 shares at CHF 1), no qualified facts (cash presumed). European headquarters subsidiary of the Chinese robot maker Estun Automation; the CHF 0.5m increase is an intra-group capital injection by the parent, not outside equity."
+      "note": "Remo: unverifiable; parent funding is very plausible but no source says the parent subscribed the increase: refuted needs positive evidence."
     },
     {
       "key": "9b48701c-65a1-44aa-bac1-4b01584aa829",

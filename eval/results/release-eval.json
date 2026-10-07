@@ -1,6 +1,6 @@
 {
   "evaluatedOn": "2026-10-07",
-  "provisional": true,
+  "provisional": false,
   "system": {
     "parserVersion": "4",
     "modelId": "claude-opus-5-5",
@@ -14,9 +14,9 @@
   "systems": {
     "rulesPlusClaude": {
       "precision": {
-        "lo": 0.0710843333634036,
+        "lo": 0.018301490649824923,
         "hi": 1,
-        "estimateLo": 0.21735976789168276,
+        "estimateLo": 0.09695357833655706,
         "estimateHi": 1,
         "n": 17
       },
@@ -27,10 +27,10 @@
     },
     "rulesOnly": {
       "precision": {
-        "lo": 0.04221740983566949,
-        "hi": 0.9628692446331315,
-        "estimateLo": 0.1373038967611336,
-        "estimateHi": 0.895242914979757,
+        "lo": 0.012295557113169299,
+        "hi": 0.9937761903569974,
+        "estimateLo": 0.06904731781376519,
+        "estimateHi": 0.965080971659919,
         "n": 29
       },
       "recall": {
