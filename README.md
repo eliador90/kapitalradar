@@ -12,20 +12,22 @@ Private preview. The live link and GIF land with the public launch.
 
 ## Evaluation
 
-Release v2 (`r4`, parser v3, data as of 6 Oct 2026), evaluated 7 Oct 2026. Generated from
-[`eval/results/release-eval.json`](eval/results/release-eval.json); v1 is archived in
-[`eval/v1/`](eval/v1/).
+Release v3 (`r6`, parser v4 with the reserves and conversion rules, data as of 6 Oct 2026),
+evaluated 7 Oct 2026. Generated from [`eval/results/release-eval.json`](eval/results/release-eval.json);
+earlier releases are archived in [`eval/v1/`](eval/v1/) and [`eval/v2/`](eval/v2/).
 
 | System | Precision (n) | Recall on 30 announced rounds |
 |---|---|---|
-| Rules + Claude | 19–100 % estimate, 95 % interval 7–100 % (n=16) | 16/30 |
-| Rules only | 10–82 % estimate, 95 % interval 4–92 % (n=29) | 18/30 |
+| Rules + Claude | 10–100 % estimate, 95 % interval 2–100 % (n=17) | 16/30 |
+| Rules only | 7–97 % estimate, 95 % interval 1–99 % (n=29) | 18/30 |
 
 Recall ceiling is 20/30: nine announced rounds have no capital increase in the gazette within
-the pre-registered window, and one match stays uncertain. Precision is wide because 22 of 30
-sampled increases have no public evidence either way (3 verified, 5 refuted): most capital
-increases are never announced. Each release is measured on its own fresh sample of companies
-nobody had inspected; the v1 sample found the two parser bugs that v2 fixes.
+the pre-registered window, and one match stays uncertain. Each release is measured on a fresh
+sample of companies nobody had inspected. Labels follow one standard: "verified" needs
+independent evidence that outside investors funded the step (the register alone can't verify
+itself), "refuted" needs positive evidence of an internal explanation. Under that standard
+26 of 30 v3 items are unverifiable (3 verified, 1 refuted), so the precision bounds stay wide:
+most capital increases are never announced.
 
 How it is measured: [methodology](app/methodology/page.tsx) ·
 pre-registration in [`eval/preregistration/`](eval/preregistration/PREREGISTRATION.md) ·
