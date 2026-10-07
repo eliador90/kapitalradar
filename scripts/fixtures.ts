@@ -34,6 +34,11 @@ export const FIXTURES: Record<string, string> = {
   "fr-correction": "HR02-1005205992",
   "fr-formation": "HR01-1004804379",
   "it-increase": "HR02-1006603981",
+  // Parser v3 (found through the v1 precision sample, decision log #37).
+  "de-set-off-zur-verrechnung": "HR02-1006703690",
+  "de-redenomination-resplit": "HR02-1006612025",
+  "fr-redenomination": "HR02-1006662825",
+  "de-redenomination-with-increase": "HR02-1006765900",
 };
 
 const OUT = "eval/fixtures/shab";

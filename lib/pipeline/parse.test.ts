@@ -72,6 +72,30 @@ describe("parse: capital changes (expectations checked by hand against each fixt
   });
 });
 
+describe("parse v3: cases found through the v1 precision sample (decision log #37)", () => {
+  it("reads 'Forderungen … zur Verrechnung gebracht' covering every new share as set-off only", () => {
+    const e = capital("de-set-off-zur-verrechnung");
+    expect(e.contributionType).toBe("set_off");
+    expect(e.payload.direction).toBe("increase");
+  });
+  it("treats a redenomination that re-splits shares to keep the nominal as no increase", () => {
+    const e = capital("de-redenomination-resplit");
+    expect(e.payload.currencyBefore).toBe("CHF");
+    expect(e.currency).toBe("USD");
+    expect(e.payload.direction).toBe("unchanged");
+  });
+  it("treats the old French 'la monnaie du capital-actions … a été convertie' as no increase", () => {
+    const p = fixture("fr-redenomination");
+    const e = p.events.find((x) => x.type === "capital_change");
+    expect(e?.type === "capital_change" ? e.payload.direction : "no capital event").not.toBe("increase");
+  });
+  it("keeps a stated increase across a currency change, flagged so amounts aren't compared", () => {
+    const e = capital("de-redenomination-with-increase");
+    expect(e.payload.direction).toBe("increase");
+    expect(e.payload.currencyBefore).toBe("CHF");
+  });
+});
+
 describe("parse: other events", () => {
   it("emits conversions with their capital change", () => {
     expect(types("de-conversion-gmbh-ag")).toEqual(["conversion_to_ag", "capital_change", "name_change"]);

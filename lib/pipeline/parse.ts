@@ -8,7 +8,7 @@ import { normalizeUid } from "../domain/uid";
 import { clausesOf, splitClauses, type Clause } from "./clauses";
 import { LEGAL_FORM, section, textAt } from "./xml";
 
-export const PARSER_VERSION = "2";
+export const PARSER_VERSION = "3";
 
 export interface ParsedPublication {
   id: string;
@@ -216,6 +216,21 @@ const EXECUTED_INCREASE = /ordentliche Kapitalerhöhung|Ordentliche (?:Erhöhung
 // The pair is the accordion operation: reduce (usually to absorb losses) and re-increase at once.
 const SAME_OPERATION = /gleichzeitig|Wiedererhöhung|Unterbilanz|Überschuldung|Verlust|simultané|immédiatement|en vue de (?:la )?(?:compensation|couverture) de(?:s)? pertes|pertes|contemporaneamente|perdite/i;
 const TREASURY_ONLY = /eigene(?:n)? Aktien|actions propres|azioni proprie/i;
+const FRENCH_CURRENCY_BEFORE = new RegExp(`monnaie du capital-actions de\\s+${CUR}\\b`, "i");
+
+/**
+ * The capital's previous currency when this entry changes it, else null. German entries show it
+ * in the share classes ("[bisher: … zu CHF 1.00]" is parsed into classesBefore); the old French
+ * format states it in prose ("La monnaie du capital-actions de CHF … a été convertie").
+ */
+function capitalCurrencyBefore(active: string, classesBefore: ShareClass[] | null, classesAfter: ShareClass[] | null): ShareClass["currency"] | null {
+  const after = new Set((classesAfter ?? []).map((c) => c.currency));
+  const changedClass = (classesBefore ?? []).find((c) => after.size > 0 && !after.has(c.currency));
+  if (changedClass) return changedClass.currency;
+  const m = REDENOMINATION.test(active) ? FRENCH_CURRENCY_BEFORE.exec(active) : null;
+  if (m) return m[1] as ShareClass["currency"];
+  return null;
+}
 const REDENOMINATION =
   /monnaie du capital[\s\S]{0,200}?(?:a été )?converti|Währung des (?:Aktien)?[Kk]apitals[\s\S]{0,200}?(?:umgestellt|umgewandelt|geändert)|Umstellung (?:der Währung|des Aktienkapitals auf)|valuta del capitale[\s\S]{0,200}?convertit/i;
 
@@ -298,14 +313,21 @@ export function parsePublication(xml: string): ParsedPublication {
     const reductionClauses = splitClauses(active).map((c) => c.text).filter((c) => REDUCTION.test(c));
     const treasuryOnly = reductionClauses.length > 0 && reductionClauses.every((c) => TREASURY_ONLY.test(c));
     const pair = reductionClauses.length > 0 && EXECUTED_INCREASE.test(active) && SAME_OPERATION.test(active) && !treasuryOnly;
-    // A change of capital currency (CHF 105'000 → USD 124'136.25, same shares) is not an increase:
-    // the two nominal figures are in different currencies and can't be compared.
-    const classCurrencies = (cs: ShareClass[] | null) => new Set((cs ?? []).map((c) => c.currency));
-    const redenominated =
-      REDENOMINATION.test(active) ||
-      (classesBefore !== null && classesAfter !== null && classesBefore.length > 0 && classesAfter.length > 0 && [...classCurrencies(classesAfter)].some((c) => !classCurrencies(classesBefore).has(c)));
-    if (redenominated) warnings.push("capital currency changed: compared as unchanged");
-    const direction = redenominated ? "unchanged" : Number(after) > Number(before) ? "increase" : Number(after) < Number(before) ? "reduction" : "unchanged";
+    // A change of capital currency (CHF 105'000 → USD 124'136.25) puts the two nominal figures in
+    // different currencies: they can't be compared. The step is an increase only when the entry
+    // says one was executed ("Ordentliche Kapitalerhöhung", "aus bedingtem Kapital"); a plain
+    // redenomination, even one that re-splits the shares to keep the nominal, issues nothing.
+    const currencyBefore = capitalCurrencyBefore(active, classesBefore, classesAfter);
+    const statedIncrease = EXECUTED_INCREASE.test(active) || CONDITIONAL_ISSUANCE.test(active);
+    const direction = currencyBefore
+      ? statedIncrease
+        ? "increase"
+        : "unchanged"
+      : Number(after) > Number(before)
+        ? "increase"
+        : Number(after) < Number(before)
+          ? "reduction"
+          : "unchanged";
     const sharesAfter = total(classesAfter);
     let sharesBefore = total(classesBefore);
     if (sharesBefore === null && sharesIssued !== null && sharesAfter !== null && !pair && direction === "increase") {
@@ -360,6 +382,7 @@ export function parsePublication(xml: string): ParsedPublication {
           newPreferredClass,
           nominalChanged,
           participationCapital: participation,
+          currencyBefore,
         },
       });
     }

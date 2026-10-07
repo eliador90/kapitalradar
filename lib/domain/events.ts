@@ -44,6 +44,8 @@ export const capitalChangePayload = z.object({
   nominalChanged: z.boolean(),
   /** Participation capital (Partizipationskapital) rather than share capital. */
   participationCapital: z.boolean(),
+  /** Previous capital currency when this step changes it (amounts before/after are then not comparable); absent before parser v3. */
+  currencyBefore: currency.nullable().optional(),
 });
 export type CapitalChangePayload = z.infer<typeof capitalChangePayload>;
 

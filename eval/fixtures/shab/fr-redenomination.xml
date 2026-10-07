@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<HR02:publication xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HR02="https://shab.ch/shab/HR02-export" xsi:schemaLocation="https://shab.ch/shab/HR02-export https://amtsblattportal.ch/api/v1/schemas/shab/1.26/HR02-export.xsd">
+<meta>
+  <id>46523bd9-e1fc-40fa-ae90-1bfedf444bd6</id>
+  <rubric>HR</rubric>
+  <subRubric>HR02</subRubric>
+  <language>fr</language>
+  <registrationOffice/>
+  <publicationNumber>HR02-1006662825</publicationNumber>
+  <publicationState>PUBLISHED</publicationState>
+  <publicationDate>2026-05-29</publicationDate>
+  <primaryTenantCode>shab</primaryTenantCode>
+  <legalRemedy>La mutation de l'entité juridique mentionnée a été effectuée dans le registre du commerce. &lt;br />Publication selon les art. 9 et 35 ORC.</legalRemedy>
+  <cantons>GE</cantons>
+  <title>
+    <de>Mutation Zen-Noh Global Holdings SA, Vernier, neu Genève</de>
+    <en>Change Zen-Noh Global Holdings SA, Vernier, new Genève</en>
+    <it>Cambiamenti Zen-Noh Global Holdings SA, Vernier, nuovo Genève</it>
+    <fr>Mutation Zen-Noh Global Holdings SA, Vernier, nouveau Genève</fr>
+  </title>
+</meta>
+<content>
+  <testImport>false</testImport>
+  <journalNumber>14018</journalNumber>
+  <journalDate>2026-05-26</journalDate>
+  <publicationText>Zen-Noh Global Holdings SA, à Vernier, CHE-315.599.547 (FOSC du 19.09.2025, p. 0/1006438132). La monnaie du capital-actions de CHF 105'000, entièrement libéré, divisé en 10'500'000 actions de CHF 0.01, nominatives, liées selon statuts, a été convertie en USD 124'136, 25, entièrement libéré, divisé en 10'500'000 actions de USD 0.0118225, nominatives, liées selon statuts. Capital-actions: USD 124'136, 25, entièrement libéré, divisé en 10'500'000 actions de USD 0.0118225, nominatives, liées selon statuts. Statuts modifiés le 30.04.2026.</publicationText>
+  <commonsNew>
+    <company>
+      <name>Zen-Noh Global Holdings SA</name>
+      <uid>CHE-315.599.547</uid>
+      <uidOrganisationId>315599547</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66051970251</code13>
+      <seat>Genève</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>la prise et l'administration de participations sous quelque forme que ce soit dans des entreprises suisses ou étrangères et participer au financement, notamment par la fourniture de garanties et de sûretés de toute sorte, de telles entreprises et d'autres entités du groupe auquel la Société appartient dans l'intérêt dudit groupe. La Société n'acquerra aucun immeuble en Suisse, à l'exception, le cas échéant d'immeubles à usage exclusivement commercial. Le cas échéant les participations de la Société dans des entreprises ayant une activité immobilière en Suisse est exclusivement limitée aux entreprises acquérant, gérant et/ou contrôlant de l'immobilier à affectation commerciale. La Société peut constituer des succursales et des filiales en Suisse et à l'étranger.</purpose>
+    <capital>
+      <nominal>124136.25</nominal>
+      <paid>124136.25</paid>
+    </capital>
+    <revision/>
+  </commonsNew>
+  <commonsActual>
+    <company>
+      <name>Zen-Noh Global Holdings SA</name>
+      <uid>CHE-315.599.547</uid>
+      <uidOrganisationId>315599547</uidOrganisationId>
+      <uidOrganisationIdCategorie>CHE</uidOrganisationIdCategorie>
+      <code13>CH66051970251</code13>
+      <seat>Vernier</seat>
+      <legalForm>0106</legalForm>
+      <noAddress>false</noAddress>
+      <address/>
+    </company>
+    <purpose>la prise et l'administration de participations sous quelque forme que ce soit dans des entreprises suisses ou étrangères et participer au financement, notamment par la fourniture de garanties et de sûretés de toute sorte, de telles entreprises et d'autres entités du groupe auquel la Société appartient dans l'intérêt dudit groupe. La Société n'acquerra aucun immeuble en Suisse, à l'exception, le cas échéant d'immeubles à usage exclusivement commercial. Le cas échéant les participations de la Société dans des entreprises ayant une activité immobilière en Suisse est exclusivement limitée aux entreprises acquérant, gérant et/ou contrôlant de l'immobilier à affectation commerciale. La Société peut constituer des succursales et des filiales en Suisse et à l'étranger.</purpose>
+    <capital>
+      <nominal>105000.00</nominal>
+      <paid>105000.00</paid>
+    </capital>
+    <revision/>
+  </commonsActual>
+  <lastFosc>
+    <lastFoscDate>2025-09-19</lastFoscDate>
+    <lastFoscNumber>181</lastFoscNumber>
+    <lastFoscSequence>1006438132</lastFoscSequence>
+  </lastFosc>
+  <transaction>
+    <update>
+      <changements>
+        <others>false</others>
+        <nameChanged>false</nameChanged>
+        <uidChanged>false</uidChanged>
+        <legalStatusChanged>false</legalStatusChanged>
+        <seatChanged>true</seatChanged>
+        <addressChanged>true</addressChanged>
+        <purposeChanged>false</purposeChanged>
+        <capitalChanged>
+          <nominal>true</nominal>
+          <paid>true</paid>
+          <other>false</other>
+        </capitalChanged>
+        <statusChanged>
+          <bankruptcy>
+            <dissolution>false</dissolution>
+            <dismissal>false</dismissal>
+            <revocation>false</revocation>
+            <cancellation>false</cancellation>
+            <summary>false</summary>
+          </bankruptcy>
+          <liquidation>
+            <dissolution>
+              <nonExceptional>false</nonExceptional>
+              <or731b>false</or731b>
+              <hregv153b>false</hregv153b>
+            </dissolution>
+            <revocation>false</revocation>
+          </liquidation>
+          <suspension>false</suspension>
+          <reentry>false</reentry>
+          <reapplication>false</reapplication>
+        </statusChanged>
+      </changements>
+    </update>
+  </transaction>
+  <senderOffice>
+    <officeName>Registre du commerce du Canton de Genève</officeName>
+  </senderOffice>
+</content>
+</HR02:publication>
