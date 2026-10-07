@@ -1,0 +1,6 @@
+{
+  "issues": [
+    "Set-off phrased as \"Forderungen … zur Verrechnung gebracht\" is read as a cash payment: about 30 increases in this release that were paid entirely or partly by converting claims are shown as cash, so the conversion rule did not lower their score.",
+    "A change of capital currency (for example CHF to USD) is read as a capital increase: about 75 entries in this release are currency redenominations, not new shares."
+  ]
+}

@@ -113,6 +113,7 @@ async function computeRecall() {
 const PRECISION_SAMPLE = "eval/precision-sample.json";
 const PRECISION_VERDICTS = "eval/precision-verdicts.json";
 const PRECISION_SEED = 20261007;
+const KNOWN_ISSUES = "eval/known-issues.json";
 const REJECTION_SAMPLE = 12;
 
 const precisionSample = z.object({
@@ -215,6 +216,7 @@ async function run(releaseId: string) {
     misses: rec.rows.filter((r) => r.tier !== "likely_financing").map((r) => ({ company: r.company, announced: r.announced, reason: r.reason || `classifier score ${r.score?.toFixed(2) ?? "—"} (${r.tier === "abstain" ? "undecided" : "below threshold"})` })),
     rejections,
     confirmationSource: "Confirmed rounds come from hand-checked announcements.",
+    knownIssues: existsSync(KNOWN_ISSUES) ? z.object({ issues: z.array(z.string()) }).parse(JSON.parse(readFileSync(KNOWN_ISSUES, "utf8"))).issues : [],
   });
   mkdirSync(RESULTS, { recursive: true });
   writeFileSync(`${RESULTS}/release-eval.json`, JSON.stringify(result, null, 2) + "\n");

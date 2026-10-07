@@ -10,6 +10,7 @@ import { and, eq, sql } from "drizzle-orm";
 import { db } from "../db/client";
 import { companyNames, currentRelease, events, publications, releases } from "../db/schema";
 import { addDays } from "../lib/domain/dates";
+import { isCapitalIncrease } from "../lib/domain/events";
 import { featuredRewind } from "../lib/domain/featured";
 import { formatDate } from "../lib/domain/format";
 import { mulberry32 } from "../eval/lib/seeded";
@@ -43,9 +44,10 @@ const sample = Array.from({ length: Math.min(N, uids.length) }, () => uids[Math.
 let checked = 0;
 const failures: string[] = [];
 for (const uid of [...new Set(sample)]) {
-  const evs = await db().select({ publishedAt: events.publishedAt, number: publications.publicationNumber }).from(events).innerJoin(publications, eq(publications.id, events.publicationId)).where(and(eq(events.releaseId, rel.id), eq(events.companyUid, uid)));
+  const evs = await db().select({ publishedAt: events.publishedAt, number: publications.publicationNumber, type: events.type, before: events.capitalBefore, after: events.capitalAfter }).from(events).innerJoin(publications, eq(publications.id, events.publicationId)).where(and(eq(events.releaseId, rel.id), eq(events.companyUid, uid)));
   const names = await db().select({ name: companyNames.name, publishedAt: companyNames.publishedAt }).from(companyNames).where(and(eq(companyNames.releaseId, rel.id), eq(companyNames.companyUid, uid)));
   const dates = [...new Set(evs.map((e) => e.publishedAt).filter((d) => d >= rel.backfill))].sort();
+  const firstIncrease = evs.filter((e) => e.type === "capital_change" && e.publishedAt >= rel.backfill && isCapitalIncrease(e.before, e.after)).map((e) => e.publishedAt).sort()[0];
   // Rewind to the day before each publication: that publication and everything later must be absent.
   for (const d of dates) {
     const asOf = addDays(d, -1);
@@ -63,6 +65,9 @@ for (const uid of [...new Set(sample)]) {
       for (const n of names) if (n.publishedAt > asOf && !earlierNames.has(n.name) && body.includes(n.name)) failures.push(`${path}: later name "${n.name}"`);
     }
     // Positive control: on its own publication day the entry is there (the check is not vacuous).
+    // A page exists only from the company's first in-window capital increase on (A11), so earlier
+    // dates have nothing to control.
+    if (!firstIncrease || d < firstIncrease) continue;
     const { body } = await get(d === rel.snapshot ? `/c/${uid}` : `/c/${uid}?asof=${d}`);
     checked++;
     const own = evs.filter((e) => e.publishedAt === d);

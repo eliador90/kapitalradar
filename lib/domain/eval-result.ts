@@ -32,6 +32,8 @@ export const releaseEval = z.object({
   rejections: z.array(z.object({ company: z.string(), publishedAt: isoDate, reason: z.string() })),
   /** Confirmed rounds come from hand-checked announcements (OQ4). */
   confirmationSource: z.string(),
+  /** Known defects of the evaluated system, disclosed on /methodology (shipped as evaluated, fixed in the next release). */
+  knownIssues: z.array(z.string()),
 });
 export type ReleaseEval = z.infer<typeof releaseEval>;
 

@@ -1,5 +1,5 @@
 {
-  "reviewedBy": "claude_proposal_pending_remo",
+  "reviewedBy": "remo",
   "rows": [
     {
       "rank": 38,
@@ -104,7 +104,7 @@
       "uid": "CHE171163797",
       "verdict": "uncertain",
       "publicationId": null,
-      "note": "two small increases inside the capital band (−103 d, +174 d); neither clearly the strategic investment"
+      "note": "two small increases inside the capital band (−103 d, +174 d); Remo: Oct 2025 more likely (~70/30) but not provable, kept uncertain"
     },
     {
       "rank": 82,
@@ -125,21 +125,21 @@
       "uid": "CHE190466790",
       "verdict": "accepted",
       "publicationId": "055f31e0-b679-44cb-8ea5-dc3283f86837",
-      "note": "+166 d, set-off: the crowd round registered late via conversion; may count as a miss by definition (conversion_only)"
+      "note": "crowd round closed earlier and registered by set-off of exactly the raised amount, +166 d; Remo: a hit (the gazette entry is the registration of the announced round)"
     },
     {
       "rank": 89,
       "uid": "CHE290009772",
-      "verdict": "accepted",
-      "publicationId": "9815f77b-fb72-43cc-b0c9-4f4b6dd283e1",
-      "note": "+16% within the band, −96 d (round closed September per the article)"
+      "verdict": "none",
+      "publicationId": null,
+      "note": "Remo: the 18 Dec 2025 entry is not this round; the company names a September 2025 financing, registered 9 Sep 2025 (−196 d), outside the pre-registered −120 d window: a miss for both systems, like Plair/Sparkli in the spike"
     },
     {
       "rank": 92,
       "uid": "CHE308142728",
       "verdict": "accepted",
       "publicationId": "95eb35b8-6672-4d5e-8c60-6487b31f1ca9",
-      "note": "capital ×5.5 with the rename, −49 d; −19 d entry adds type A preferred within the band (possible second step), +17 d is conditional capital: check"
+      "note": "multi-close: 2 Feb 2026 is the principal close (new Type A preferred structure, capital ×5.5 with the rename); the 4 Mar entry is likely a second tranche of the same round, so a flag on it is not a pure false positive"
     },
     {
       "rank": 93,
@@ -174,7 +174,7 @@
       "uid": "CHE199078187",
       "verdict": "accepted",
       "publicationId": "93076a18-2556-467f-8291-e071f476ea88",
-      "note": "new Seed class with set-off, −92 d; the +20 d entry is a second close"
+      "note": "multi-close: 24 Dec 2025 creates the Seed class (cash + set-off), −92 d; the 15 Apr entry is a later top-up of the same round"
     },
     {
       "rank": 98,

@@ -8,16 +8,22 @@ scores which increases look like a financing round. It serves the result as a da
 can rewind: the round is often in the gazette before the press release (spike: median 10.5
 days earlier, 13 of 16 matched rounds).
 
-Private preview. The live link, GIF and evaluation table land with release v1.
+Private preview. The live link and GIF land with the public launch.
 
 ## Evaluation
 
-The table below is generated from `eval/results/release-eval.json` when release v1 ships.
+Release v1 (`r2`, data as of 6 Oct 2026), evaluated 6 Oct 2026. Generated from
+[`eval/results/release-eval.json`](eval/results/release-eval.json).
 
-| System | Precision (n) | Recall on announced rounds |
+| System | Precision (n) | Recall on 30 announced rounds |
 |---|---|---|
-| Rules + Claude | pending: verified precision sample | pending: cohort adjudication review |
-| Rules only | pending | pending |
+| Rules + Claude | 10–94 % estimate, 95 % interval 2–99 % (n=16) | 16/30 |
+| Rules only | 10–93 % estimate, 95 % interval 3–99 % (n=29) | 18/30 |
+
+Recall ceiling is 20/30: nine announced rounds have no capital increase in the gazette within
+the pre-registered window, and one match stays uncertain. Precision is wide because 24 of 30 sampled increases have no public
+evidence either way (4 verified, 2 refuted): most capital increases are never announced. Known
+parser issues of this release are listed on the methodology page and fixed in v2.
 
 How it is measured: [methodology](app/methodology/page.tsx) ·
 pre-registration in [`eval/preregistration/`](eval/preregistration/PREREGISTRATION.md) ·

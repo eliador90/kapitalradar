@@ -118,6 +118,17 @@ export default async function MethodologyPage({ searchParams }: { searchParams: 
         &ldquo;not in the SHAB&rdquo;. GmbH capital changes are not covered. Company history before {formatDate(release.backfillStart)} comes from each
         company&rsquo;s own publications and is labeled when partial. Parser version {c.parserVersion}.
       </p>
+      {e && e.knownIssues.length > 0 && (
+        <>
+          <h2>Known issues in this release</h2>
+          <p>Found while checking the evaluation sample. The release ships as evaluated; the next release fixes them and is measured on a fresh sample.</p>
+          <ul>
+            {e.knownIssues.map((k, i) => (
+              <li key={i}>{k}</li>
+            ))}
+          </ul>
+        </>
+      )}
     </main>
   );
 }
