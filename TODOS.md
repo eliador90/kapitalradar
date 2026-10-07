@@ -21,4 +21,4 @@ Deferred work with its reason. Keep this short: anything under ~10 minutes gets 
 
 ## Deferred from the v1 eval (2026-10-06)
 
-- **Parser fixes for v2** (branch `fix/parser-setoff-redenomination`, decision log #37): read "zur Verrechnung gebracht" as set-off; treat a capital-currency change as no increase, with a rule for the 18 r1 cases where shares also change. Why deferred: found through the precision holdout, so v1 ships as evaluated; v2 needs a fresh precision sample.
+- **v2 release** (parser v3 merged in PR #1, decision log #42): classify the 48 changed inputs, build r3, draw a fresh precision sample from uninspected companies, verdicts, eval, activate.
