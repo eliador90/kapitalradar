@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { FeedRow } from "../../lib/data/readers";
 import { formatAmount, formatDate, formatMoney, formatPercent } from "../../lib/domain/format";
 import { httpsUrl, publicationUrl } from "../../lib/domain/shab-link";
-import { StatusLabel } from "./status";
+import { ScoreMeter, StatusLabel, statusTone } from "./status";
 
 const PURPOSE_CHARS = 110;
 const clip = (s: string) => (s.length > PURPOSE_CHARS ? `${s.slice(0, PURPOSE_CHARS).replace(/\s+\S*$/, "")} …` : s);
@@ -47,7 +47,7 @@ function AnnouncedRound({ row }: { row: FeedRow }) {
 }
 
 // One ledger row (design AS2, IA2): no box, the company name and the SHAB link are separate links.
-export function LedgerRow({ row, companyHref }: { row: FeedRow; companyHref: string }) {
+export function LedgerRow({ row, companyHref, tau }: { row: FeedRow; companyHref: string; tau: number }) {
   const shab = (
     <a className="shab-link" href={publicationUrl(row.publicationId)} rel="noopener noreferrer" target="_blank">
       <span aria-hidden="true">SHAB ↗</span>
@@ -70,6 +70,7 @@ export function LedgerRow({ row, companyHref }: { row: FeedRow; companyHref: str
       </td>
       <td role="cell" className="col-status">
         <StatusLabel status={row.status} />
+        <ScoreMeter score={row.score} tau={tau} tone={statusTone(row.status)} />
         {row.announcedRound && (
           <span className="inline-secondary sub">
             Announced round: <AnnouncedRound row={row} />

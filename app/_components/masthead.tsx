@@ -18,19 +18,28 @@ interface Props {
   backQuery: Record<string, string | null>;
 }
 
-// First screen, in order (design IA3). Everything except the control renders from release
-// metadata only, so a rewound page carries nothing published after asOf (eng delta A12).
+// First screen (design IA3, radar redesign stage 1). Everything except the date control renders
+// from release metadata only, so a rewound page carries nothing published after asOf (A12).
 export function Masthead({ release, asOf, isDefault, notice, action, keep = {}, backQuery }: Props) {
   return (
     <header className="masthead">
-      <p className="wordmark">
-        <Link href="/">Kapitalradar</Link>
-      </p>
-      <p className="descriptor">Swiss capital increases, classified with evidence from the official gazette.</p>
-      {featuredRewind.asOf >= release.backfillStart && featuredRewind.asOf <= release.snapshotDate && (
-        <p>
-          <Link href={hrefWith(`/c/${featuredRewind.uid}`, { asof: featuredRewind.asOf })}>{featuredRewindText()} ↗</Link>
+      <div className="brand-row">
+        <p className="wordmark">
+          <Link href="/">
+            Kapital<span>radar</span>
+          </Link>
         </p>
+        <p className="descriptor">Swiss capital increases, read from the official gazette and scored for financing rounds.</p>
+      </div>
+      <p className="status-line">
+        <span className="live">updated every weekday</span>
+        <span>release {release.id}</span>
+        <span>data as of {formatDate(release.snapshotDate)}</span>
+      </p>
+      {featuredRewind.asOf >= release.backfillStart && featuredRewind.asOf <= release.snapshotDate && (
+        <Link className="rewind" href={hrefWith(`/c/${featuredRewind.uid}`, { asof: featuredRewind.asOf })}>
+          ↺ {featuredRewindText()}
+        </Link>
       )}
       <div className="published-by-bar">
         <form className="published-by" method="get" action={action}>
@@ -40,9 +49,6 @@ export function Masthead({ release, asOf, isDefault, notice, action, keep = {}, 
           <button className="button" type="submit">
             Show
           </button>
-          <span className="release-line">
-            release {release.id} · data as of {formatDate(release.snapshotDate)}
-          </span>
           {!isDefault && (
             <Link className="back" href={hrefWith(action, { s: keep.s?.join(",") })}>
               Latest available record · {formatDate(release.snapshotDate)}
