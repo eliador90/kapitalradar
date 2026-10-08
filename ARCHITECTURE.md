@@ -27,11 +27,10 @@ rounds, and serves the result as a dated, point-in-time record.
 | `lib/domain/` | Pure rules and formats: as-of resolution, weeks, status derivation, rule catalog, share issuance, metrics, Swiss formatting. No I/O. |
 | `lib/pipeline/` | Fetching (rate-limited `politeFetch`), XML parsing with privacy-first clause classification, history refresh, capital fold, rules, name redaction, classifier backend, release build and gates. |
 | `lib/data/` | Server data readers for the app. Each calls `assertPreviewAccess()` first and filters by release and asOf. |
-| `lib/preview-gate.ts` | HMAC cookie gate for the private preview; `proxy.ts` redirects early, the readers enforce. |
 | `db/` | Drizzle schema, migrations, the shared `visibleAt` predicate. |
 | `scripts/` | Operator commands: ingest, history, classify, build-release, eval, leak-check. |
 | `eval/` | Pre-registration, sealed recall cohort, inspected-company ledger, dev labels, fixtures, eval artifacts. Isolated from production code (a test enforces it). |
-| `app/` | Feed, company record, methodology, misses, preview gate, 404 and error states. |
+| `app/` | Feed, company record, methodology, misses, 404 and error states. Public; the website reads through a read-only database role. |
 
 ## Invariants
 
