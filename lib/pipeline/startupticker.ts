@@ -1,7 +1,7 @@
-// startupticker.ch, used only to hand-build the eval ground truth (Open Question 4 gates any
-// production use). robots.txt asks for a 5 s crawl delay.
-import { fetchText } from "../../lib/pipeline/http";
-import { decodeEntities } from "../../lib/pipeline/text";
+// startupticker.ch financing news: the eval ground truth (hand-built) and, since 2026-10-08, the
+// automatic confirmations (lib/pipeline/confirmations.ts). robots.txt asks for a 5 s crawl delay.
+import { fetchText } from "./http";
+import { decodeEntities } from "./text";
 
 export const BASE = "https://www.startupticker.ch";
 const CRAWL_DELAY_MS = 5000;

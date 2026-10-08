@@ -22,7 +22,7 @@ import {
 import { readLedger, today, writeLedger } from "../eval/lib/ledger";
 import { assertNoListedNames, loadNameList, scrub } from "../eval/lib/scrub";
 import { seededShuffle } from "../eval/lib/seeded";
-import { BASE, fetchArticle, fetchFinancingPage } from "../eval/lib/startupticker";
+import { BASE, fetchArticle, fetchFinancingPage } from "../lib/pipeline/startupticker";
 import { ZEFIX_LEGAL_FORM_AG, ZEFIX_LEGAL_FORM_GMBH, searchFirms } from "../lib/pipeline/zefix";
 import { formatUid } from "../lib/domain/uid";
 
