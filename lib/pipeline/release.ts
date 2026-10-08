@@ -8,7 +8,7 @@ import { isGazetteDay } from "../domain/holidays";
 import type { ReleaseConfig, Tier } from "../domain/schemas";
 import type { CompanyBundle } from "./candidates";
 import { tierFor, type StoredClassification } from "./classify";
-import type { ClauseKind } from "./clauses";
+import { maskInlinePersons, personDataHits, type ClauseKind } from "./clauses";
 
 export const GATE_MAX_RATE = 0.05; // plan: parse-failure and classifier-error rate
 
@@ -80,6 +80,36 @@ export interface GateReport {
 }
 
 const CAPITAL_SPAN_KINDS: ClauseKind[] = ["capital", "shares", "contribution", "band", "conversion"];
+/** Longest excerpt shown; the full entry is one click away on the SHAB. */
+export const EXCERPT_MAX_CHARS = 700;
+/**
+ * Clauses quoted on the public site. Contribution clauses are left out: they name who contributed
+ * or set off claims (often natural persons); the contribution type is stated in our own words.
+ */
+export const EXCERPT_KINDS: ClauseKind[] = ["capital", "shares", "band", "conversion"];
+// Anything name-like that survives masking withholds the whole excerpt (public site, so strict):
+// "par Surname Firstname", "von Dr. X Y", or a contributor's domicile "…, in Wattens (AT)".
+const NAME_LIKE =
+  /\b(?:von|de|par|durch|an|à|da|di|dal|della|du)\s+(?:Herrn?|Frau|Dr\.?|M\.|Mme|Monsieur|Madame)?\s*[A-ZÄÖÜÉÈ][a-zäöüéèàç]+(?:[- ][A-ZÄÖÜÉÈ][a-zäöüéèàç]+){1,2}\b(?!\s+(?:AG|SA|GmbH|Sàrl|Ltd|Inc|S\.A\.|Holding|Group|Capital|Partners))|,\s+(?:in|à|a)\s+[A-ZÄÖÜ][a-zäöü]+\s*\([A-Z]{2}\)/u;
+
+/**
+ * The gazette passage behind a capital step, for the company page (SHAB terms of use §3.3 allow
+ * reuse with attribution). Built from the step's capital, share, band and conversion clauses with
+ * inline person names replaced; null (withheld) when anything person-like survives the masking.
+ */
+export function excerptOf(text: string, clauses: readonly { start: number; end: number; kind: ClauseKind }[]): string | null {
+  const joined = clauses
+    .filter((c) => EXCERPT_KINDS.includes(c.kind))
+    .sort((a, b) => a.start - b.start)
+    .map((s) => text.slice(s.start, s.end).trim())
+    .filter(Boolean)
+    .join(" ");
+  if (!joined) return null;
+  const masked = maskInlinePersons(joined).replace(/<PERSON_\d+>/g, "[name removed]");
+  if (personDataHits(masked).length || NAME_LIKE.test(masked)) return null;
+  return masked.length > EXCERPT_MAX_CHARS ? `${masked.slice(0, EXCERPT_MAX_CHARS).replace(/\s+\S*$/, "")} …` : masked;
+}
+
 const SPAN_KINDS: Record<string, ClauseKind[]> = {
   capital_change: CAPITAL_SPAN_KINDS,
   conversion_to_ag: ["conversion", "capital", "shares"],
@@ -148,7 +178,9 @@ export function deriveRows(input: Pick<BuildInput, "companies" | "classification
           sharesAfter: capital?.sharesAfter ?? null,
           contributionType: capital?.contributionType ?? null,
           // Company facts as published in this entry (as-of correct for the event's own date).
-          payload: capital ? { ...capital.payload, context: byPub.get(p.id)?.context ?? null, canton: p.canton, purpose: p.purpose, legalForm: p.legalForm } : e.payload,
+          payload: capital
+            ? { ...capital.payload, context: byPub.get(p.id)?.context ?? null, canton: p.canton, purpose: p.purpose, legalForm: p.legalForm, excerpt: excerptOf(p.text, p.clauses) }
+            : e.payload,
           spans,
           correctsPublicationNumber: p.correctsPublicationNumber,
           cancelsPublicationNumber: e.type === "cancellation" ? e.payload.cancelsPublicationNumber : null,

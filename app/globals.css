@@ -94,6 +94,11 @@ p { margin: 0 0 16px; }
 .figures dt { color: var(--ink-muted); }
 .figures dd { margin: 0; }
 .evidence { margin: 8px 0 0; padding: 0 0 0 16px; border-left: 1px solid var(--rule); }
+/* The gazette's own text: a heavier rule than our evidence, original language, caption below. */
+.excerpt { margin: 12px 0; padding: 0 0 0 16px; border-left: 2px solid var(--ink-muted); max-width: var(--measure); }
+.excerpt blockquote { margin: 0; }
+.excerpt blockquote p { margin: 0; font-size: 15px; line-height: 23px; overflow-wrap: anywhere; }
+.excerpt figcaption { margin-top: 6px; color: var(--ink-muted); font-size: 14px; line-height: 20px; }
 .evidence ul { margin: 0; padding: 0; list-style: none; }
 .evidence li { margin: 0 0 4px; }
 .earlier summary { cursor: pointer; min-height: 44px; display: flex; align-items: center; }

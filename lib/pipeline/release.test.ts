@@ -5,7 +5,7 @@ import { describe, expect, it, vi } from "vitest";
 import type { ReleaseConfig } from "../domain/schemas";
 import { assembleCompany } from "./candidates";
 import { parsePublication } from "./parse";
-import { buildRelease, missingGazetteDays, releasesToPrune, rollback, type BuildInput, type ReleaseRepo } from "./release";
+import { buildRelease, excerptOf, missingGazetteDays, releasesToPrune, rollback, type BuildInput, type ReleaseRepo } from "./release";
 
 vi.mock("../../db/client", () => ({ db: () => { throw new Error("no DB in unit tests"); } }));
 
@@ -115,6 +115,30 @@ describe("release build", () => {
 
   it("ignores holidays and weekends when checking for empty gazette days", () => {
     expect(missingGazetteDays(new Set(), "2025-12-24", "2025-12-28")).toEqual(["2025-12-24"]);
+  });
+});
+
+describe("excerptOf", () => {
+  const all = (text: string, kind: "capital" | "shares" | "contribution" = "capital") => [{ start: 0, end: text.length, kind }];
+  it("joins capital and share clauses in text order and leaves contribution clauses out", () => {
+    const text = "Header. Aktienkapital neu: CHF 132'893.00. Verrechnung mit Forderungen. Aktien neu: 132'893 Namenaktien.";
+    const span = (from: string, to: string | null, kind: "capital" | "shares" | "contribution") => ({ start: text.indexOf(from), end: to ? text.indexOf(to) : text.length, kind });
+    expect(
+      excerptOf(text, [span("Aktien neu", null, "shares"), span("Verrechnung", " Aktien neu", "contribution"), span("Aktienkapital", " Verrechnung", "capital")]),
+    ).toBe("Aktienkapital neu: CHF 132'893.00. Aktien neu: 132'893 Namenaktien.");
+  });
+  it("replaces masked inline person names", () => {
+    const text = "Die Aktien werden übernommen von Maxima Mustermann gegen Bareinlage.";
+    expect(excerptOf(text, all(text, "shares"))).toBe("Die Aktien werden übernommen von [name removed] gegen Bareinlage.");
+  });
+  it("withholds the whole excerpt when anything name-like survives masking", () => {
+    expect(excerptOf("100 actions souscrites et libérées par Muster Maxima.", all("100 actions souscrites et libérées par Muster Maxima.", "shares"))).toBeNull();
+    expect(excerptOf("Aktien gezeichnet durch die Beta Holding AG, in Wattens (AT).", all("Aktien gezeichnet durch die Beta Holding AG, in Wattens (AT).", "shares"))).toBeNull();
+  });
+  it("is null without clauses and shortens long passages", () => {
+    expect(excerptOf("x", [])).toBeNull();
+    const long = "Aktienkapital neu: CHF 1.00. ".repeat(60);
+    expect(excerptOf(long, all(long))!.length).toBeLessThanOrEqual(702);
   });
 });
 

@@ -60,13 +60,31 @@ function Evidence({ e, config }: { e: Entry; config: ReleaseConfig }) {
       ) : (
         <p className="secondary">No classifier score for this step.</p>
       )}
-      <p className="secondary">
-        Excerpt withheld until the gazette&rsquo;s reuse terms are confirmed ·{" "}
-        <a href={publicationUrl(e.publicationId)} rel="noopener noreferrer" target="_blank">
-          Read on SHAB ↗
-        </a>
-      </p>
     </div>
+  );
+}
+
+const LANGUAGE: Record<string, string> = { de: "German", fr: "French", it: "Italian", rm: "Romansh", en: "English" };
+
+/**
+ * The gazette's own words for this step, kept visually apart from our reading of it (SHAB terms
+ * of use §3.3: unchanged data separate from own comments, source named, not an official copy).
+ */
+function Excerpt({ e }: { e: Entry }) {
+  const text = (e.payload as { excerpt?: string | null }).excerpt;
+  if (!text) return null;
+  return (
+    <figure className="excerpt">
+      <blockquote lang={e.language} cite={publicationUrl(e.publicationId)}>
+        <p>{text}</p>
+      </blockquote>
+      <figcaption>
+        From the SHAB entry · {LANGUAGE[e.language] ?? "original"} original, person names removed · not an official copy ·{" "}
+        <a href={publicationUrl(e.publicationId)} rel="noopener noreferrer" target="_blank">
+          full entry ↗
+        </a>
+      </figcaption>
+    </figure>
   );
 }
 
@@ -124,6 +142,7 @@ export function RecordEntry({ e, config }: { e: Entry; config: ReleaseConfig }) 
       {e.status && <StatusLabel status={e.status} />}
       {contribution && <p className="secondary">{contribution}</p>}
       <Figures e={e} />
+      <Excerpt e={e} />
       {e.corrects && <p className="secondary">Corrects SHAB {e.corrects}</p>}
       {e.correctedOn && <p className="secondary">Corrected on {formatDate(e.correctedOn)} ↓</p>}
       <Evidence e={e} config={config} />
