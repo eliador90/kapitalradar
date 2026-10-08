@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { matchConfirmations, nameStem, normalizeName, stageOf, statedAmountOf, type CompanyForMatch, type FinancingArticle } from "./confirmations";
+import { isRoundNews, matchConfirmations, nameStem, normalizeName, stageOf, statedAmountOf, type CompanyForMatch, type FinancingArticle } from "./confirmations";
 
 const soverli: CompanyForMatch = { uid: "CHE453478419", names: ["Soverli AG"], increases: [{ publicationId: "p1", publishedAt: "2025-09-24" }] };
 const sika: CompanyForMatch = { uid: "CHE000000001", names: ["Sika AG"], increases: [{ publicationId: "s1", publishedAt: "2025-11-01" }] };
@@ -16,6 +16,27 @@ describe("confirmation matching", () => {
     expect(normalizeName("Électron Sàrl")).toBe("electron sarl");
     expect(nameStem("Soverli AG")).toBe("soverli");
     expect(nameStem("L.E.S.S. SA")).toBe("l.e.s.s.");
+  });
+
+  it.each([
+    ["Soverli raises CHF 3.5 million seed round", true],
+    ["Fusionality raises CHF 3 million to take fusion devices next level", true],
+    ["siabit übernimmt Mitbewerber-Software und gewinnt neuen Investor", true],
+    ["Une levée de fonds de CHF 2 millions pour Soverli", true],
+    ["Ipsen to acquire Memo Therapeutics for up to EUR 700 million", false],
+    ["TargImmune Therapeutics gets acquired", false],
+    ["BOXS übernimmt Recoplast", false],
+    ["DEKRA wird Mehrheitseigner des Zürcher Insurtechs Spearhead", false],
+    ["Axmed secures $6 million grant from the Gates Foundation", false],
+    ["Wellcome awards CHF 14 million for BioVersys' BV100 Phase 2b study", false],
+    ["Un prêt de € 1M pour porter les projets d'Insolight en France", false],
+    ["Terra Quantum AG to go public at Nasdaq in $3.25 billion SPAC deal", false],
+  ])("treats %j as round news: %s", (title, expected) => {
+    expect(isRoundNews(title)).toBe(expected);
+  });
+
+  it("never confirms from news that is not a round", () => {
+    expect(matchConfirmations([article({ title: "Soverli secures CHF 3.5 million grant" })], [soverli])).toEqual([]);
   });
 
   it("confirms the raiser named in the title, not the linked investor", () => {

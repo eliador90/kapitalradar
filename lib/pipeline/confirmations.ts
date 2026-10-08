@@ -67,11 +67,26 @@ export function statedAmountOf(title: string): { amount: string; currency: strin
 const STAGE = /\b(pre-seed|seed|series [a-f]|bridge|growth)\b/i;
 export const stageOf = (title: string) => STAGE.exec(title)?.[1]?.toLowerCase() ?? null;
 
+// startupticker's financing category also carries news that is not an equity round. A
+// "Confirmed round" must mean one, so these titles never confirm (audit 2026-10-08: 20 of 142
+// high-confidence matches were acquisitions, grants, loans or listings).
+/** Whole words, Unicode-aware (`\b` treats "è" as a boundary, so "lève" would never match). */
+const words = (alternatives: string) => new RegExp(`(?<![\\p{L}\\p{N}])(?:${alternatives})(?![\\p{L}\\p{N}])`, "iu");
+/** Never a round: grants and prizes, loans, listings, liquidations. */
+const NOT_A_ROUND = words("grants?|awards?|prizes?|preis|prix|loans?|prêts?|darlehen|kredit|crédit|ipo|spac|go(?:es|ing)? public|listing|börsengang|liquidation");
+/** Acquisitions: a round only when the title also says money came in. */
+const ACQUISITION = words("acqui\\p{L}*|übernimmt|übernahme|rachat|rachète|racheté|kauft|merger|majority|mehrheits\\p{L}*|majoritaire");
+const RAISE = words("rais\\p{L}*|secur\\p{L}*|funding|financing|round|series [a-f]|seed|investors?|investment|finanzierung\\p{L}*|finanziert|kapitalerhöhung|levée|lève|financement|tour de table");
+
+/** Whether a financing-news title can confirm an equity round. */
+export const isRoundNews = (title: string) => !NOT_A_ROUND.test(title) && (!ACQUISITION.test(title) || RAISE.test(title));
+
 export function matchConfirmations(articles: readonly FinancingArticle[], companies: readonly CompanyForMatch[]): ConfirmationRow[] {
   const byName = new Map<string, CompanyForMatch[]>();
   for (const c of companies) for (const n of new Set(c.names.map(normalizeName))) byName.set(n, [...(byName.get(n) ?? []), c]);
   const rows: ConfirmationRow[] = [];
   for (const a of articles) {
+    if (!isRoundNews(a.title)) continue;
     const title = normalizeName(a.title);
     const linked = new Map<string, CompanyForMatch>();
     for (const n of a.companies) for (const c of byName.get(normalizeName(n)) ?? []) linked.set(c.uid, c);
