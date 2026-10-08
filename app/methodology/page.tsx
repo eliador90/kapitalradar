@@ -103,7 +103,7 @@ export default async function MethodologyPage({ searchParams }: { searchParams: 
             stratified sample of the system&rsquo;s positives, each checked by hand against outside evidence. {e.confirmationSource}
           </p>
           <p>
-            <Link href={hrefWith("/misses", { asof: backQuery(release, sp).asof, s: backQuery(release, sp).s })}>
+            <Link href={hrefWith("/misses", { asof: backQuery(release, sp).asof, s: backQuery(release, sp).s, c: backQuery(release, sp).c })}>
               Misses and rejections →
             </Link>
           </p>

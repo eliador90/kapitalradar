@@ -1,3 +1,4 @@
+import type React from "react";
 import { CANTON_CODES, SWISS_MAP } from "../../lib/domain/cantons";
 import { formatDate } from "../../lib/domain/format";
 import { SweepToggle } from "./sweep-toggle";
@@ -56,7 +57,7 @@ export function RadarMap({ counts, from, asOf, selected, hrefFor }: Props) {
               <path
                 d={shape.d}
                 className={`canton${selected === c ? " is-selected" : ""}${selected && selected !== c ? " is-dimmed" : ""}`}
-                style={{ fillOpacity: n ? 0.08 + 0.32 * (n / max) : undefined }}
+                style={n ? ({ "--heat": (0.08 + 0.32 * (n / max)).toFixed(2) } as React.CSSProperties) : undefined}
                 data-hot={n > 0 || undefined}
               />
             </a>
@@ -92,7 +93,7 @@ export function RadarMap({ counts, from, asOf, selected, hrefFor }: Props) {
       </svg>
       <p className="radar-foot">
         <span>
-          {total} likely financing{total === 1 ? "" : "s"} · {formatDate(from)} – {formatDate(asOf)}
+          {total} likely financing{total === 1 ? "" : "s"} · {formatDate(from)} – {formatDate(asOf)} · the feed below shows one week
         </span>
         {selected ? (
           <a className="canton-chip" href={hrefFor(null)}>

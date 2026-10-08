@@ -50,7 +50,7 @@ export function Masthead({ release, asOf, isDefault, notice, action, keep = {}, 
             Show
           </button>
           {!isDefault && (
-            <Link className="back" href={hrefWith(action, { s: keep.s?.join(",") })}>
+            <Link className="back" href={hrefWith(action, { s: keep.s?.join(","), c: keep.c?.join(",") })}>
               Latest available record · {formatDate(release.snapshotDate)}
             </Link>
           )}

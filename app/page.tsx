@@ -96,7 +96,7 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
         </form>
 
         {rows.length === 0 ? (
-          <p className="empty">No capital increases were published in the SHAB {range}.</p>
+          <p className="empty">No capital increases {c ? `from canton ${c} ` : ""}were published in the SHAB {range}.</p>
         ) : shown.length === 0 ? (
           <p className="empty">
             No {feedFilterPhrase(filters)} among the {plural(rows.length, "capital increase", "capital increases")} published {range}.{" "}

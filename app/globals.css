@@ -106,9 +106,11 @@ p { margin: 0 0 14px; }
 .map-land { fill: #0f1d26; }
 .canton { fill: var(--likely); fill-opacity: 0; stroke: none; cursor: pointer; transition: fill-opacity .2s; }
 .canton:not([data-hot]) { fill: var(--sweep); }
-a:hover > .canton, a:focus-visible > .canton { fill: var(--sweep); fill-opacity: .18; }
-.canton.is-selected { fill: var(--sweep); fill-opacity: .28; }
-.canton.is-dimmed { fill-opacity: .04; }
+.canton[data-hot] { fill-opacity: var(--heat); }
+.radar-svg a:hover > .canton, .radar-svg a:focus-visible > .canton { fill: var(--sweep); fill-opacity: .22; }
+.radar-svg a:focus-visible > .canton { stroke: var(--focus); stroke-width: 2.5; vector-effect: non-scaling-stroke; }
+.radar-svg .canton.is-selected { fill: var(--sweep); fill-opacity: .3; }
+.radar-svg .canton.is-dimmed { fill-opacity: .04; }
 .radar-svg a:focus-visible { outline: none; }
 .map-inner { fill: none; stroke: #2d4a5c; stroke-width: 1; pointer-events: none; vector-effect: non-scaling-stroke; }
 .map-outline { fill: none; stroke: var(--sweep); stroke-width: 1.5; opacity: .85; pointer-events: none; vector-effect: non-scaling-stroke; }
