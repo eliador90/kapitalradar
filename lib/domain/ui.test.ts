@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { ALL_SHARES, capitalSeries, compactAmount } from "./capital-series";
 import { evalLine, missesSummary, parseReleaseEval, type ReleaseEval } from "./eval-result";
 import { shareIssuance } from "./issuance";
 import { deriveStatus, feedFilterOf, parseFeedFilters } from "./status";
@@ -85,5 +86,38 @@ describe("design tokens", () => {
   };
   it.each(["ink", "ink-muted", "time"])("--%s on --paper is at least 4.5:1", (name) => {
     expect(contrast(token(name), token("paper"))).toBeGreaterThanOrEqual(4.5);
+  });
+});
+
+describe("capitalSeries", () => {
+  const cls = (count: number, nominal: string, label: string | null, preferred = false) => ({ count, nominal, currency: "CHF" as const, label, preferred });
+  const step = (publishedAt: string, before: string | null, after: string, extra: Partial<Parameters<typeof capitalSeries>[0][number]> = {}) => ({
+    publishedAt, currency: "CHF", capitalBefore: before, capitalAfter: after, classesAfter: null, tone: "likely", ...extra,
+  });
+
+  it("splits a step by class when the classes add up, preferred classes on top", () => {
+    const s = capitalSeries([step("2026-03-02", "100000", "125000", { classesAfter: [cls(25_000, "1", "Seed", true), cls(100_000, "1", null)] })])!;
+    expect(s.keys).toEqual(["shares", "Seed"]);
+    expect(s.steps[0]!.parts).toEqual([{ key: "Seed", value: 25_000 }, { key: "shares", value: 100_000 }]);
+    expect(s.start).toBe(100_000);
+  });
+  it("falls back to one total when the classes don't match the stated capital", () => {
+    const s = capitalSeries([step("2026-03-02", null, "125000", { classesAfter: [cls(10, "1", null)] })])!;
+    expect(s.steps[0]!.parts).toEqual([{ key: ALL_SHARES, value: 125_000 }]);
+    expect(s.start).toBeNull();
+  });
+  it("draws only the latest currency run and counts what it leaves out", () => {
+    const s = capitalSeries([
+      step("2025-01-01", "100", "200", { currency: "EUR" }),
+      step("2025-06-01", "200", "300", { currency: "CHF" }),
+      step("2025-09-01", "300", "400", { currency: "CHF" }),
+    ])!;
+    expect([s.currency, s.omitted, s.steps.map((x) => x.total)]).toEqual(["CHF", 1, [300, 400]]);
+  });
+  it("is null without a stated capital", () => {
+    expect(capitalSeries([step("2026-01-01", null, "1", { currency: null })])).toBeNull();
+  });
+  it("labels axes compactly", () => {
+    expect([850, 1500, 120_000, 1_250_000, 2e9].map(compactAmount)).toEqual(["850", "1.5k", "120k", "1.3M", "2B"]);
   });
 });

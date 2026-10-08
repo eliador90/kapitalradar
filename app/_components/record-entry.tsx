@@ -38,28 +38,72 @@ function title(e: Entry): string {
   }
 }
 
+/** Rule hits as a diverging bar chart around zero; hard negatives block the step outright. */
+function RuleBars({ hits, config }: { hits: string[]; config: ReleaseConfig }) {
+  const rules = new Map(config.rules.map((r) => [r.id, r]));
+  const scale = Math.max(1, ...config.rules.map((r) => Math.abs(r.weight)));
+  return (
+    <ul className="rule-bars">
+      {hits.map((id) => {
+        const r = rules.get(id);
+        const hard = r?.kind === "hard_negative";
+        const w = r?.weight ?? 0;
+        return (
+          <li key={id}>
+            <span className="rule-name">{r?.display ?? id}</span>
+            <span className="rule-track" aria-hidden="true">
+              <i className={hard || w < 0 ? "rule-neg" : "rule-pos"} style={{ width: `${hard ? 50 : (Math.abs(w) / scale) * 50}%` }} />
+            </span>
+            <span className="rule-weight">{hard ? "blocks" : `${w > 0 ? "+" : "−"}${Math.abs(w).toFixed(1)}`}</span>
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
+const polar = (v: number, r: number) => [60 + r * Math.cos(Math.PI * (1 - v)), 60 - r * Math.sin(Math.PI * (1 - v))] as const;
+const arc = (a: number, b: number, r = 48) => {
+  const [x0, y0] = polar(a, r);
+  const [x1, y1] = polar(b, r);
+  return `M${x0.toFixed(1)},${y0.toFixed(1)} A${r},${r} 0 0 1 ${x1.toFixed(1)},${y1.toFixed(1)}`;
+};
+
+/** Claude's score on a half dial with the release's two thresholds as zone boundaries. */
+function ScoreGauge({ score, tau, tauLow }: { score: number; tau: number; tauLow: number }) {
+  const [nx, ny] = polar(Math.min(1, Math.max(0, score)), 40);
+  return (
+    <svg className="gauge" viewBox="0 0 120 82" aria-hidden="true">
+      <path d={arc(0, tauLow)} className="gauge-zone zone-increased" />
+      <path d={arc(tauLow, tau)} className="gauge-zone zone-undecided" />
+      <path d={arc(tau, 1)} className="gauge-zone zone-likely" />
+      <line x1="60" y1="60" x2={nx.toFixed(1)} y2={ny.toFixed(1)} className="gauge-needle" />
+      <circle cx="60" cy="60" r="3" className="gauge-hub" />
+      <text x="60" y="80" textAnchor="middle" className="gauge-value">
+        {score.toFixed(2)}
+      </text>
+    </svg>
+  );
+}
+
 function Evidence({ e, config }: { e: Entry; config: ReleaseConfig }) {
   const ev = e.evidence;
   if (!ev) return null;
-  const display = new Map(config.rules.map((r) => [r.id, r.display]));
   return (
     <div className="evidence">
-      {ev.ruleHits.length > 0 && (
-        <ul>
-          {ev.ruleHits.map((id) => (
-            <li key={id}>{display.get(id) ?? id}</li>
-          ))}
-        </ul>
-      )}
-      {ev.rejectReason ? (
-        <p className="secondary">Not sent to the classifier: {ev.rejectReason.replace(/_/g, " ")}.</p>
-      ) : ev.score !== null ? (
-        <p className="mono">
-          Classifier score {ev.score.toFixed(2)} · likely-financing threshold {config.tau.toFixed(2)} · not a calibrated probability
-        </p>
-      ) : (
-        <p className="secondary">No classifier score for this step.</p>
-      )}
+      {ev.score !== null && !ev.rejectReason && <ScoreGauge score={ev.score} tau={config.tau} tauLow={config.tauLow} />}
+      <div className="evidence-body">
+        {ev.ruleHits.length > 0 ? <RuleBars hits={ev.ruleHits} config={config} /> : <p className="secondary">No rule fired.</p>}
+        {ev.rejectReason ? (
+          <p className="secondary">Not sent to the classifier: {ev.rejectReason.replace(/_/g, " ")}.</p>
+        ) : ev.score !== null ? (
+          <p className="mono secondary">
+            Classifier score {ev.score.toFixed(2)} · likely-financing threshold {config.tau.toFixed(2)} · not a calibrated probability
+          </p>
+        ) : (
+          <p className="secondary">No classifier score for this step.</p>
+        )}
+      </div>
     </div>
   );
 }

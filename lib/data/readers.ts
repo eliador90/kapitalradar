@@ -172,6 +172,7 @@ export interface CompanyRecord {
     publicationNumber: string;
     publicationId: string;
     payload: unknown;
+    currency: string | null;
     capitalBefore: string | null;
     capitalAfter: string | null;
     sharesBefore: number | null;
@@ -257,6 +258,7 @@ export async function readCompany(release: ReleaseMeta, uid: string, asOf: strin
         publicationNumber: e.publicationNumber,
         publicationId: e.publicationId,
         payload: e.payload,
+        currency: e.currency,
         capitalBefore: e.capitalBefore,
         capitalAfter: e.capitalAfter,
         sharesBefore: e.sharesBefore,
