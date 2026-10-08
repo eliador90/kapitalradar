@@ -38,7 +38,8 @@ export function CapitalChart({ series, asOf, announcements, lang }: Props) {
 
   const { steps, keys, preferredKeys, currency, start } = series;
   const end = toT(asOf);
-  const first = toT(steps[0]!.date);
+  // Announcements often precede the gazette entry: the time axis starts early enough to show them.
+  const first = Math.min(toT(steps[0]!.date), ...announcements.map(toT));
   const span = Math.max(60 * DAY, end - first);
   const t0 = first - span * 0.12;
   const x = (iso: string) => PAD.l + ((toT(iso) - t0) / (end - t0)) * (W - PAD.l - PAD.r);
@@ -54,7 +55,8 @@ export function CapitalChart({ series, asOf, announcements, lang }: Props) {
   steps.forEach((s, i) => (line += ` V${y(s.total)} H${xs[i + 1] ?? right}`));
   const ticks = [0.25, 0.5, 0.75, 1].map((f) => (max / 1.12) * f);
   const years: string[] = [];
-  for (let yr = new Date(t0).getUTCFullYear() + 1; Date.UTC(yr, 0, 1) <= end; yr++) years.push(`${yr}-01-01`);
+  const yearStep = Math.max(1, Math.ceil(((end - t0) / (365 * DAY)) / ((W - PAD.l - PAD.r) / 48)));
+  for (let yr = new Date(t0).getUTCFullYear() + 1; Date.UTC(yr, 0, 1) <= end; yr++) if (yr % yearStep === 0) years.push(`${yr}-01-01`);
   const last = steps.at(-1)!;
   const label = `Nominal capital ${start !== null ? `from ${currency} ${compactAmount(start)} ` : ""}to ${currency} ${compactAmount(last.total)} over ${steps.length} published step${steps.length === 1 ? "" : "s"}, up to ${fmt(asOf)}.`;
 
@@ -107,7 +109,7 @@ export function CapitalChart({ series, asOf, announcements, lang }: Props) {
         ))}
         <line x1={right} x2={right} y1={PAD.t - 6} y2={H - PAD.b} className="tl-cursor" />
         {years.map((d) => (
-          <text key={d} x={x(d)} y={H - 6} className="tl-axis">
+          <text key={d} x={x(d)} y={H - 6} className="tl-axis" textAnchor={x(d) > right - 30 ? "end" : "start"}>
             {d.slice(0, 4)}
           </text>
         ))}

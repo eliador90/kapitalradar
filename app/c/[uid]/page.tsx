@@ -51,6 +51,7 @@ export default async function CompanyPage({ params, searchParams }: Props) {
         capitalBefore: e.capitalBefore,
         capitalAfter: e.capitalAfter,
         classesAfter: (e.payload as CapitalChangePayload).classesAfter,
+        currencyBefore: (e.payload as CapitalChangePayload).currencyBefore,
         // Steps outside the assessed window get a hollow marker, not a tier colour.
         tone: !e.status ? null : e.status.state === "not_assessed" ? "none" : statusTone(e.status),
       })),

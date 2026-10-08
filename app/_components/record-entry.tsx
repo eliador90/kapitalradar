@@ -54,7 +54,7 @@ function RuleBars({ hits, config }: { hits: string[]; config: ReleaseConfig }) {
             <span className="rule-track" aria-hidden="true">
               <i className={hard || w < 0 ? "rule-neg" : "rule-pos"} style={{ width: `${hard ? 50 : (Math.abs(w) / scale) * 50}%` }} />
             </span>
-            <span className="rule-weight">{hard ? "blocks" : `${w > 0 ? "+" : "−"}${Math.abs(w).toFixed(1)}`}</span>
+            <span className="rule-weight">{hard ? "blocks" : w === 0 ? "0" : `${w > 0 ? "+" : "−"}${Math.abs(w).toFixed(1)}`}</span>
           </li>
         );
       })}

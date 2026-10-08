@@ -8,6 +8,8 @@ export interface CapitalStepInput {
   capitalBefore: string | null;
   capitalAfter: string | null;
   classesAfter: ShareClass[] | null;
+  /** Previous capital currency when this step changes it: `capitalBefore` is then in that currency. */
+  currencyBefore?: string | null;
   /** Status tone of the step (likely, undecided, increased, confirmed, or none when unassessed); null for non-increases. */
   tone: string | null;
 }
@@ -68,7 +70,8 @@ export function capitalSeries(input: CapitalStepInput[]): CapitalSeries | null {
   const seen = [...new Set(steps.flatMap((s) => s.parts.map((p) => p.key)))];
   const keys = [...seen.filter((k) => !preferred.has(k)), ...seen.filter((k) => preferred.has(k))];
   const first = run[0]!;
-  const start = first.capitalBefore !== null ? Number(first.capitalBefore) : null;
+  // A step that changes the currency states its "before" in the old one: no comparable start.
+  const start = first.capitalBefore !== null && !first.currencyBefore ? Number(first.capitalBefore) : null;
   return { currency, start, steps, keys, preferredKeys: keys.filter((k) => preferred.has(k)), omitted: from };
 }
 

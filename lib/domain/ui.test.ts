@@ -109,10 +109,10 @@ describe("capitalSeries", () => {
   it("draws only the latest currency run and counts what it leaves out", () => {
     const s = capitalSeries([
       step("2025-01-01", "100", "200", { currency: "EUR" }),
-      step("2025-06-01", "200", "300", { currency: "CHF" }),
+      step("2025-06-01", "200", "300", { currency: "CHF", currencyBefore: "EUR" }),
       step("2025-09-01", "300", "400", { currency: "CHF" }),
     ])!;
-    expect([s.currency, s.omitted, s.steps.map((x) => x.total)]).toEqual(["CHF", 1, [300, 400]]);
+    expect([s.currency, s.omitted, s.steps.map((x) => x.total), s.start]).toEqual(["CHF", 1, [300, 400], null]);
   });
   it("is null without a stated capital", () => {
     expect(capitalSeries([step("2026-01-01", null, "1", { currency: null })])).toBeNull();
