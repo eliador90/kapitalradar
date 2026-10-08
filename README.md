@@ -10,6 +10,8 @@ days earlier, 13 of 16 matched rounds).
 
 Live: [kapitalradar.vercel.app](https://kapitalradar.vercel.app). Updated automatically every weekday.
 
+![Kapitalradar: dragging the "Published by" date back in time, filtering the canton map to Zurich, and a company's capital history with its classifier score](docs/kapitalradar.gif)
+
 ## Evaluation
 
 Release v3 (`r6`, parser v4 with the reserves and conversion rules, data as of 6 Oct 2026),
