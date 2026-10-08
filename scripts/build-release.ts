@@ -8,6 +8,9 @@ import { and, eq, gte, lte, sql } from "drizzle-orm";
 import { z } from "zod";
 import { db } from "../db/client";
 import { releaseEval } from "../lib/domain/eval-result";
+import { isCapitalIncrease } from "../lib/domain/events";
+import { matchConfirmations } from "../lib/pipeline/confirmations";
+import { articlesOf, readArticleCache } from "../lib/pipeline/confirmations-cache";
 import { classifications, publications } from "../db/schema";
 import { BACKFILL_START, listCandidateUids, loadCompany, type CompanyBundle } from "../lib/pipeline/candidates";
 import type { StoredClassification } from "../lib/pipeline/classify";
@@ -17,7 +20,6 @@ import { RULES_FINGERPRINT } from "../lib/domain/rule-catalog";
 import { buildRelease, deriveRows, missingGazetteDays, rollback, type ConfirmationRow } from "../lib/pipeline/release";
 import { dbReleaseRepo } from "../lib/pipeline/release-repo";
 
-const CONFIRMATIONS = "eval/confirmations.json";
 const EVAL_RESULT = "eval/results/release-eval.json";
 
 const args = process.argv.slice(2);
@@ -95,7 +97,19 @@ const confirmationRow = z.object({
   reviewedAt: z.string().nullable(),
   matchedPublicationId: z.string().nullable(),
 });
-const confirmations: ConfirmationRow[] = existsSync(CONFIRMATIONS) ? z.array(confirmationRow).parse(JSON.parse(readFileSync(CONFIRMATIONS, "utf8")).confirmations) : [];
+// Confirmations come from startupticker financing news (crawled by `npm run confirmations`),
+// matched to our companies here so they always use this build's company data.
+const confirmations: ConfirmationRow[] = z.array(confirmationRow).parse(
+  matchConfirmations(
+    articlesOf(readArticleCache()),
+    companies.map((c) => ({
+      uid: c.uid,
+      names: c.names,
+      increases: c.capitalChanges.filter((x) => isCapitalIncrease(x.event.payload)).map((x) => ({ publicationId: x.publication.id, publishedAt: x.publication.publishedAt })),
+    })),
+  ),
+);
+console.log(`confirmations: ${confirmations.length} (${confirmations.filter((c) => c.matchConfidence === "high").length} high confidence)`);
 // Validated against the one schema the pages read: a malformed file stops the build here.
 const parsedEval = existsSync(EVAL_RESULT) ? releaseEval.parse(JSON.parse(readFileSync(EVAL_RESULT, "utf8"))) : null;
 // Unreviewed labels never ship: a provisional artifact counts as no eval (the gate fails). Nor

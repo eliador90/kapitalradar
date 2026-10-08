@@ -27,7 +27,8 @@
     "leak-check": "tsx scripts/leak-check.ts",
     "export": "tsx --env-file-if-exists=.env.local scripts/export.ts",
     "prune-releases": "tsx --env-file-if-exists=.env.local scripts/prune-releases.ts",
-    "daily": "tsx --env-file-if-exists=.env.local scripts/daily.ts"
+    "daily": "tsx --env-file-if-exists=.env.local scripts/daily.ts",
+    "confirmations": "tsx scripts/confirmations.ts"
   },
   "dependencies": {
     "@neondatabase/serverless": "^1.2.0",

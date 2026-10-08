@@ -1,6 +1,6 @@
 // The daily job (GitHub Actions, .github/workflows/daily.yml; runnable locally too):
 // ingest the latest gazette days → fetch history for new companies → classify new candidates →
-// build a release (activated only if every gate passes, eval included) → prune old releases.
+// crawl new startupticker financing news → build a release (activated only if every gate passes, eval included) → prune old releases.
 // Any failing step stops the run; the site keeps serving the last good release.
 //
 //   npm run daily -- [--dry-run]
@@ -23,11 +23,12 @@ const steps: [string, string[]][] = [
   ["ingest", ["--start", start, "--end", today]],
   ["history", ["--run", "daily", "--only-new"]],
   ["classify", ["backfill"]],
+  ["confirmations", []],
   ["build-release", ["--release", "auto"]],
   ["prune-releases", []],
 ];
 for (const [script, args] of steps) {
-  const runArgs = dryRun ? (script === "ingest" || script === "history" || script === "prune-releases" ? [...args, "--dry-run"] : null) : args;
+  const runArgs = dryRun ? (script === "ingest" || script === "history" || script === "confirmations" || script === "prune-releases" ? [...args, "--dry-run"] : null) : args;
   if (!runArgs) {
     console.log(`[daily] ${script}: skipped in dry run`);
     continue;

@@ -25,7 +25,7 @@ concurrency:
 jobs:
   daily:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,6 +34,13 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm install -g @anthropic-ai/claude-code
+      # startupticker articles are fetched once and kept between runs (each run saves a new entry
+      # and restores the latest one).
+      - uses: actions/cache@v4
+        with:
+          path: .data/startupticker
+          key: startupticker-${{ github.run_id }}
+          restore-keys: startupticker-
       - run: npm run daily
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
