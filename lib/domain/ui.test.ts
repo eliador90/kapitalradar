@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { CANTON_CODES, parseCanton, SWISS_MAP } from "./cantons";
 import { ALL_SHARES, capitalSeries, compactAmount } from "./capital-series";
 import { evalLine, missesSummary, parseReleaseEval, type ReleaseEval } from "./eval-result";
 import { shareIssuance } from "./issuance";
@@ -119,5 +120,15 @@ describe("capitalSeries", () => {
   });
   it("labels axes compactly", () => {
     expect([850, 1500, 120_000, 1_250_000, 2e9].map(compactAmount)).toEqual(["850", "1.5k", "120k", "1.3M", "2B"]);
+  });
+});
+
+describe("cantons", () => {
+  it("has all 26 cantons with a shape and a label position", () => {
+    expect(CANTON_CODES).toHaveLength(26);
+    for (const c of CANTON_CODES) expect(SWISS_MAP.cantons[c]!.d.startsWith("M")).toBe(true);
+  });
+  it("accepts only known canton codes", () => {
+    expect([parseCanton("zh"), parseCanton("XX"), parseCanton(["ZH"]), parseCanton(undefined)]).toEqual(["ZH", null, null, null]);
   });
 });

@@ -85,6 +85,22 @@ export async function readDailySeries(release: ReleaseMeta, asOf: string): Promi
   return [...byDay.values()].sort((a, b) => a.d.localeCompare(b.d));
 }
 
+/**
+ * Likely financings per canton published in [from, asOf], for the radar map. Like the daily
+ * series, bounded by asOf in SQL so nothing later reaches the page; cancellations aren't applied.
+ */
+export async function readCantonCounts(release: ReleaseMeta, asOf: string, from: string): Promise<Record<string, number>> {
+  const r = release.id;
+  const canton = sql<string | null>`${events.payload}->>'canton'`;
+  const rows = await db()
+    .select({ canton, n: sql<number>`count(*)::int` })
+    .from(assessments)
+    .innerJoin(events, eq(events.id, assessments.eventId))
+    .where(and(eq(assessments.releaseId, r), eq(assessments.tier, "likely_financing"), visibleAt(events, r, asOf), gte(events.publishedAt, from)))
+    .groupBy(canton);
+  return Object.fromEntries(rows.filter((x) => x.canton).map((x) => [x.canton!, x.n]));
+}
+
 type EventRow = typeof events.$inferSelect & { publicationNumber: string; language: string };
 type ConfirmationRow = typeof confirmations.$inferSelect;
 

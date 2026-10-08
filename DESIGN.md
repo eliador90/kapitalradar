@@ -47,6 +47,17 @@ Company names, legal forms and excerpts keep their original language with a `lan
 8 px grid. Max content width 1240 px; reading pages (/methodology, /misses) use a 72ch column.
 Touch targets ≥ 40 px high. 16 px side gutter on phones; no horizontal page scroll at 375 px.
 
+## Instruments
+
+- **Timeline** (feed): daily capital increases by tier, drawn only up to `asOf`; red cursor,
+  hatch for days not yet published.
+- **Scope** (feed): likely financings per canton over the 30 days to `asOf` on the Natural Earth
+  1:10m canton shapes (public domain, credited under the map). The CSS sweep is on by default,
+  can be switched off (remembered per browser) and never runs under reduced motion. Clicking a
+  canton filters the feed (`?c=ZH`).
+- **Capital chart** (company): nominal capital per step, stacked by share class when the classes
+  add up, ending at `asOf`; score dial and rule bars per assessed step.
+
 ## Formats (DS3)
 
 `CHF 132’231.38` (typographic apostrophe, cents dropped when zero) · `29 Sep 2026` ·
