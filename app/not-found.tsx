@@ -9,8 +9,10 @@ import { REQUEST_PATH_HEADER } from "./_lib/request-path";
 // One 404 for an unknown UID and for a UID with nothing published by asOf, identical in status
 // and body: the UID only, no name, no count (eng delta A11, design ST1).
 export default async function NotFound() {
-  const release = await getRelease();
+  // Request headers first: this makes the page dynamic, so the build never prerenders it (and
+  // never needs the database).
   const path = new URL((await headers()).get(REQUEST_PATH_HEADER) ?? "/", "http://x.invalid");
+  const release = await getRelease();
   const match = /^\/c\/([^/]+)\/?$/.exec(path.pathname);
   const uid = match ? uidFromPathSegment(match[1]!) : null;
   const { asOf, isDefault } = resolveAsOf(path.searchParams.get("asof") ?? undefined, release);

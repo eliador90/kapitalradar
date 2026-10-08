@@ -8,7 +8,7 @@ scores which increases look like a financing round. It serves the result as a da
 can rewind: the round is often in the gazette before the press release (spike: median 10.5
 days earlier, 13 of 16 matched rounds).
 
-Live (private preview): [kapitalradar.vercel.app](https://kapitalradar.vercel.app). Updated automatically every weekday.
+Live: [kapitalradar.vercel.app](https://kapitalradar.vercel.app). Updated automatically every weekday.
 
 ## Evaluation
 
@@ -54,8 +54,8 @@ rules, model, prompt or thresholds change; the gate refuses to publish otherwise
 
 **Manual (backfill, first setup, or debugging):**
 
-Prerequisites: Node 24, `.env.local` with `DATABASE_URL` (Neon), and for the app
-`PREVIEW_PASSWORD` (≥ 20 random characters) and `PREVIEW_COOKIE_SECRET` (≥ 32).
+Prerequisites: Node 24 and `.env.local` with `DATABASE_URL` (Neon owner role for the scripts;
+the website uses a read-only role).
 
 ```bash
 npm ci

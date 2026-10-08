@@ -1,6 +1,5 @@
-// Server-side data readers (T10, T14, T15, T17). Every reader checks the preview gate first
-// (eng delta V9: the proxy is not a security boundary) and reads one release, resolved once per
-// request by the caller. Rows are filtered by release_id and published_at <= asOf (db/predicates).
+// Server-side data readers (T10, T14, T15, T17). Each reads one release, resolved once per
+// request by the caller, through the read-only database role. Rows are filtered by release_id and published_at <= asOf (db/predicates).
 import { and, eq, gte, inArray, lte, or } from "drizzle-orm";
 import { db } from "../../db/client";
 import { visibleAt } from "../../db/predicates";
@@ -10,7 +9,6 @@ import { isCapitalIncrease } from "../domain/events";
 import { shareIssuance, type Issuance, type IssuancePayload } from "../domain/issuance";
 import type { EventMatch, ReleaseConfig, Tier } from "../domain/schemas";
 import { deriveStatus, isConfirmed, type ConfirmationLink, type Status } from "../domain/status";
-import { assertPreviewAccess } from "../preview-gate";
 import { correctedAt, nameAt, visibleEvents } from "./asof-view";
 
 export interface ReleaseMeta {
@@ -23,7 +21,6 @@ export interface ReleaseMeta {
 
 /** The live release (callers wrap this in React cache() so one request sees one release). */
 export async function readCurrentRelease(): Promise<ReleaseMeta | null> {
-  await assertPreviewAccess();
   const [row] = await db()
     .select({ id: releases.id, snapshotDate: releases.snapshotDate, backfillStart: releases.backfillStart, config: releases.config, evalResult: releases.evalResult })
     .from(currentRelease)
@@ -63,7 +60,6 @@ const issuanceOf = (e: EventRow) => shareIssuance({ ...(e.payload as IssuancePay
 
 /** Capital increases published in [start, end] (end already capped at asOf), newest first. */
 export async function readFeedWeek(release: ReleaseMeta, asOf: string, start: string, end: string): Promise<FeedRow[]> {
-  await assertPreviewAccess();
   const r = release.id;
   // A cancellation is published on or after the entry it cancels, so start bounds both queries.
   const rows = await db()
@@ -160,7 +156,6 @@ export interface CompanyRecord {
  * that a company raises later (eng delta A11).
  */
 export async function readCompany(release: ReleaseMeta, uid: string, asOf: string): Promise<CompanyRecord | null> {
-  await assertPreviewAccess();
   const r = release.id;
   const rows = await db()
     .select({ e: events, pub: { number: publications.publicationNumber, language: publications.language } })

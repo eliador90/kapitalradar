@@ -5,7 +5,7 @@
 // curated rewind link, release id/date) is the named allowlist below.
 //
 //   npm run leak-check -- --base http://localhost:3100 [--companies 40]
-// Needs DATABASE_URL (same database as the server) and PREVIEW_PASSWORD.
+// Needs DATABASE_URL (same database as the server).
 import { and, eq, sql } from "drizzle-orm";
 import { db } from "../db/client";
 import { companyNames, currentRelease, events, publications, releases } from "../db/schema";
@@ -29,11 +29,8 @@ if (!rel) throw new Error("no current release");
 // Allowlist: release metadata that renders identically at every asOf.
 const allowedDates = new Set([formatDate(rel.snapshot), formatDate(featuredRewind.asOf)]);
 
-const login = await fetch(`${BASE}/preview/login`, { method: "POST", body: new URLSearchParams({ password: process.env.PREVIEW_PASSWORD ?? "", next: "/" }), redirect: "manual" });
-const cookie = login.headers.get("set-cookie")?.split(";")[0];
-if (!cookie) throw new Error("login failed: check PREVIEW_PASSWORD");
 const get = async (path: string) => {
-  const res = await fetch(BASE + path, { headers: { cookie }, redirect: "manual" });
+  const res = await fetch(BASE + path, { redirect: "manual" });
   return { status: res.status, body: await res.text() };
 };
 
