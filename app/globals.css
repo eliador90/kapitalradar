@@ -93,6 +93,40 @@ p { margin: 0 0 14px; }
 .tl-cursor { stroke: var(--time); stroke-width: 2; }
 .tl-cursor-head { fill: var(--time); }
 
+/* Scope: the canton map with the sweep */
+.scope-row { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 16px; align-items: start; }
+.scope-row .status-legend { grid-template-columns: 1fr; }
+.radar { background: var(--panel); border: 1px solid var(--rule); padding: 12px; }
+.radar-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 6px; }
+.radar-head h2 { margin: 0; }
+.toggle { white-space: nowrap; font: 500 12px var(--font-mono); min-height: 32px; padding: 4px 10px; background: none; border: 1px solid var(--rule); color: var(--ink-muted); cursor: pointer; }
+.toggle[aria-pressed="true"] { color: var(--sweep); border-color: var(--sweep); }
+.radar-svg { width: 100%; height: auto; display: block; }
+.radar-ring { fill: none; stroke: var(--grid); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.map-land { fill: #0f1d26; }
+.canton { fill: var(--likely); fill-opacity: 0; stroke: none; cursor: pointer; transition: fill-opacity .2s; }
+.canton:not([data-hot]) { fill: var(--sweep); }
+a:hover > .canton, a:focus-visible > .canton { fill: var(--sweep); fill-opacity: .18; }
+.canton.is-selected { fill: var(--sweep); fill-opacity: .28; }
+.canton.is-dimmed { fill-opacity: .04; }
+.radar-svg a:focus-visible { outline: none; }
+.map-inner { fill: none; stroke: #2d4a5c; stroke-width: 1; pointer-events: none; vector-effect: non-scaling-stroke; }
+.map-outline { fill: none; stroke: var(--sweep); stroke-width: 1.5; opacity: .85; pointer-events: none; vector-effect: non-scaling-stroke; }
+.sweep { transform-origin: 500px 320px; animation: sweep 4s linear infinite; pointer-events: none; }
+.sweep-beam { stroke: var(--sweep); stroke-width: 1.5; opacity: .6; }
+@keyframes sweep { to { transform: rotate(360deg); } }
+.blip { fill: var(--likely); pointer-events: none; animation: blip 4s linear infinite; }
+@keyframes blip { 0% { opacity: 1; r: 4.6px; } 70% { opacity: .3; r: 3.6px; } 100% { opacity: .3; } }
+:root[data-sweep="off"] .sweep { display: none; }
+:root[data-sweep="off"] .blip { animation: none; opacity: .9; }
+@media (prefers-reduced-motion: reduce) { .sweep { display: none; } .blip { opacity: .9; } }
+.canton-label { fill: var(--ink-muted); font: 600 17px var(--font-display); letter-spacing: .04em; pointer-events: none; }
+.canton-label.is-hot { fill: var(--ink); }
+.radar-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 4px 14px; margin: 6px 0 0; font: 12px/18px var(--font-mono); color: var(--ink-muted); }
+.canton-chip { display: inline-flex; align-items: center; min-height: 32px; padding: 2px 10px; border: 1px solid var(--sweep); color: var(--sweep); text-decoration: none; }
+.map-credit { font-size: 11px; }
+@media (max-width: 899px) { .scope-row { grid-template-columns: 1fr; } .scope-row .status-legend { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); } }
+
 /* Status explanations */
 .status-legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px 22px; margin: 0; padding: 12px; border: 1px solid var(--grid); }
 .status-legend dt { font: 600 13px var(--font-display); letter-spacing: .04em; display: flex; align-items: center; gap: 8px; }

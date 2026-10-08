@@ -19,14 +19,14 @@ interface Props {
   asOf: string;
   backfillStart: string;
   snapshotDate: string;
-  /** Feed filter to keep in the URL. */
-  filter: string | null;
+  /** Feed query parameters to keep in the URL (status filter, canton). */
+  keep: Record<string, string | null>;
 }
 
 const H = 150;
 const PAD = { l: 34, r: 8, t: 12, b: 22 };
 
-export function Timeline({ series, asOf, backfillStart, snapshotDate, filter }: Props) {
+export function Timeline({ series, asOf, backfillStart, snapshotDate, keep }: Props) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
   const [cursor, setCursor] = useState(asOf);
@@ -56,7 +56,7 @@ export function Timeline({ series, asOf, backfillStart, snapshotDate, filter }: 
   const go = (iso: string) => {
     const q = new URLSearchParams();
     if (iso !== snapshotDate) q.set("asof", iso);
-    if (filter) q.set("s", filter);
+    for (const [k, v] of Object.entries(keep)) if (v) q.set(k, v);
     const s = q.toString();
     startTransition(() => router.push(s ? `/?${s}` : "/", { scroll: false }));
   };

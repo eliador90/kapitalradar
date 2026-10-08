@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { readDailySeries, readFeedWeek } from "../lib/data/readers";
+import { readCantonCounts, readDailySeries, readFeedWeek } from "../lib/data/readers";
 import { resolveAsOf } from "../lib/domain/asof";
-import { maxDate } from "../lib/domain/dates";
+import { MAP_WINDOW_DAYS, parseCanton } from "../lib/domain/cantons";
+import { addDays, maxDate } from "../lib/domain/dates";
 import { formatDateRange } from "../lib/domain/format";
 import { FEED_FILTERS, feedFilterOf, feedFilterParam, feedFilterPhrase, parseFeedFilters } from "../lib/domain/status";
 import { nextWeekAsOf, previousWeekAsOf, weekOf } from "../lib/domain/week";
 import { LedgerRow } from "./_components/ledger-row";
 import { Masthead } from "./_components/masthead";
+import { RadarMap } from "./_components/radar-map";
 import { StatusLegend } from "./_components/status-legend";
 import { Timeline } from "./_components/timeline";
 import { canonicalRedirect, getRelease, hrefWith } from "./_lib/release";
@@ -22,14 +24,15 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
   const release = await getRelease();
   const { filters } = parseFeedFilters(sp.s);
   const s = feedFilterParam(filters);
+  const c = parseCanton(sp.c);
   const resolved = resolveAsOf(sp.asof, release);
-  if (resolved.notice === "malformed") redirect(hrefWith("/", { s, notice: "malformed" }));
+  if (resolved.notice === "malformed") redirect(hrefWith("/", { s, c, notice: "malformed" }));
   const notice = resolved.notice ?? (sp.notice === "malformed" ? "malformed" : null);
   const { asOf, isDefault } = resolved;
   const asof = isDefault ? null : asOf;
   const keepNotice = sp.notice === "malformed" && !sp.asof ? "malformed" : null;
   if (!resolved.notice) {
-    const canonical = canonicalRedirect("/", sp, { asof, s, notice: keepNotice });
+    const canonical = canonicalRedirect("/", sp, { asof, s, c, notice: keepNotice });
     if (canonical) redirect(canonical);
   }
 
@@ -37,23 +40,36 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
   const week = weekOf(asOf);
   const start = maxDate(week.start, release.backfillStart);
   const range = formatDateRange(start, week.end);
-  const [rows, series] = await Promise.all([readFeedWeek(release, asOf, start, week.end), readDailySeries(release, asOf)]);
+  const mapFrom = maxDate(addDays(asOf, 1 - MAP_WINDOW_DAYS), release.backfillStart);
+  const [weekRows, series, cantonCounts] = await Promise.all([
+    readFeedWeek(release, asOf, start, week.end),
+    readDailySeries(release, asOf),
+    readCantonCounts(release, asOf, mapFrom),
+  ]);
+  const rows = c ? weekRows.filter((r) => r.canton === c) : weekRows;
   const shown = rows.filter((r) => filters.includes(feedFilterOf(r.status, r.tier)));
   const others = rows.length - shown.length;
   const prev = previousWeekAsOf(asOf, release.backfillStart);
   const next = nextWeekAsOf(asOf, release.snapshotDate);
-  const weekHref = (d: string) => hrefWith("/", { asof: d === release.snapshotDate ? null : d, s });
+  const weekHref = (d: string) => hrefWith("/", { asof: d === release.snapshotDate ? null : d, s, c });
+  const cantonHref = (canton: string | null) => `${hrefWith("/", { asof, s, c: canton })}#radar`;
   const companyHref = (uid: string) => hrefWith(`/c/${uid}`, { asof });
   const filterLabel = feedFilterPhrase(filters, "and");
 
   return (
     <>
-      <Masthead release={release} asOf={asOf} isDefault={isDefault} notice={notice} action="/" keep={s ? { s: [s] } : {}} backQuery={{ asof, s }} />
-      <Timeline series={series} asOf={asOf} backfillStart={release.backfillStart} snapshotDate={release.snapshotDate} filter={s} />
-      <StatusLegend tau={release.config.tau} tauLow={release.config.tauLow} />
+      <Masthead release={release} asOf={asOf} isDefault={isDefault} notice={notice} action="/" keep={{ ...(s ? { s: [s] } : {}), ...(c ? { c: [c] } : {}) }} backQuery={{ asof, s, c }} />
+      <Timeline series={series} asOf={asOf} backfillStart={release.backfillStart} snapshotDate={release.snapshotDate} keep={{ s, c }} />
+      <div className="scope-row">
+        <RadarMap counts={cantonCounts} from={mapFrom} asOf={asOf} selected={c} hrefFor={cantonHref} />
+        <StatusLegend tau={release.config.tau} tauLow={release.config.tauLow} />
+      </div>
       <main id="record">
         <div className="window-heading">
-          <h1 className="window-title">Published {range}</h1>
+          <h1 className="window-title">
+            Published {range}
+            {c && <span className="muted"> · canton {c}</span>}
+          </h1>
           <span className="mono muted">
             {plural(rows.length, "capital increase", "capital increases")} · {shown.length} shown
           </span>
@@ -61,6 +77,7 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
 
         <form method="get" action="/">
           {asof && <input type="hidden" name="asof" value={asof} />}
+          {c && <input type="hidden" name="c" value={c} />}
           <details className="filters" open>
             <summary>Showing: {filterLabel} ▾</summary>
             <fieldset className="filter-set">
@@ -83,7 +100,7 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
         ) : shown.length === 0 ? (
           <p className="empty">
             No {feedFilterPhrase(filters)} among the {plural(rows.length, "capital increase", "capital increases")} published {range}.{" "}
-            <Link href={hrefWith("/", { asof, s: "all" })}>Show all {rows.length}</Link>
+            <Link href={hrefWith("/", { asof, s: "all", c })}>Show all {rows.length}</Link>
           </p>
         ) : (
           <table className="ledger" role="table">
@@ -126,7 +143,7 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
 
         {others > 0 && shown.length > 0 && (
           <p className="others">
-            <Link href={hrefWith("/", { asof, s: "all" })}>{plural(others, "other capital increase", "other capital increases")} published this week ▸</Link>
+            <Link href={hrefWith("/", { asof, s: "all", c })}>{plural(others, "other capital increase", "other capital increases")} published this week ▸</Link>
           </p>
         )}
 
