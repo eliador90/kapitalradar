@@ -1,6 +1,6 @@
 // Server-side data readers (T10, T14, T15, T17). Each reads one release, resolved once per
 // request by the caller, through the read-only database role. Rows are filtered by release_id and published_at <= asOf (db/predicates).
-import { and, eq, gte, inArray, lte, or } from "drizzle-orm";
+import { and, eq, gte, inArray, lte, or, sql } from "drizzle-orm";
 import { db } from "../../db/client";
 import { visibleAt } from "../../db/predicates";
 import { assessments, classifications, companyNames, companySources, confirmations, currentRelease, events, publications, releases } from "../../db/schema";
@@ -48,7 +48,41 @@ export interface FeedRow {
   issuance: Issuance;
   status: Status;
   tier: Tier | null;
+  /** Claude's score; null when the step wasn't sent to the classifier. Not a probability. */
+  score: number | null;
   announcedRound: { url: string; statedAmount: string | null; statedCurrency: string | null } | null;
+}
+
+/** One day of the timeline: assessed capital increases published that day, by tier. */
+export interface DayCount {
+  d: string;
+  likely: number;
+  undecided: number;
+  increased: number;
+}
+
+/**
+ * Daily counts for the timeline, from the backfill start to asOf and never beyond: later days
+ * are not sent to the browser at all, so dragging back in time can't reveal the future (A11/A12).
+ * Cancelled entries are not subtracted here; the feed itself applies cancellations.
+ */
+export async function readDailySeries(release: ReleaseMeta, asOf: string): Promise<DayCount[]> {
+  const rows = (
+    await db().execute(sql`
+      select e.published_at::text as d, a.tier, count(*)::int as n
+      from assessments a join events e on e.id = a.event_id
+      where a.release_id = ${release.id} and e.published_at >= ${release.backfillStart} and e.published_at <= ${asOf}
+      group by 1, 2`)
+  ).rows as { d: string; tier: Tier; n: number }[];
+  const byDay = new Map<string, DayCount>();
+  for (const r of rows) {
+    const day = byDay.get(r.d) ?? { d: r.d, likely: 0, undecided: 0, increased: 0 };
+    if (r.tier === "likely_financing") day.likely += r.n;
+    else if (r.tier === "abstain") day.undecided += r.n;
+    else day.increased += r.n;
+    byDay.set(r.d, day);
+  }
+  return [...byDay.values()].sort((a, b) => a.d.localeCompare(b.d));
 }
 
 type EventRow = typeof events.$inferSelect & { publicationNumber: string; language: string };
@@ -73,13 +107,18 @@ export async function readFeedWeek(release: ReleaseMeta, asOf: string, start: st
   const ids = visible.map((e) => e.id);
   const uids = [...new Set(visible.map((e) => e.companyUid))];
   const [assess, names, confs] = await Promise.all([
-    db().select().from(assessments).where(and(eq(assessments.releaseId, r), inArray(assessments.eventId, ids))),
+    db()
+      .select({ a: assessments, score: classifications.score })
+      .from(assessments)
+      .leftJoin(classifications, eq(classifications.id, assessments.classificationId))
+      .where(and(eq(assessments.releaseId, r), inArray(assessments.eventId, ids))),
     db().select().from(companyNames).where(and(visibleAt(companyNames, r, asOf), inArray(companyNames.companyUid, uids))),
     db().select().from(confirmations).where(and(visibleAt(confirmations, r, asOf), inArray(confirmations.matchedEventId, ids))),
   ]);
   return visible
     .map((e) => {
-      const a = assess.find((x) => x.eventId === e.id);
+      const found = assess.find((x) => x.a.eventId === e.id);
+      const a = found?.a;
       const cs = confs.filter((c) => c.matchedEventId === e.id);
       const accepted = cs.find((c) => isConfirmed(linkOf(c)));
       const payload = e.payload as { canton?: string | null; purpose?: string };
@@ -100,6 +139,7 @@ export async function readFeedWeek(release: ReleaseMeta, asOf: string, start: st
         sharesAfter: e.sharesAfter,
         issuance: issuanceOf(e),
         tier: a?.tier ?? null,
+        score: found?.score ?? null,
         status: deriveStatus(a?.tier ?? null, cs.map(linkOf)),
         announcedRound: accepted ? { url: accepted.sourceUrl, statedAmount: accepted.statedAmount, statedCurrency: accepted.statedCurrency } : null,
       };

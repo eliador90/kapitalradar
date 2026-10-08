@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { readFeedWeek } from "../lib/data/readers";
+import { readDailySeries, readFeedWeek } from "../lib/data/readers";
 import { resolveAsOf } from "../lib/domain/asof";
 import { maxDate } from "../lib/domain/dates";
 import { formatDateRange } from "../lib/domain/format";
@@ -8,6 +8,8 @@ import { FEED_FILTERS, feedFilterOf, feedFilterParam, feedFilterPhrase, parseFee
 import { nextWeekAsOf, previousWeekAsOf, weekOf } from "../lib/domain/week";
 import { LedgerRow } from "./_components/ledger-row";
 import { Masthead } from "./_components/masthead";
+import { StatusLegend } from "./_components/status-legend";
+import { Timeline } from "./_components/timeline";
 import { canonicalRedirect, getRelease, hrefWith } from "./_lib/release";
 
 type SearchParams = Promise<Record<string, string | string[] | undefined>>;
@@ -35,7 +37,7 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
   const week = weekOf(asOf);
   const start = maxDate(week.start, release.backfillStart);
   const range = formatDateRange(start, week.end);
-  const rows = await readFeedWeek(release, asOf, start, week.end);
+  const [rows, series] = await Promise.all([readFeedWeek(release, asOf, start, week.end), readDailySeries(release, asOf)]);
   const shown = rows.filter((r) => filters.includes(feedFilterOf(r.status, r.tier)));
   const others = rows.length - shown.length;
   const prev = previousWeekAsOf(asOf, release.backfillStart);
@@ -47,6 +49,8 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
   return (
     <>
       <Masthead release={release} asOf={asOf} isDefault={isDefault} notice={notice} action="/" keep={s ? { s: [s] } : {}} backQuery={{ asof, s }} />
+      <Timeline series={series} asOf={asOf} backfillStart={release.backfillStart} snapshotDate={release.snapshotDate} filter={s} />
+      <StatusLegend tau={release.config.tau} tauLow={release.config.tauLow} />
       <main id="record">
         <div className="window-heading">
           <h1 className="window-title">Published {range}</h1>
@@ -114,7 +118,7 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
             </thead>
             <tbody role="rowgroup">
               {shown.map((r) => (
-                <LedgerRow key={r.eventId} row={r} companyHref={companyHref(r.companyUid)} />
+                <LedgerRow key={r.eventId} row={r} companyHref={companyHref(r.companyUid)} tau={release.config.tau} />
               ))}
             </tbody>
           </table>

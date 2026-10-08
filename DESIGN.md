@@ -3,40 +3,49 @@
 Source of truth for the UI tokens (design review DS2, D6). `app/globals.css` implements them;
 change both together.
 
-## Direction: the record is the signature
+## Direction: a radar console over the record (redesign, 2026-10-08)
 
-White paper, ink, hairline rules. No boxes, no shadows, no radius, no motion, no tracked
-micro-labels. Red marks only the "Published by" boundary: the date control and the `asOf` cut
-line. No Swiss cross, federal red or federal typography: the site must never pass for the SHAB.
+Blue-black scope glass, phosphor for the instrument, hairline grid, square corners, no shadows.
+The record stays the substance: every visual (the timeline, later the map and the cap-table
+chart) is an instrument reading the same release, and nothing draws data published after
+`asOf`. Red marks only the "Published by" boundary: the timeline cursor, the date control and
+the cut line. No Swiss cross, federal red or federal typography: the site must never pass for
+the SHAB. Motion is decorative only and stops under `prefers-reduced-motion`.
 
 ## Colour tokens
 
 | Token | Value | Contrast on paper | Use |
 |---|---|---|---|
-| `--paper` | `#FFFFFF` | — | page background |
-| `--ink` | `#1A1A1A` | 17.4:1 | text, rules under table headers, focus ring, pips |
-| `--ink-muted` | `#5E5A52` | 6.9:1 | secondary lines (canton · purpose, coverage) |
-| `--rule` | `#D8D2C4` | never text | hairlines between rows and entries |
-| `--time` | `#A61B1B` | 7.5:1 | "Published by" control and the `asOf` cut line; always paired with text |
-| `--focus` | `#1A1A1A` | — | 2 px ring at 2 px offset |
+| `--paper` | `#070D12` | — | page background |
+| `--panel` | `#0B141B` | — | instrument panels (timeline, feed) |
+| `--grid` | `#142430` | never text | grid lines, row hairlines, meter track |
+| `--rule` | `#213645` | never text | panel borders, rules under table headers |
+| `--ink` | `#D5E0E5` | 14.5:1 | text |
+| `--ink-muted` | `#8AA1AB` | 7.2:1 | secondary lines, axis labels |
+| `--sweep` | `#4FE0C3` | 11.9:1 | the instrument: wordmark accent, live state, confirmed rounds, focus ring |
+| `--likely` | `#FFB547` | 11.1:1 | likely financing |
+| `--undecided` | `#A58BFF` | 7.2:1 | undecided (a different hue from amber, not a shade of it) |
+| `--increased` | `#5F7C8B` | bars only | capital increased; recedes behind the two signal tones |
+| `--time` | `#FF5B4F` | 6.4:1 | "Published by" cursor, control and cut line; always paired with text |
 
-Colour never encodes status: status is pips plus a label (DS1).
+Colour reinforces status but never carries it alone: pips plus a label stay (DS1), and the
+status legend under the timeline explains each tier with the release's own thresholds.
 
 ## Type
 
 | Role | Face | Size / line |
 |---|---|---|
-| Body, UI | IBM Plex Sans 400/600 | 16/24 (16 px minimum for body) |
-| Secondary lines | IBM Plex Sans 400 | 14/20 |
-| Amounts, dates, SHAB numbers | IBM Plex Mono 400, `tabular-nums` | 15/24 |
-| Page headline (one size) | Source Serif 4 400, upright, never italic | 32/40 |
+| Body, UI | IBM Plex Sans 400/500/600 | 15/23 |
+| Secondary lines | IBM Plex Sans 400 | 13.5/20 |
+| Amounts, dates, SHAB numbers, metadata | IBM Plex Mono 400–600, `tabular-nums` | 14/22 |
+| Wordmark, headings, tracked labels | IBM Plex Sans Condensed 600/700 | 26 / 30 / 11 caps |
 
 Company names, legal forms and excerpts keep their original language with a `lang` attribute.
 
 ## Space and geometry
 
-8 px grid. Max content width 1120 px; reading pages (/methodology, /misses) use a 72ch column.
-Ledger rows ≥ 48 px; touch targets ≥ 44 × 44 px. 16 px side gutter on phones.
+8 px grid. Max content width 1240 px; reading pages (/methodology, /misses) use a 72ch column.
+Touch targets ≥ 40 px high. 16 px side gutter on phones; no horizontal page scroll at 375 px.
 
 ## Formats (DS3)
 
