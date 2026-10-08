@@ -67,13 +67,13 @@ export interface DayCount {
  * Cancelled entries are not subtracted here; the feed itself applies cancellations.
  */
 export async function readDailySeries(release: ReleaseMeta, asOf: string): Promise<DayCount[]> {
-  const rows = (
-    await db().execute(sql`
-      select e.published_at::text as d, a.tier, count(*)::int as n
-      from assessments a join events e on e.id = a.event_id
-      where a.release_id = ${release.id} and e.published_at >= ${release.backfillStart} and e.published_at <= ${asOf}
-      group by 1, 2`)
-  ).rows as { d: string; tier: Tier; n: number }[];
+  const r = release.id;
+  const rows = await db()
+    .select({ d: events.publishedAt, tier: assessments.tier, n: sql<number>`count(*)::int` })
+    .from(assessments)
+    .innerJoin(events, eq(events.id, assessments.eventId))
+    .where(and(eq(assessments.releaseId, r), visibleAt(events, r, asOf), gte(events.publishedAt, release.backfillStart)))
+    .groupBy(events.publishedAt, assessments.tier);
   const byDay = new Map<string, DayCount>();
   for (const r of rows) {
     const day = byDay.get(r.d) ?? { d: r.d, likely: 0, undecided: 0, increased: 0 };

@@ -27,7 +27,7 @@ export function StatusLegend({ tau, tauLow }: { tau: number; tauLow: number }) {
           <i className="sw sw-increased" aria-hidden="true" />
           Capital increased
         </dt>
-        <dd>No sign of a financing round: a score below {t(tauLow)}. Typical causes are converted loans, assets contributed in kind, reserves turned into capital or a conversion to an AG.</dd>
+        <dd>No sign of a financing round: the pre-filter found nothing to send to Claude, or Claude scored it below {t(tauLow)}. Typical causes are converted loans, assets contributed in kind, reserves turned into capital or a conversion to an AG.</dd>
       </div>
       <div>
         <dt>

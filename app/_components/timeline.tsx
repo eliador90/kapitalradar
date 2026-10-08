@@ -43,6 +43,8 @@ export function Timeline({ series, asOf, backfillStart, snapshotDate, filter }: 
   }, []);
   const drag = useRef(false);
   const keyTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const cancelKeyNav = () => { if (keyTimer.current) clearTimeout(keyTimer.current); keyTimer.current = null; };
+  useEffect(() => cancelKeyNav, []);
 
   const n = Math.round((toT(snapshotDate) - toT(backfillStart)) / DAY) + 1;
   const bw = (W - PAD.l - PAD.r) / n;
@@ -67,6 +69,8 @@ export function Timeline({ series, asOf, backfillStart, snapshotDate, filter }: 
   const ci = idx(cursor);
   const shown = idx(asOf); // bars exist up to the rendered date only
   const cx = PAD.l + (ci + 0.5) * bw;
+  // The hatch starts after the last drawn day: past the cursor, or past asOf while a later date loads.
+  const hx = PAD.l + (Math.min(shown, ci) + 1) * bw;
   const monday = (iso: string) => { const t = toT(iso); const wd = (new Date(t).getUTCDay() + 6) % 7; return toISO(t - wd * DAY); };
   const weekFrom = Math.max(0, idx(monday(cursor)));
   const months: { x: number; label: string }[] = [];
@@ -95,16 +99,30 @@ export function Timeline({ series, asOf, backfillStart, snapshotDate, filter }: 
         aria-valuemax={toT(snapshotDate)}
         aria-valuenow={toT(cursor)}
         aria-valuetext={fmt(cursor)}
-        onPointerDown={(e) => { drag.current = true; e.currentTarget.setPointerCapture(e.pointerId); setCursor(dayAt(e.clientX)); }}
+        onPointerDown={(e) => {
+          if (e.button !== 0) return;
+          cancelKeyNav();
+          drag.current = true;
+          e.currentTarget.setPointerCapture(e.pointerId);
+          setCursor(dayAt(e.clientX));
+        }}
         onPointerMove={(e) => { if (drag.current) setCursor(dayAt(e.clientX)); }}
-        onPointerUp={(e) => { if (!drag.current) return; drag.current = false; const d = dayAt(e.clientX); setCursor(d); if (d !== asOf) go(d); }}
+        onPointerUp={(e) => {
+          if (!drag.current) return;
+          drag.current = false;
+          const d = dayAt(e.clientX);
+          setCursor(d);
+          // While another date is loading, going back to the rendered one still has to navigate.
+          if (d !== asOf || pending) go(d);
+        }}
+        onPointerCancel={() => { drag.current = false; setCursor(asOf); }}
         onKeyDown={(e) => {
           const step = { ArrowLeft: -1, ArrowRight: 1 }[e.key];
           if (!step) return;
           e.preventDefault();
           const d = clamp(toISO(toT(cursor) + step * (e.shiftKey ? 7 : 1) * DAY));
           setCursor(d);
-          if (keyTimer.current) clearTimeout(keyTimer.current);
+          cancelKeyNav();
           keyTimer.current = setTimeout(() => go(d), 450);
         }}
       >
@@ -138,9 +156,9 @@ export function Timeline({ series, asOf, backfillStart, snapshotDate, filter }: 
             </g>
           );
         })}
-        <rect x={cx} y={PAD.t} width={Math.max(0, W - PAD.r - cx)} height={H - PAD.t - PAD.b} fill="url(#tl-hatch)" />
-        {ci < n - 1 && (
-          <text x={cx > W - 220 ? cx - 8 : cx + 8} y={PAD.t + 14} className="tl-axis" textAnchor={cx > W - 220 ? "end" : "start"}>
+        <rect x={hx} y={PAD.t} width={Math.max(0, W - PAD.r - hx)} height={H - PAD.t - PAD.b} fill="url(#tl-hatch)" />
+        {Math.min(shown, ci) < n - 1 && (
+          <text x={hx > W - 220 ? hx - 8 : hx + 8} y={PAD.t + 14} className="tl-axis" textAnchor={hx > W - 220 ? "end" : "start"}>
             not yet published
           </text>
         )}
