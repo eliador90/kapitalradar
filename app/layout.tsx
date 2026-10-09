@@ -11,7 +11,6 @@ const condensed = IBM_Plex_Sans_Condensed({ subsets: ["latin", "latin-ext"], wei
 export const metadata: Metadata = {
   title: "Kapitalradar",
   description: "Swiss capital increases, classified with evidence from the official gazette.",
-  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

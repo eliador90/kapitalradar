@@ -18,5 +18,6 @@ until the SHAB reuse terms are confirmed (Open Question 1).
 | `model_id`, `prompt_version` | Classifier identity for assessed rows |
 
 Excluded: gazette text (including the purpose), person data, evaluation labels (dev or
-holdout). Scores are not calibrated probabilities. Coverage: AG capital changes published from
+holdout), and confirmations: the site's "Confirmed round" status is matched automatically from
+startupticker.ch financing news (see the methodology) and is not part of the export. Scores are not calibrated probabilities. Coverage: AG capital changes published from
 the release's backfill start to its snapshot, plus each such company's earlier publications.

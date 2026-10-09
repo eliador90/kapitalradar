@@ -177,6 +177,5 @@
       "reason": "Classifier score 0.04, below the undecided threshold (0.35); rules score below 1.0"
     }
   ],
-  "confirmationSource": "Confirmed rounds come from hand-checked announcements.",
   "knownIssues": []
 }

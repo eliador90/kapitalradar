@@ -48,7 +48,8 @@ immutable release that the app reads as of any date.
 
 **Automated:** `.github/workflows/daily.yml` runs `npm run daily` on weekdays at 09:15 UTC:
 ingest the latest gazette days, fetch history for new companies, classify new candidates (Claude
-subscription via `CLAUDE_CODE_OAUTH_TOKEN`), build a release that goes live only if every gate
+subscription via `CLAUDE_CODE_OAUTH_TOKEN`), crawl new startupticker.ch financing news for
+confirmations (cached between runs), build a release that goes live only if every gate
 passes (including an eval of the same system), and prune old releases (current + one rollback
 target are kept). A failed run emails the repo owner and leaves the live release untouched.
 Secrets: `DATABASE_URL`, `CLAUDE_CODE_OAUTH_TOKEN`. A new eval is needed only when the parser,
@@ -104,8 +105,12 @@ Checks: `npm run typecheck`, `npm test`, `npm run build`, and against a running 
   publication, and compliance with Swiss data protection law.
 - **Zefix**, Federal Office of Justice ([zefix.admin.ch](https://www.zefix.admin.ch)): OGD "Open use.
   Must provide the source."
-- **startupticker.ch**: the recall cohort lists company names, announcement dates and links only;
-  no article text is copied.
+- **startupticker.ch**: the recall cohort lists company names, announcement dates and links only.
+  Confirmed rounds are matched automatically against its financing news: the article must link
+  the company by its exact legal name, name it in the title, and fall within −120/+180 days of
+  exactly one capital increase (otherwise it is a possible confirmation). Only round news counts;
+  grants, prizes, loans, listings and acquisitions without new money are excluded. The site shows
+  the article date and link; no article text is copied.
 
 This is not an official publication. The authoritative data are those on the Official Gazettes
 Portal that bear the SECO electronic signature or stamp.
@@ -113,8 +118,8 @@ Portal that bear the SECO electronic signature or stamp.
 ## Data and privacy
 
 No natural-person data is committed: fixtures are scrubbed and checked against a private name
-list (`npm run preregister -- check`). Excerpts are withheld until the gazette's reuse terms
-are confirmed; every entry links to its SHAB publication. The dataset export
-([data card](docs/DATA_CARD.md)) is built but not published for the same reason.
+list (`npm run preregister -- check`). Gazette excerpts are shown in the original language with
+person names removed, and every entry links to its SHAB publication. The dataset export
+([data card](docs/DATA_CARD.md)) is built but not published.
 
 Not an official publication.
