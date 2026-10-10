@@ -218,7 +218,6 @@ async function run(releaseId: string) {
     recallIncludingUndecided: { hits: rec.rulesPlusClaudeIncludingUndecided.detected, n: rec.cohort },
     misses: rec.rows.filter((r) => r.tier !== "likely_financing").map((r) => ({ company: r.company, announced: r.announced, reason: r.reason || `classifier score ${r.score?.toFixed(2) ?? "—"} (${r.tier === "abstain" ? "undecided" : "below threshold"})` })),
     rejections,
-    confirmationSource: "Confirmed rounds come from hand-checked announcements.",
     knownIssues: existsSync(KNOWN_ISSUES) ? z.object({ issues: z.array(z.string()) }).parse(JSON.parse(readFileSync(KNOWN_ISSUES, "utf8"))).issues : [],
   });
   mkdirSync(RESULTS, { recursive: true });

@@ -54,7 +54,6 @@ describe("release eval", () => {
     recallIncludingUndecided: null,
     misses: [],
     rejections: [],
-    confirmationSource: "Confirmed rounds come from hand-checked announcements.",
     knownIssues: [],
   };
   it("renders the one-line summary with the does-not-rewind label", () => {

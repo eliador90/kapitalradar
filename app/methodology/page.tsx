@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pct, type ReleaseEval } from "../../lib/domain/eval-result";
 import { formatDate } from "../../lib/domain/format";
+import { MATCH_WINDOW } from "../../lib/pipeline/confirmations";
 import { BackLink, backQuery } from "../_components/back-link";
 import { getRelease, hrefWith } from "../_lib/release";
 
@@ -69,6 +70,16 @@ export default async function MethodologyPage({ searchParams }: { searchParams: 
       </table>
       <p>Rules-only counts an increase as a financing at a rules score of {c.rulesThreshold.toFixed(1)} or more.</p>
 
+      <h2>Confirmed rounds</h2>
+      <p>
+        Confirmations are matched automatically, every weekday, against the financing news on startupticker.ch. An article confirms a round when it
+        links the company by its exact legal name, names it in the title, and the company has exactly one capital increase from {MATCH_WINDOW.before} days
+        before to {MATCH_WINDOW.after} days after the article date. That increase is shown as a confirmed round. When the match is ambiguous (several
+        increases in the window, or several companies named in the title) the increase is marked as a possible confirmation instead. Only round news
+        counts: articles about grants and prizes, loans or listings never confirm, and acquisitions only when the title also reports money raised. The
+        site shows the article&rsquo;s date and a link to it; no article text is copied.
+      </p>
+
       <h2>Evaluation</h2>
       {e ? (
         <>
@@ -100,7 +111,8 @@ export default async function MethodologyPage({ searchParams }: { searchParams: 
           )}
           <p>
             Recall is measured on {e.cohortSize} financing rounds announced in the press and sealed before any threshold was set. Precision is measured on a
-            stratified sample of the system&rsquo;s positives, each checked by hand against outside evidence. {e.confirmationSource}
+            stratified sample of the system&rsquo;s positives, each checked by hand against outside evidence. Confirmed rounds play no part in either
+            measure.
           </p>
           <p>
             <Link href={hrefWith("/misses", { asof: backQuery(release, sp).asof, s: backQuery(release, sp).s, c: backQuery(release, sp).c })}>

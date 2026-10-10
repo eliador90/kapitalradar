@@ -18,7 +18,3 @@ Deferred work with its reason. Keep this short: anything under ~10 minutes gets 
   - **Cons:** one more asset to maintain; worthless while the site is private.
   - **Context:** during the private preview the password gate hides every page from crawlers, so a card can't render anyway (D8, /plan-design-review).
   - **Blocked by:** Open Question 1 (SHAB reuse terms) and the public launch.
-
-## Deferred from the v1 eval (2026-10-06)
-
-- **Automatic confirmations from startupticker's free feed** (Remo, 2026-10-07): match announced rounds to gazette increases daily; publish only high-confidence matches (exact company, date window, amount fits), list the rest as possible confirmations. Why deferred: the daily automation ships first.

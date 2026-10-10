@@ -32,8 +32,6 @@ export const releaseEval = z.object({
   misses: z.array(z.object({ company: z.string(), announced: isoDate, reason: z.string() })),
   /** Random sample of pre-filter or classifier rejections with reasons. */
   rejections: z.array(z.object({ company: z.string(), publishedAt: isoDate, reason: z.string() })),
-  /** Confirmed rounds come from hand-checked announcements (OQ4). */
-  confirmationSource: z.string(),
   /** Known defects of the evaluated system, disclosed on /methodology (shipped as evaluated, fixed in the next release). */
   knownIssues: z.array(z.string()),
 });
