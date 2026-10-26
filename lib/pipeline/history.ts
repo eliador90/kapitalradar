@@ -12,6 +12,9 @@ import { ZEFIX_FORMATION, zefixPublicationRefs, type ZefixRef } from "./zefix";
 
 export const ZEFIX_UNKNOWN_UID = "UID unknown to Zefix";
 
+/** A stored or returned zefixError that a later run should retry (a failed call, not an unknown UID). */
+export const isRetryableZefixError = (zefixError: string | null | undefined): zefixError is string => !!zefixError && zefixError !== ZEFIX_UNKNOWN_UID;
+
 export interface HistoryResult {
   listed: number;
   newlyStored: number;
@@ -171,7 +174,7 @@ export async function runHistory(
         } catch (e) {
           failure = (e as Error).message;
         }
-        const zefixFailure = result?.zefixError && result.zefixError !== ZEFIX_UNKNOWN_UID ? `zefix: ${result.zefixError}` : null;
+        const zefixFailure = isRetryableZefixError(result?.zefixError) ? `zefix: ${result.zefixError}` : null;
         const error = failure ?? zefixFailure;
         // Counted once, after the checkpoint is written; a failed write leaves the item to retry.
         await deps.mark(job, uid, error ? "failed" : "done", error ?? result?.zefixError ?? null);

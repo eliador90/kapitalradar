@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { coverageLine, ageBucket } from "../domain/coverage";
 import type { ParsedEvent } from "../domain/events";
 import { foldCapitalContext } from "./fold";
-import { runHistory, type HistoryDeps, type HistoryResult } from "./history";
+import { isRetryableZefixError, runHistory, ZEFIX_UNKNOWN_UID, type HistoryDeps, type HistoryResult } from "./history";
 
 vi.mock("../../db/client", () => ({ db: () => { throw new Error("no DB in unit tests"); } }));
 
@@ -48,6 +48,13 @@ describe("runHistory", () => {
     expect(calls.filter((u) => u === "CHE000000002")).toHaveLength(2); // retried, not skipped
     const fresh = await runHistory(uids, "r2", quiet, deps); // a new build refetches every company (eng V5)
     expect(fresh.skippedDone).toBe(0);
+  });
+});
+
+describe("isRetryableZefixError", () => {
+  it("retries a failed Zefix call, never an unknown UID or a clean fetch", () => {
+    expect(isRetryableZefixError("fetch failed: https://www.zefix.ch/ZefixREST/api/v1/firm/search.json → TypeError: fetch failed")).toBe(true);
+    expect([ZEFIX_UNKNOWN_UID, null, undefined, ""].map(isRetryableZefixError)).toEqual([false, false, false, false]);
   });
 });
 
