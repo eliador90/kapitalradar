@@ -1,12 +1,11 @@
 // One release per request (eng delta P4, V13): every page resolves the current release once
 // and passes it to each reader, so a page never mixes releases.
 import { cache } from "react";
-import { readCurrentRelease } from "../../lib/data/readers";
+import { cachedCurrentRelease } from "../../lib/data/cached-readers";
 import { parseReleaseEval } from "../../lib/domain/eval-result";
 
 export const getRelease = cache(async () => {
-  const release = await readCurrentRelease();
-  if (!release) throw new Error("no current release: build and activate one with scripts/build-release.ts");
+  const release = await cachedCurrentRelease();
   return { ...release, evaluation: parseReleaseEval(release.evalResult) };
 });
 

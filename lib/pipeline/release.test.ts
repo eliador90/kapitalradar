@@ -144,11 +144,11 @@ describe("excerptOf", () => {
 
 describe("releasesToPrune", () => {
   const r = (id: string, status = "ready") => ({ id, status });
-  it("keeps the current and the newest other ready release; drops older and failed builds", () => {
-    expect(releasesToPrune([r("r1", "failed"), r("r2"), r("r3", "failed"), r("r4"), r("r5", "failed"), r("r6")], "r6")).toEqual(["r1", "r2", "r3", "r5"]);
+  it("keeps the current and the two newest other ready releases; drops older and failed builds", () => {
+    expect(releasesToPrune([r("r1"), r("r2"), r("r3", "failed"), r("r4"), r("r5", "failed"), r("r6"), r("r7")], "r7")).toEqual(["r1", "r2", "r3", "r5"]);
   });
   it("never prunes the current release, even after a rollback to an older one", () => {
-    expect(releasesToPrune([r("r4"), r("r6"), r("r7")], "r4")).toEqual(["r6"]);
+    expect(releasesToPrune([r("r4"), r("r5"), r("r6"), r("r7")], "r4")).toEqual(["r5"]);
   });
   it("leaves a build in progress alone", () => {
     expect(releasesToPrune([r("r6"), r("r7", "building")], "r6")).toEqual([]);

@@ -9,7 +9,7 @@
   --rule: #213645; /* hairlines and borders, never text */
   --ink: #d5e0e5; /* text, 14.5:1 on paper */
   --ink-muted: #8aa1ab; /* secondary text, 7.2:1 on paper */
-  --sweep: #4fe0c3; /* phosphor: the instrument, live state, confirmed rounds */
+  --sweep: #4fe0c3; /* phosphor: the instrument, confirmed rounds */
   --likely: #ffb547; /* amber: likely financing */
   --undecided: #a58bff; /* violet: undecided (a different hue, not a darker amber) */
   --increased: #5f7c8b; /* slate: capital increased, recedes */
@@ -61,9 +61,6 @@ p { margin: 0 0 14px; }
 .wordmark span { color: var(--sweep); }
 .descriptor { margin: 0; color: var(--ink-muted); max-width: 58ch; }
 .status-line { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0; font: 500 12px/18px var(--font-mono); color: var(--ink-muted); }
-.live { color: var(--sweep); }
-.live::before { content: "●"; margin-right: 6px; animation: blink 2.4s steps(2, start) infinite; }
-@keyframes blink { 50% { opacity: .25; } }
 .rewind { justify-self: start; display: inline-flex; align-items: center; min-height: 40px; padding: 6px 12px; border: 1px solid var(--rule); font: 500 13px/18px var(--font-mono); text-decoration: none; color: var(--ink); }
 .rewind:hover { border-color: var(--time); color: var(--time); }
 .published-by-bar { display: grid; gap: 6px; }

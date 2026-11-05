@@ -72,7 +72,7 @@ export default async function MethodologyPage({ searchParams }: { searchParams: 
 
       <h2>Confirmed rounds</h2>
       <p>
-        Confirmations are matched automatically, every weekday, against the financing news on startupticker.ch. An article confirms a round when it
+        Confirmations are matched automatically, twice a month, against the financing news on startupticker.ch. An article confirms a round when it
         links the company by its exact legal name, names it in the title, and the company has exactly one capital increase from {MATCH_WINDOW.before} days
         before to {MATCH_WINDOW.after} days after the article date. That increase is shown as a confirmed round. When the match is ambiguous (several
         increases in the window, or several companies named in the title) the increase is marked as a possible confirmation instead. Only round news

@@ -1,6 +1,10 @@
-# The daily job (scripts/daily.ts): ingest → history for new companies → classify new candidates
-# → build a release (activated only if every gate passes) → prune old releases.
+# The refresh job (scripts/daily.ts, named before it moved to twice a month): ingest → history for
+# new companies → classify new candidates → build a release (activated only if every gate passes)
+# → prune old releases.
 # A failed run emails the repo owner (GitHub default) and leaves the live release untouched.
+#
+# Twice a month because each run moves about 0.6 GB out of Neon and the free plan allows 5 GB a
+# month (decision log #52).
 #
 # Secrets (set by Remo in Settings → Secrets and variables → Actions):
 #   DATABASE_URL             Neon owner connection string (the job writes releases)
@@ -8,22 +12,46 @@
 name: daily
 on:
   schedule:
-    # Weekdays 09:15 UTC: the gazette publishes in the morning, Swiss time.
-    - cron: "15 9 * * 1-5"
+    # 1st and 15th, 09:15 UTC: the gazette publishes in the morning, Swiss time.
+    - cron: "15 9 1,15 * *"
+    # Mondays and Thursdays: touches the article cache only, no database. See the job below.
+    - cron: "0 6 * * 1,4"
   workflow_dispatch:
 
 permissions:
   contents: read
-  # Keep-alive: public repos disable scheduled workflows after 60 days without repository
-  # activity, and this job commits nothing. Re-enabling it through the API each run avoids that.
-  actions: write
-
-concurrency:
-  group: daily
-  cancel-in-progress: false
 
 jobs:
+  # GitHub evicts a cache not read for 7 days, which a two-week gap would always hit. Without the
+  # articles the next run crawls startupticker from scratch (about 70 min, at most 1,000 articles)
+  # and can publish fewer confirmations.
+  keep-article-cache:
+    if: github.event.schedule == '0 6 * * 1,4'
+    runs-on: ubuntu-latest
+    # Keep-alive: public repos disable scheduled workflows after 60 days without repository
+    # activity, and this workflow commits nothing. Re-enabling it through the API avoids that.
+    permissions:
+      actions: write
+    steps:
+      - uses: actions/cache/restore@v4
+        with:
+          path: .data/startupticker
+          key: startupticker-${{ github.run_id }}
+          restore-keys: startupticker-
+          # A lost cache fails this job, so the owner gets an email before the next run re-crawls.
+          fail-on-cache-miss: true
+      - name: Keep the schedule alive
+        if: always()
+        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/daily.yml/enable"
+        env:
+          GH_TOKEN: ${{ github.token }}
+
   daily:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '15 9 1,15 * *'
+    # On the job, so a cache run can't displace a queued refresh (one pending run per group).
+    concurrency:
+      group: daily
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 180
     steps:
@@ -46,8 +74,3 @@ jobs:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           CLAUDE_BIN: claude
-      - name: Keep the schedule alive
-        if: always()
-        run: gh api -X PUT "repos/${{ github.repository }}/actions/workflows/daily.yml/enable"
-        env:
-          GH_TOKEN: ${{ github.token }}

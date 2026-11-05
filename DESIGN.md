@@ -22,7 +22,7 @@ the SHAB. Motion is decorative only and stops under `prefers-reduced-motion`.
 | `--rule` | `#213645` | never text | panel borders, rules under table headers |
 | `--ink` | `#D5E0E5` | 14.5:1 | text |
 | `--ink-muted` | `#8AA1AB` | 7.2:1 | secondary lines, axis labels |
-| `--sweep` | `#4FE0C3` | 11.9:1 | the instrument: wordmark accent, live state, confirmed rounds, focus ring |
+| `--sweep` | `#4FE0C3` | 11.9:1 | the instrument: wordmark accent, confirmed rounds, focus ring |
 | `--likely` | `#FFB547` | 11.1:1 | likely financing |
 | `--undecided` | `#A58BFF` | 7.2:1 | undecided (a different hue from amber, not a shade of it) |
 | `--increased` | `#5F7C8B` | bars only | capital increased; recedes behind the two signal tones |

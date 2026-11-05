@@ -1,9 +1,8 @@
-// Deletes old releases' rows so daily builds fit the free database tier. Keeps the current
-// release and the newest other ready release (rollback target). Raw publications, history and
-// cached classifications are shared across releases and never touched.
+// Deletes old releases' rows so builds fit the free database tier (what it keeps: releasesToPrune).
+// Raw publications, history and cached classifications are shared across releases and never touched.
 //
 //   npm run prune-releases -- --dry-run
-//   npm run prune-releases -- [--keep 2]
+//   npm run prune-releases -- [--keep N]
 import { eq, inArray, sql } from "drizzle-orm";
 import { db } from "../db/client";
 import { assessments, companyNames, confirmations, currentRelease, events, ingestRuns, releases } from "../db/schema";
@@ -11,8 +10,8 @@ import { releasesToPrune } from "../lib/pipeline/release";
 
 const args = process.argv.slice(2);
 const i = args.indexOf("--keep");
-const keep = i >= 0 ? Number(args[i + 1]) : 2;
-if (!Number.isInteger(keep) || keep < 1) throw new Error("--keep needs an integer ≥ 1");
+const keep = i >= 0 ? Number(args[i + 1]) : undefined;
+if (keep !== undefined && (!Number.isInteger(keep) || keep < 1)) throw new Error("--keep needs an integer ≥ 1");
 
 const all = await db().select({ id: releases.id, status: releases.status }).from(releases);
 const [cur] = await db().select({ id: currentRelease.releaseId }).from(currentRelease).where(eq(currentRelease.id, 1));
