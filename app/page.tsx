@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { readCantonCounts, readDailySeries, readFeedWeek } from "../lib/data/readers";
+import { cachedCantonCounts, cachedDailySeries, cachedFeedWeek } from "../lib/data/cached-readers";
 import { resolveAsOf } from "../lib/domain/asof";
 import { MAP_WINDOW_DAYS, parseCanton } from "../lib/domain/cantons";
 import { addDays, maxDate } from "../lib/domain/dates";
@@ -42,9 +42,9 @@ export default async function FeedPage({ searchParams }: { searchParams: SearchP
   const range = formatDateRange(start, week.end);
   const mapFrom = maxDate(addDays(asOf, 1 - MAP_WINDOW_DAYS), release.backfillStart);
   const [weekRows, series, cantonCounts] = await Promise.all([
-    readFeedWeek(release, asOf, start, week.end),
-    readDailySeries(release, asOf),
-    readCantonCounts(release, asOf, mapFrom),
+    cachedFeedWeek(release, asOf, start, week.end),
+    cachedDailySeries(release, asOf),
+    cachedCantonCounts(release, asOf, mapFrom),
   ]);
   const rows = c ? weekRows.filter((r) => r.canton === c) : weekRows;
   const shown = rows.filter((r) => filters.includes(feedFilterOf(r.status, r.tier)));

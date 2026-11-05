@@ -267,10 +267,11 @@ export const rollback = (repo: ReleaseRepo, toReleaseId: string) => repo.activat
 
 /**
  * Releases to delete so the database stays small (Neon free tier): keep the current release and
- * the newest `keep - 1` other ready releases (rollback targets); every older or failed build goes.
- * Never returns the current release.
+ * the newest `keep - 1` other ready releases; every older or failed build goes. Two others by
+ * default: a rollback target, and one more because the website's cached pointer can lag a day and
+ * must not name a deleted release after two runs in one day. Never returns the current release.
  */
-export function releasesToPrune(all: readonly { id: string; status: string }[], currentId: string | null, keep = 2): string[] {
+export function releasesToPrune(all: readonly { id: string; status: string }[], currentId: string | null, keep = 3): string[] {
   const num = (id: string) => Number(id.slice(1));
   const ready = all.filter((r) => r.status === "ready" && r.id !== currentId).sort((a, b) => num(b.id) - num(a.id));
   const kept = new Set([...(currentId ? [currentId] : []), ...ready.slice(0, Math.max(0, keep - 1)).map((r) => r.id)]);

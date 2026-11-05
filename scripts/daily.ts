@@ -1,5 +1,5 @@
-// The daily job (GitHub Actions, .github/workflows/daily.yml; runnable locally too):
-// ingest the latest gazette days → fetch history for new companies → classify new candidates →
+// The refresh job, twice a month despite the name (GitHub Actions, .github/workflows/daily.yml;
+// runnable locally too): ingest the gazette days since the last run → fetch history for new companies → classify new candidates →
 // crawl new startupticker financing news → build a release (activated only if every gate passes, eval included) → prune old releases.
 // Any failing step stops the run; the site keeps serving the last good release.
 //

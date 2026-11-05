@@ -26,7 +26,7 @@ rounds, and serves the result as a dated, point-in-time record.
 |---|---|
 | `lib/domain/` | Pure rules and formats: as-of resolution, weeks, status derivation, rule catalog, share issuance, metrics, Swiss formatting. No I/O. |
 | `lib/pipeline/` | Fetching (rate-limited `politeFetch`), XML parsing with privacy-first clause classification, history refresh, capital fold, rules, name redaction, classifier backend, release build and gates. |
-| `lib/data/` | Server data readers for the app. Each calls `assertPreviewAccess()` first and filters by release and asOf. |
+| `lib/data/` | Server data readers for the app, filtered by release and asOf, and `cached-readers.ts`, the Data Cache around them that the pages call. |
 | `db/` | Drizzle schema, migrations, the shared `visibleAt` predicate. |
 | `scripts/` | Operator commands: ingest, history, classify, build-release, eval, leak-check. |
 | `eval/` | Pre-registration, sealed recall cohort, inspected-company ledger, dev labels, fixtures, eval artifacts. Isolated from production code (a test enforces it). |
@@ -36,6 +36,14 @@ rounds, and serves the result as a dated, point-in-time record.
 
 - **One release per request.** `getRelease()` (React `cache()`) resolves `current_release`
   once; every reader receives that release id. Pages are dynamic; nothing is page-cached.
+- **Data is cached by release, so most requests never reach the database.** Reader results are
+  keyed by release id and arguments (asOf included) and never expire: a release is immutable, and
+  a new one changes the key. The one exception is `company_sources` (a company's coverage line),
+  which is not per release and so can lag until the next release. The pointer to the current
+  release expires daily, so a new release or a rollback shows within about a day, or on the next
+  requests after `vercel cache invalidate --tag current-release`. A new commit starts with an empty
+  cache; redeploying the same commit keeps it, so check a database change with a URL nobody has
+  requested yet.
 - **As-of is inclusive and clamped.** A row is visible iff `published_at ≤ asOf`. `asOf`
   defaults to the release snapshot and is clamped to `[backfill start, snapshot]`.
   Cancellations hide their target from the cancellation's own date. Release-level chrome

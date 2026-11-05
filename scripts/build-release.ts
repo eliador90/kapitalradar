@@ -31,7 +31,7 @@ const arg = (name: string) => {
 const cfg = loadClassificationConfig();
 if (arg("rollback")) {
   await rollback(dbReleaseRepo(cfg.modelId, cfg.promptVersion), arg("rollback")!);
-  console.log(`current_release → ${arg("rollback")}`);
+  console.log(`current_release → ${arg("rollback")}. The site follows within a day; to show it now: vercel cache invalidate --tag current-release`);
   process.exit(0);
 }
 // "auto": the next free id (daily job); ids are never reused, failed builds included.

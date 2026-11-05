@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
-import { readCompany } from "../../../lib/data/readers";
+import { cachedCompany } from "../../../lib/data/cached-readers";
 import { capitalSeries } from "../../../lib/domain/capital-series";
 import type { CapitalChangePayload } from "../../../lib/domain/events";
 import { resolveAsOf } from "../../../lib/domain/asof";
@@ -35,7 +35,7 @@ export default async function CompanyPage({ params, searchParams }: Props) {
     if (canonical) redirect(canonical);
   } else if (!isCanonicalUid(raw)) redirect(hrefWith(path, { asof: typeof sp.asof === "string" ? sp.asof : null }));
 
-  const record = await readCompany(release, uid, asOf);
+  const record = await cachedCompany(release, uid, asOf);
   if (!record) notFound();
 
   const items = [

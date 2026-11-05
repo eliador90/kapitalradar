@@ -8,7 +8,7 @@ scores which increases look like a financing round. It serves the result as a da
 can rewind: the round is often in the gazette before the press release (spike: median 10.5
 days earlier, 13 of 16 matched rounds).
 
-Live: [kapitalradar.vercel.app](https://kapitalradar.vercel.app). Updated automatically every weekday.
+Live: [kapitalradar.vercel.app](https://kapitalradar.vercel.app). Updated automatically twice a month.
 
 ![Kapitalradar: stepping the "Published by" date back a week, a confirmed round in the feed, and the company's record with the SHAB excerpt, classifier score and the round announcement](docs/kapitalradar.gif)
 
@@ -46,12 +46,13 @@ immutable release that the app reads as of any date.
 
 ## Runbook
 
-**Automated:** `.github/workflows/daily.yml` runs `npm run daily` on weekdays at 09:15 UTC:
-ingest the latest gazette days, fetch history for new companies, classify new candidates (Claude
+**Automated:** `.github/workflows/daily.yml` runs `npm run daily` on the 1st and 15th of each
+month at 09:15 UTC, to stay on Neon's free plan (the name is older than the schedule): ingest the
+gazette days since the last run, fetch history for new companies, classify new candidates (Claude
 subscription via `CLAUDE_CODE_OAUTH_TOKEN`), crawl new startupticker.ch financing news for
 confirmations (cached between runs), build a release that goes live only if every gate
-passes (including an eval of the same system), and prune old releases (current + one rollback
-target are kept). A failed run emails the repo owner and leaves the live release untouched.
+passes (including an eval of the same system), and prune old releases (current + two earlier ones
+are kept). A failed run emails the repo owner and leaves the live release untouched.
 Secrets: `DATABASE_URL`, `CLAUDE_CODE_OAUTH_TOKEN`. A new eval is needed only when the parser,
 rules, model, prompt or thresholds change; the gate refuses to publish otherwise.
 

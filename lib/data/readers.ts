@@ -19,7 +19,10 @@ export interface ReleaseMeta {
   evalResult: unknown;
 }
 
-/** The live release (callers wrap this in React cache() so one request sees one release). */
+/** What the readers need of a release; the cached readers use it as the cache key. */
+export type ReleaseKey = Pick<ReleaseMeta, "id" | "backfillStart">;
+
+/** The live release. */
 export async function readCurrentRelease(): Promise<ReleaseMeta | null> {
   const [row] = await db()
     .select({ id: releases.id, snapshotDate: releases.snapshotDate, backfillStart: releases.backfillStart, config: releases.config, evalResult: releases.evalResult })
@@ -66,7 +69,7 @@ export interface DayCount {
  * are not sent to the browser at all, so dragging back in time can't reveal the future (A11/A12).
  * Cancelled entries are not subtracted here; the feed itself applies cancellations.
  */
-export async function readDailySeries(release: ReleaseMeta, asOf: string): Promise<DayCount[]> {
+export async function readDailySeries(release: ReleaseKey, asOf: string): Promise<DayCount[]> {
   const r = release.id;
   const rows = await db()
     .select({ d: events.publishedAt, tier: assessments.tier, n: sql<number>`count(*)::int` })
@@ -89,7 +92,7 @@ export async function readDailySeries(release: ReleaseMeta, asOf: string): Promi
  * Likely financings per canton published in [from, asOf], for the radar map. Like the daily
  * series, bounded by asOf in SQL so nothing later reaches the page; cancellations aren't applied.
  */
-export async function readCantonCounts(release: ReleaseMeta, asOf: string, from: string): Promise<Record<string, number>> {
+export async function readCantonCounts(release: ReleaseKey, asOf: string, from: string): Promise<Record<string, number>> {
   const r = release.id;
   const canton = sql<string | null>`${events.payload}->>'canton'`;
   const rows = await db()
@@ -109,7 +112,7 @@ const linkOf = (c: ConfirmationRow): ConfirmationLink => ({ eventMatch: c.eventM
 const issuanceOf = (e: EventRow) => shareIssuance({ ...(e.payload as IssuancePayload), sharesBefore: e.sharesBefore, sharesAfter: e.sharesAfter });
 
 /** Capital increases published in [start, end] (end already capped at asOf), newest first. */
-export async function readFeedWeek(release: ReleaseMeta, asOf: string, start: string, end: string): Promise<FeedRow[]> {
+export async function readFeedWeek(release: ReleaseKey, asOf: string, start: string, end: string): Promise<FeedRow[]> {
   const r = release.id;
   // A cancellation is published on or after the entry it cancels, so start bounds both queries.
   const rows = await db()
@@ -212,7 +215,7 @@ export interface CompanyRecord {
  * asOf: unknown and not-yet-raising UIDs get the same null, and a rewound page never reveals
  * that a company raises later (eng delta A11).
  */
-export async function readCompany(release: ReleaseMeta, uid: string, asOf: string): Promise<CompanyRecord | null> {
+export async function readCompany(release: ReleaseKey, uid: string, asOf: string): Promise<CompanyRecord | null> {
   const r = release.id;
   const rows = await db()
     .select({ e: events, pub: { number: publications.publicationNumber, language: publications.language } })

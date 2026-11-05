@@ -32,7 +32,7 @@ export function Masthead({ release, asOf, isDefault, notice, action, keep = {}, 
         <p className="descriptor">Swiss capital increases, read from the official gazette and scored for financing rounds.</p>
       </div>
       <p className="status-line">
-        <span className="live">updated every weekday</span>
+        <span>updated twice a month</span>
         <span>release {release.id}</span>
         <span>data as of {formatDate(release.snapshotDate)}</span>
       </p>

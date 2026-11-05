@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 
-vi.mock("../../lib/data/readers", () => ({ readCurrentRelease: async () => null }));
+vi.mock("../../lib/data/cached-readers", () => ({ cachedCurrentRelease: async () => null }));
 const { canonicalRedirect, hrefWith } = await import("./release");
 
 describe("canonical URLs", () => {
