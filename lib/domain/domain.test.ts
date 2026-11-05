@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { asOfNoticeText, isVisibleAt, resolveAsOf } from "./asof";
 import { addDays, isIsoDate, zurichDate } from "./dates";
-import { formatAmount, formatCount, formatDate, formatDateRange, formatMoney } from "./format";
+import { formatAmount, formatCount, formatDate, formatDateRange, formatMoney, formatNominal } from "./format";
 import { recall, weightedPrecision, wilson } from "./metrics";
 import { RULES, claudeCatalog, getRule } from "./rule-catalog";
 import { deriveStatus, type ConfirmationLink } from "./status";
@@ -93,6 +93,17 @@ describe("format", () => {
     expect(formatAmount(-1500)).toBe("-1’500");
     expect(() => formatAmount("1.234")).toThrow(/two decimals/);
     expect(formatCount(13282500)).toBe("13’282’500");
+  });
+
+  it("keeps every significant decimal of a share's nominal value", () => {
+    expect(formatNominal("0.025")).toBe("0.025");
+    expect(formatNominal("0.000231")).toBe("0.000231");
+    expect(formatNominal("1065.586872")).toBe("1’065.586872");
+    expect(formatNominal("0.0250")).toBe("0.025");
+    expect(formatNominal("1000")).toBe("1’000");
+    expect(formatNominal("0.10")).toBe("0.10");
+    expect(formatNominal("1.2300")).toBe("1.23");
+    expect(() => formatNominal("abc")).toThrow(/not a decimal/);
   });
 
   it("formats dates and ranges", () => {
