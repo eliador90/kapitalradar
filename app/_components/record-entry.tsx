@@ -1,6 +1,6 @@
 import type { CompanyRecord } from "../../lib/data/readers";
 import type { CapitalChangePayload } from "../../lib/domain/events";
-import { formatAmount, formatCount, formatDate, formatLegalForm, formatPercent } from "../../lib/domain/format";
+import { formatAmount, formatCount, formatDate, formatLegalForm, formatNominal, formatPercent } from "../../lib/domain/format";
 import type { ReleaseConfig } from "../../lib/domain/schemas";
 import { httpsUrl, publicationUrl } from "../../lib/domain/shab-link";
 import { StatusLabel } from "./status";
@@ -154,7 +154,7 @@ function Figures({ e }: { e: Entry }) {
           <>
             <dt>Share classes</dt>
             <dd lang={e.language}>
-              {classes.map((k) => `${formatCount(k.count)} × ${k.currency} ${formatAmount(k.nominal)}${k.label ? ` ${k.label}` : ""}`).join(" · ")}
+              {classes.map((k) => `${formatCount(k.count)} × ${k.currency} ${formatNominal(k.nominal)}${k.label ? ` ${k.label}` : ""}`).join(" · ")}
             </dd>
           </>
         )}

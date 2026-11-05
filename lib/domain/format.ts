@@ -21,6 +21,15 @@ export function formatAmount(value: string | number): string {
 
 export const formatMoney = (value: string | number, currency = "CHF") => `${currency} ${formatAmount(value)}`;
 
+/**
+ * A share's nominal value, which unlike a capital amount can be a fraction of a cent, so every
+ * significant decimal is kept: "0.025" → "0.025", "1000" → "1’000", "0.10" → "0.10".
+ */
+export function formatNominal(value: string): string {
+  const subCent = /^(\d+)\.(\d{2}\d*?[1-9])0*$/.exec(value.trim());
+  return subCent ? `${formatAmount(subCent[1]!)}.${subCent[2]}` : formatAmount(value);
+}
+
 /** Integer counts (shares): "13’282’500". */
 export const formatCount = (n: number | bigint) => group(String(n));
 
